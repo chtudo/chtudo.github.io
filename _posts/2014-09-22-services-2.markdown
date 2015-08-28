@@ -1,6 +1,6 @@
 ---
 layout: default
-img: dog.png
+img: DeathtoStock_Wired6.png
 category: Services
 title: MOD優化研究
 description: |
