@@ -2,7 +2,7 @@
 layout: default
 img: ipad.png
 category: Services
-title: OTT TV: <br>美好體驗的延續 
+title: OTT TV:<br>美好體驗的延續 
 description: |
 ---
   目前正在與點子搏鬥中，延續您在中華影視App的內容，但是在新的裝置上有更好的體驗和享受。我們致力於如何讓使用者有更好體驗，更好玩！更有趣!
