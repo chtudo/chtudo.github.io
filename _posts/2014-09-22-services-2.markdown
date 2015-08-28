@@ -2,9 +2,7 @@
 layout: default
 img: dog.png
 category: Services
-title: 3D Device Mockups<br>by PSDCovers
+title: MOD優化研究
 description: |
 ---
-  Turn your 2D designs into high quality, 3D
-  product shots in seconds using free Photoshop actions by [PSDCovers](http://www.psdcovers.com/)! Visit
-  their website to download some of their awesome, free photoshop actions!
+  面對OTT的既有產品優化，我們的分析研究員以及資料分析專家會走出去面對使用者進行量化質化分析，結合大數據的行為分析，將更精準的進行決策！
