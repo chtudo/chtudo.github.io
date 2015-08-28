@@ -6,7 +6,6 @@ url: http://chtudo.github.io/
 title: Ux Design Office
 email: sherlock@cht.com.tw
 author: Sherlock
-#description: > # "I don't design objects,design strategies."
 description: > # "The Life is play and play."
 # ----------------------- #
 #    Jekyll & Plugins     #
@@ -25,5 +24,5 @@ social:
     url: https://www.facebook.com/twudo
   - title: github
     url: https://github.com/chtudo/chtudo.github.io
- # - title: linkedin
- #   url: 
+ # - title: linkedin #
+ #   url:  #
