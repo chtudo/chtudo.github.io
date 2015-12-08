@@ -1,28 +1,24 @@
-# ----------------------- #
-#      Main Configs       #
-# ----------------------- #
-
-url: http://chtudo.github.io/
-title: Ux Design Office
-email: sherlock@cht.com.tw
-author: Sherlock
+# Site settings
+title: "Ux Design Office"
+email: "sherlock@cht.com.tw"
 description: > # "The Life is play and play."
-# ----------------------- #
-#    Jekyll & Plugins     #
-# ----------------------- #
+baseurl:  # the subpath of your site, e.g. /blog/
+url:  # the base hostname & protocol for your site
+
+# User setting
+owner: Ux Design Office
+email: wudywu@cht.com.tw
+facebook_username: twudo
+twitter_username:
+github_username: chtudo
+address:
+  - line: "100中正區信義路一段21-3號806室"
+  # Feel free to add more lines here 
+telephone: 886-223445640
+copyright:
+
+# API settings
+google_api_key: "AIzaSyDODaztXRMCex3Iga8mQifwXITWRWtH38k"
 
 # Build settings
 markdown: kramdown
-permalink: pretty
-
-# ----------------------- #
-#   3rd Party Settings    #
-# ----------------------- #
-
-social:
-  - title: facebook
-    url: https://www.facebook.com/twudo
-  - title: github
-    url: https://github.com/chtudo/chtudo.github.io
- # - title: linkedin #
- #   url:  #
