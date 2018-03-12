@@ -184,6 +184,9 @@ class ZoomBtn extends Layer
 focusManager = new focusManager
 	leftStickDpad: true
 	controller: "XB1"
+	defaultSelectionBorder: true
+	defaultSelectionBorderWidth: 4
+	defaultSelectionBorderColor: "#FF9900"	
 theBackColor="Black"
 sketch = Framer.Importer.load("imported/MODHome2018@4x", scale: 1)
 Utils.globalLayers sketch
@@ -200,6 +203,27 @@ food_tv = new VideoLayer
 cut_boss2 = new VideoLayer
 	video: "images/cut_boss3.mp4"
 	scale:1.2
+IsTVZoom=false
+zoomTV=(isZoom)->
+	originalH=395
+	originalW=630
+	originX=0
+	originY=0
+	if isZoom
+		#print cut_boss2.parent,cut_boss2.parent.children.length
+		
+		cut_boss2.parent=null
+		cut_boss2.x=0
+		cut_boss2.y=0
+		cut_boss2.width=Screen.width
+		cut_boss2.height=Screen.height
+	else
+		BindVideo(cut_boss2,ChannelMainTVInter,true)
+		cut_boss2.x=originX
+		cut_boss2.y=originY
+		cut_boss2.width=originalW
+		cut_boss2.height=originalH
+	
 fifa_tv = new VideoLayer
 	video: "images/messi.mp4"
 	scale:1.27
@@ -385,11 +409,11 @@ BindVideo=(video,banner,sounded)->
 		video.player.muted=false
 	else
 		video.player.muted=true
-BindVideo(play_tv,TVContent1,false)		
+BindVideo(play_tv,TVContent1,false)
+#print play_tv.width,play_tv.height,play_tv.x,play_tv.y		
 BindVideo(food_tv,TVContent2,false)		
 BindVideo(cut_boss2,ChannelMainTVInter,true)
 BindVideo(fifa_tv,EventBarkerInter,true)
-
 BuildMenuBtnBars=()->
 	
 	HomeBtnMenuBar=new ScrollComponent
@@ -442,7 +466,19 @@ BuildMenuBtnBars=()->
 		bb.selectionBorder=false
 
 		x=x+1
-
+		
+		bb.on "b",->
+			IsTVZoom=false
+			zoomTV(IsTVZoom)			
+		bb.on "a",->
+			if this.name=="BTN_EnterChannel"
+				IsTVZoom=true
+				zoomTV(IsTVZoom)
+				#play_tv.height				
+# 				video=new VideoLayer
+# 					width: Screen.width
+# 					height: Screen.height
+# 					
 		bb.on "focus",->
 			#print this.name,"focus",MainBtnsPageMappingDict[this.name]['value']
 			
@@ -466,6 +502,13 @@ BuildMenuBtnBars=()->
 			
 			
 	Page2Menus.parent=MODHomePage
+	ChannelMain.isSelectable=true
+	ChannelMain.on "a",->
+		IsTVZoom=true
+		zoomTV(IsTVZoom)
+	ChannelMain.on "b",->
+		IsTVZoom=false
+		zoomTV(IsTVZoom)	
 	for sub in Page2Menus.children
 		sub.visible=false		
 		ZoomBtn_sub=new ZoomBtn
