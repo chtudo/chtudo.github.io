@@ -795,28 +795,101 @@ window.__imported__["MODHome2018@4x/layers.json.js"] = [
 						"objectId": "B0AB9851-8BB3-45D2-9A69-3D35A8E498C4",
 						"kind": "group",
 						"name": "DramaContent",
-						"originalName": "DramaContent*",
+						"originalName": "DramaContent",
 						"maskFrame": null,
 						"layerFrame": {
 							"x": 0,
-							"y": 0,
+							"y": 318,
 							"width": 1280,
-							"height": 520
+							"height": 202
 						},
 						"visible": true,
 						"metadata": {
 							"opacity": 1
 						},
-						"image": {
-							"path": "images/Layer-DramaContent-qjbbqjk4.png",
-							"frame": {
-								"x": 0,
-								"y": 0,
-								"width": 1280,
-								"height": 520
+						"children": [
+							{
+								"objectId": "865DB2E0-FC70-47AF-A9A1-AE90D40B6876",
+								"kind": "group",
+								"name": "DramaContentDeco",
+								"originalName": "DramaContentDeco",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 59,
+									"y": 318,
+									"width": 750,
+									"height": 153
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"image": {
+									"path": "images/Layer-DramaContentDeco-ody1reiy.png",
+									"frame": {
+										"x": 59,
+										"y": 318,
+										"width": 750,
+										"height": 153
+									}
+								},
+								"children": []
+							},
+							{
+								"objectId": "96DACE48-6954-4432-B019-47B70A041E25",
+								"kind": "group",
+								"name": "FootMask",
+								"originalName": "FootMask",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 0,
+									"y": 468,
+									"width": 1280,
+									"height": 52
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"image": {
+									"path": "images/Layer-FootMask-otzequnf.png",
+									"frame": {
+										"x": 0,
+										"y": 468,
+										"width": 1280,
+										"height": 52
+									}
+								},
+								"children": []
+							},
+							{
+								"objectId": "975CC38C-6E56-4048-97F8-F32EE8827E3B",
+								"kind": "group",
+								"name": "DramaPoster",
+								"originalName": "DramaPoster",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 0,
+									"y": 0,
+									"width": 1280,
+									"height": 520
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"image": {
+									"path": "images/Layer-DramaPoster-otc1q0mz.png",
+									"frame": {
+										"x": 0,
+										"y": 0,
+										"width": 1280,
+										"height": 520
+									}
+								},
+								"children": []
 							}
-						},
-						"children": []
+						]
 					},
 					{
 						"objectId": "8CC1A269-8DC0-4DED-8411-31F705474A5F",
@@ -911,7 +984,7 @@ window.__imported__["MODHome2018@4x/layers.json.js"] = [
 							{
 								"objectId": "EE9461DD-9690-43EF-BD2F-8FE357A88D1C",
 								"kind": "group",
-								"name": "FootMask",
+								"name": "FootMask1",
 								"originalName": "FootMask",
 								"maskFrame": null,
 								"layerFrame": {
@@ -1268,7 +1341,7 @@ window.__imported__["MODHome2018@4x/layers.json.js"] = [
 							{
 								"objectId": "B64C91C0-BB3F-4A84-9271-7C8966F230BD",
 								"kind": "group",
-								"name": "FootMask1",
+								"name": "FootMask2",
 								"originalName": "FootMask",
 								"maskFrame": null,
 								"layerFrame": {
@@ -1630,6 +1703,105 @@ window.__imported__["MODHome2018@4x/layers.json.js"] = [
 						"y": 16,
 						"width": 341,
 						"height": 305
+					}
+				},
+				"children": []
+			}
+		]
+	},
+	{
+		"objectId": "6274BA5A-7293-4379-9D1D-AB51ED127208",
+		"kind": "artboard",
+		"name": "PosterResource",
+		"originalName": "PosterResource",
+		"maskFrame": null,
+		"layerFrame": {
+			"x": 1338,
+			"y": 261,
+			"width": 1280,
+			"height": 520
+		},
+		"visible": true,
+		"metadata": {},
+		"backgroundColor": "rgba(255, 255, 255, 1)",
+		"children": [
+			{
+				"objectId": "036F18B0-305B-4B1B-B434-634C858839ED",
+				"kind": "group",
+				"name": "PosterImage1",
+				"originalName": "PosterImage1",
+				"maskFrame": null,
+				"layerFrame": {
+					"x": 0,
+					"y": 0,
+					"width": 1280,
+					"height": 520
+				},
+				"visible": true,
+				"metadata": {
+					"opacity": 1
+				},
+				"image": {
+					"path": "images/Layer-PosterImage1-mdm2rje4.png",
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"width": 1280,
+						"height": 520
+					}
+				},
+				"children": []
+			},
+			{
+				"objectId": "1D1AB8B7-FB34-4880-8D23-8B6E0CEA113B",
+				"kind": "group",
+				"name": "PosterImage2",
+				"originalName": "PosterImage2",
+				"maskFrame": null,
+				"layerFrame": {
+					"x": 0,
+					"y": 0,
+					"width": 1280,
+					"height": 520
+				},
+				"visible": true,
+				"metadata": {
+					"opacity": 1
+				},
+				"image": {
+					"path": "images/Layer-PosterImage2-muqxqui4.png",
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"width": 1280,
+						"height": 520
+					}
+				},
+				"children": []
+			},
+			{
+				"objectId": "6B8129FA-879B-40F6-B631-321B1C1F2010",
+				"kind": "group",
+				"name": "PosterImage3",
+				"originalName": "PosterImage3",
+				"maskFrame": null,
+				"layerFrame": {
+					"x": 0,
+					"y": 0,
+					"width": 1280,
+					"height": 520
+				},
+				"visible": true,
+				"metadata": {
+					"opacity": 1
+				},
+				"image": {
+					"path": "images/Layer-PosterImage3-nki4mti5.png",
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"width": 1280,
+						"height": 520
 					}
 				},
 				"children": []

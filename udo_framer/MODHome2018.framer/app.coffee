@@ -531,7 +531,63 @@ focusManager.selectedItem=MODHomePage.subLayersByName("HomeBtnMenuBar")[0].conte
 	#video.player.play()	
 
 
+fade = (nav, layerA, layerB, overlay) ->
+# 	print nav
+# 	
+# 	print layerA
+# 	
+# 	print layerB
+# 	
+# 	layerB.x = 0
+# 	layerB.y = 0
+# 	layerB.opacity = 0
+	
+# 	print overlay
+# 	options = {animate: false}
+	options = {time: 1}
+	return transition =
+		layerA:
+			show: {x: 0, opacity: 1, options: options}
+			hide: {x: 0, opacity: 0, options: options}
+		layerB:
+			show: {x: 0, opacity: 1, options: options}
+			hide: {x: 0, opacity: 0, options: options}
 
+flowImage=new FlowComponent(PosterImage1)
+flowImage.parent=DramaPoster
+flowImage.width= Screen.width
+flowImage.height= 520
+#flowImage.transition(PosterImage2, fade)
+
+Utils.interval 3,->
+	 
+	flowImage.transition(Utils.randomChoice([PosterImage1,PosterImage2,PosterImage3]), fade)
+	
+# 	
+# posterImage=new Layer
+# 	width: Screen.width
+# 	height: 520
+# 	#image:"images/PosterImage1.png"
+# posterImage.states.poster1=
+# 	image: "images/PosterImage1.png"
+# 	animationOptions:
+# 		#curve: Spring(damping: 0.5)
+# 		time: 0.5
+# posterImage.states.poster2=
+# 	image: "images/PosterImage2.png"
+# 	#width: 50
+# 	animationOptions:
+# 		#curve: Spring(damping: 0.5)
+# 		time: 0.5
+# posterImage.states.poster3=
+# 	image: "images/PosterImage3.png"
+# 	#width: 100
+# 	animationOptions:
+# 		#curve: Spring(damping: 0.5)
+# 		time: 0.5
+# Utils.interval 5,->
+# 	posterImage.stateCycle("poster1", "poster2","poster3")
+			
 
 # 
 # messi = new VideoLayer
@@ -540,3 +596,5 @@ focusManager.selectedItem=MODHomePage.subLayersByName("HomeBtnMenuBar")[0].conte
 # 	video: "images/messi.mp4"
 # 
 # messi.player.play()
+
+
