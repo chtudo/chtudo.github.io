@@ -1,6 +1,71 @@
 # Import file "MODHome2018"
 sketch = Framer.Importer.load("imported/MODHome2018@4x", scale: 1)
 # Import file "Untitled"
+class ScaleCommandBTNInTV extends Layer
+	constructor: (options={}) ->
+
+		options.width=options.BASECOMPONENT.width
+		options.height=options.BASECOMPONENT.height		
+		
+		options.backgroundColor="Transparent"
+		options.name=options.BASECOMPONENT.name#"commandBTN_"+options.TAGLABEL
+		options.isSelectable=true
+		super options
+		
+		@.states.focus=
+			visible: true
+
+		@.states.blur=
+			visible: true
+			
+		options.BASECOMPONENT.parent=@
+		options.BASECOMPONENT.x=0
+		options.BASECOMPONENT.y=0
+		options.BASECOMPONENT.scale=1.2875
+		options.BASECOMPONENT.states.focus=
+			scale:1.2875
+		options.BASECOMPONENT.states.blur=
+			scale:1
+			borderWidth:0
+			shadowBlur:0
+			shadowColor:"Black"
+		txt=new TextLayer
+			text:options.TAGLABEL
+			parent:@
+			width: 206
+			height:30
+			color: "white"
+			fontSize: 20
+			textAlign:Align.center
+			y:98
+			name:options.TAGLABEL
+		txt.centerX()
+		options.BASECOMPONENT.stateSwitch("blur")
+		txt.states.focus=
+			visible:true
+			y:110
+			fontSize: 22
+		txt.states.blur=
+			visible:true
+			y:98
+		txt.stateSwitch("blur")
+		@.on "focus",->
+			@.stateSwitch("focus")
+			options.BASECOMPONENT.scale=1.2875
+			@.bringToFront()
+			for sub in @.children
+				sub.stateSwitch("focus")
+		
+		@.on "blur",->
+			@.stateSwitch("blur")
+			for sub in @.children
+				sub.stateSwitch("blur")
+			
+		@.on "a",->
+			@.stateSwitch("focus")
+			for sub in @.children
+				sub.stateSwitch("focus")
+				
 class ScaleCommandBTN extends Layer
 	constructor: (options={}) ->
 
@@ -47,7 +112,7 @@ class ScaleCommandBTN extends Layer
 		options.BASECOMPONENT.stateSwitch("blur")
 		txt.states.focus=
 			visible:true
-
+		txt.placeBefore options.BASECOMPONENT
 		txt.states.blur=
 			visible:false
 		txt.stateSwitch("blur")
@@ -55,6 +120,7 @@ class ScaleCommandBTN extends Layer
 			@.stateSwitch("focus")
 			options.BASECOMPONENT.scale=1.2875
 			@.bringToFront()
+			
 			for sub in @.children
 				sub.stateSwitch("focus")
 		
@@ -114,6 +180,7 @@ class TwoScenarioComponent extends Layer
 			for sub in @.children
 				sub.stateSwitch("focus")
 		@.stateSwitch("focus")
+
 class ZoomBtn extends Layer
 	constructor: (options={}) ->
 		options.width=160
@@ -181,6 +248,8 @@ class ZoomBtn extends Layer
 			for sub in @.children
 				sub.stateSwitch("focus")
 {focusManager} = require 'focusManager'
+enterTV=""
+
 focusManager = new focusManager
 	leftStickDpad: true
 	controller: "XB1"
@@ -188,6 +257,11 @@ focusManager = new focusManager
 	defaultSelectionBorderWidth: 4
 	defaultSelectionBorderColor: "#FF9900"	
 theBackColor="Black"
+PREVIEW_SCREENSHOT1_84881 = new Layer
+	width: 1280
+	height: 720
+	image: "images/PREVIEW_SCREENSHOT1_84881.png"
+	visible: false
 sketch = Framer.Importer.load("imported/MODHome2018@4x", scale: 1)
 Utils.globalLayers sketch
 flowMODHome=new FlowComponent
@@ -204,14 +278,15 @@ cut_boss2 = new VideoLayer
 	video: "images/cut_boss3.mp4"
 	scale:1.2
 IsTVZoom=false
+IsShowTVPanel=false
+
 zoomTV=(isZoom)->
 	originalH=395
 	originalW=630
 	originX=0
 	originY=0
 	if isZoom
-		#print cut_boss2.parent,cut_boss2.parent.children.length
-		
+
 		cut_boss2.parent=null
 		cut_boss2.x=0
 		cut_boss2.y=0
@@ -274,8 +349,30 @@ MainBtnsLabelArray=[{
 	value:"春番新上架！"},{
 	name:"BTN_Comicss"
 	value:"FIFA運動影音"}]
-	
-
+TVBtnsLabelArray=[{
+	name:"ADDBTN" 
+	value:"增加捷徑"},{
+	name:"LASTUSEBTN" 
+	value:"上次使用"},{
+	name:"HOMEBTN"
+	value:"MOD首頁"},{
+	name:"KKTVBTN"
+	value:"KKTV"},{
+	name:"MOVIE199BTN"
+	value:"本週新上架四片"}]	
+TVShortCutMappingArray=[{
+	name:"CU1" 
+	value:"觀看最愛頻道"},{
+	name:"CU2" 
+	value:"加入最愛頻道"},{
+	name:"CU3"
+	value:"節目表"},{
+	name:"CU4"
+	value:"錄影"},{
+	name:"CU5"
+	value:"頻道分類"},{
+	name:"CU6"
+	value:"搜尋"}]
 MainBtnsPageMappingArray=[{
 	name:"BTN_EnterChannel" 
 	value:"ChannelContent"},{
@@ -316,7 +413,9 @@ SubBtnsLabelMappingArray=[{
 	name:"Personal"
 	value:"個人"},{
 	name:"Setting"
-	value:"設定"}]	
+	value:"設定"},{
+	name:"A18"
+	value:"18＋"}]	
 
 
 
@@ -351,8 +450,8 @@ MainBtnsLabelDict = MainBtnsLabelArray.toDict('name')
 MainBtnsPositionDict= MainBtnsPositionArray.toDict('name')
 MainBtnsPageMappingDict=MainBtnsPageMappingArray.toDict('name')
 SubBtnsLabelMappingDict=SubBtnsLabelMappingArray.toDict('name')
-
-
+TVShortCutMappingDict=TVShortCutMappingArray.toDict('name')
+TVBtnsLabelDict=TVBtnsLabelArray.toDict('name')
 for sub in RichContents.children	
 	pageview=new Layer
 		width: Screen.width
@@ -376,7 +475,6 @@ nappingDict = posterMapping.toDict('name')
 showBarkerImage=(day)->
 	
 	pageToSnap=nappingDict[day]["poster"]
-	#print pageToSnap,"---->"
 	
 	PageContent.snapToPage(pageToSnap)
 
@@ -394,7 +492,100 @@ SettingFIFATV=(isPlay)->
 		fifa_tv.player.play()
 	else
 		fifa_tv.player.pause()
+SettingControlPanelSelectable=()->
+	ControlPanelTV.parent=null
+	ControlPanelTV.x=650
+	ControlPanelTV.y=0
+	ControlPanelBGNew=new Layer
+# 		opacity:0.61
+		backgroundColor:'rgba(0, 0, 0, 0.61)'
+		#blur:10
+		width: ControlPanelTV.width
+		height: ControlPanelTV.height
+		x:0
+		y:0
+		parent:ControlPanelTV
+#		backgroundBlur:10
+	#ControlPanelBGNew.blur=10
+	ControlPanelBGNew.style =
+		'-webkit-backdrop-filter': 'blur(10px)'
+
+	ControlPanelBG.destroy()
+	ControlPanelTV.height=720
+	ControlPanelTV.width=630
+	ControlPanelTV.visible=false
+	ControlPanelBGNew.sendToBack(
+	)
+
+	TVRELATEDBTNS_new=new Layer
+		width: TVRELATEDBTNS.width
+		height: TVRELATEDBTNS.height
+# 		parent: SHOTCUTBTNS.parent
+		x:TVRELATEDBTNS.x
+		y:TVRELATEDBTNS.y
+		backgroundColor: "Transparent"
+		name:"SS"
+	TVRELATEDBTNS_new.parent=ControlPanelTV
+	
+	
+	SHOTCUTBTNS_new =new Layer
+		width: SHOTCUTBTNS.width
+		height: SHOTCUTBTNS.height
+# 		parent: SHOTCUTBTNS.parent
+		x:SHOTCUTBTNS.x
+		y:SHOTCUTBTNS.y
+		backgroundColor: "Transparent"
+		name:"SS2"	
+	SHOTCUTBTNS_new.parent=ControlPanelTV
+	for sub in SHOTCUTBTNS.children
+		bb=new ScaleCommandBTN
+			BASECOMPONENT:sub.copy()
+			TAGLABEL:TVBtnsLabelDict[sub.name]['value']
+			x:sub.x
+			y:sub.y
+			parent:SHOTCUTBTNS_new
+			width:sub.width
+			height:sub.height			
+		bb.on "b",->
+			ShowTVPanel(false)
+			focusManager.selectedItem=enterTV
+		bb.on "a",->
+			if this.name=="HOMEBTN"
+				ShowTVPanel(false)
+				IsTVZoom=false
+				zoomTV(IsTVZoom)
+				IsShowTVPanel=false	
+				focusManager.selectedItem=enterTV
 				
+	for sub in TVRELATEDBTNS.children
+		bb=new ScaleCommandBTNInTV
+			BASECOMPONENT:sub.copy()
+			TAGLABEL:TVShortCutMappingDict[sub.name]['value']
+			x:sub.x
+			y:sub.y
+			parent:TVRELATEDBTNS_new
+			width:sub.width
+			height:sub.height
+		bb.on "b",->
+			ShowTVPanel(false)
+			focusManager.selectedItem=enterTV
+	TVRELATEDBTNS.destroy()		
+	
+SettingControlPanelSelectable()
+
+ShowTVPanel=(needto_showTVPanel)->
+	ControlPanelTV.visible=needto_showTVPanel
+	ControlPanelTV.placeBefore cut_boss2
+# 	PREVIEW_SCREENSHOT1_84881.visible=needto_showTVPanel
+# 	PREVIEW_SCREENSHOT1_84881.bringToFront()
+# 	ControlPanelTV.placeBefore PREVIEW_SCREENSHOT1_84881
+	if needto_showTVPanel
+		focusManager.selectedItem=ControlPanelTV.subLayersByName("SS")[0].children[0]
+	#	print "Here"
+	#else
+		#if cut_boss2.width<Screen.width
+		#	print "here"
+			#focusManager.selectedItem=enterTV #MODHomePage.subLayersByName("HomeBtnMenuBar")			
 BindVideo=(video,banner,sounded)->
 	video.props=
 		width:banner.width
@@ -410,7 +601,6 @@ BindVideo=(video,banner,sounded)->
 	else
 		video.player.muted=true
 BindVideo(play_tv,TVContent1,false)
-#print play_tv.width,play_tv.height,play_tv.x,play_tv.y		
 BindVideo(food_tv,TVContent2,false)		
 BindVideo(cut_boss2,ChannelMainTVInter,true)
 BindVideo(fifa_tv,EventBarkerInter,true)
@@ -430,14 +620,12 @@ BuildMenuBtnBars=()->
 	HomeBtnMenuBar.placeBefore PageContent
 			
 	BTN_SmallSetting.parent=HomeBtnMenuBar.content
-#	BTN_SmallMessage.parent=HomeBtnMenuBar.content
 	BTN_SmallSetting.x=90
 	BTN_SmallSetting.y=148
 	BTN_SmallMessageX=147
 	BTN_SmallMessageY=148-(BTN_SmallMessage.height-BTN_SmallSetting.height)
 	x=0
-# 	BTN_SmallMessage.isSelectable=true
-# 	BTN_SmallMessage.selectionBorder=false
+
 	BTN_SmallSetting.isSelectable=true
 	BTN_SmallSetting.selectionBorder=false
 	BTN_SmallMessage.visible=false	
@@ -468,19 +656,25 @@ BuildMenuBtnBars=()->
 		x=x+1
 		
 		bb.on "b",->
-			IsTVZoom=false
-			zoomTV(IsTVZoom)			
+			if this.name=="BTN_EnterChannel"
+				IsTVZoom=false
+				zoomTV(IsTVZoom)
+				IsShowTVPanel=false			
 		bb.on "a",->
 			if this.name=="BTN_EnterChannel"
 				IsTVZoom=true
 				zoomTV(IsTVZoom)
-				#play_tv.height				
-# 				video=new VideoLayer
-# 					width: Screen.width
-# 					height: Screen.height
-# 					
+	
+			if IsTVZoom
+				
+				if IsShowTVPanel
+					ShowTVPanel(true)
+					enterTV=this
+				else
+					ShowTVPanel(false)		
+			IsShowTVPanel=!IsShowTVPanel
+			
 		bb.on "focus",->
-			#print this.name,"focus",MainBtnsPageMappingDict[this.name]['value']
 			
 			if this.name=="BTN_EnterChannel"
 				SettingVideoAction(true)
@@ -491,14 +685,11 @@ BuildMenuBtnBars=()->
 				SettingFIFATV(true)
 			else
 				SettingFIFATV(false)	
-			#print MainBtnsPositionDict[this.name]['value']
 			HomeBtnMenuBar.scrollToPoint(x:MainBtnsPositionDict[this.name]['value'])
 			flowMODHome.scroll.scrollToPoint(y:0)
 			layerHead.visible=true
 			showBarkerImage(MainBtnsPageMappingDict[this.name]['value'])
-			#print PageContent.currentPage,"CurrentPage"
-			#showBarkerImage("MovieContent")
-			#print "ddd"
+
 			
 			
 	Page2Menus.parent=MODHomePage
@@ -506,9 +697,18 @@ BuildMenuBtnBars=()->
 	ChannelMain.on "a",->
 		IsTVZoom=true
 		zoomTV(IsTVZoom)
+		if IsTVZoom			
+			if IsShowTVPanel
+				ShowTVPanel(true)
+				enterTV=this
+			else
+				ShowTVPanel(false)		
+		IsShowTVPanel=!IsShowTVPanel				
+		
 	ChannelMain.on "b",->
 		IsTVZoom=false
-		zoomTV(IsTVZoom)	
+		zoomTV(IsTVZoom)
+		IsShowTVPanel=false		
 	for sub in Page2Menus.children
 		sub.visible=false		
 		ZoomBtn_sub=new ZoomBtn
@@ -532,18 +732,7 @@ focusManager.selectedItem=MODHomePage.subLayersByName("HomeBtnMenuBar")[0].conte
 
 
 fade = (nav, layerA, layerB, overlay) ->
-# 	print nav
-# 	
-# 	print layerA
-# 	
-# 	print layerB
-# 	
-# 	layerB.x = 0
-# 	layerB.y = 0
-# 	layerB.opacity = 0
-	
-# 	print overlay
-# 	options = {animate: false}
+
 	options = {time: 1}
 	return transition =
 		layerA:
@@ -560,41 +749,9 @@ flowImage.height= 520
 #flowImage.transition(PosterImage2, fade)
 
 Utils.interval 3,->
-	 
-	flowImage.transition(Utils.randomChoice([PosterImage1,PosterImage2,PosterImage3]), fade)
+	if PageContent.currentPage.name=="DramaContent"
+		flowImage.transition(Utils.randomChoice([PosterImage1,PosterImage2,PosterImage3]), fade)
+
+# ShowTVPanel(true)
+
 	
-# 	
-# posterImage=new Layer
-# 	width: Screen.width
-# 	height: 520
-# 	#image:"images/PosterImage1.png"
-# posterImage.states.poster1=
-# 	image: "images/PosterImage1.png"
-# 	animationOptions:
-# 		#curve: Spring(damping: 0.5)
-# 		time: 0.5
-# posterImage.states.poster2=
-# 	image: "images/PosterImage2.png"
-# 	#width: 50
-# 	animationOptions:
-# 		#curve: Spring(damping: 0.5)
-# 		time: 0.5
-# posterImage.states.poster3=
-# 	image: "images/PosterImage3.png"
-# 	#width: 100
-# 	animationOptions:
-# 		#curve: Spring(damping: 0.5)
-# 		time: 0.5
-# Utils.interval 5,->
-# 	posterImage.stateCycle("poster1", "poster2","poster3")
-			
-
-# 
-# messi = new VideoLayer
-# 	width: 1280
-# 	height: 720
-# 	video: "images/messi.mp4"
-# 
-# messi.player.play()
-
-
