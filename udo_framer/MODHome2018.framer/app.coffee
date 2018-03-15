@@ -346,9 +346,9 @@ MainBtnsLabelArray=[{
 	name:"BTN_Child"
 	value:"2+好片上架！"},{
 	name:"BTN_Sporteee"
-	value:"春番新上架！"},{
+	value:"FIFA運動影音"},{
 	name:"BTN_Comicss"
-	value:"FIFA運動影音"}]
+	value:"春番新上架！"}]
 TVBtnsLabelArray=[{
 	name:"ADDBTN" 
 	value:"增加捷徑"},{
