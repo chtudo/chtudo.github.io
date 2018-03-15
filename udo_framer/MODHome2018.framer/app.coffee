@@ -17,7 +17,24 @@ class ScaleCommandBTNInTV extends Layer
 
 		@.states.blur=
 			visible: true
+		circleBG=new Layer
+			width:88
+			height:88
+			borderRadius:44
+			parent:@
+			backgroundColor:"#3D3D3D"
+			visible:true
+		circleBG.center()
+# 			midX:options.BASECOMPONENT.midX
+# 			midY:options.BASECOMPONENT.midY
+		circleBG.states.focus=
+			scale:1.3
+			backgroundColor:"#747678"
 			
+			
+		circleBG.states.blur=
+			scale:1
+			backgroundColor:"#3D3D3D"
 		options.BASECOMPONENT.parent=@
 		options.BASECOMPONENT.x=0
 		options.BASECOMPONENT.y=0
@@ -37,18 +54,21 @@ class ScaleCommandBTNInTV extends Layer
 			color: "white"
 			fontSize: 20
 			textAlign:Align.center
-			y:98
+			y:68
 			name:options.TAGLABEL
 		txt.centerX()
 		options.BASECOMPONENT.stateSwitch("blur")
 		txt.states.focus=
 			visible:true
-			y:110
-			fontSize: 22
+			y:80
+			fontSize: 28
 		txt.states.blur=
 			visible:true
-			y:98
+			y:68
+			fontSize: 20
 		txt.stateSwitch("blur")
+
+
 		@.on "focus",->
 			@.stateSwitch("focus")
 			options.BASECOMPONENT.scale=1.2875
@@ -549,6 +569,7 @@ SettingControlPanelSelectable=()->
 		bb.on "b",->
 			ShowTVPanel(false)
 			focusManager.selectedItem=enterTV
+			IsShowTVPanel=false
 		bb.on "a",->
 			if this.name=="HOMEBTN"
 				ShowTVPanel(false)
@@ -569,12 +590,31 @@ SettingControlPanelSelectable=()->
 		bb.on "b",->
 			ShowTVPanel(false)
 			focusManager.selectedItem=enterTV
+			IsShowTVPanel=false
 	TVRELATEDBTNS.destroy()		
 	
 SettingControlPanelSelectable()
+formatAMPM=(date) ->
+  hours = date.getHours()
+  minutes = date.getMinutes()
+  seconds=date.getSeconds()
+  ampm = if(hours>=12) then "PM" else "AM"
 
+  strTime = hours + ':' + minutes+":"+seconds
+  return strTime
 ShowTVPanel=(needto_showTVPanel)->
-	ControlPanelTV.visible=needto_showTVPanel
+	#print formatAMPM(new Date()),needto_showTVPanel
+	if needto_showTVPanel
+		ControlPanelTV.x=1280
+		ControlPanelTV.animate
+			x:649
+	else
+		ControlPanelTV.x=649
+		ControlPanelTV.animate
+			x:1280
+	ControlPanelTV.visible=true#needto_showTVPanel
+			
+	
 	ControlPanelTV.placeBefore cut_boss2
 # 	PREVIEW_SCREENSHOT1_84881.visible=needto_showTVPanel
 # 	PREVIEW_SCREENSHOT1_84881.bringToFront()
@@ -661,18 +701,19 @@ BuildMenuBtnBars=()->
 				zoomTV(IsTVZoom)
 				IsShowTVPanel=false			
 		bb.on "a",->
+			
 			if this.name=="BTN_EnterChannel"
 				IsTVZoom=true
 				zoomTV(IsTVZoom)
 	
 			if IsTVZoom
-				
+				IsShowTVPanel=!IsShowTVPanel	
 				if IsShowTVPanel
 					ShowTVPanel(true)
 					enterTV=this
 				else
 					ShowTVPanel(false)		
-			IsShowTVPanel=!IsShowTVPanel
+			
 			
 		bb.on "focus",->
 			
@@ -698,12 +739,13 @@ BuildMenuBtnBars=()->
 		IsTVZoom=true
 		zoomTV(IsTVZoom)
 		if IsTVZoom			
+			IsShowTVPanel=!IsShowTVPanel
 			if IsShowTVPanel
 				ShowTVPanel(true)
 				enterTV=this
 			else
 				ShowTVPanel(false)		
-		IsShowTVPanel=!IsShowTVPanel				
+		#IsShowTVPanel=!IsShowTVPanel				
 		
 	ChannelMain.on "b",->
 		IsTVZoom=false

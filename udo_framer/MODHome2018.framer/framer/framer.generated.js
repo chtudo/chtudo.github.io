@@ -2029,10 +2029,10 @@ window.__imported__["MODHome2018@4x/layers.json.js"] = [
 						"originalName": "TVRELATEDBTNS",
 						"maskFrame": null,
 						"layerFrame": {
-							"x": 737,
-							"y": 50,
-							"width": 462,
-							"height": 243
+							"x": 757,
+							"y": 75,
+							"width": 422,
+							"height": 194
 						},
 						"visible": true,
 						"metadata": {
@@ -2046,10 +2046,10 @@ window.__imported__["MODHome2018@4x/layers.json.js"] = [
 								"originalName": "CU6*",
 								"maskFrame": null,
 								"layerFrame": {
-									"x": 1111,
-									"y": 205,
-									"width": 88,
-									"height": 88
+									"x": 1137,
+									"y": 231,
+									"width": 36,
+									"height": 36
 								},
 								"visible": true,
 								"metadata": {
@@ -2058,10 +2058,10 @@ window.__imported__["MODHome2018@4x/layers.json.js"] = [
 								"image": {
 									"path": "images/Layer-CU6-q0y5nzix.png",
 									"frame": {
-										"x": 1111,
-										"y": 205,
-										"width": 88,
-										"height": 88
+										"x": 1137,
+										"y": 231,
+										"width": 36,
+										"height": 36
 									}
 								},
 								"children": []
@@ -2073,10 +2073,10 @@ window.__imported__["MODHome2018@4x/layers.json.js"] = [
 								"originalName": "CU5*",
 								"maskFrame": null,
 								"layerFrame": {
-									"x": 927,
-									"y": 205,
-									"width": 88,
-									"height": 88
+									"x": 950,
+									"y": 230,
+									"width": 42,
+									"height": 39
 								},
 								"visible": true,
 								"metadata": {
@@ -2085,10 +2085,10 @@ window.__imported__["MODHome2018@4x/layers.json.js"] = [
 								"image": {
 									"path": "images/Layer-CU5-muqxqtay.png",
 									"frame": {
-										"x": 927,
-										"y": 205,
-										"width": 88,
-										"height": 88
+										"x": 950,
+										"y": 230,
+										"width": 42,
+										"height": 39
 									}
 								},
 								"children": []
@@ -2100,10 +2100,10 @@ window.__imported__["MODHome2018@4x/layers.json.js"] = [
 								"originalName": "CU4*",
 								"maskFrame": null,
 								"layerFrame": {
-									"x": 737,
-									"y": 205,
-									"width": 88,
-									"height": 88
+									"x": 763,
+									"y": 236,
+									"width": 37,
+									"height": 27
 								},
 								"visible": true,
 								"metadata": {
@@ -2112,10 +2112,10 @@ window.__imported__["MODHome2018@4x/layers.json.js"] = [
 								"image": {
 									"path": "images/Layer-CU4-njq3mtze.png",
 									"frame": {
-										"x": 737,
-										"y": 205,
-										"width": 88,
-										"height": 88
+										"x": 763,
+										"y": 236,
+										"width": 37,
+										"height": 27
 									}
 								},
 								"children": []
@@ -2127,10 +2127,10 @@ window.__imported__["MODHome2018@4x/layers.json.js"] = [
 								"originalName": "CU3*",
 								"maskFrame": null,
 								"layerFrame": {
-									"x": 1111,
-									"y": 50,
-									"width": 88,
-									"height": 88
+									"x": 1131,
+									"y": 75,
+									"width": 48,
+									"height": 38
 								},
 								"visible": true,
 								"metadata": {
@@ -2139,10 +2139,10 @@ window.__imported__["MODHome2018@4x/layers.json.js"] = [
 								"image": {
 									"path": "images/Layer-CU3-nemwmdm5.png",
 									"frame": {
-										"x": 1111,
-										"y": 50,
-										"width": 88,
-										"height": 88
+										"x": 1131,
+										"y": 75,
+										"width": 48,
+										"height": 38
 									}
 								},
 								"children": []
@@ -2154,10 +2154,10 @@ window.__imported__["MODHome2018@4x/layers.json.js"] = [
 								"originalName": "CU2*",
 								"maskFrame": null,
 								"layerFrame": {
-									"x": 927,
-									"y": 50,
-									"width": 88,
-									"height": 88
+									"x": 950,
+									"y": 78,
+									"width": 43,
+									"height": 33
 								},
 								"visible": true,
 								"metadata": {
@@ -2166,10 +2166,10 @@ window.__imported__["MODHome2018@4x/layers.json.js"] = [
 								"image": {
 									"path": "images/Layer-CU2-otlgnemy.png",
 									"frame": {
-										"x": 927,
-										"y": 50,
-										"width": 88,
-										"height": 88
+										"x": 950,
+										"y": 78,
+										"width": 43,
+										"height": 33
 									}
 								},
 								"children": []
@@ -2181,10 +2181,10 @@ window.__imported__["MODHome2018@4x/layers.json.js"] = [
 								"originalName": "CU1*",
 								"maskFrame": null,
 								"layerFrame": {
-									"x": 737,
-									"y": 50,
-									"width": 88,
-									"height": 88
+									"x": 757,
+									"y": 75,
+									"width": 48,
+									"height": 38
 								},
 								"visible": true,
 								"metadata": {
@@ -2193,10 +2193,10 @@ window.__imported__["MODHome2018@4x/layers.json.js"] = [
 								"image": {
 									"path": "images/Layer-CU1-mjc1ney0.png",
 									"frame": {
-										"x": 737,
-										"y": 50,
-										"width": 88,
-										"height": 88
+										"x": 757,
+										"y": 75,
+										"width": 48,
+										"height": 38
 									}
 								},
 								"children": []
