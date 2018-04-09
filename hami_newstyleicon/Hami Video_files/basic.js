@@ -1,0 +1,1 @@
+!function(a) {var b = a(window);b.bind("resize",function() {try {if($(".content-wrapper").length==1){a(".content-wrapper").css("min-height",b.height() - a("footer").outerHeight()- a(".content-wrapper").offset().top - 21)}} catch (a) {}}).resize()}(jQuery);
