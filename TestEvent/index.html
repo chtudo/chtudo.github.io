@@ -43,5 +43,256 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-PGP5RP');</script>
 <!-- End Google Tag Manager -->
+<div class="topnavi">
+      <div class="logo"><a href="#" onclick="toHamiVideo();return false;"><img class="hamilogo" src="/HamiSoccerEvent/resources/img/hamivideo_logo.png"></a></div>
+      <div class="submenu"></div>
+      <ul>
+        <li><a href="#s1" class="subNavBtn">參加抽獎活動</a></li>
+        <li><a href="#s2" class="subNavBtn">活動辦法</a></li>
+        <li><a href="#s3" class="subNavBtn">注意事項</a></li>
+        <li><a href="#s4" class="subNavBtn">個資法聲明</a></li>
+      </ul>
+      <div class="clr"></div> 
+    </div>
+    <div class="header">
+        <div class="content wpMode"><img src="/HamiSoccerEvent/resources/img/main_kv.png"></div>
+        <div class="mMode"><img src="/HamiSoccerEvent/resources/img/main_kv_m.png"></div>
+    </div>
+    <div class="wrapper">
+      <div class="content">
+        <div class="title" id="s1">
+          <h2>參加抽獎活動</h2>
+          <div class="fold"></div>
+        </div>
+        <div class="signup">
+          <form id="command" name="eventForm" action='https://emcrm.hinet.net/PermitLists/PermitListActionPage.aspx' method='post' onsubmit="return validateForm();">
+            <input type='hidden' name='formStyle' value='general' />
+            <input type='hidden' name='PermitListID' value='fecf635b-6332-e811-a241-00155dc8c159' />
+            <input type='hidden' name='OnlyUserCheck' value='true' />
+            <input type='hidden' name='RedirectURL' value='http://chtudo.github.io/HamiSoccerEvent/index.do' />
+            <input type='hidden' name='MemberType' value='0' />
+            <input type='hidden' name='MemberAttributeName' value='' />
+            <input type='hidden' id='ValidImagePage' value= 'http://emcrm.hinet.net/PermitLists/ValidateCodePage.aspx' />
+            <table>
+                <tbody>
+                    <tr>
+                      <th>聯絡人姓名：</th>
+                    </tr>
+                    <tr>
+                      <td>
+                        <input type='text' id='Name' name='Name' value='' maxlength='10' placeholder="請輸入聯絡人姓名"/>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>聯絡人手機/市話號碼：</th>
+                    </tr>
+                    <tr>
+                        <td >
+                          <input type='text' id='MobileNumber' name='MobileNumber' value='' maxlength='10' onkeypress="return checkNum(event);" placeholder="請輸入聯絡人手機/市話號碼"/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="understand">
+                  <input type="checkbox" id="box-1" >
+                  <label for="box-1">已詳閱並同意 <a href="#s2">活動辦法</a>、<a href="#s3">注意事項</a> 並同意 <a href="#s4">個資法聲明</a>。
+                  </label>
+            </div>
+            <div class="submit">
+              <input type='submit' id='btnFBConfirm' value='參加第一重抽獎活動 ' />
+            </div>
+            <input type='hidden' id='SerialNumber' name='SerialNumber' value='' />
+        </form>
+        </div>
+      </div>
+      <div class="content">
+        <div class="title" id="s2">
+          <h2>活動辦法</h2>
+          <div class="fold"></div>
+        </div>
+        <div class="section">
+          <div class="game dash_bottom">
+            <div class="number fL"><img src="/HamiSoccerEvent/resources/img/icon_no1.png"></div>
+            <div class="game_detail">
+              <h3>裝MOD訂Hami Video大獎跟著來</h3>
+              <ul class="level1">
+                <li>參加抽獎活動期間：2018.4.20~2018.9.13</li>
+                <li>獎品項目及抽獎日期：<br><span>第一重活動獎項為MOD及Hami Video共同抽獎。</span></li>
+                <div class="wpMode"><img src="/HamiSoccerEvent/resources/img/chart.png"></div>
+                <div class="mMode"><img src="/HamiSoccerEvent/resources/img/chart_m.png"></div>
+                <li>
+                  參加資格及方式：
+                  <ul class="level2">
+                    <li>Hami Video客戶：
+                      <ul class="level3">
+                        <li>凡訂閱Hami Vide指定包月付費服務(電視、影劇或運動)，於活動期間內，閱讀並同意活動辦法、注意事項及蒐集個人資料同意書等內容後，填寫聯絡電話號碼及姓名，按下「參加第一重抽獎活動」，審核成功即可參加抽獎。</li>
+                      </ul>
+                    </li>
+                    <li>MOD客戶如欲參加本活動，請參閱MOD平台世足抽獎活動資訊(按快速鍵972)。</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="clr"></div>
+          </div>
+          <div class="game dash_bottom">
+            <div class="number fL"><img src="/HamiSoccerEvent/resources/img/icon_no2.png"></div>
+            <div class="game_detail">
+              <h3>預測世足冠軍抽購物金</h3>
+              <ul class="level1">
+                <li>參加抽獎活動期間：2018.6.1~2018.6.14</li>
+                <li>獎品項目：7-ELEVEN 200元購物金(共100名)</li>
+                <li>抽獎日期：7/16(一)</li>
+                <li>參加資格及方式：<br>
+                  已參加第一重抽獎活動之Hami Video客戶，於第二重活動期間內，至Hami Video世足專區參加預測冠軍活動，最後成功預測者，即可參加抽獎。</li>
+              </ul>
+            </div>
+            <div class="clr"></div>
+          </div>
+          <div class="game">
+            <div class="number fL"><img src="/HamiSoccerEvent/resources/img/icon_no3.png"></div>
+            <div class="game_detail">
+              <h3>看世足週週抽萬元旅遊金</h3>
+              <ul class="level1">
+                <li>參加抽獎活動期間：2018.6.14~2018.7.15</li>
+                <li>獎品項目：ezfly易飛網10,000元面額抵用券(每週抽1名，共5名)。</li>
+                <li>抽獎日期：6/19(二)、6/25(一)、7/2(一)、7/9(一)及7/16(一)</li>
+                <li>參加資格及方式：<br>
+                  已參加第一重抽獎活動之電視或運動客戶，於活動期間內，當週(週一至週日)收視Hami Video世足專區任一場世足Live直播賽事，即可參加當週抽獎活動。</li>
+              </ul>
+            </div>
+            <div class="clr"></div>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <div class="title" id="s3">
+          <h2>注意事項</h2>
+          <div class="fold"></div>
+        </div>
+        <div class="section">
+          <ul class="level1">
+            <li>本活動中獎資格排除免費、測試及中華電信員工，且每一登入帳號於每一重抽獎活動僅有一個抽獎資格，不因任一個帳號訂閱多個包月服務而增加抽獎資格。</li>
+            <li>已參加本活動之Hami Video客戶於2018年5月15日後，可連結至「<a href="http://chtudo.github.io/HamiSoccerEvent/index.htm" target="_blank">裝MOD 買運彩 大獎跟著來</a>」活動網站分別輸入聯絡人姓名及電話末四碼資訊，查詢抽獎資格是否已登錄完成。另如擬修改參加本活動之聯絡資料，可於活動期間內，重新登錄聯絡資料，本活動將以活動期間最後一次留下之聯絡資料為準，之前所留之資料將不予紀錄。</li>
+            <li>本活動由系統以亂數方式抽出中獎者，所有抽獎資料及中獎資格須經主辦單位查驗合格方為有效，中獎者於中獎名單公布、直到領獎前須仍符合當初參加時之資格方可領獎。如中獎名單公布後已退訂MOD包月或頻道套餐或Hami Video包月付費服務者，將視為喪失參加或中獎資格，主辦單位將不做任何通知，並得追回本活動獎項。</li>
+            <li>如原中獎者因故放棄中獎資格或驗證資格不符者，由抽獎時原電腦亂數隨機產生之遞補順序的備取名單為準，依序遞補。備取名單如未因遞補獲得中獎資格前，仍可參加後續場次之抽獎。</li>
+            <li>第一重活動中獎名單於抽獎後五個工作日內，公布於「<a href="http://chtudo.github.io/HamiSoccerEvent/index.htm" target="_blank">裝MOD 買運彩 大獎跟著來</a>」活動網站。第二及三重活動中獎名單於抽獎後五個工作日內，公布於「<a href="http://chtudo.github.io/HamiSoccerEvent/index.htm" target="_blank">Hami Video臉書粉絲團</a>」。</li>
+            <li>
+              各獎品領獎方式：
+              <ul class="level2">
+                <li>第一重活動委託凱絡媒體服務公司(以下簡稱凱絡公司)；第二及三重活動委由智慧時尚股份有限公司 (以下簡稱智慧時尚公司)處理本活動相關作業，包含中獎者聯繫、領獎作業、稅務及獎品寄送等事宜。凱絡公司/智慧時尚公司將以電話及掛號郵寄中獎通知函送達中獎者，中獎者須依函中指定日期前，以郵寄中獎者回函(檢附上身分證正反面影本)至指定地址，始得領取獎項，日期以郵戳為憑，逾期未提供者，視同放棄中獎資格，恕不補發本活動獎品或其他賠償或補償。</li>
+                <li>本活動除需親領的獎品外，寄送地區僅限台灣本島、金門、澎湖、馬祖地區，前述以外地區恕不郵寄獎品。如中獎者經主辦單位或協辦單位通知應於期限內提供有效寄送地址後，逾期仍未提供者，視同放棄中獎資格，恕不補發本活動獎品或其他賠償或補償。</li>
+                <li>賓士汽車：需中獎者親自領取。領獎時需提示申請人身分證明文件。如非申請人本人親領，代理人須同時提交申請人之身分證明文件及獎品代領委託書方可領取。</li>
+                <li>emoving Shine電動自行車、聲寶55吋4K電視機：由凱絡公司協助配送事宜。聲寶55吋4K電視機為標準安裝，不含壁掛安裝。</li>
+                <li>iPhone X 64G：將以郵件寄送予中獎者，若郵件逾期未領或遭退件，主辦單位將自退件日起保留30天，逾期視同放棄中獎資格，恕不補發本活動獎品或其他賠償或補償。</li>
+                <li>
+                  7-ELEVEN 200元購物金：將以簡訊方式發送電子序號至中獎者聯絡手機門號，兌換方式如下：(可任選一種方式兌換)
+                  <ul class="level3">
+                    <li>下載ibon行動生活站 APP→好康紅利→i禮贈→輸入12碼序號→閱讀兌換須知→至門市櫃檯出示條碼兌換。</li>
+                    <li>請至門市ibon選擇好康/紅利→好康活動→i禮贈序號補券→閱讀兌換須知→輸入12碼序號→列印紙本小白單券後，持券至門市櫃檯兌換。<br>使用限制如下：
+                      <ul class="level4">
+                        <li>使用時須符合本券載明之品牌與規格。商品兌換後，無法提供退貨及換貨。</li>
+                        <li>本券不適用非開立7-ELEVEN發票之特殊門市 (如：台鐵門市、部分學校、廠辦及商場門市)與離島門市。</li>
+                        <li>本券不適用於免開立統一發票之代收/代售業務及健康捐商品(如：香菸)及儲值(如：icash、悠遊卡)。</li>
+                        <li>本券不得與其他行銷活動合併使用，亦不計入7-ELEVEN舉辦之全店集點活動消費金額內。</li>
+                        <li>本券無法兌換現金或找零，請一次抵用完畢，不可重複使用。</li>
+                        <li>本券為企業贈品專用，請於指定日期前兌換，不得零售或轉售。</li>
+                        <li>本券為不記名，任何人持本券皆可使用，請自行妥善保管，如遭他人盜用，本券不再補發。</li>
+                        <li>本券所兌換之商品或折抵消費之金額不予開立統一發票。</li>
+                        <li>本券有效與否，以發行人票券系統所記錄之狀態為憑。 如系統因網路連線有所遲延，依兌換商家系統端資訊為準。</li>
+                        <li>本券為有價證券，請勿擅自偽造、變造，以免觸犯刑責。</li>
+                        <li>本券使用問題請洽智慧時尚客服專線：(02)2377-6966（服務時間：周一至周五上午10:00至下午6:00）</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>ezfly 10,000元面額抵用券：將以簡訊方式發送電子序號至中獎者聯絡手機門號，兌換方式及使用限制如下： 
+                  <ul class="level4">
+                    <li>使用本券請於出發日前30天，致電ezfly易飛網 (04)2313-2006分機603廖小姐或分機606黃先生預約行程並成功開票，方可使用。</li>
+                    <li>本券ezfly易飛網全品項都可使用。</li>
+                    <li>本券面額限一次抵用完畢，餘額無法分次抵用，且無法兌換現金或找零。</li>
+                    <li>本券不得與其他行銷活動合併使用。</li>
+                    <li>本券為企業贈品專用，請於指定日期前兌換，不得零售或轉售。</li>
+                    <li>本券為不記名，任何人持本券皆可使用，請自行妥善保管，如遭他人盜用，本券不再補發。</li>
+                    <li>本券所兌換之商品或折抵消費之金額不予開立統一發票。</li>
+                    <li>本券有效與否，以發行人票券系統所記錄之狀態為憑。</li>
+                    <li>本券為有價證券，請勿擅自偽造、變造，以免觸犯刑責。</li>
+                    <li>本券使用問題請洽智慧時尚線上客服專線：(02)2377-6966（服務時間：周一至周五上午10:00至下午6:00）。</li>
+                  </ul>
+                </li>
+                <li>本活動提供之獎品價值，依當時採購金額為準。如獎品價值超過1,000元者，依法將依照中獎獎品價值開立扣繳憑單予中獎者，請中獎者配合繳交身分證影印本作為申報依據。中獎獎品值超過20,000元者，中獎者須於指定日期前，先繳交獎品價值10%以上(非本國籍人士為20%)之機會中獎所得稅。出具繳款收據後，始得領取獎項。若中獎者未能依法繳納應繳稅額與資料文件，即視為喪失中獎資格。</li>
+              </ul>
+            </li>
+            <li>請您確保填寫聯絡資料之正確性，若因資料填寫錯誤或其他中獎者個人因素導致無法順利聯繫中獎者或寄送獎品時，獎品保留一個月，逾期後，視為放棄中獎。</li>
+            <li>本活動之獎品以主辦單位所規劃之實物為準，恕無法由中獎者指定規格(含款式及顏色)、轉換、轉讓或折換現金。</li>
+            <li>凡參加本活動者皆視為同意接受本活動之相關辦法及領獎方式，如有違反，主辦單位得取消其參加或中獎資格，且恕不補發本活動獎品或其他賠償或補償。</li>
+            <li>主辦單位保留修改獎品相關細節或更換等值獎品之權利，相關訊息以活動網站公告為準。</li>
+            <li>主辦單位保留擴大、修改、取消、終止本活動、本活動獎品以及本活動截止日期之權利。其他未盡事宜，依抽獎活動網站公布之訊息為準。</li>
+            <li>本活動參加者於參加本活動時，已充分知悉並同意主辦單位依「蒐集個人資料告知事項與同意書」蒐集、處理及利用其個人資料，同時您亦可向主辦單位行使查詢、補充、更正、刪除、停止蒐集或利用之權利。參加本活動即同意主辦單位提供參加者個人資料予凱絡公司及智慧時尚公司，以便處理本活動相關事宜。若不同意或不願意提供，請勿參加本次活動，然將因此無法參與抽獎。</li>
+            <li>本活動主辦單位為中華電信，客服專線:0800-080-123。</li>
+          </ul>
+        </div>
+      </div>
+      <div class="content">
+        <div class="title small" id="s4">
+          <h2>蒐集個人資料告知事項與同意書</h2>
+          <div class="fold"></div>
+        </div>
+        <div class="section">
+          <p class="statement">為辦理「Hami Video看世足好禮三重抽」抽獎活動(以下簡稱本活動)，將蒐集、處理、利用您的個人資料。主辦單位蒐集您的個人資料時，將依個人資料保護法第8條第1項及第9條第1項規定，明確告知下列事項。當您透過本活動網站等輸入個人資料參與活動時表示已同意『蒐集個人資料告知事項與同意書』內容。</p>
+          <p>告知事項：</p>
+          <ul class="level1">
+            <li>蒐集機關名稱：中華電信股份有限公司(以下簡稱本公司)。</li>
+            <li>蒐集之目的：行銷(包括主辦單位各項產品及服務之行銷訊息)、「客戶管理與服務」（包括辦理本活動抽獎活動登錄、中獎名單公布、中獎者中獎通知與獎品寄送(含獎品稅金處理)）、「調查、統計與研究分析」、「經營電信業務與電信加值網路業務」及「其他諮詢與顧問服務」。</li>
+            <li>蒐集之個人資料之類別：001識別個人者，包括姓名、電話(手機電話或住家電話)、通訊地址；C011個人描述，包括性別、年齡區間；C003政府資料中之識別者，包括身份證正反面影本。</li>
+            <li>個人資料利用之期間：自 台端參加本活動之日起至向本公司提出請求停止蒐集、處理或利用資料止。</li>
+            <li>個人資料利用之地區：本公司營運範圍，僅限於台灣、金門、澎湖、馬祖等地區利用，且不會移轉至其他境外地區利用。</li>
+            <li>個人資料利用之對象及方式：由本公司及受本公司委託之協辦單位或廠商於辦理本活動之特定目的必要範圍內，利用此個人資料。本活動網站公開之資料，公眾將可透過網際網路瀏覽參與活動所公開之資料或中獎資訊。本公司對於中獎資訊之公布，將採取隱匿部分個人資訊之方式處理，以確保個人資料之安全。</li>
+            <li>台端得向本公司請求查詢、閱覽、製給複製本、補充或更正、停止蒐集、處理、利用或刪除個人資料內容之一部或全部。（註：台端請求查詢、閱覽、製給複製本時，將酌收必要成本費用。）</li>
+          </ul>
+          <p class="statement2">台端填寫個人資料後，以任何方式遞送至本公司收執時，均視為 台端已同意其所填寫之個人資料，供本公司於辦理本活動之特定目的必要範圍內蒐集、處理及利用；此外，台端可自由選擇是否提供完整個人資料，惟若 台端提供之資料不足或有誤時，將無法參加本次活動所提供之相關服務，本公司得取消參加或中獎資格。</p>
+        </div>
+      </div>
+    </div>
+    <script>
+    function validateForm(){
+      if(document.eventForm.Name.value.trim().length==0){
+        alert('請輸入姓名');
+        return false;
+      }
+      if(document.eventForm.MobileNumber.value.trim().length==0){
+        alert('請輸入手機/市話號碼');
+        return false;
+      }
+      if(document.getElementById('box-1').checked === false){
+        alert('請詳閱活動辦法，並勾選同意後才能參加');
+        return false;
+      }
+      if(document.eventForm.SerialNumber.value.trim().length==0){
+        document.eventForm.action = 'login.do';
+      }else{
+        document.eventForm.SerialNumber = auth_login_id;
+      }
+      return true;
+    }
+    </script>
+    
+    <script>
+    function toHamiVideo(){
+      if (navigator.userAgent.match(/Android/i)) {
+        location = "https://play.google.com/store/apps/details?id=com.cht.ottPlayer&hl=zh_TW";
+      } else if (navigator.userAgent.match(/(iPhone|iPad|iPod)/i)) {
+        location = "https://itunes.apple.com/tw/app/zhong-hua-ying-shi/id879383077?l=zh";
+      } else {
+        location = "http://chtudo.github.io/HamiSoccerEvent/index.htm";
+      }
+    }
+    
+    
+    function checkNum(event){
+      return event.charCode >= 48 && event.charCode <= 57
+    }
+    </script><div class="footer"><p>Copyright &copy; 2018 CHT Co., Ltd. All Rights Reserved.</p></div>
+<script src="/HamiSoccerEvent/resources/js/main.js"></script>
 </body>
 </html>
