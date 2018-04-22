@@ -380,9 +380,9 @@ window.__imported__["FIFA_Framer@2x/layers.json.js"] = [
 				"maskFrame": null,
 				"layerFrame": {
 					"x": 0,
-					"y": 99,
+					"y": 0,
 					"width": 1179,
-					"height": 900
+					"height": 999
 				},
 				"visible": true,
 				"metadata": {
@@ -392,9 +392,9 @@ window.__imported__["FIFA_Framer@2x/layers.json.js"] = [
 					"path": "images/Layer-playerui-mzy3ndm4.png",
 					"frame": {
 						"x": 0,
-						"y": 99,
+						"y": 0,
 						"width": 1179,
-						"height": 900
+						"height": 999
 					}
 				},
 				"children": []
@@ -1412,26 +1412,26 @@ window.__imported__["FIFA_Framer@2x/layers.json.js"] = [
 					{
 						"objectId": "0CE7F7BA-D442-4478-B810-E2192960791D",
 						"kind": "group",
-						"name": "NewChannelItem3",
-						"originalName": "NewChannelItem3",
+						"name": "NewChannelItemAD",
+						"originalName": "NewChannelItemAD",
 						"maskFrame": null,
 						"layerFrame": {
-							"x": 114,
+							"x": 115,
 							"y": 364,
-							"width": 338,
-							"height": 140
+							"width": 336,
+							"height": 138
 						},
 						"visible": true,
 						"metadata": {
 							"opacity": 1
 						},
 						"image": {
-							"path": "images/Layer-NewChannelItem3-menfn0y3.png",
+							"path": "images/Layer-NewChannelItemAD-menfn0y3.png",
 							"frame": {
-								"x": 114,
+								"x": 115,
 								"y": 364,
-								"width": 338,
-								"height": 140
+								"width": 336,
+								"height": 138
 							}
 						},
 						"children": []
@@ -4127,7 +4127,7 @@ window.__imported__["FIFA_Framer@2x/layers.json.js"] = [
 				"objectId": "4221D8F8-9A76-4608-97C4-9F2C7DE49528",
 				"kind": "group",
 				"name": "D_MINUS1",
-				"originalName": "D_MINUS1",
+				"originalName": "D_MINUS1*",
 				"maskFrame": null,
 				"layerFrame": {
 					"x": 0,

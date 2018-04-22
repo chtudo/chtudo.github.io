@@ -477,7 +477,7 @@ BuildFindPlayerControl=()->
 		btn.parent=FindPlayerContents
 		btn.on "a",->
 			flow.showNext(NBA_PLayer)
-			setUpHeaderTitle("史蒂芬．柯瑞")
+			setUpHeaderTitle("球星介紹")
 			NBA_PLayer.isSelectable=true
 			NBA_PLayer.selectionBorder=false
 			focusManager.selectedItem=NBA_PLayer
@@ -694,7 +694,7 @@ howManyComponentsInaRow=0
 # mainBG.sendToBack()
 flow =new FlowComponent
 flow.header=layerHead
-
+layerHead.stateSwitch("home")
 createTagBtnGroups=(maxWidth,datasTag,randomSelectNum,isSelected,isFocus)->
 	
 	layerBtns=new Layer
@@ -983,7 +983,15 @@ GenScrollChannelBars=()->
 			btn.name="今天"
 			focusManager.selectedItem = btn
 # 			btn.stateSwitch("focus")
-			
+		else if sub.name.indexOf("AD")>0
+			btn=new ChannelGameBTN
+				BASECOMPONENT:sub
+				DATEINFO:""
+				StarIcon:StarIcon
+				ISTodaySpecial:false
+			btn.parent=scrollChannelNew.content
+			btn.name="D_MINUS"+(todayIndex-loopIndex)
+			btn.stateSwitch("blur")
 		else
 			if loopIndex==todayIndex+1
 				btn=new ChannelGameBTN
