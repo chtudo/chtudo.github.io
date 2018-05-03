@@ -243,7 +243,8 @@ SettingBtns=()->
 				ArrowBarBG.visible=false
 				scrollMainPage.scrollToPoint(x:0,y:500)
 		item.on "focus",->
-			showBarkerImage(MainBtnsPageMappingDict[this.name]['value'])
+			if this.name.indexOf("First")>=0
+				showBarkerImage(MainBtnsPageMappingDict[this.name]['value'])
 			#print this.name
 # 			if this.name.indexOf("First")>=0
 # 				this.visible=true
