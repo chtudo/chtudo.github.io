@@ -237,10 +237,14 @@ SettingBtns=()->
 			if this.name.indexOf("First")>=0
 				ArrowBarBG.visible=true
 				TheHeader.visible=true
+				ArrowComponent.animate
+					rotation:0
 				scrollMainPage.scrollToPoint(x:0,y:0)
 			else
 				TheHeader.visible=false
 				ArrowBarBG.visible=false
+				ArrowComponent.animate
+					rotation:180
 				scrollMainPage.scrollToPoint(x:0,y:500)
 		item.on "focus",->
 			if this.name.indexOf("First")>=0
