@@ -94,6 +94,7 @@ videoLay=new VideoLayer
 	scale: 1.55
 BarkerContent.clip=true	
 videoLay.player.play()
+videoLay.player.loop=true
 scrollBtns=new ScrollComponent
 	width: 560
 	x:720
@@ -148,7 +149,7 @@ for kk in Banners.children
 		visible:true
 
 	kk.states.off=
-		opacity: 0.6
+		opacity: 1
 		scale: 0.9
 		visible:true
 	kk.on "focus",->
@@ -173,6 +174,8 @@ for sub in bannerComp.content.children
 HScrollContentMask.parent=null
 HScrollContentMask.x=Screen.width-HScrollContentMask.width
 HScrollContentMask.y=HScrollContentMask.y+7
+RBannerContentMask.parent=null
+LBannerContentMask.parent=null
 focusManager.selectedItem=scrollBtns.content.children[0]
 
 scrollBtns.content.subLayersByName("FirstBtnCom03")[0].down=bannerComp.content.subLayersByName("CBanner")[0]

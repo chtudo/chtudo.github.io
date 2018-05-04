@@ -133,7 +133,8 @@ videoLay=new VideoLayer
 	y:0
 	parent:BarkerContent
 	scale: 1.55
-BarkerContent.clip=true	
+BarkerContent.clip=true
+videoLay.player.loop=true	
 # fifaad = new VideoLayer
 # 	width: 1280
 # 	height: 720

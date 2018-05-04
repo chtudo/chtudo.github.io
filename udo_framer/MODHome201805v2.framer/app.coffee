@@ -160,7 +160,11 @@ InitialUI=()->
 		parent:BarkerContent
 		scale: 1.55
 	BarkerContent.clip=true	
+	videoLay.player.loop=true
 	videoLay.player.play()
+	Barker.isSelectable=true
+	
+	
 scrollMainPage=new ScrollComponent
 	width: Screen.width
 	height: Screen.height
@@ -234,6 +238,7 @@ SettingBtns=()->
 
 		item.on "focus",->
 			this.visible=true
+			#print this.name
 			if this.name.indexOf("First")>=0
 				ArrowBarBG.visible=true
 				TheHeader.visible=true
@@ -289,4 +294,33 @@ SettingBtns=()->
 	#BTN_SmallMessage.destroy()
 		#print btn.name
 SettingBtns()
-focusManager.selectedItem=scrollBtm.content.childrenWithName("FirstBtnCom01")[0]
+SettingFocusUI=()->
+	
+	focusManager.selectedItem=scrollBtm.content.childrenWithName("FirstBtnCom01")[0]
+	scrollBtm.content.subLayersByName("FirstBtnCom09")[0].right=scrollBtm.content.subLayersByName("BtnCom10")[0]
+	scrollBtm.content.subLayersByName("BtnCom10")[0].left=scrollBtm.content.subLayersByName("FirstBtnCom09")[0]
+
+	CartonPoster1.isSelectable=true
+	CartonPoster2.isSelectable=true
+	CartonPoster3.isSelectable=true
+	CartonPoster4.isSelectable=true
+	Barker.down=scrollBtm.content.childrenWithName("FirstBtnCom01")[0]
+	#page2
+	MoviePoster1.isSelectable=true
+	MoviePoster2.isSelectable=true
+	MoviePoster3.isSelectable=true
+	MoviePoster4.isSelectable=true	
+	scrollBtm.content.childrenWithName("FirstBtnCom02")[0].up=MoviePoster1
+	MoviePoster1.down=scrollBtm.content.childrenWithName("FirstBtnCom02")[0]
+	MoviePoster2.down=scrollBtm.content.childrenWithName("FirstBtnCom02")[0]
+	MoviePoster3.down=scrollBtm.content.childrenWithName("FirstBtnCom02")[0]
+	MoviePoster4.down=scrollBtm.content.childrenWithName("FirstBtnCom02")[0]
+	#page3
+	Page3ContentCTA.isSelectable=true	
+	Page3ContentCTA.down=scrollBtm.content.childrenWithName("FirstBtnCom03")[0]
+	scrollBtm.content.childrenWithName("FirstBtnCom03")[0].up=Page3ContentCTA
+	#page4
+	Page4ContentCTA.isSelectable=true
+	Page4ContentCTA.down=scrollBtm.content.childrenWithName("FirstBtnCom04")[0]
+	scrollBtm.content.childrenWithName("FirstBtnCom04")[0].up=Page4ContentCTA		
+SettingFocusUI()

@@ -707,15 +707,69 @@ window.__imported__["MODHome_201805v3_Framer@4x/layers.json.js"] = [
 				]
 			},
 			{
+				"objectId": "1D9E4652-01A8-4128-B718-6334F0465347",
+				"kind": "group",
+				"name": "LBannerContentMask",
+				"originalName": "LBannerContentMask",
+				"maskFrame": null,
+				"layerFrame": {
+					"x": 0,
+					"y": 459,
+					"width": 330,
+					"height": 222
+				},
+				"visible": true,
+				"metadata": {
+					"opacity": 1
+				},
+				"image": {
+					"path": "images/Layer-LBannerContentMask-muq5rtq2.png",
+					"frame": {
+						"x": 0,
+						"y": 459,
+						"width": 330,
+						"height": 222
+					}
+				},
+				"children": []
+			},
+			{
+				"objectId": "2BF74517-A0C9-435C-973D-9EDEA754DBCF",
+				"kind": "group",
+				"name": "RBannerContentMask",
+				"originalName": "RBannerContentMask",
+				"maskFrame": null,
+				"layerFrame": {
+					"x": 944,
+					"y": 459,
+					"width": 336,
+					"height": 222
+				},
+				"visible": true,
+				"metadata": {
+					"opacity": 1
+				},
+				"image": {
+					"path": "images/Layer-RBannerContentMask-mkjgnzq1.png",
+					"frame": {
+						"x": 944,
+						"y": 459,
+						"width": 336,
+						"height": 222
+					}
+				},
+				"children": []
+			},
+			{
 				"objectId": "50A85A3B-BA39-45B6-BFE8-2B5B784DCA88",
 				"kind": "group",
 				"name": "Banners",
 				"originalName": "Banners",
 				"maskFrame": null,
 				"layerFrame": {
-					"x": -280,
+					"x": -288,
 					"y": 484,
-					"width": 1845,
+					"width": 1853,
 					"height": 196
 				},
 				"visible": true,
@@ -784,7 +838,7 @@ window.__imported__["MODHome_201805v3_Framer@4x/layers.json.js"] = [
 						"originalName": "LBanner*",
 						"maskFrame": null,
 						"layerFrame": {
-							"x": -280,
+							"x": -288,
 							"y": 484,
 							"width": 621,
 							"height": 196
@@ -796,7 +850,7 @@ window.__imported__["MODHome_201805v3_Framer@4x/layers.json.js"] = [
 						"image": {
 							"path": "images/Layer-LBanner-qtq1rjg2.png",
 							"frame": {
-								"x": -280,
+								"x": -288,
 								"y": 484,
 								"width": 621,
 								"height": 196
@@ -831,7 +885,7 @@ window.__imported__["MODHome_201805v3_Framer@4x/layers.json.js"] = [
 						"maskFrame": null,
 						"layerFrame": {
 							"x": 63,
-							"y": 372,
+							"y": 371.99999999999994,
 							"width": 638,
 							"height": 79
 						},
@@ -843,7 +897,7 @@ window.__imported__["MODHome_201805v3_Framer@4x/layers.json.js"] = [
 							"path": "images/Layer-ShadowMovie-qtc4nund.png",
 							"frame": {
 								"x": 63,
-								"y": 372,
+								"y": 371.99999999999994,
 								"width": 638,
 								"height": 79
 							}

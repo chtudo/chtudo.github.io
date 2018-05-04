@@ -1029,16 +1029,69 @@ window.__imported__["MODHome_201805v2_Framer@4x/layers.json.js"] = [
 												"metadata": {
 													"opacity": 1
 												},
-												"image": {
-													"path": "images/Layer-Group_11-mty2mzgw.png",
-													"frame": {
-														"x": 933,
-														"y": 95,
-														"width": 251,
-														"height": 381
+												"children": [
+													{
+														"objectId": "A8782491-C6DD-47F0-9DAF-5193A64D3622",
+														"kind": "text",
+														"name": "Group_15",
+														"originalName": "Group 15",
+														"maskFrame": null,
+														"layerFrame": {
+															"x": 934.8499999999985,
+															"y": 455,
+															"width": 103,
+															"height": 21
+														},
+														"visible": true,
+														"metadata": {
+															"opacity": 1,
+															"string": "最終休止符",
+															"css": [
+																"/* 最終休止符: */",
+																"font-family: PingFangTC-Regular;",
+																"font-size: 20.79px;",
+																"color: #FFFFFF;"
+															]
+														},
+														"image": {
+															"path": "images/Layer-Group_15-qtg3odi0.png",
+															"frame": {
+																"x": 934.8499999999985,
+																"y": 455,
+																"width": 103,
+																"height": 21
+															}
+														},
+														"children": []
+													},
+													{
+														"objectId": "CA421F3A-65C5-41C0-885F-7703711CDB1B",
+														"kind": "group",
+														"name": "CartonPoster4",
+														"originalName": "CartonPoster4",
+														"maskFrame": null,
+														"layerFrame": {
+															"x": 933.8499999999985,
+															"y": 95,
+															"width": 250,
+															"height": 346
+														},
+														"visible": true,
+														"metadata": {
+															"opacity": 1
+														},
+														"image": {
+															"path": "images/Layer-CartonPoster4-q0e0mjfg.png",
+															"frame": {
+																"x": 933.8499999999985,
+																"y": 95,
+																"width": 250,
+																"height": 346
+															}
+														},
+														"children": []
 													}
-												},
-												"children": []
+												]
 											},
 											{
 												"objectId": "CE629D04-8262-4F9F-AEC2-03E19D4F5E9B",
@@ -1056,16 +1109,69 @@ window.__imported__["MODHome_201805v2_Framer@4x/layers.json.js"] = [
 												"metadata": {
 													"opacity": 1
 												},
-												"image": {
-													"path": "images/Layer-Group_10-q0u2mjle.png",
-													"frame": {
-														"x": 654,
-														"y": 95,
-														"width": 250,
-														"height": 381
+												"children": [
+													{
+														"objectId": "224E9729-3782-426E-A101-74307B7E9B50",
+														"kind": "text",
+														"name": "Group_17",
+														"originalName": "Group 17",
+														"maskFrame": null,
+														"layerFrame": {
+															"x": 658.5500000000002,
+															"y": 455,
+															"width": 190,
+															"height": 21
+														},
+														"visible": true,
+														"metadata": {
+															"opacity": 1,
+															"string": "惡魔高校DXD HERO",
+															"css": [
+																"/* 惡魔高校DXD HERO: */",
+																"font-family: PingFangTC-Regular;",
+																"font-size: 20.79px;",
+																"color: #FFFFFF;"
+															]
+														},
+														"image": {
+															"path": "images/Layer-Group_17-mji0rtk3.png",
+															"frame": {
+																"x": 658.5500000000002,
+																"y": 455,
+																"width": 190,
+																"height": 21
+															}
+														},
+														"children": []
+													},
+													{
+														"objectId": "B6A6F30D-3D8F-48E3-9823-7BE3DC836CE9",
+														"kind": "group",
+														"name": "CartonPoster3",
+														"originalName": "CartonPoster3",
+														"maskFrame": null,
+														"layerFrame": {
+															"x": 654.5500000000002,
+															"y": 95,
+															"width": 250,
+															"height": 346
+														},
+														"visible": true,
+														"metadata": {
+															"opacity": 1
+														},
+														"image": {
+															"path": "images/Layer-CartonPoster3-qjzbnkyz.png",
+															"frame": {
+																"x": 654.5500000000002,
+																"y": 95,
+																"width": 250,
+																"height": 346
+															}
+														},
+														"children": []
 													}
-												},
-												"children": []
+												]
 											},
 											{
 												"objectId": "9BE63D83-3E07-4581-B18A-E8E4D5625634",
@@ -1083,16 +1189,69 @@ window.__imported__["MODHome_201805v2_Framer@4x/layers.json.js"] = [
 												"metadata": {
 													"opacity": 1
 												},
-												"image": {
-													"path": "images/Layer-Group_9-oujfnjne.png",
-													"frame": {
-														"x": 376,
-														"y": 95,
-														"width": 250,
-														"height": 381
+												"children": [
+													{
+														"objectId": "A5CCB24C-BE93-4F4A-AE7C-0A07FEB17410",
+														"kind": "text",
+														"name": "Group_16",
+														"originalName": "Group 16",
+														"maskFrame": null,
+														"layerFrame": {
+															"x": 381.2999999999993,
+															"y": 455,
+															"width": 128,
+															"height": 21
+														},
+														"visible": true,
+														"metadata": {
+															"opacity": 1,
+															"string": "鬼燈的冷徹S2",
+															"css": [
+																"/* 鬼燈的冷徹S2: */",
+																"font-family: PingFangTC-Regular;",
+																"font-size: 20.79px;",
+																"color: #FFFFFF;"
+															]
+														},
+														"image": {
+															"path": "images/Layer-Group_16-qtvdq0iy.png",
+															"frame": {
+																"x": 381.2999999999993,
+																"y": 455,
+																"width": 128,
+																"height": 21
+															}
+														},
+														"children": []
+													},
+													{
+														"objectId": "FCE85FF0-F9E7-4DA8-ACA3-9576CC2881D8",
+														"kind": "group",
+														"name": "CartonPoster2",
+														"originalName": "CartonPoster2",
+														"maskFrame": null,
+														"layerFrame": {
+															"x": 376.2999999999993,
+															"y": 95,
+															"width": 250,
+															"height": 346
+														},
+														"visible": true,
+														"metadata": {
+															"opacity": 1
+														},
+														"image": {
+															"path": "images/Layer-CartonPoster2-rknfodvg.png",
+															"frame": {
+																"x": 376.2999999999993,
+																"y": 95,
+																"width": 250,
+																"height": 346
+															}
+														},
+														"children": []
 													}
-												},
-												"children": []
+												]
 											},
 											{
 												"objectId": "352A24ED-1EAB-443F-94DA-76DEDF87BAAB",
@@ -1110,16 +1269,69 @@ window.__imported__["MODHome_201805v2_Framer@4x/layers.json.js"] = [
 												"metadata": {
 													"opacity": 1
 												},
-												"image": {
-													"path": "images/Layer-Group_8-mzuyqti0.png",
-													"frame": {
-														"x": 97,
-														"y": 95,
-														"width": 250,
-														"height": 381
+												"children": [
+													{
+														"objectId": "6CD48765-6F2E-4934-B094-D39157A080B7",
+														"kind": "text",
+														"name": "Group_18",
+														"originalName": "Group 18",
+														"maskFrame": null,
+														"layerFrame": {
+															"x": 102,
+															"y": 455,
+															"width": 170,
+															"height": 21
+														},
+														"visible": true,
+														"metadata": {
+															"opacity": 1,
+															"string": "刀劍神域外傳GGO",
+															"css": [
+																"/* 刀劍神域外傳GGO: */",
+																"font-family: PingFangTC-Regular;",
+																"font-size: 20.79px;",
+																"color: #FFFFFF;"
+															]
+														},
+														"image": {
+															"path": "images/Layer-Group_18-nknendg3.png",
+															"frame": {
+																"x": 102,
+																"y": 455,
+																"width": 170,
+																"height": 21
+															}
+														},
+														"children": []
+													},
+													{
+														"objectId": "BCABB738-5622-4A34-9CBA-50E3CF0D6B0A",
+														"kind": "group",
+														"name": "CartonPoster1",
+														"originalName": "CartonPoster1",
+														"maskFrame": null,
+														"layerFrame": {
+															"x": 97,
+															"y": 95,
+															"width": 250,
+															"height": 346
+														},
+														"visible": true,
+														"metadata": {
+															"opacity": 1
+														},
+														"image": {
+															"path": "images/Layer-CartonPoster1-qknbqki3.png",
+															"frame": {
+																"x": 97,
+																"y": 95,
+																"width": 250,
+																"height": 346
+															}
+														},
+														"children": []
 													}
-												},
-												"children": []
+												]
 											},
 											{
 												"objectId": "34DD23AB-A58A-4140-A268-5AD66F714E97",
@@ -1245,6 +1457,33 @@ window.__imported__["MODHome_201805v2_Framer@4x/layers.json.js"] = [
 						},
 						"children": [
 							{
+								"objectId": "2F30C412-EAEE-49DB-8F54-C63CF97D34B2",
+								"kind": "group",
+								"name": "Page4ContentCTA",
+								"originalName": "Page4ContentCTA",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 1016,
+									"y": 378,
+									"width": 98,
+									"height": 71
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"image": {
+									"path": "images/Layer-Page4ContentCTA-mkyzmem0.png",
+									"frame": {
+										"x": 1016,
+										"y": 378,
+										"width": 98,
+										"height": 71
+									}
+								},
+								"children": []
+							},
+							{
 								"objectId": "CCD62AE4-E679-4C4A-B53E-BD8B17B5FDDE",
 								"kind": "group",
 								"name": "Group2",
@@ -1364,6 +1603,33 @@ window.__imported__["MODHome_201805v2_Framer@4x/layers.json.js"] = [
 							"opacity": 1
 						},
 						"children": [
+							{
+								"objectId": "1FB2BBFD-D672-4D83-92B8-E31F23C28240",
+								"kind": "group",
+								"name": "Page3ContentCTA",
+								"originalName": "Page3ContentCTA",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 1016,
+									"y": 378,
+									"width": 98,
+									"height": 71
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"image": {
+									"path": "images/Layer-Page3ContentCTA-muzcmkjc.png",
+									"frame": {
+										"x": 1016,
+										"y": 378,
+										"width": 98,
+										"height": 71
+									}
+								},
+								"children": []
+							},
 							{
 								"objectId": "B16E1A55-672D-4CA6-8AB5-FD1D979FB1CF",
 								"kind": "group",
@@ -1534,16 +1800,69 @@ window.__imported__["MODHome_201805v2_Framer@4x/layers.json.js"] = [
 								"metadata": {
 									"opacity": 1
 								},
-								"image": {
-									"path": "images/Layer-Group_11-ndfbqku5.png",
-									"frame": {
-										"x": 933,
-										"y": 95,
-										"width": 251,
-										"height": 381
+								"children": [
+									{
+										"objectId": "E9462C7C-B04F-4DDF-8DF1-0388ACD69C6F",
+										"kind": "text",
+										"name": "Group_14",
+										"originalName": "Group 14",
+										"maskFrame": null,
+										"layerFrame": {
+											"x": 934.8500000000004,
+											"y": 455,
+											"width": 74,
+											"height": 21
+										},
+										"visible": true,
+										"metadata": {
+											"opacity": 1,
+											"string": "歌喉讚3",
+											"css": [
+												"/* 歌喉讚3: */",
+												"font-family: PingFangTC-Regular;",
+												"font-size: 20.79px;",
+												"color: #FFFFFF;"
+											]
+										},
+										"image": {
+											"path": "images/Layer-Group_14-rtk0njjd.png",
+											"frame": {
+												"x": 934.8500000000004,
+												"y": 455,
+												"width": 74,
+												"height": 21
+											}
+										},
+										"children": []
+									},
+									{
+										"objectId": "D646F92F-FB33-4BC9-BDE4-84ACDDFAAFB8",
+										"kind": "group",
+										"name": "MoviePoster4",
+										"originalName": "MoviePoster4",
+										"maskFrame": null,
+										"layerFrame": {
+											"x": 933.8500000000004,
+											"y": 95,
+											"width": 250,
+											"height": 346
+										},
+										"visible": true,
+										"metadata": {
+											"opacity": 1
+										},
+										"image": {
+											"path": "images/Layer-MoviePoster4-rdy0nky5.png",
+											"frame": {
+												"x": 933.8500000000004,
+												"y": 95,
+												"width": 250,
+												"height": 346
+											}
+										},
+										"children": []
 									}
-								},
-								"children": []
+								]
 							},
 							{
 								"objectId": "1864CF8F-1913-4CED-A8CA-D1A2FF1B0C70",
@@ -1561,16 +1880,69 @@ window.__imported__["MODHome_201805v2_Framer@4x/layers.json.js"] = [
 								"metadata": {
 									"opacity": 1
 								},
-								"image": {
-									"path": "images/Layer-Group_10-mtg2neng.png",
-									"frame": {
-										"x": 654,
-										"y": 95,
-										"width": 250,
-										"height": 381
+								"children": [
+									{
+										"objectId": "16D2F59C-9861-40A9-A2F3-DB63C9B47E00",
+										"kind": "text",
+										"name": "Group_7",
+										"originalName": "Group 7",
+										"maskFrame": null,
+										"layerFrame": {
+											"x": 658.5500000000002,
+											"y": 455,
+											"width": 144,
+											"height": 21
+										},
+										"visible": true,
+										"metadata": {
+											"opacity": 1,
+											"string": "東方快車謀殺案",
+											"css": [
+												"/* 東方快車謀殺案: */",
+												"font-family: PingFangTC-Regular;",
+												"font-size: 20.79px;",
+												"color: #FFFFFF;"
+											]
+										},
+										"image": {
+											"path": "images/Layer-Group_7-mtzemky1.png",
+											"frame": {
+												"x": 658.5500000000002,
+												"y": 455,
+												"width": 144,
+												"height": 21
+											}
+										},
+										"children": []
+									},
+									{
+										"objectId": "037E12C8-D44F-40E1-A0F0-9A4FBC54FB05",
+										"kind": "group",
+										"name": "MoviePoster3",
+										"originalName": "MoviePoster3",
+										"maskFrame": null,
+										"layerFrame": {
+											"x": 654.5500000000002,
+											"y": 95,
+											"width": 250,
+											"height": 346
+										},
+										"visible": true,
+										"metadata": {
+											"opacity": 1
+										},
+										"image": {
+											"path": "images/Layer-MoviePoster3-mdm3rtey.png",
+											"frame": {
+												"x": 654.5500000000002,
+												"y": 95,
+												"width": 250,
+												"height": 346
+											}
+										},
+										"children": []
 									}
-								},
-								"children": []
+								]
 							},
 							{
 								"objectId": "F3A2A891-3C53-408A-AEDD-3096C30A73A6",
@@ -1588,16 +1960,69 @@ window.__imported__["MODHome_201805v2_Framer@4x/layers.json.js"] = [
 								"metadata": {
 									"opacity": 1
 								},
-								"image": {
-									"path": "images/Layer-Group_9-rjnbmke4.png",
-									"frame": {
-										"x": 376,
-										"y": 95,
-										"width": 250,
-										"height": 381
+								"children": [
+									{
+										"objectId": "E724A073-9129-4B27-A8A5-D70B2CEC74D0",
+										"kind": "text",
+										"name": "Group_13",
+										"originalName": "Group 13",
+										"maskFrame": null,
+										"layerFrame": {
+											"x": 381.3000000000002,
+											"y": 455,
+											"width": 241,
+											"height": 21
+										},
+										"visible": true,
+										"metadata": {
+											"opacity": 1,
+											"string": "star wars 最後的絕地武士",
+											"css": [
+												"/* star wars 最後的絕地武士: */",
+												"font-family: PingFangTC-Regular;",
+												"font-size: 20.79px;",
+												"color: #FFFFFF;"
+											]
+										},
+										"image": {
+											"path": "images/Layer-Group_13-rtcyneew.png",
+											"frame": {
+												"x": 381.3000000000002,
+												"y": 455,
+												"width": 241,
+												"height": 21
+											}
+										},
+										"children": []
+									},
+									{
+										"objectId": "AE43DFDD-A112-4AE7-BA75-E1F88F63BF62",
+										"kind": "group",
+										"name": "MoviePoster2",
+										"originalName": "MoviePoster2",
+										"maskFrame": null,
+										"layerFrame": {
+											"x": 376.3000000000002,
+											"y": 95,
+											"width": 250,
+											"height": 346
+										},
+										"visible": true,
+										"metadata": {
+											"opacity": 1
+										},
+										"image": {
+											"path": "images/Layer-MoviePoster2-quu0m0rg.png",
+											"frame": {
+												"x": 376.3000000000002,
+												"y": 95,
+												"width": 250,
+												"height": 346
+											}
+										},
+										"children": []
 									}
-								},
-								"children": []
+								]
 							},
 							{
 								"objectId": "11A79508-476F-400E-9181-D8ABB7F7640D",
@@ -1615,16 +2040,69 @@ window.__imported__["MODHome_201805v2_Framer@4x/layers.json.js"] = [
 								"metadata": {
 									"opacity": 1
 								},
-								"image": {
-									"path": "images/Layer-Group_8-mtfbnzk1.png",
-									"frame": {
-										"x": 97,
-										"y": 95,
-										"width": 250,
-										"height": 381
+								"children": [
+									{
+										"objectId": "143B9AB9-998F-46BC-8E37-31E73A5B3B49",
+										"kind": "text",
+										"name": "Group_12",
+										"originalName": "Group 12",
+										"maskFrame": null,
+										"layerFrame": {
+											"x": 101,
+											"y": 455,
+											"width": 82,
+											"height": 21
+										},
+										"visible": true,
+										"metadata": {
+											"opacity": 1,
+											"string": "正義聯盟",
+											"css": [
+												"/* 正義聯盟: */",
+												"font-family: PingFangTC-Regular;",
+												"font-size: 20.79px;",
+												"color: #FFFFFF;"
+											]
+										},
+										"image": {
+											"path": "images/Layer-Group_12-mtqzqjlb.png",
+											"frame": {
+												"x": 101,
+												"y": 455,
+												"width": 82,
+												"height": 21
+											}
+										},
+										"children": []
+									},
+									{
+										"objectId": "A22373DA-BC10-4302-ADF5-403F248C0E7A",
+										"kind": "group",
+										"name": "MoviePoster1",
+										"originalName": "MoviePoster1",
+										"maskFrame": null,
+										"layerFrame": {
+											"x": 97,
+											"y": 95,
+											"width": 250,
+											"height": 346
+										},
+										"visible": true,
+										"metadata": {
+											"opacity": 1
+										},
+										"image": {
+											"path": "images/Layer-MoviePoster1-qtiymzcz.png",
+											"frame": {
+												"x": 97,
+												"y": 95,
+												"width": 250,
+												"height": 346
+											}
+										},
+										"children": []
 									}
-								},
-								"children": []
+								]
 							},
 							{
 								"objectId": "3435FA0B-A3EA-48AE-A927-420BAE9DBC26",
@@ -1707,9 +2185,9 @@ window.__imported__["MODHome_201805v2_Framer@4x/layers.json.js"] = [
 								"maskFrame": null,
 								"layerFrame": {
 									"x": 50,
-									"y": 416,
-									"width": 620,
-									"height": 76
+									"y": 421,
+									"width": 631,
+									"height": 77
 								},
 								"visible": true,
 								"metadata": {
@@ -1724,9 +2202,9 @@ window.__imported__["MODHome_201805v2_Framer@4x/layers.json.js"] = [
 										"maskFrame": null,
 										"layerFrame": {
 											"x": 50,
-											"y": 416,
-											"width": 620,
-											"height": 76
+											"y": 421,
+											"width": 631,
+											"height": 77
 										},
 										"visible": true,
 										"metadata": {
@@ -1736,9 +2214,9 @@ window.__imported__["MODHome_201805v2_Framer@4x/layers.json.js"] = [
 											"path": "images/Layer-ShadowMovie-qjlbrtq1.png",
 											"frame": {
 												"x": 50,
-												"y": 416,
-												"width": 620,
-												"height": 76
+												"y": 421,
+												"width": 631,
+												"height": 77
 											}
 										},
 										"children": []
@@ -1752,8 +2230,8 @@ window.__imported__["MODHome_201805v2_Framer@4x/layers.json.js"] = [
 										"layerFrame": {
 											"x": 50,
 											"y": 148,
-											"width": 620,
-											"height": 344
+											"width": 631,
+											"height": 350
 										},
 										"visible": true,
 										"metadata": {
@@ -1764,8 +2242,8 @@ window.__imported__["MODHome_201805v2_Framer@4x/layers.json.js"] = [
 											"frame": {
 												"x": 50,
 												"y": 148,
-												"width": 620,
-												"height": 344
+												"width": 631,
+												"height": 350
 											}
 										},
 										"children": []
