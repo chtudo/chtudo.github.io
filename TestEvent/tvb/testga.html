@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=11;IE=10;IE=9; IE=8;IE=edge; " />
+<title>Hami Video</title>
+<link rel="shortcut icon"  href="http://stg.hamivideo.hinet.net/favicon_hamivideo_new.ico" />
+	
+</head>
+<body >
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PGP5RP"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PGP5RP');
+
+$(function() {
+
+  // Every button with the btn-GA class can execute the function.
+  $(".btn-GA").on("click", function() {
+    dataLayer.push({
+      "event": "event",
+      "eventCategory": "功能使用",
+      "eventAction": "聊天",
+      "eventLabel": "世足聊天互動版型"
+    });
+  });
+
+
+});
+
+</script>
+
+<!-- End Google Tag Manager -->
+<button type="button" class="btn-GA">Login</button>
+
+<button type="button" class="btn-GA">Like</button>
+<button type="button" class="btn-GA">Post Msg</button>
+<button type="button" class="btn-GA">Vote!</button>
+

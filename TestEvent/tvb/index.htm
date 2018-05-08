@@ -1,0 +1,1094 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=11;IE=10;IE=9; IE=8;IE=edge; " />
+<title>Hami Video</title>
+<link rel="shortcut icon"  href="http://stg.hamivideo.hinet.net/favicon_hamivideo_new.ico" />
+<script type="text/javascript" src="/resources/js/jquery-1.11.2.min.js"></script>
+<link href="/resources/20170220/css/global.css?v=20180508" rel="stylesheet" type="text/css" media="all" />
+	<link rel="stylesheet" href="/resources/20170220/css/swiper.min.css">
+	<link rel="stylesheet" href="/resources/20170220/css/jquery.mCustomScrollbar.css">
+	<script type="text/javascript" src="/resources/js/jquery.cookie.js"></script>
+	<!-- old -->
+	<script type="text/javascript">
+function errorProductImg(obj){
+	var src = $(obj).attr('src');
+	var src2 = $(obj).attr('src2');
+	if( src2 ){
+		if(  src2 != src && src.indexOf(src2) < 0 )
+			$(obj).attr('src',src2);
+		else
+			$(obj).attr('src','/resources/img/img_319x450.jpg');
+	}else{
+		$(obj).attr('src','/resources/img/img_319x450.jpg');
+	}
+}
+function errorSportImg(obj){
+	var src = $(obj).attr('src');
+	var src2 = $(obj).attr('src2');
+	if( src2 ){
+		if(  src2 != src && src.indexOf(src2) < 0 )
+			$(obj).attr('src',src2);
+		else
+			$(obj).attr('src','/resources/img/img_534x300.jpg');
+	}else{
+		$(obj).attr('src','/resources/img/img_534x300.jpg');
+	}
+}
+function errorTvImg(img){
+	img.src = '/resources/img/img_534x300.jpg';
+}
+</script>
+</head>
+<body >
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PGP5RP"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PGP5RP');</script>
+<!-- End Google Tag Manager -->
+<script src="/resources/20170220/js/swiper.jquery.min.js"></script> 
+<script src="/resources/20170220/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<div class="wrapper">
+<script>
+if(location.href.indexOf("/login")>-1&&true){
+	location = "/index.do";
+}
+</script>
+<header>
+	<h1><a href="/index.do">Hami Video</a></h1>
+	<nav>
+		<ul>
+			<li class="menu"><span>瀏覽</span>
+				<div class="subMenu">
+					<div class="block">
+						<ul>
+						<li><a href="/singlePoint/main.do">單片</a></li>
+						<li><a href="/hamitv/main.do">電視</a></li>
+						<li>影劇 (<a href="/movie2/main.do">電影</a> | <a href="/drama/main.do">戲劇</a> | <a href="/comics/main.do">動漫</a>)</li>
+						<li><a href="/sports/main.do">運動</a></li>
+						</ul>
+					</div>
+				</div></li>
+			<li><a href="/curation/main.do">精選活動</a></li>
+			<li class="navPic"><a href="https://hamivideo.mpublic.net"><img src="/resources/20170220/img/nav_003.png" alt=""></a></li>
+			</ul>
+	</nav>
+	<div class="topToolBlock">
+		<div class="buyArea">
+			<p>想要觀看所有的影視內容？快看看購買方案</p>
+			<div class="btn">
+				<a href="/packages.do" class="bt">購買方案</a>
+			</div>
+		</div>
+		<div class="searchArea">
+			<a href="/search.do"></a>
+		</div>
+		<div class="loginArea menuSet">
+			<p><a href="/personal/myInfo.do">會員專區</a></p>
+			<div class="memMenu">
+				<ul>
+					<li class="_mInfo"><a href="/personal/myInfo.do">帳號資訊</a></li>
+					<li class="_mCollection"><a href="/personal/myCollection.do">我的收藏</a></li>
+					<li class="_myPlayingHistory"><a href="/personal/myPlayingHistory.do">歷史紀錄</a></li>
+					<li class="_mMessage"><a href="/personal/myMessage.do">訊息中心</a></li>
+					<li class="_mDownload"><a href="/download.do">APP下載</a></li>
+					<li class="_mQA"><a href="/faq.do">Q&amp;A</a></li>
+					<li><a href="http://service.hinet.net/2004/ncsc/index.htm" target="_blank">聯絡我們</a></li>
+					<li class="logout"><a href="/logout.do">登出</a></li>
+				</ul>
+			</div>
+			</div>
+			</header>
+<script>
+function toProductPage(path,categoryId){
+	if(categoryId){
+		$("#sForm #categoryId").val(encodeURIComponent(categoryId));
+	}
+	document.getElementById("sForm").action=path;
+	document.getElementById("sForm").submit();
+}
+function toExhibition(path,category){
+	$("#sForm #category").val(encodeURIComponent(category));
+	document.getElementById("sForm").action=path;
+	document.getElementById("sForm").submit();
+}
+function toExhibitionPage(path,category,subcategory){
+	$("#sForm #categoryName").val(encodeURIComponent(category));
+	$("#sForm #subcategoryName").val(encodeURIComponent(subcategory));
+	document.getElementById("sForm").action=path;
+	document.getElementById("sForm").submit();
+}
+function setMyContent(id){
+	var likeClass = $(".like").attr("class");
+	if(likeClass == 'like on'){
+		deleteMyContent(id);
+	}else{
+		addMyContent(id);
+	}
+}
+function addMyContent(id){
+	$.getJSON('/personal/addMyCollection.do?productId='+id, function(data) {
+		var rsp_code = data.rsp_code;
+		if(rsp_code == '0'){
+			$(".like").addClass("on");
+			alert('已加入收藏');
+		}else if(rsp_code == '1'){
+			alert('加入收藏失敗，請再重新操作');
+		}else if(rsp_code == '2'){
+			alert('請先登入會員');
+		}
+	});
+}
+function deleteMyContent(id){
+	$.getJSON('/personal/deleteMyCollection.do?productId='+id, function(data) {
+		var rsp_code = data.rsp_code;
+		if(rsp_code == '0'){
+			$(".like").removeClass("on");
+			alert('已刪除收藏');
+		}else if(rsp_code == '1'){
+			alert('加入刪除失敗，請再重新操作');
+		}else if(rsp_code == '2'){
+			alert('請先登入會員');
+		}
+	});
+}
+function toSubMenu(url,subcategory){
+	var factor = '藝術情慾';
+	document.getElementById("sForm").action=url;
+	$("#sForm #subcategory").val(encodeURIComponent(subcategory));
+	if(factor.indexOf(subcategory)>-1){
+		openAgreement18();
+	}else{
+		document.getElementById("sForm").submit();
+	}
+	
+}
+</script>
+<form id="sForm" method="post">
+	<input type="hidden" id="category" name="category">
+	<input type="hidden" id="categoryId" name="categoryId">
+	<input type="hidden" id="subcategory" name="subcategory">
+	<input type="hidden" id="categoryName" name="categoryName">
+	<input type="hidden" id="subcategoryName" name="subcategoryName">
+</form><script type="text/javascript" src="/resources/js/strophe.min.js"></script>
+<script>
+// XMPP伺服器BOSH地址  
+var chatServiceName = 'openfire';  
+var BOSH_SERVICE = 'http://stg.api2.ott.hinet.net/http-bind/';
+// 房間JID  
+var chatRoomJid = null;  
+// XMPP連接  
+var connection = null;  
+// 當前狀態是否連接  
+var connected = false;  
+// 當前登錄的JID  
+var chatJid = null;
+var chatPwd = null;
+var chatNick = null;
+var chatHead = null;
+var chatCurationId = '20180426160837286154';
+var chatContentId = null;
+var chatLimit = 0;//僅保留N筆訊息
+var chatSpecialMessagePool = new Array();
+var chatSpecialBatch = null;
+var selfSend = false;
+// 連接狀態改變的事件  
+function onConnect(status) {  
+    if (status == Strophe.Status.CONNFAIL) {  
+        alert("連接失敗！");  
+    } else if (status == Strophe.Status.AUTHFAIL) {  
+        alert("登錄失敗！");  
+    } else if (status == Strophe.Status.DISCONNECTED) {  
+        //alert("連接斷開！");  
+        connected = false;  
+    } else if (status == Strophe.Status.CONNECTED) {
+    	console.log("chat connect success!");
+        connected = true;  
+        // 當接收到<message>節，調用onMessage回呼函數  
+        connection.addHandler(onMessage, null, 'message', null, null, null);  
+        // 首先要發送一個<presence>給伺服器（initial presence）  
+        connection.send($pres().tree());  
+        // 發送<presence>元素，加入房間  
+		var to = chatRoomJid + "/" + chatJid.substring(0,chatJid.indexOf("@"));
+        connection.send($pres({  
+            from: chatJid,  
+            to: to  
+        }).c('x',{xmlns: 'http://jabber.org/protocol/muc'}).tree());
+        closeSetting();
+        chatSpecialBatch = setInterval( function(){specialLoop();} , 5000 );
+        gaEvent('進入聊天室');
+    }
+}  
+  
+// 接收到<message>  
+function onMessage(msg) {
+    //解析出<message>的from、type屬性，以及body子元素  
+    var from = msg.getAttribute('from');
+    if(from.indexOf(chatRoomJid.toLowerCase())==-1){//只接受同一個room的訊息
+    	return;
+    }
+    var type = msg.getAttribute('type');  
+    var elems = msg.getElementsByTagName('body');
+  
+    if (type == "groupchat" && elems.length > 0) {
+    	if(msg.getElementsByTagName('delay').length==0){//only accept new message 
+	        var body = elems[0];  
+	        body = Strophe.getText(body);
+	        var bodyFormat = body.split("&lt;$!1@&gt;");
+	        if(bodyFormat.length==3){
+	        	if(bodyFormat[0]=="948794sp4"){
+	        		if(bodyFormat[2]=="空空遺忘"){
+	        			$("#forumList .forum_item").remove();
+	        		}else{
+	        			chatSpecialMessagePool.push(bodyFormat[2]);
+	        		}
+	        	}else{
+		        	var html = '';
+		            html += '<div class="forum_item">';
+		            html += '<div class="pic"><img src="/resources/chat/images/avatar_'+bodyFormat[1]+'.png"></div>';
+		            html += '<div class="text"><span>'+bodyFormat[0]+':</span>'+bodyFormat[2]+'</div>';
+		            html += '</div>';
+		            appendChatMessage(html);
+	        	}
+	        }else if(bodyFormat[0]=="hamivideo"){
+	        	var html = '';
+	        	if(bodyFormat[1]=="bubble" && bodyFormat.length>2){//讚 -> hamivideo<$!1@>bubble<$!1@>按讚人<$!1@>按讚人頭像
+	        		html += '<div class="forum_item">';
+		            html += '<div class="pic"><img src="/resources/chat/images/avatar_'+bodyFormat[3]+'.png"></div>';
+		            html += '<div class="text"><span>'+bodyFormat[2]+':</span><img src="/resources/20170220/images/bt_like.png"></div>';
+		            html += '</div>';
+	    		}else if(bodyFormat[1]=="gift"){//送禮 -> hamivideo<$!1@>gift<$!1@>送禮人<$!1@>收禮人<$!1@>禮物名<$!1@>禮物動作<$!1@>禮物圖url
+	    			
+	    		}
+	        	appendChatMessage(html);
+	        }
+    	}
+    }  
+    return true;  
+}
+
+function appendChatMessage(html){
+	if(html==''){
+		return;
+	}
+	if(chatLimit>0 && $("#forumList .forum_item").length>=chatLimit){
+    	$("#forumList .forum_item")[0].remove();
+    }
+    $("#forumList").append(html);
+    var bottom = $('#forumList').height() - (0-parseInt($(".mCSB_container").css("top")) + $('.forum_main').find(".mCSB_dragger").position().top);
+    if(selfSend || parseInt($(".mCSB_container").css("top"))==0 || bottom<160){
+    	$(".forum_main").mCustomScrollbar("scrollTo","bottom");//scroll to bottom
+    	selfSend = false;
+    }
+}
+
+function specialLoop(){
+	if(chatSpecialMessagePool.length>0){
+		$("#specialMessage").html(chatSpecialMessagePool[0]);
+		chatSpecialMessagePool.splice(0, 1);
+	}else{
+		$("#specialMessage").html("");
+	}
+}
+  
+function loginChat(){
+	if(null==chatContentId){
+		alert("請選擇頻道!");
+		return;
+	}
+	if(null==chatServiceName){
+		alert("聊天室系統異常，請稍後再試!");
+		return;
+	}
+    connection = new Strophe.Connection(BOSH_SERVICE);  
+    connection.connect(chatJid, chatPwd, onConnect);  
+	console.log("chat login...");
+}
+
+function changeNickHead(){
+	chatNick = $("#chat_nickName").val();
+    chatHead = $(".headList .pic.active").attr("alt");
+    $.cookie("chatNick", chatNick, {path:'/', expires: 365});
+    $.cookie("chatHead", chatHead, {path:'/', expires: 365});
+	if(chatNick.trim().length==0){
+		alert("請輸入暱稱!");
+		return;
+	}
+    if(!connected){
+    	loginChat();
+    }else{
+    	closeSetting();
+    }
+}
+
+function closeSetting(){
+	$(".settingBlock").hide();
+    $(".bt_setting").removeClass("active");
+    $("#input-msg").focus();
+}
+
+function chatJoin(channelId){
+	chatContentId = channelId;
+	$.ajax({
+		type: "POST",
+		cache: false,
+		async: false,
+		url: '/curation/chatJoin.do',
+		data: {curationId:chatCurationId, channelId:chatContentId},
+		success: function(data) {
+			if(data.returnCode=='1'){
+				$("#forumList").html('');
+				chatServiceName = data.serviceName;
+				chatJid = data.account+'@'+data.serviceName;
+				chatPwd = data.pwd;
+				chatRoomJid = data.roomAddress;
+				setChatNickHead();
+				
+				if(connected){//重新連線
+					connection.options.sync = true; // Switch to using synchronous requests since this is typically called onUnload.
+			    	connection.flush();
+			    	connection.disconnect();
+				}
+		    	loginChat();
+			}else{
+				alert("聊天室目前無法使用，請稍後再試!");
+			}
+		}
+	});
+}
+
+function setChatNickHead(){
+	chatNick = $.cookie("chatNick");
+	chatHead = $.cookie("chatHead");
+	$("#chat_nickName").val(chatNick);
+	$(".headList .pic.active").removeClass("active");
+	$(".headList .pic[alt="+chatHead+"]").addClass("active");
+}
+
+function sendChatMessage(content){
+	if(connected) {  
+		if(content){
+			content += "<$!1@>"+chatNick+"<$!1@>"+chatHead;
+			gaEvent('按讚');
+		}else{
+			content = $("#input-msg").val();
+	    	if(content.trim().length==0){
+	    		alert("請輸入訊息!");
+	    		return;
+	    	}
+	    	//顯示用暱稱<$!1@>大頭代號<$!1@>聊天內
+	    	content = chatNick+"<$!1@>"+chatHead+"<$!1@>"+content;
+	    	gaEvent('傳送訊息');
+		}
+		
+        // 創建一個<message>元素並發送  
+        var msg = $msg({  
+            to: chatRoomJid,   
+            from: chatJid,   
+            type: 'groupchat'  
+        }).c("body", null, content);  
+        connection.send(msg.tree());
+        selfSend = true;
+        $("#input-msg").val('');  
+    } else {  
+        alert("請先登錄！");  
+    }
+}
+
+function handleContent(elem, e){
+	if(e.keyCode === 13){
+		/*
+		if(!event.shiftKey){
+			if(verifyForm()){
+				document.addFeedForm.submit();
+			}
+			return false;
+		}else{*/
+		if(elem.id=="chat_nickName"){
+			changeNickHead();
+		}else if(elem.id=="input-msg"){
+			sendChatMessage();
+		}
+		return false;
+		/*}*/
+	}
+	return true;
+}
+
+$(document).ready(function() {
+	// 發送消息  
+	$("#btn-send").click(function() {  
+		sendChatMessage();  
+	});  
+
+	// 修改暱稱
+	$("#btn_nickname").click(function() {
+		changeNickHead();
+	});
+
+	//設定頭像,暱稱
+	$(".bt_setting").click(function() {
+	    $(".settingBlock").show();
+	    $(".bt_setting").addClass("active");
+	    $("#chat_nickName").focus();
+	});
+
+	$(".headList .pic").click(function(){
+		$(".headList .pic.active").removeClass("active");
+		$(this).addClass("active");
+	});
+	
+	//按讚
+	$(".bt_like").click(function(){
+		sendChatMessage("hamivideo<$!1@>bubble");
+	});
+}); 
+</script><script>
+function resizeBannerScale(elem,scale){elem.style.height = (elem.width * scale)+"px";}
+</script>
+<link href="/resources/js/jquery-ui.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js?loadCastFramework=1"></script>
+<script type="text/javascript" src="/resources/js/jquery-ui.js"></script>
+<link type="text/css" rel="stylesheet" href="/resources/player/chromecast/slide.css" />
+
+<link href="/resources/js/video/video-js-cdn.css" rel="stylesheet">
+<script type="text/javascript" src="/resources/js/video/video.js?v=20180508"></script>
+<script type="text/javascript" src="/resources/js/video/videojs-contrib-hls.js?v=20180508"></script>
+
+<link href="/resources/js/video/videojs-resolution-switcher.css" rel="stylesheet">
+<script type="text/javascript" src="/resources/js/video/videojs-resolution-switcher.js"></script>
+
+<script type="text/javascript" src="/resources/js/jsrender.min.js"></script>
+<script type="text/javascript" src="/resources/js/play.js?v=20180508"></script>
+<script type="text/javascript" src="/resources/js/play_chromecast.js"></script>
+
+<style>
+ .video-js .vjs-big-play-button {
+    left: 40% !important;
+    top: 40% !important;
+    width: 20%;
+}
+ </style>
+<style>
+</style>
+<script>
+var tid = "1633d774e36000004b0dae09a4aafc2a";//play.do(token)
+var isIE = (navigator.appName == 'Microsoft Internet Explorer' ||  !!(navigator.userAgent.match(/Trident/) || navigator.userAgent.match(/rv:11/)) || (typeof $.browser !== "undefined" && $.browser.msie == 1));
+var previewUrl = null;//預告
+var isLive = false;
+var now_salesplans;
+var now_contentId = '';
+var now_productId = '';
+var now_preview = '/resources/player/default_play_bg.jpg';
+var isLogin = true;
+function playTV(contentId){
+	if($(".btPlay_go").is(":visible")){
+		if(isLogin){
+			$('<form action="'+myPlayer.contextPath + 'paySelect.do?id='+myPlayer.contentID+'&others=e9de754d3e1a5d4d611a2f7c2eb23f306c4206fc17352b54b9df9f83cf94a5b78ebc6db380745fd723e523c2c17e577ccaece482f64d4dbf2fdebe9669201e2c&product_id=" method="post"><input type="hidden" name="data" value="'+now_salesplans+'"/><input type="submit" value="Submit" style="display:none;"/></form>').appendTo('body').trigger('submit');
+		}else{
+			console.log(_login_url);
+			location = _login_url;
+		}
+	}else{
+		$.ajaxSetup({ cache: false });
+		  var canPlay = true;
+		  try{
+		    canPlay = checkLivePlay();
+		  }catch(e){}
+		if( canPlay ){
+			if(!contentId){
+				$(".player_pic").hide();
+			}
+			$(".btPlay").hide();
+		    openPlayer();
+		  }else{
+		    $("#player").html('<img src="http://chtvideo2.hinet.net/resources/images/none-liveshow.png" width="100%;"/>');
+		    _playerSizeChange();
+		    $(window).scroll();
+		  }	
+	}
+}
+
+var _login_url;
+_login_url = '/login.do?others=e9de754d3e1a5d4d611a2f7c2eb23f306c4206fc17352b54b9df9f83cf94a5b78ebc6db380745fd723e523c2c17e577ccaece482f64d4dbf2fdebe9669201e2c';
+myPlayer.cast.hasRight = "false" === "true";
+myPlayer.cast.currentMediaTitle = "";
+myPlayer.cast.currentMediaThumb = "\/resources\/images\/channel_default.png";
+
+//set回看ID
+
+
+myPlayer.init("/", "");
+
+
+myPlayer.isLive = true;
+  
+myPlayer.sendPlayerLog = function(action){
+  callASync(myPlayer.contextPath + 'api/sendPlayerLog.do?action=' + action + "&content_id=&category_id=");
+};
+
+myPlayer.callInit = function() {
+  location.replace('/api/reinit.do?callback=e9de754d3e1a5d4d611a2f7c2eb23f306c4206fc17352b54b9df9f83cf94a5b78ebc6db380745fd723e523c2c17e577ccaece482f64d4dbf2fdebe9669201e2c');
+}
+myPlayer.callLogin = function(img) {
+  
+  //alert("請登入會員");
+  if($(".btPlay_go").length>0){
+	  endInitPlayer();
+	  $(".btPlay_go").show();
+  }else{
+	  location = _login_url;
+  }
+}
+
+myPlayer.callBuy = function (salesplans) {
+	if($(".btPlay_go").length>0){
+		now_salesplans = salesplans;
+		endInitPlayer();
+		$(".btPlay_go").show();
+	}else{
+		$('<form action="'+myPlayer.contextPath + 'paySelect.do?id='+myPlayer.contentID+'&others=e9de754d3e1a5d4d611a2f7c2eb23f306c4206fc17352b54b9df9f83cf94a5b78ebc6db380745fd723e523c2c17e577ccaece482f64d4dbf2fdebe9669201e2c&product_id=" method="post"><input type="hidden" name="data" value="'+salesplans+'"/><input type="submit" value="Submit" style="display:none;"/></form>').appendTo('body').trigger('submit');
+	}
+};
+</script><script>
+var liveIndex = 0;
+function playGame(index){
+	if(index>=0){
+		liveIndex = index;
+	}
+	$("#playerArea").show();
+	now_contentId = document.getElementsByName("gameChannel")[liveIndex].value;
+	if(index>=0){
+		$(".btPlay_go").hide();
+	}
+	playTV(now_contentId);
+	chatJoin(now_contentId);
+}
+
+now_contentId = 'OTT_LIVE_0000001653';
+now_preview = 'http://stg.render.ott.hinet.net/stg/chtvideo/curation/1630103afdd000006014.png';
+</script>
+<div class="player-wrapper" style="background:linear-gradient(to bottom, rgba(0,0,0,0) 50%,rgba(0,0,0,.9) 100%), url(http://stg.render.ott.hinet.net/stg/chtvideo/curation/1630104ad2c00000b7a9.png) center center;background-size: cover;">
+      <div class="inner">
+        <div class="player_main forumSet">
+        	<div class="player_pic">
+    		<script>
+var _$obj = null;
+function startInitPlayer(){
+
+}
+function endInitPlayer(){
+
+	//$("#player").html('<img src="'+now_preview+'" style="max-width: 100%; max-height: 100%;"/>');//? gif
+	//$("#now_preview").attr("src", now_preview);
+	$("#player").html('<div class="player_pic"><img id="now_preview" src="'+now_preview+'" style="width: 100%; height: 100%;"/></div>');//? gif
+	$(".btPlay").show();
+	return false;
+}
+
+</script>
+<div id="playerArea">
+	<div class="player_tv">
+	<div id="player" class="area" align="center"></div>
+    <div id="casting" style="display:none;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      opacity: 0.7;
+      z-index: 9997;
+      color: #ffffff">
+      <div style="bottom: 40px;left: 40px;position: absolute;">
+        <div style="float:left; "><img src="/resources/player/chromecast/casticon.on.png" style="max-width: 100%; max-height: 100%;"/></div>
+        <div id="castingMsg" style="float:left;line-height:normal;"></div>
+      </div>
+    </div>
+	</div>
+  <div id="playerTag" style="display:none"></div>
+  <div class="cast_intro" style="display:none;"><a href="#" onclick="hideCastIntro(); return false;"></a></div>
+<!--   <div class="player_bar" style="z-index: 99; display:none;" id="castPlayer"> -->
+<!--       <div class="play_cast"><a style="position: absolute; top: 0px; left: 0px; width: 54px; height: 42px; background-color: transparent;" href="#" onclick="cast();return false;"></a></div> -->
+<!--       <div class="play"><a href="#" onclick="playMedia(); return false;"></a></div> -->
+<!--       <div class="slider_play"> <span class="tooltip1"></span> -->
+<!--         <div id="slider1"></div> -->
+<!--       </div> -->
+<!--       <div style="display:none;" class="play_time"> <span id="progress_tick"></span> / <span id="duration"></span> </div> -->
+<!--       <div class="slider_sound"> <span class="tooltip2"></span> -->
+<!--         <div id="slider2"></div> -->
+<!--       </div> -->
+<!--       <div class="sound"><a href="#" onclick="switchMute(); return false;"></a></div> -->
+<!--       <div class="close"><a href="#"></a></div> -->
+<!--       <div class="fullscreen"><a href="#"></a></div> -->
+<!--   </div> -->
+	<div class="player_bar" id="castPlayer" style="display:none;">
+		<div class="play_cast"><a style="position: absolute; top: 0px; left: 0px; width: 54px; height: 42px; background-color: transparent;" href="#" onclick="cast();return false;"></a></div>
+		<div class="play"><a href="#" onclick="playMedia(); return false;"></a></div>
+		<div class="slider_play">
+			<span class="tooltip1" style="display: none;"></span>
+			<div id="slider1" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false">
+				<div class="ui-slider-range ui-widget-header ui-corner-all ui-slider-range-min" style="width: 0%;"></div>
+				<a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 0%;"></a>
+			</div>
+		</div>
+		<div style="display: none;" class="play_time">
+			<span id="progress_tick">00:00:00</span> / <span id="duration">00:00:00</span>
+		</div>
+		<div class="slider_sound">
+			<span class="tooltip2" style="display: none;">100</span>
+			<div id="slider2" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false">
+				<div class="ui-slider-range ui-widget-header ui-corner-all ui-slider-range-min" style="width: 100%;"></div>
+				<a class="ui-slider-handle ui-state-default ui-corner-all ui-state-hover" href="#" style="left: 100%;"></a>
+			</div>
+		</div>
+		<div class="sound">
+			<a href="#" onclick="switchMute(); return false;"></a>
+		</div>
+		<!--<div class="fullscreen"><a href="#"></a></div>-->
+	</div>
+</div>
+<div class="btPlay">
+				<div class="btPlay_icon">
+					<a href="#" onclick="playGame();return false;"></a>
+				</div>
+				<div class="btPlay_go" style="display: none;">
+					<a href="#" onclick="playGame();return false;">請登入或購買方案</a>
+				</div>
+			</div>
+    		</div>
+          <div class="toolbar">
+	        <div class="chromecast" id="divCast" style="display:none"><a href="#" onclick="cast();return false;"><img src="/resources/20170220/images/chromecast/ic_cast_white_24dp.png"></a></div>
+	      </div>
+        </div>
+        <div class="play_list">
+        <div class="tvSideListBlock" id="gameList1">
+          <div class="swiper-wrapper">
+        	<input type="hidden" name="gameChannel" value="OTT_LIVE_0000001653">
+          	<div class="item list_item swiper-slide">
+	<a href="#" class="alink"
+		onclick="playGame(0);return false;"></a>
+	<div class="pic">
+		<img src="http://ott.hinet.net/images/sourceImages/screen/ch0221.jpg"
+					onerror="errorTvImg(this);" />
+			</div>
+	<h3>
+		愛爾達體育3台</h3>
+</div><input type="hidden" name="gameChannel" value="OTT_LIVE_0000001572">
+          	<div class="item list_item swiper-slide">
+	<a href="#" class="alink"
+		onclick="playGame(1);return false;"></a>
+	<div class="pic">
+		<img src="http://ott.hinet.net/images/sourceImages/screen/ch26.jpg"
+					onerror="errorTvImg(this);" />
+			</div>
+	<h3>
+		愛爾達體育1台</h3>
+</div><input type="hidden" name="gameChannel" value="OTT_LIVE_0000001521">
+          	<div class="item list_item swiper-slide">
+	<a href="#" class="alink"
+		onclick="playGame(2);return false;"></a>
+	<div class="pic">
+		<img src="http://ott.hinet.net/images/sourceImages/screen/ch80.jpg"
+					onerror="errorTvImg(this);" />
+			</div>
+	<h3>
+		愛爾達體育2台</h3>
+</div><input type="hidden" name="gameChannel" value="OTT_LIVE_0000001508">
+          	<div class="item list_item swiper-slide">
+	<a href="#" class="alink"
+		onclick="playGame(3);return false;"></a>
+	<div class="pic">
+		<img src="http://ott.hinet.net/images/sourceImages/Live/7/1508.png"
+					onerror="errorTvImg(this);" />
+			</div>
+	<h3>
+		中央氣象局影音頻道</h3>
+</div><input type="hidden" name="gameChannel" value="OTT_LIVE_0000001506">
+          	<div class="item list_item swiper-slide">
+	<a href="#" class="alink"
+		onclick="playGame(4);return false;"></a>
+	<div class="pic">
+		<img src="http://ott.hinet.net/images/sourceImages/screen/ch77.jpg"
+					onerror="errorTvImg(this);" />
+			</div>
+	<h3>
+		天天ㄏㄤ圓仔</h3>
+</div></div>
+        	<div class="btn_prev"></div>
+          <div class="btn_next"></div>
+          </div>
+        </div>
+        <div class="player_forum">
+          <div class="in">
+            <div class="forum_top">
+              <div class="btArea">
+              <a href="#" onclick="getVote(); return false;" class="bt bt_vote">預測</a>
+                    </div>
+            </div>
+            <div class="alertSet">
+               <div class="pic"><img src="/resources/chat/images/avatar_00.png"></div>
+               <div class="text"><span>Hami Video</span><div id="specialMessage"></div></div>
+            </div>
+            <div class="forum_main mCustomScrollbar">
+            <div id="forumList"></div>
+            </div>
+            <div class="forum_send">
+              <textarea placeholder="留下訊息..." id="input-msg" onkeypress="return handleContent(this,event);"></textarea>
+              <div class="bt_like"></div>
+              <div class="bt_setting active"></div>
+              <div class="btArea"><a href="#" class="bt" id="btn-send">送出</a></div>
+              <div class="settingBlock" style="display:none;">
+                  <p>選擇頭像</p>
+                  <div class="headList">
+                  <div class="pic active" alt="01"><img src="/resources/chat/images/avatar_01.png"></div>
+                  <div class="pic" alt="02"><img src="/resources/chat/images/avatar_02.png"></div>
+                  <div class="pic" alt="03"><img src="/resources/chat/images/avatar_03.png"></div>
+                  <div class="pic" alt="04"><img src="/resources/chat/images/avatar_04.png"></div>
+                  <div class="pic" alt="05"><img src="/resources/chat/images/avatar_05.png"></div>
+                  </div>
+                  <p>修改暱稱<p>
+                  <div class="nameFill"><input type="text" id="chat_nickName" onkeypress="return handleContent(this,event);"><a href="#" class="bt" id="btn_nickname">確認</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clr"></div>
+      </div>
+    </div>
+    <div class="banner-wrapper" id="banner20180502115728989062">
+    <div class="swiper-wrapper">
+    <div class="list_item swiper-slide">
+      <img src="http://stg.render.ott.hinet.net/stg/chtvideo/curation/1631effe76000000ae8d.jpg" onload="resizeBannerScale(this,0.2578);">
+      </div>
+      </div>
+    <div class="btn_prev"></div>
+    <div class="btn_next"></div>
+  </div>
+    <script>
+  if($("#slider a").length > 1){
+	  var swiper = new Swiper('#slider', {
+	        pagination: '#slider .pagination',
+	        paginationClickable: true,
+	        nextButton: '#slider .btn_next',
+	        prevButton: '#slider .btn_prev',
+			autoplay: 6000,
+			//loop: true,
+			effect: 'fade',
+			speed: 1000
+	    });
+	}else{$("#slider .pagination, #slider .btn_prev, #slider .btn_next").hide();}
+
+    
+    var swiper = new Swiper('#movieList', {
+        nextButton: '#movieList .btn_next',
+        prevButton: '#movieList .btn_prev',
+		slidesPerView: 'auto',
+		spaceBetween: 5, slidesPerGroup: 5
+    });
+    
+    var swiper = new Swiper('#movieList', {
+        nextButton: '#movieList .btn_next',
+        prevButton: '#movieList .btn_prev',
+		slidesPerView: 'auto',
+		spaceBetween: 5, slidesPerGroup: 5
+    });
+    
+    var swiper = new Swiper('#banner20180502115728989062', {
+        paginationClickable: true,
+        nextButton: '#banner20180502115728989062 .btn_next',
+        prevButton: '#banner20180502115728989062 .btn_prev',
+		autoplay: 6000,
+		effect: 'fade',
+		speed: 1000
+    });
+    
+    var swiper = new Swiper('#gameList1', {
+        nextButton: '#gameList1 .btn_next',
+        prevButton: '#gameList1 .btn_prev',
+		slidesPerView: 'auto',
+		spaceBetween: 10,
+		slidesPerGroup: 5
+    });
+</script>
+<script>
+$(window).on("load", function() {
+	 $(".forum_main").css("height", $('.player_main').height() - 90);
+	 
+	 playGame(0);
+	 
+});
+</script>
+<script src="/resources/js/mustache.min.js"></script>
+<script id="voteInfoTemplate" type="x-tmpl-mustache">
+<h2>{{title}} 投票說明</h2>
+    <div class="popScroll mCustomScrollbar">
+        <p>{{description}}</p>
+    </div>
+<div class="btArea"><a href="#" onclick="getVote(); return false;" class="bt">去投票</a></div>
+</script>
+<script id="voteIndexTemplate" type="x-tmpl-mustache">
+<h2>{{vote.title}} 人氣投票</h2>
+    <div class="voteInfo">
+        <div class="num">剩餘<span>{{remainingVotes}}</span>票</div>
+        <div class="time">
+			{{#vote.havMemoLink}}<a href="{{vote.memo_link}}" target="_blank">{{vote.memo}}</a>{{/vote.havMemoLink}}
+			{{^vote.havMemoLink}}{{vote.memo}}{{/vote.havMemoLink}}
+		</div>
+    </div>
+<div class="clr"></div>
+      <div class="voteList">
+      {{#vote.voteItems}}
+        <div class="item">
+          <div class="pic"><img src="{{image}}">
+            <div class="voteBt">
+              <span>0</span>
+            </div>
+          </div>
+          <p>{{title}}</p>
+        </div>
+      {{/vote.voteItems}}
+        <div class="clr"></div>
+      </div>
+      <div class="btArea"><a href="#" onclick="popupVoteInfo(); return false;" class="bt set1">投票說明</a><a href="#" onclick="getVoteResult(); return false;" class="bt set2">排行榜</a><a href="#" onclick="vote(); return false;" class="bt">送出投票</a></div>
+</script>
+<script id="voteResultTemplate" type="x-tmpl-mustache">
+<h2>{{title}} 排行榜</h2>
+    <div class="voteList">
+    {{#voteItems}}
+        <div class="item {{itemClass}}">
+          <div class="pic"><img src="{{image}}"></div>
+          <p><span>NO{{no}}.</span>{{title}}</p>
+          <p class="num">{{count}}票</p>
+        </div>
+    {{/voteItems}}
+        <div class="clr"></div>
+      </div>
+<div class="btArea"><a href="#" onclick="getVote(); return false;" class="bt">去投票</a></div>
+</script>
+<textarea id="voteHtml" style="display:none;">
+<div id="popupVote" style="display:none;">
+<div class="popup_overlay"></div>
+<div class="popup voteSet">
+<div class="inner">
+    <div class="bt_close"><a href="#" onclick="hidePopupVote(); return false;"></a></div>
+    <div class="com" id="voteContent">
+    </div>
+</div>
+</div>
+<div id="popupVoteSucc" style="display:none;">
+<div class="popup_overlay" style="z-index:998;"></div>
+<!--POPUP 成功-->
+  <div class="popup" style="z-index:999;">
+  <div class="bt_close"><a href="#" onclick="$('#popupVoteSucc').hide();return false;"></a></div>
+  <div class="com">
+    <h2>預測冠軍</h2>
+    <p>投票成功</p>
+    <div class="btArea"><a href="#" class="bt" onclick="$('#popupVoteSucc').hide();return false;">確認</a></div>
+  </div>
+</div>
+</div>
+</div>
+</textarea>
+<script>
+var token;
+var remainingVotes;
+$('body').append($('#voteHtml').val());
+var voteInfoTemplate = $('#voteInfoTemplate').html();
+Mustache.parse(voteInfoTemplate);
+var voteIndexTemplate = $('#voteIndexTemplate').html();
+Mustache.parse(voteIndexTemplate);
+var voteResultTemplate = $('#voteResultTemplate').html();
+Mustache.parse(voteResultTemplate);
+
+$('#voteContent').on({
+    mouseenter: function () {
+        $(this).addClass('active');
+    },
+    mouseleave: function () {
+		var $this = $(this);
+        var spanText = $this.find('span').text();
+		if (isNaN(spanText) || spanText === '0') {
+			$this.removeClass('active');
+		}
+    }
+}, ".item");
+
+$("#voteContent").on("click",".voteBt",function() {
+	var $this = $(this);
+	console.log($this);
+	var $span = $this.children('span');
+    var count = parseInt($span.text());
+    if (countVote() < remainingVotes) {
+        $span.text(count + 1);
+    }else{
+    	$span.text(0);
+    }
+});
+/*
+$("#voteContent").on("click",".vMinus",function() {
+	var $this = $(this);
+	var $span = $this.parent().children('span');
+    var count = parseInt($span.text());
+	if (count > 0) {
+		$span.text(count - 1);
+	}
+});
+*/
+
+function countVote() {
+    var count = 0;
+    $('#voteContent .item').each(function(){
+		var $this = $(this);
+		var v = parseInt($this.find('span').text());
+        count += v;
+	});
+    return count;
+}
+
+function vote() {
+
+    if (countVote() <= 0) {
+        return;
+    }
+
+    var data = {curationId: '20180426160837286154'};
+    data['token'] = token;
+    $('#voteContent .item').each(function( index ) {
+        var $this = $(this);
+        data['voteItems['+index+'].count'] = $this.find('span').text();
+    });
+    voteAction = true;
+    var url = "vote.do";
+		$.ajax({
+			type: "POST",
+			cache: false,
+			url: url,
+		    data: data,
+			success: function() {
+				getVoteResult();
+			}
+		});
+}
+
+function popupVoteInfo() {
+    var url = "getVoteInfo.do";
+		$.ajax({
+			type: "POST",
+			cache: false,
+			url: url,
+		    data: {curationId: '20180426160837286154'},
+		    dataType: 'json',
+			success: function(data) {
+				var rendered = Mustache.render(voteInfoTemplate, data);
+                $('#voteContent').html(rendered);
+
+                showPopupVote();
+			}
+		});
+}
+
+function getVote() {
+    var url = "getVote.do";
+		$.ajax({
+			type: "POST",
+			cache: false,
+			url: url,
+		    data: {curationId: '20180426160837286154'},
+		    dataType: 'json',
+			success: function(data) {
+				var rendered = Mustache.render(voteIndexTemplate, data);
+                $('#voteContent').html(rendered);
+                token = data.token;
+                remainingVotes = data.remainingVotes;
+
+                showPopupVote();
+			}
+		});
+		gaEvent('投票');
+}
+
+var voteAction = false;
+function getVoteResult() {
+    var url = "getVoteResult.do";
+		$.ajax({
+			type: "POST",
+			cache: false,
+			url: url,
+		    data: {curationId: '20180426160837286154'},
+		    dataType: 'json',
+			success: function(data) {
+                if (data.voteItems) {
+                    var no = 1;
+                    for (var i=0, size=data.voteItems.length;i<size;i++) {
+                        if (no <= 3) {
+                            data.voteItems[i].itemClass = 'noTop';
+                        }
+                        data.voteItems[i].no = no++;
+                        data.voteItems[i].count = currencyFormat(data.voteItems[i].count);
+                    }
+                    if(voteAction){
+                    	$('#popupVoteSucc').show();
+                    	voteAction = false;
+                    }
+                }
+				var rendered = Mustache.render(voteResultTemplate, data);
+                $('#voteContent').html(rendered);
+
+                showPopupVote();
+			}
+		});
+
+}
+
+function showPopupVote() {
+	$('#popupVote').show();
+}
+function hidePopupVote() {
+	$('#popupVote').hide();
+}
+function currencyFormat(num) {
+	return num.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+}
+
+//GA Event
+function gaEvent(action){
+	ga('send',{
+		hitType			:'event',
+		eventCategory	:'功能使用',
+		eventAction		:action,
+		eventLabel		:'世足聊天互動版型'
+	});
+}
+</script>
+<footer>
+	<ul>
+		<li><a href="http://www.hinet.net/privacy.html" target="_blank">隱私權保護</a></li>
+		<li><a href="http://www.hinet.net/copyright.html" target="_blank">著作權所有</a></li>
+		<li><a href="http://service.hinet.net/2004/ncsc/index.htm" target="_blank">服務電話</a></li>
+		<li><a href="http://www.hinet.net/notify.html?type=0" target="_blank">系統公告</a></li>
+		<li><a href="http://blog.xuite.net/hinet_marketing/blog" target="_blank">刊登廣告</a></li>
+		<li><a href="/download.do">下載APP</a></li>
+		<li><a href="/faq.do">問題回報</a></li>
+		<li><a href="https://www.facebook.com/HamiVideo/" target="_blank">facebook</a></li>
+	</ul>
+	<p>Copyright&nbsp;©&nbsp;2018 CHT Co., Ltd. All Rights Reserved.</p>
+</footer>
+<div class="top" id="top"></div>
+<script>
+$(window).scroll(function(){
+	if ($(document).scrollTop() > 100 ) $('#top').stop().animate({bottom: 10}, 1000);
+	else $('#top').stop().animate({bottom: -65}, 1000);
+});
+$("#top").click(function(){	
+	$("html,body").stop().animate({scrollTop:0}, '500', 'swing');
+});
+</script></div>
+<script src="/resources/20170220/js/basic.js"></script>
+</body>
+</html>
