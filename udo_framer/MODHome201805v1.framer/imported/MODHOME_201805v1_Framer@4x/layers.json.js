@@ -34,28 +34,28 @@ window.__imported__["MODHOME_201805v1_Framer@4x/layers.json.js"] = [
 				},
 				"children": [
 					{
-						"objectId": "2A20053A-0F55-4D5C-B2EE-3317CC83DA02",
+						"objectId": "5E360C44-2DB0-4A53-9470-0B30238D53FF",
 						"kind": "group",
 						"name": "MODLogo",
 						"originalName": "MODLogo",
 						"maskFrame": null,
 						"layerFrame": {
-							"x": 25,
-							"y": 16,
-							"width": 212,
-							"height": 57
+							"x": 50,
+							"y": 20,
+							"width": 156,
+							"height": 56
 						},
 						"visible": true,
 						"metadata": {
 							"opacity": 1
 						},
 						"image": {
-							"path": "images/Layer-MODLogo-mkeymda1.jpg",
+							"path": "images/Layer-MODLogo-nuuznjbd.png",
 							"frame": {
-								"x": 25,
-								"y": 16,
-								"width": 212,
-								"height": 57
+								"x": 50,
+								"y": 20,
+								"width": 156,
+								"height": 56
 							}
 						},
 						"children": []
@@ -153,13 +153,67 @@ window.__imported__["MODHOME_201805v1_Framer@4x/layers.json.js"] = [
 					"x": 710,
 					"y": 95,
 					"width": 508,
-					"height": 1168
+					"height": 1474
 				},
 				"visible": true,
 				"metadata": {
 					"opacity": 1
 				},
 				"children": [
+					{
+						"objectId": "B0F07658-C916-452D-905E-7D5D0761B4D5",
+						"kind": "group",
+						"name": "P3_Btn16",
+						"originalName": "P3_Btn16",
+						"maskFrame": null,
+						"layerFrame": {
+							"x": 710,
+							"y": 1413,
+							"width": 156,
+							"height": 156
+						},
+						"visible": true,
+						"metadata": {
+							"opacity": 1
+						},
+						"image": {
+							"path": "images/Layer-P3_Btn16-qjbgmdc2.png",
+							"frame": {
+								"x": 710,
+								"y": 1413,
+								"width": 156,
+								"height": 156
+							}
+						},
+						"children": []
+					},
+					{
+						"objectId": "0A671A0A-DD0B-4F12-90F5-4B262AEA9AB7",
+						"kind": "group",
+						"name": "P3_Btn17",
+						"originalName": "P3_Btn17",
+						"maskFrame": null,
+						"layerFrame": {
+							"x": 886,
+							"y": 1413,
+							"width": 156,
+							"height": 156
+						},
+						"visible": true,
+						"metadata": {
+							"opacity": 1
+						},
+						"image": {
+							"path": "images/Layer-P3_Btn17-mee2nzfb.png",
+							"frame": {
+								"x": 886,
+								"y": 1413,
+								"width": 156,
+								"height": 156
+							}
+						},
+						"children": []
+					},
 					{
 						"objectId": "BA7BEC5C-9D57-4CD1-8E72-4EE5209527D7",
 						"kind": "group",
@@ -249,7 +303,7 @@ window.__imported__["MODHOME_201805v1_Framer@4x/layers.json.js"] = [
 						"maskFrame": null,
 						"layerFrame": {
 							"x": 710,
-							"y": 931,
+							"y": 930,
 							"width": 156,
 							"height": 156
 						},
@@ -261,7 +315,7 @@ window.__imported__["MODHOME_201805v1_Framer@4x/layers.json.js"] = [
 							"path": "images/Layer-P2_Btn13-mtzcnknb.png",
 							"frame": {
 								"x": 710,
-								"y": 931,
+								"y": 930,
 								"width": 156,
 								"height": 156
 							}
@@ -276,7 +330,7 @@ window.__imported__["MODHOME_201805v1_Framer@4x/layers.json.js"] = [
 						"maskFrame": null,
 						"layerFrame": {
 							"x": 886,
-							"y": 931,
+							"y": 930,
 							"width": 156,
 							"height": 156
 						},
@@ -288,7 +342,7 @@ window.__imported__["MODHOME_201805v1_Framer@4x/layers.json.js"] = [
 							"path": "images/Layer-P2_Btn14-rta0neq3.png",
 							"frame": {
 								"x": 886,
-								"y": 931,
+								"y": 930,
 								"width": 156,
 								"height": 156
 							}
@@ -320,35 +374,7 @@ window.__imported__["MODHOME_201805v1_Framer@4x/layers.json.js"] = [
 								"height": 156
 							}
 						},
-						"children": [
-							{
-								"objectId": "73AC279C-77DD-4390-8A21-DF3DF98528CF",
-								"kind": "group",
-								"name": "Group_8",
-								"originalName": "Group 8",
-								"maskFrame": null,
-								"layerFrame": {
-									"x": 1112,
-									"y": 961,
-									"width": 56,
-									"height": 55
-								},
-								"visible": true,
-								"metadata": {
-									"opacity": 1
-								},
-								"image": {
-									"path": "images/Layer-Group_8-nznbqzi3.png",
-									"frame": {
-										"x": 1112,
-										"y": 961,
-										"width": 56,
-										"height": 55
-									}
-								},
-								"children": []
-							}
-						]
+						"children": []
 					},
 					{
 						"objectId": "F7B66A00-58FB-42EC-8E50-AFF6B1567C6F",
@@ -358,7 +384,7 @@ window.__imported__["MODHOME_201805v1_Framer@4x/layers.json.js"] = [
 						"maskFrame": null,
 						"layerFrame": {
 							"x": 710,
-							"y": 1107,
+							"y": 1106,
 							"width": 156,
 							"height": 156
 						},
@@ -370,7 +396,7 @@ window.__imported__["MODHOME_201805v1_Framer@4x/layers.json.js"] = [
 							"path": "images/Layer-P2_Btn16-rjdcnjzb.png",
 							"frame": {
 								"x": 710,
-								"y": 1107,
+								"y": 1106,
 								"width": 156,
 								"height": 156
 							}
@@ -385,7 +411,7 @@ window.__imported__["MODHOME_201805v1_Framer@4x/layers.json.js"] = [
 						"maskFrame": null,
 						"layerFrame": {
 							"x": 886,
-							"y": 1107,
+							"y": 1106,
 							"width": 156,
 							"height": 156
 						},
@@ -397,7 +423,7 @@ window.__imported__["MODHOME_201805v1_Framer@4x/layers.json.js"] = [
 							"path": "images/Layer-P2_Btn17-rtg5mzgy.png",
 							"frame": {
 								"x": 886,
-								"y": 1107,
+								"y": 1106,
 								"width": 156,
 								"height": 156
 							}
@@ -412,7 +438,7 @@ window.__imported__["MODHOME_201805v1_Framer@4x/layers.json.js"] = [
 						"maskFrame": null,
 						"layerFrame": {
 							"x": 1062,
-							"y": 1107,
+							"y": 1106,
 							"width": 156,
 							"height": 156
 						},
@@ -424,40 +450,12 @@ window.__imported__["MODHOME_201805v1_Framer@4x/layers.json.js"] = [
 							"path": "images/Layer-P2_Btn18-nejgrum0.png",
 							"frame": {
 								"x": 1062,
-								"y": 1107,
+								"y": 1106,
 								"width": 156,
 								"height": 156
 							}
 						},
-						"children": [
-							{
-								"objectId": "AB21442C-EB69-46F4-B310-AAC286729D1E",
-								"kind": "group",
-								"name": "Group_12",
-								"originalName": "Group 12",
-								"maskFrame": null,
-								"layerFrame": {
-									"x": 1109,
-									"y": 1134,
-									"width": 63,
-									"height": 63
-								},
-								"visible": true,
-								"metadata": {
-									"opacity": 1
-								},
-								"image": {
-									"path": "images/Layer-Group_12-quiymtq0.png",
-									"frame": {
-										"x": 1109,
-										"y": 1134,
-										"width": 63,
-										"height": 63
-									}
-								},
-								"children": []
-							}
-						]
+						"children": []
 					},
 					{
 						"objectId": "D28F32DB-A339-41E8-8391-479C6DC1683D",

@@ -93,8 +93,13 @@ for sub in Page1Btns.children
 	
 	item.on "focus",->
 		#print this.name
+
 		if this.name.indexOf("P2")>0
 			scrollMainCommand.scrollToPoint(y:655)
+			ArrowComponent.animate
+				rotation:180
+		else if this.name.indexOf("P3")>0
+			scrollMainCommand.scrollToPoint(y:1308)
 			ArrowComponent.animate
 				rotation:180
 		else
@@ -104,7 +109,7 @@ for sub in Page1Btns.children
 ll=new Layer
 	backgroundColor: "Transparent"
 	parent: scrollMainCommand.content
-	y:1200
+	y:1800
 Page1Btns.destroy()
 scrollMainCommand.contentInset=
 	bottom: 10
