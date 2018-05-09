@@ -1,3 +1,61 @@
+class ProvideUIStates_With_4State_Component extends Layer
+	constructor: (options={}) ->
+
+		options.backgroundColor="Transparent"
+#		options.name="btnLayer"
+		options.isSelectable=true
+		super options
+		@ishided=false#options.ISCHOICED
+		objName=options.BASECOMPONENT.name
+		options.BASECOMPONENT.x=0
+		options.BASECOMPONENT.y=0
+		options.BASECOMPONENT.subLayersByName(objName+"_default")[0].visible=true
+		options.BASECOMPONENT.subLayersByName(objName+"_focus")[0].visible=false
+		options.BASECOMPONENT.parent=@
+		if options.ISHIDED			
+			@.opacity=0.2
+		else
+			@.opacity=1
+# 		options.BASECOMPONENT.states.on=
+# 			opacity:1
+# 			visible:true			
+# 		options.BASECOMPONENT.states.off=
+# 			opacity:1
+# 			visible:true
+# 		options.BASECOMPONENT.stateSwitch("off")
+		@.states.on=
+			visible:true
+
+		@.states.off=
+			
+			visible:true
+
+# 		options.ISHIDED=false	
+
+		
+		@.on "focus",->
+			@.stateSwitch("on")
+			
+# 			options.BASECOMPONENT.stateSwitch("on")
+			@.opacity=1
+			options.BASECOMPONENT.visible=true
+			options.BASECOMPONENT.subLayersByName(objName+"_default")[0].visible=false
+			options.BASECOMPONENT.subLayersByName(objName+"_focus")[0].visible=true
+			@.bringToFront()		
+		@.on "blur",->
+			@.stateSwitch("off")
+			options.BASECOMPONENT.visible=true
+			options.BASECOMPONENT.subLayersByName(objName+"_default")[0].visible=true
+			options.BASECOMPONENT.subLayersByName(objName+"_focus")[0].visible=false			
+			
+			if options.ISHIDED
+				
+				@.opacity=0.2
+			else
+				@.opacity=1
+				
+
+
 class ScaleCommandBTN extends Layer
 	constructor: (options={}) ->
 
@@ -61,11 +119,11 @@ sketch = Framer.Importer.load("imported/MODHome_201805v3_Framer@4x", scale: 1)
 enterTV=""
 
 MainBtnsPageMappingArray=[{
-	name:"RBanner" 
+	name:"RBannerParent" 
 	value:2},{
-	name:"CBanner" 
+	name:"CBannerParent" 
 	value:1},{
-	name:"LBanner"
+	name:"LBannerParent"
 	value:0}]
 	
 
@@ -81,7 +139,7 @@ focusManager = new focusManager
 	defaultSelectionBorder: true
 	defaultSelectionBorderWidth: 4
 	defaultSelectionBorderColor: "#FF9900"	
-padding=330
+padding=350
 Utils.globalLayers sketch
 
 videoLay=new VideoLayer
@@ -135,56 +193,79 @@ for btn in BTNS.children
 			if this.name.indexOf("First")>=0
 				scrollBtns.scrollToPoint(x:0)
 				HScrollContentMask.visible=true
+			else if this.name.indexOf("Third")>=0
+				scrollBtns.scrollToPoint(x:1020)
+				HScrollContentMask.visible=false			
 			else
 				scrollBtns.scrollToPoint(x:500)
 				HScrollContentMask.visible=false
 BTNS.destroy()
-Banners.parent=null
-for kk in Banners.children
-#	print kk.name
-	kk.parent=bannerComp.content
-	kk.states.on =
-		opacity: 1
-		scale: 1
-		visible:true
+#Banners.parent=null
+# BannersCopy=Banners.copy()
+# 
+# BannersCopy.name="ssss1"
 
-	kk.states.off=
-		opacity: 1
-		scale: 0.9
-		visible:true
-	kk.on "focus",->
-# 		print "here focus"
-		card.states.switch("off") for card in cards
+#Banners.destroy()
+for kk in Banners.children
+	isHide=true
+	
+	if kk.name=="CBanner"
+		isHide=false
+	bannerKK=new ProvideUIStates_With_4State_Component
+		name:kk.name+"Parent"
+		BASECOMPONENT:kk
+		x:kk.x
+		y:kk.y
+		width:kk.width
+		height:kk.height
+		ISHIDED:isHide
+	
+	bannerKK.parent=bannerComp.content
+
+	bannerKK.on "focus",->
+		for s in bannerComp.content.children
+			s.opacity=0.2
 		current = bannerComp.horizontalPageIndex(cards[MainBtnsPageMappingDict[this.name]["value"]])
-# 		print MainBtnsPageMappingDict[this.name]["value"],current,cards[MainBtnsPageMappingDict[this.name]["value"]]
-		cards[current].states.switch("on")
+		this.opacity=1
 		bannerComp.snapToPage cards[MainBtnsPageMappingDict[this.name]["value"]]
-# 		print "focus",this.name
-# 	kk.on "off",->
-# 		print "blur",this.name		
-	kk.isSelectable=true
-	kk.selectionBorder=false
-	cards.push(kk)
+	bannerKK.on "blur",->
+		isAnyFocus=false
+		for s in bannerComp.content.children
+			if s.states.current.name=="on"
+				isAnyFocus=true
+				break
+		if !isAnyFocus
+			this.opacity=1
+		else
+			this.opacity=0.2
+			
+	bannerKK.isSelectable=true
+	bannerKK.selectionBorder=false
+	cards.push(bannerKK)
 Banners.destroy()
+
 bannerComp.snapToPage(bannerComp.content.children[1])
 for sub in bannerComp.content.children
-	sub.states.switchInstant "off"
+	sub.stateSwitch "off"
+	
 
 #bannerComp.content.children[1].states.switchInstant "focus"
 HScrollContentMask.parent=null
 HScrollContentMask.x=Screen.width-HScrollContentMask.width
 HScrollContentMask.y=HScrollContentMask.y+7
-RBannerContentMask.parent=null
-LBannerContentMask.parent=null
+
 focusManager.selectedItem=scrollBtns.content.children[0]
 
-scrollBtns.content.subLayersByName("FirstBtnCom03")[0].down=bannerComp.content.subLayersByName("CBanner")[0]
-scrollBtns.content.subLayersByName("FirstBtnCom06")[0].down=bannerComp.content.subLayersByName("CBanner")[0]
-scrollBtns.content.subLayersByName("FirstBtnCom09")[0].down=bannerComp.content.subLayersByName("CBanner")[0]
-scrollBtns.content.subLayersByName("BtnCom12")[0].down=bannerComp.content.subLayersByName("CBanner")[0]
-scrollBtns.content.subLayersByName("BtnCom15")[0].down=bannerComp.content.subLayersByName("CBanner")[0]
-scrollBtns.content.subLayersByName("BtnCom18")[0].down=bannerComp.content.subLayersByName("CBanner")[0]
-bannerComp.content.subLayersByName("CBanner")[0].up=scrollBtns.content.subLayersByName("FirstBtnCom03")[0]
-bannerComp.content.subLayersByName("LBanner")[0].up=scrollBtns.content.subLayersByName("FirstBtnCom03")[0]
-bannerComp.content.subLayersByName("RBanner")[0].up=scrollBtns.content.subLayersByName("FirstBtnCom03")[0]
-
+scrollBtns.content.subLayersByName("FirstBtnCom03")[0].down=bannerComp.content.subLayersByName("CBannerParent")[0]
+scrollBtns.content.subLayersByName("FirstBtnCom06")[0].down=bannerComp.content.subLayersByName("CBannerParent")[0]
+scrollBtns.content.subLayersByName("FirstBtnCom09")[0].down=bannerComp.content.subLayersByName("CBannerParent")[0]
+scrollBtns.content.subLayersByName("BtnCom12")[0].down=bannerComp.content.subLayersByName("CBannerParent")[0]
+scrollBtns.content.subLayersByName("BtnCom15")[0].down=bannerComp.content.subLayersByName("CBannerParent")[0]
+scrollBtns.content.subLayersByName("BtnCom18")[0].down=bannerComp.content.subLayersByName("CBannerParent")[0]
+bannerComp.content.subLayersByName("CBannerParent")[0].up=scrollBtns.content.subLayersByName("FirstBtnCom03")[0]
+bannerComp.content.subLayersByName("LBannerParent")[0].up=scrollBtns.content.subLayersByName("FirstBtnCom03")[0]
+bannerComp.content.subLayersByName("RBannerParent")[0].up=scrollBtns.content.subLayersByName("FirstBtnCom03")[0]
+bannerComp.content.subLayersByName("CBannerParent")[0].left=bannerComp.content.subLayersByName("LBannerParent")[0]
+bannerComp.content.subLayersByName("CBannerParent")[0].right=bannerComp.content.subLayersByName("RBannerParent")[0]
+bannerComp.content.subLayersByName("LBannerParent")[0].right=bannerComp.content.subLayersByName("CBannerParent")[0]
+bannerComp.content.subLayersByName("RBannerParent")[0].left=bannerComp.content.subLayersByName("CBannerParent")[0]
