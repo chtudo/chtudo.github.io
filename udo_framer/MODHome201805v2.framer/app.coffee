@@ -163,6 +163,8 @@ InitialUI=()->
 	videoLay.player.loop=true
 	videoLay.player.play()
 	Barker.isSelectable=true
+	for sub in BigBanner.children
+		sub.isSelectable=true
 	
 	
 scrollMainPage=new ScrollComponent
@@ -203,6 +205,9 @@ pageComponent=new PageComponent
 	scrollVertical: false
 	parent:scrollMainPage.content
 for page in TopContent.children
+	page.x=0
+	page.y=0
+	page.height=520
 	pageComponent.addPage(page)
 	posterMapping.push({
 		name:   page.name,
@@ -245,6 +250,12 @@ SettingBtns=()->
 				ArrowComponent.animate
 					rotation:0
 				scrollMainPage.scrollToPoint(x:0,y:0)
+# 			else if this.name.indexOf("Third")>=0
+# 				TheHeader.visible=false
+# 				ArrowBarBG.visible=false
+# 				ArrowComponent.animate
+# 					rotation:180
+# 				scrollMainPage.scrollToPoint(x:0,y:500)			
 			else
 				TheHeader.visible=false
 				ArrowBarBG.visible=false
@@ -294,6 +305,10 @@ SettingBtns=()->
 	#BTN_SmallMessage.destroy()
 		#print btn.name
 SettingBtns()
+# Screen2BG.parent=scrollMainPage.content
+# Screen2BG.x=0
+# Screen2BG.y=520
+# Screen2BG.sendToBack()
 SettingFocusUI=()->
 	
 	focusManager.selectedItem=scrollBtm.content.childrenWithName("FirstBtnCom01")[0]
@@ -305,6 +320,7 @@ SettingFocusUI=()->
 	CartonPoster3.isSelectable=true
 	CartonPoster4.isSelectable=true
 	Barker.down=scrollBtm.content.childrenWithName("FirstBtnCom01")[0]
+	Barker.right=BannerUp
 	#page2
 	MoviePoster1.isSelectable=true
 	MoviePoster2.isSelectable=true

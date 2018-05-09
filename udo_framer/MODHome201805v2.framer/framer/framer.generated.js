@@ -157,7 +157,7 @@ window.__imported__["MODHome_201805v2_Framer@4x/layers.json.js"] = [
 					"x": 80,
 					"y": 535,
 					"width": 1161,
-					"height": 268
+					"height": 393
 				},
 				"visible": true,
 				"metadata": {
@@ -174,7 +174,7 @@ window.__imported__["MODHome_201805v2_Framer@4x/layers.json.js"] = [
 							"x": 208,
 							"y": 535,
 							"width": 1022,
-							"height": 249
+							"height": 393
 						},
 						"visible": true,
 						"metadata": {
@@ -379,7 +379,7 @@ window.__imported__["MODHome_201805v2_Framer@4x/layers.json.js"] = [
 								"layerFrame": {
 									"x": 1012,
 									"y": 536,
-									"width": 105,
+									"width": 104,
 									"height": 104
 								},
 								"visible": true,
@@ -391,7 +391,7 @@ window.__imported__["MODHome_201805v2_Framer@4x/layers.json.js"] = [
 									"frame": {
 										"x": 1012,
 										"y": 536,
-										"width": 105,
+										"width": 104,
 										"height": 104
 									}
 								},
@@ -584,35 +584,7 @@ window.__imported__["MODHome_201805v2_Framer@4x/layers.json.js"] = [
 										"height": 104
 									}
 								},
-								"children": [
-									{
-										"objectId": "99D28670-7C59-4E37-9F4A-FB121690EFB8",
-										"kind": "group",
-										"name": "Group_8",
-										"originalName": "Group 8",
-										"maskFrame": null,
-										"layerFrame": {
-											"x": 817,
-											"y": 703,
-											"width": 35,
-											"height": 34
-										},
-										"visible": true,
-										"metadata": {
-											"opacity": 1
-										},
-										"image": {
-											"path": "images/Layer-Group_8-otlemjg2.png",
-											"frame": {
-												"x": 817,
-												"y": 703,
-												"width": 35,
-												"height": 34
-											}
-										},
-										"children": []
-									}
-								]
+								"children": []
 							},
 							{
 								"objectId": "116265DF-0D1E-4AF5-9563-A80B4FAC4C12",
@@ -689,6 +661,60 @@ window.__imported__["MODHome_201805v2_Framer@4x/layers.json.js"] = [
 									"frame": {
 										"x": 1126,
 										"y": 680,
+										"width": 104,
+										"height": 104
+									}
+								},
+								"children": []
+							},
+							{
+								"objectId": "F6513413-8F7A-4554-A607-EC456BC2045D",
+								"kind": "group",
+								"name": "Third_BtnCom19",
+								"originalName": "Third_BtnCom19",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 209,
+									"y": 824,
+									"width": 104,
+									"height": 104
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"image": {
+									"path": "images/Layer-Third_BtnCom19-rjy1mtm0.png",
+									"frame": {
+										"x": 209,
+										"y": 824,
+										"width": 104,
+										"height": 104
+									}
+								},
+								"children": []
+							},
+							{
+								"objectId": "E83DBCEE-31D0-4C75-AB7E-E1599EE8F076",
+								"kind": "group",
+								"name": "Third_BtnCom20",
+								"originalName": "Third_BtnCom20",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 325,
+									"y": 824,
+									"width": 104,
+									"height": 104
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"image": {
+									"path": "images/Layer-Third_BtnCom20-rtgzrejd.png",
+									"frame": {
+										"x": 325,
+										"y": 824,
 										"width": 104,
 										"height": 104
 									}
@@ -874,7 +900,7 @@ window.__imported__["MODHome_201805v2_Framer@4x/layers.json.js"] = [
 					"x": 0,
 					"y": 0,
 					"width": 1280,
-					"height": 538
+					"height": 520
 				},
 				"visible": true,
 				"metadata": {
@@ -1256,7 +1282,7 @@ window.__imported__["MODHome_201805v2_Framer@4x/layers.json.js"] = [
 											{
 												"objectId": "352A24ED-1EAB-443F-94DA-76DEDF87BAAB",
 												"kind": "group",
-												"name": "Group_81",
+												"name": "Group_8",
 												"originalName": "Group 8",
 												"maskFrame": null,
 												"layerFrame": {
@@ -2027,7 +2053,7 @@ window.__imported__["MODHome_201805v2_Framer@4x/layers.json.js"] = [
 							{
 								"objectId": "11A79508-476F-400E-9181-D8ABB7F7640D",
 								"kind": "group",
-								"name": "Group_82",
+								"name": "Group_81",
 								"originalName": "Group 8",
 								"maskFrame": null,
 								"layerFrame": {
@@ -2170,7 +2196,7 @@ window.__imported__["MODHome_201805v2_Framer@4x/layers.json.js"] = [
 							"x": 0,
 							"y": 0,
 							"width": 1280,
-							"height": 538
+							"height": 520
 						},
 						"visible": true,
 						"metadata": {
@@ -2284,25 +2310,81 @@ window.__imported__["MODHome_201805v2_Framer@4x/layers.json.js"] = [
 								"originalName": "BigBanner",
 								"maskFrame": null,
 								"layerFrame": {
-									"x": 660,
-									"y": 53,
-									"width": 610,
-									"height": 485
+									"x": 700,
+									"y": 93,
+									"width": 530,
+									"height": 405
 								},
 								"visible": true,
 								"metadata": {
 									"opacity": 1
 								},
-								"image": {
-									"path": "images/Layer-BigBanner-n0ndrkvf.png",
-									"frame": {
-										"x": 660,
-										"y": 53,
-										"width": 610,
-										"height": 485
+								"children": [
+									{
+										"objectId": "D7CA9BC3-2B4E-454A-9069-665F9F88DD5F",
+										"kind": "group",
+										"name": "BannerUp",
+										"originalName": "BannerUp",
+										"maskFrame": {
+											"x": 0,
+											"y": 0,
+											"width": 530,
+											"height": 195
+										},
+										"layerFrame": {
+											"x": 700,
+											"y": 93,
+											"width": 530,
+											"height": 195
+										},
+										"visible": true,
+										"metadata": {
+											"opacity": 1
+										},
+										"image": {
+											"path": "images/Layer-BannerUp-rdddqtlc.png",
+											"frame": {
+												"x": 700,
+												"y": 93,
+												"width": 530,
+												"height": 195
+											}
+										},
+										"children": []
+									},
+									{
+										"objectId": "59C1EB20-67E2-4204-BEEB-4007063DE449",
+										"kind": "group",
+										"name": "BannerDown",
+										"originalName": "BannerDown",
+										"maskFrame": {
+											"x": 0,
+											"y": 0,
+											"width": 530,
+											"height": 195
+										},
+										"layerFrame": {
+											"x": 700,
+											"y": 303,
+											"width": 530,
+											"height": 195
+										},
+										"visible": true,
+										"metadata": {
+											"opacity": 1
+										},
+										"image": {
+											"path": "images/Layer-BannerDown-ntldmuvc.png",
+											"frame": {
+												"x": 700,
+												"y": 303,
+												"width": 530,
+												"height": 195
+											}
+										},
+										"children": []
 									}
-								},
-								"children": []
+								]
 							},
 							{
 								"objectId": "08B06C8F-6BF8-46BC-B387-B13F5C153009",
@@ -2430,6 +2512,51 @@ window.__imported__["MODHome_201805v2_Framer@4x/layers.json.js"] = [
 						"y": -39,
 						"width": 341,
 						"height": 305
+					}
+				},
+				"children": []
+			}
+		]
+	},
+	{
+		"objectId": "DAD5B437-7223-42B0-9208-58BF1911CFF6",
+		"kind": "artboard",
+		"name": "Artboard_2",
+		"originalName": "Artboard 2",
+		"maskFrame": null,
+		"layerFrame": {
+			"x": -2346,
+			"y": -211,
+			"width": 1280,
+			"height": 720
+		},
+		"visible": true,
+		"metadata": {},
+		"backgroundColor": "rgba(255, 255, 255, 1)",
+		"children": [
+			{
+				"objectId": "C42B01BA-E367-49C8-8E01-8B922273F8D3",
+				"kind": "group",
+				"name": "Screen2BG",
+				"originalName": "Screen2BG",
+				"maskFrame": null,
+				"layerFrame": {
+					"x": 0,
+					"y": 0,
+					"width": 1280,
+					"height": 720
+				},
+				"visible": true,
+				"metadata": {
+					"opacity": 1
+				},
+				"image": {
+					"path": "images/Layer-Screen2BG-qzqyqjax.png",
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"width": 1280,
+						"height": 720
 					}
 				},
 				"children": []
