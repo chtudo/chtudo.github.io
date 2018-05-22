@@ -14,7 +14,7 @@ window.__imported__["MODHOME_201805v5_Framer@4x/layers.json.js"] = [
 			"x": -490,
 			"y": -211,
 			"width": 1280,
-			"height": 979
+			"height": 720
 		},
 		"visible": true,
 		"metadata": {},
@@ -833,6 +833,33 @@ window.__imported__["MODHOME_201805v5_Framer@4x/layers.json.js"] = [
 						},
 						"children": [
 							{
+								"objectId": "4C267095-024F-4A9E-AB91-F3E8B0EE2EFF",
+								"kind": "group",
+								"name": "PageLifeContentCTA",
+								"originalName": "PageLifeContentCTA",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 1041,
+									"y": 389,
+									"width": 135,
+									"height": 69
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"image": {
+									"path": "images/Layer-PageLifeContentCTA-nemynjcw.png",
+									"frame": {
+										"x": 1041,
+										"y": 389,
+										"width": 135,
+										"height": 69
+									}
+								},
+								"children": []
+							},
+							{
 								"objectId": "71B08FBE-B75E-4CD3-84DB-6138641DA512",
 								"kind": "group",
 								"name": "HomePage1BG",
@@ -1391,28 +1418,28 @@ window.__imported__["MODHOME_201805v5_Framer@4x/layers.json.js"] = [
 						},
 						"children": [
 							{
-								"objectId": "2F30C412-EAEE-49DB-8F54-C63CF97D34B2",
+								"objectId": "908B13BC-8C35-4D40-80C0-302D5DB02C53",
 								"kind": "group",
-								"name": "Page4ContentCTA",
-								"originalName": "Page4ContentCTA",
+								"name": "PageChildContentCTA",
+								"originalName": "PageChildContentCTA",
 								"maskFrame": null,
 								"layerFrame": {
-									"x": 1016,
-									"y": 378,
-									"width": 98,
-									"height": 71
+									"x": 1041,
+									"y": 389,
+									"width": 135,
+									"height": 69
 								},
 								"visible": true,
 								"metadata": {
 									"opacity": 1
 								},
 								"image": {
-									"path": "images/Layer-Page4ContentCTA-mkyzmem0.png",
+									"path": "images/Layer-PageChildContentCTA-ota4qjez.png",
 									"frame": {
-										"x": 1016,
-										"y": 378,
-										"width": 98,
-										"height": 71
+										"x": 1041,
+										"y": 389,
+										"width": 135,
+										"height": 69
 									}
 								},
 								"children": []
@@ -1538,34 +1565,34 @@ window.__imported__["MODHOME_201805v5_Framer@4x/layers.json.js"] = [
 						},
 						"children": [
 							{
-								"objectId": "1FB2BBFD-D672-4D83-92B8-E31F23C28240",
+								"objectId": "2530C3CB-A1DD-4D1D-86CD-18EFCC830C99",
 								"kind": "group",
-								"name": "Page3ContentCTA",
-								"originalName": "Page3ContentCTA",
+								"name": "PageDramaContentCTA",
+								"originalName": "PageDramaContentCTA",
 								"maskFrame": null,
 								"layerFrame": {
-									"x": 1016,
-									"y": 378,
-									"width": 98,
-									"height": 71
+									"x": 1041,
+									"y": 389,
+									"width": 135,
+									"height": 69
 								},
 								"visible": true,
 								"metadata": {
 									"opacity": 1
 								},
 								"image": {
-									"path": "images/Layer-Page3ContentCTA-muzcmkjc.png",
+									"path": "images/Layer-PageDramaContentCTA-mjuzmemz.png",
 									"frame": {
-										"x": 1016,
-										"y": 378,
-										"width": 98,
-										"height": 71
+										"x": 1041,
+										"y": 389,
+										"width": 135,
+										"height": 69
 									}
 								},
 								"children": []
 							},
 							{
-								"objectId": "B16E1A55-672D-4CA6-8AB5-FD1D979FB1CF",
+								"objectId": "1C8EE7BC-468D-49A3-A461-89FF6A7A607D",
 								"kind": "group",
 								"name": "Group_32",
 								"originalName": "Group 3",
@@ -1581,7 +1608,7 @@ window.__imported__["MODHOME_201805v5_Framer@4x/layers.json.js"] = [
 									"opacity": 1
 								},
 								"image": {
-									"path": "images/Layer-Group_3-qje2rtfb.png",
+									"path": "images/Layer-Group_3-mum4ruu3.png",
 									"frame": {
 										"x": 0,
 										"y": 0,
@@ -1592,7 +1619,7 @@ window.__imported__["MODHOME_201805v5_Framer@4x/layers.json.js"] = [
 								"children": []
 							},
 							{
-								"objectId": "4EFFD921-4C1A-4C1C-B1F2-C5F5B4C79A76",
+								"objectId": "385FDE99-B390-48A2-84A5-05A08F17541B",
 								"kind": "group",
 								"name": "HomePage3BG",
 								"originalName": "HomePage3BG",
@@ -1608,7 +1635,7 @@ window.__imported__["MODHOME_201805v5_Framer@4x/layers.json.js"] = [
 									"opacity": 1
 								},
 								"image": {
-									"path": "images/Layer-HomePage3BG-nevgrkq5.png",
+									"path": "images/Layer-HomePage3BG-mzg1rkrf.png",
 									"frame": {
 										"x": 0,
 										"y": 0,
@@ -2368,6 +2395,33 @@ window.__imported__["MODHOME_201805v5_Framer@4x/layers.json.js"] = [
 						},
 						"children": [
 							{
+								"objectId": "316385BF-F6EB-4EF0-AD13-80B0209FF8A5",
+								"kind": "group",
+								"name": "PageSportContentBarker",
+								"originalName": "PageSportContentBarker",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 56,
+									"y": 107,
+									"width": 630,
+									"height": 359
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"image": {
+									"path": "images/Layer-PageSportContentBarker-mze2mzg1.png",
+									"frame": {
+										"x": 56,
+										"y": 107,
+										"width": 630,
+										"height": 359
+									}
+								},
+								"children": []
+							},
+							{
 								"objectId": "306894CC-19DD-4C7A-8523-82D2100C6E28",
 								"kind": "group",
 								"name": "Group3",
@@ -2414,10 +2468,37 @@ window.__imported__["MODHOME_201805v5_Framer@4x/layers.json.js"] = [
 						},
 						"children": [
 							{
-								"objectId": "75C8D1E8-5C79-4DFB-9693-683B495F59C9",
+								"objectId": "DB25530B-A1DC-4A3A-8B97-DF399DA78C68",
 								"kind": "group",
-								"name": "HomePage1BG2",
-								"originalName": "HomePage1BG",
+								"name": "PageFreeContentCTA",
+								"originalName": "PageFreeContentCTA",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 1041,
+									"y": 389,
+									"width": 135,
+									"height": 69
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"image": {
+									"path": "images/Layer-PageFreeContentCTA-reiyntuz.png",
+									"frame": {
+										"x": 1041,
+										"y": 389,
+										"width": 135,
+										"height": 69
+									}
+								},
+								"children": []
+							},
+							{
+								"objectId": "DC8E7AEB-1ABE-43AE-8F7B-9E0F6071585C",
+								"kind": "group",
+								"name": "Group_20",
+								"originalName": "Group 20",
 								"maskFrame": null,
 								"layerFrame": {
 									"x": 0,
@@ -2430,7 +2511,7 @@ window.__imported__["MODHOME_201805v5_Framer@4x/layers.json.js"] = [
 									"opacity": 1
 								},
 								"image": {
-									"path": "images/Layer-HomePage1BG-nzvdoeqx.png",
+									"path": "images/Layer-Group_20-rem4rtdb.png",
 									"frame": {
 										"x": 0,
 										"y": 0,
@@ -2460,10 +2541,37 @@ window.__imported__["MODHOME_201805v5_Framer@4x/layers.json.js"] = [
 						},
 						"children": [
 							{
-								"objectId": "81F7A861-FF34-4D9E-A3B1-42292D8A7EE1",
+								"objectId": "8196BE69-2825-42E8-BDB0-18FC9AB33B74",
 								"kind": "group",
-								"name": "HomePage1BG3",
-								"originalName": "HomePage1BG",
+								"name": "PageMusicContentBarker",
+								"originalName": "PageMusicContentBarker",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 56,
+									"y": 107,
+									"width": 630,
+									"height": 359
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"image": {
+									"path": "images/Layer-PageMusicContentBarker-ode5nkjf.png",
+									"frame": {
+										"x": 56,
+										"y": 107,
+										"width": 630,
+										"height": 359
+									}
+								},
+								"children": []
+							},
+							{
+								"objectId": "25608020-95FC-437C-A887-63B8D869C382",
+								"kind": "group",
+								"name": "Group4",
+								"originalName": "Group",
 								"maskFrame": null,
 								"layerFrame": {
 									"x": 0,
@@ -2476,7 +2584,7 @@ window.__imported__["MODHOME_201805v5_Framer@4x/layers.json.js"] = [
 									"opacity": 1
 								},
 								"image": {
-									"path": "images/Layer-HomePage1BG-odfgn0e4.png",
+									"path": "images/Layer-Group-mju2mdgw.png",
 									"frame": {
 										"x": 0,
 										"y": 0,
@@ -2492,7 +2600,7 @@ window.__imported__["MODHOME_201805v5_Framer@4x/layers.json.js"] = [
 						"objectId": "789A81C4-B924-4BB0-8AE0-41B3604DEC41",
 						"kind": "group",
 						"name": "PageMsgContent",
-						"originalName": "PageMsgContent",
+						"originalName": "PageMsgContent*",
 						"maskFrame": null,
 						"layerFrame": {
 							"x": 0,
@@ -2504,35 +2612,16 @@ window.__imported__["MODHOME_201805v5_Framer@4x/layers.json.js"] = [
 						"metadata": {
 							"opacity": 1
 						},
-						"children": [
-							{
-								"objectId": "69551513-F8D0-4375-A051-17B12E8ACCEA",
-								"kind": "group",
-								"name": "HomePage1BG4",
-								"originalName": "HomePage1BG",
-								"maskFrame": null,
-								"layerFrame": {
-									"x": 0,
-									"y": 0,
-									"width": 1280,
-									"height": 520
-								},
-								"visible": true,
-								"metadata": {
-									"opacity": 1
-								},
-								"image": {
-									"path": "images/Layer-HomePage1BG-njk1nte1.png",
-									"frame": {
-										"x": 0,
-										"y": 0,
-										"width": 1280,
-										"height": 520
-									}
-								},
-								"children": []
+						"image": {
+							"path": "images/Layer-PageMsgContent-nzg5qtgx.jpg",
+							"frame": {
+								"x": 0,
+								"y": 0,
+								"width": 1280,
+								"height": 520
 							}
-						]
+						},
+						"children": []
 					}
 				]
 			},
@@ -2588,10 +2677,10 @@ window.__imported__["MODHOME_201805v5_Framer@4x/layers.json.js"] = [
 				"originalName": "FirstBtnCom00_Scale",
 				"maskFrame": null,
 				"layerFrame": {
-					"x": 213,
+					"x": 215,
 					"y": 109,
-					"width": 147,
-					"height": 146
+					"width": 145,
+					"height": 145
 				},
 				"visible": true,
 				"metadata": {
@@ -2600,10 +2689,10 @@ window.__imported__["MODHOME_201805v5_Framer@4x/layers.json.js"] = [
 				"image": {
 					"path": "images/Layer-FirstBtnCom00_Scale-m0rbq0ng.png",
 					"frame": {
-						"x": 213,
+						"x": 215,
 						"y": 109,
-						"width": 147,
-						"height": 146
+						"width": 145,
+						"height": 145
 					}
 				},
 				"children": []
@@ -2698,6 +2787,33 @@ window.__imported__["MODHOME_201805v5_Framer@4x/layers.json.js"] = [
 		"metadata": {},
 		"backgroundColor": "rgba(255, 255, 255, 1)",
 		"children": [
+			{
+				"objectId": "0CB0D843-2EAE-4B7F-907A-39EE8FCCC566",
+				"kind": "group",
+				"name": "MessageContent",
+				"originalName": "MessageContent*",
+				"maskFrame": null,
+				"layerFrame": {
+					"x": 0,
+					"y": 0,
+					"width": 1280,
+					"height": 834
+				},
+				"visible": true,
+				"metadata": {
+					"opacity": 1
+				},
+				"image": {
+					"path": "images/Layer-MessageContent-mencmeq4.jpg",
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"width": 1280,
+						"height": 834
+					}
+				},
+				"children": []
+			},
 			{
 				"objectId": "4DFE3210-386B-4A37-953D-899B95638AA7",
 				"kind": "group",
@@ -3263,6 +3379,105 @@ window.__imported__["MODHOME_201805v5_Framer@4x/layers.json.js"] = [
 						"children": []
 					}
 				]
+			}
+		]
+	},
+	{
+		"objectId": "F71BED11-67FE-4BFC-B7CA-660DC86B0C09",
+		"kind": "artboard",
+		"name": "PopHint",
+		"originalName": "PopHint",
+		"maskFrame": null,
+		"layerFrame": {
+			"x": -490,
+			"y": 691,
+			"width": 1280,
+			"height": 720
+		},
+		"visible": true,
+		"metadata": {},
+		"backgroundColor": "rgba(255, 255, 255, 1)",
+		"children": [
+			{
+				"objectId": "A701327B-0782-48A8-AAE7-8A1802881268",
+				"kind": "group",
+				"name": "PopHintPage3",
+				"originalName": "PopHintPage3",
+				"maskFrame": null,
+				"layerFrame": {
+					"x": 0,
+					"y": 0,
+					"width": 1280,
+					"height": 720
+				},
+				"visible": true,
+				"metadata": {
+					"opacity": 1
+				},
+				"image": {
+					"path": "images/Layer-PopHintPage3-qtcwmtmy.jpg",
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"width": 1280,
+						"height": 720
+					}
+				},
+				"children": []
+			},
+			{
+				"objectId": "DC49B836-111E-40A1-9658-CD72CE99BB36",
+				"kind": "group",
+				"name": "PopHintPage2",
+				"originalName": "PopHintPage2",
+				"maskFrame": null,
+				"layerFrame": {
+					"x": 0,
+					"y": 0,
+					"width": 1280,
+					"height": 720
+				},
+				"visible": true,
+				"metadata": {
+					"opacity": 1
+				},
+				"image": {
+					"path": "images/Layer-PopHintPage2-rem0oui4.jpg",
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"width": 1280,
+						"height": 720
+					}
+				},
+				"children": []
+			},
+			{
+				"objectId": "2A74CB8D-57DE-4D91-BC5F-0438A47CEB2E",
+				"kind": "group",
+				"name": "PopHintPage1",
+				"originalName": "PopHintPage1",
+				"maskFrame": null,
+				"layerFrame": {
+					"x": 0,
+					"y": 0,
+					"width": 1280,
+					"height": 720
+				},
+				"visible": true,
+				"metadata": {
+					"opacity": 1
+				},
+				"image": {
+					"path": "images/Layer-PopHintPage1-mke3nenc.jpg",
+					"frame": {
+						"x": 0,
+						"y": 0,
+						"width": 1280,
+						"height": 720
+					}
+				},
+				"children": []
 			}
 		]
 	}

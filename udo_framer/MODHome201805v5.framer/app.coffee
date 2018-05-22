@@ -1,3 +1,5 @@
+# Import file "MODHOME_201805v5_Framer"
+sketch = Framer.Importer.load("imported/MODHOME_201805v5_Framer@4x", scale: 1)
 
 class TwoScenarioComponent extends Layer
 	constructor: (options={}) ->
@@ -135,8 +137,7 @@ class ScaleCommandFirstRowVisibleBTN extends Layer
 								
 
 
-# Import file "MODHome_201805v2_Framer"
-sketch = Framer.Importer.load("imported/MODHome_201805v5_Framer@4x", scale: 1)
+
 {focusManager} = require 'focusManager'
 enterTV=""
 
@@ -357,7 +358,7 @@ BtnContentMappingArray=[{
 	name:"FirstBtnCom02"
 	value:"MovieContent"},{
 	name:"FirstBtnCom00"
-	value:"MovieContent"}]
+	value:"MessageContent"}]
 
 
 Array::toDict = (key) ->
@@ -393,11 +394,20 @@ ShowInnerContentFocus=(layer,parent)->
 	InnerContent.visible=true
 	contentlayer=InnerContent.subLayersByName(layer)[0]
 	contentlayer.bringToFront()
-	barker=contentlayer.subLayersByName(layer+"Barker")[0].children[0]
-	barker.player.play()
+	
+	
+	if layer=="MessageContent"
+		a=1
+	else
+		barker=contentlayer.subLayersByName(layer+"Barker")[0].children[0]
+		barker.player.play()	
 	focusManager.selectedItem=contentlayer
 	contentlayer.on "b",->
-		barker.player.pause()
+		if this.name=="MessageContent"
+			s=1
+		else
+			barker=this.subLayersByName(layer+"Barker")[0].children[0]
+			barker.player.pause()
 		InnerContent.visible=false
 		focusManager.selectedItem=parent
 	
@@ -405,15 +415,19 @@ BuildInnterContent=()->
 	for sub in InnerContent.children
 		sub.selectionBorder=false
 		sub.isSelectable=true
-		videoContent=InnerContentMappingDict[sub.name]["value"]
-		barker=sub.subLayersByName(sub.name+"Barker")[0]
-		barker.clip=true
-		videolayer=new VideoLayer
-			parent:barker
-			size:barker.size
-			scale:1.3
-			video:videoContent
-		videolayer.player.loop=true	
+		
+		if sub.name=="MessageContent"
+			s=1
+		else
+			videoContent=InnerContentMappingDict[sub.name]["value"]
+			barker=sub.subLayersByName(sub.name+"Barker")[0]
+			barker.clip=true
+			videolayer=new VideoLayer
+				parent:barker
+				size:barker.size
+				scale:1.3
+				video:videoContent
+			videolayer.player.loop=true	
 		#videolayer.player.play()	
 
 	InnerContent.bringToFront()		
@@ -450,11 +464,66 @@ SettingFocusUI=()->
 	MoviePoster3.down=scrollBtm.content.childrenWithName("FirstBtnCom02")[0]
 	MoviePoster4.down=scrollBtm.content.childrenWithName("FirstBtnCom02")[0]
 	#page3
-	Page3ContentCTA.isSelectable=true	
-	Page3ContentCTA.down=scrollBtm.content.childrenWithName("FirstBtnCom03")[0]
-	scrollBtm.content.childrenWithName("FirstBtnCom03")[0].up=Page3ContentCTA
+	PageLifeContentCTA.isSelectable=true
+	PageChildContentCTA.isSelectable=true
+	PageDramaContentCTA.isSelectable=true
+	PageFreeContentCTA.isSelectable=true
+	
+	sportVideo=new VideoLayer
+		size: PageSportContentBarker.size
+		scale:1.3
+		video:InnerContentMappingDict["SportContent"]["value"]
+		parent:PageSportContentBarker
+	sportVideo.player.play()
+	sportVideo.player.muted=true
+	sportVideo.player.loop=true
+	PageSportContentBarker.clip=true
+	musicVideo=new VideoLayer
+		size: PageMusicContentBarker.size
+		scale: 1.3
+		video:InnerContentMappingDict["MusicContent"]["value"]
+		parent:PageMusicContentBarker
+	PageMusicContentBarker.clip=true
+	musicVideo.player.play()
+	musicVideo.player.muted=true
+	musicVideo.player.loop=true
+	PopHint.x=0
+	PopHint.y=0
+	PopHint.bringToFront()
+# 	PopHintPage1.isSelectable=true
+# 	PopHintPage2.isSelectable=true
+# 	PopHintPage3.isSelectable=true
+# 	
+# 	focusManager.selectedItem=PopHintPage1
+# 	PopHintPage1.on "a",->
+# 		print "ddd"
+
+	for sub in PopHint.children
+		sub.isSelectable=true
+		sub.selectionBorder=false
+		sub.visible=false
+		sub.on "blur",->
+			this.visible=false
+		sub.on "focus",->
+			this.visible=true
+		sub.on "a",->
+			this.visible=false
+			if this.name=="PopHintPage1"
+				
+				focusManager.selectedItem=PopHintPage2
+			if this.name=="PopHintPage2"
+				
+				focusManager.selectedItem=PopHintPage3
+			if this.name=="PopHintPage3"
+				PopHint.sendToBack()
+				focusManager.selectedItem=scrollBtm.content.childrenWithName("FirstBtnCom01")[0]						
+	focusManager.selectedItem=PopHintPage1
+	
+# 	Page3ContentCTA.isSelectable=true	
+# 	Page3ContentCTA.down=scrollBtm.content.childrenWithName("FirstBtnCom03")[0]
+# 	scrollBtm.content.childrenWithName("FirstBtnCom03")[0].up=Page3ContentCTA
 	#page4
-	Page4ContentCTA.isSelectable=true
-	Page4ContentCTA.down=scrollBtm.content.childrenWithName("FirstBtnCom04")[0]
-	scrollBtm.content.childrenWithName("FirstBtnCom04")[0].up=Page4ContentCTA		
+# 	Page4ContentCTA.isSelectable=true
+# 	Page4ContentCTA.down=scrollBtm.content.childrenWithName("FirstBtnCom04")[0]
+# 	scrollBtm.content.childrenWithName("FirstBtnCom04")[0].up=Page4ContentCTA		
 SettingFocusUI()
