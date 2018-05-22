@@ -1,4 +1,4 @@
-
+Framer.Extras.Preloader.enable()
 BtnContentMappingArray=[{
 	name:"ScaleComBtn8" 
 	value:"ChildContent"},{

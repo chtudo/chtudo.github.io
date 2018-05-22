@@ -1,3 +1,4 @@
+Framer.Extras.Preloader.enable()
 # Import file "MODHOME_201805v5_Framer"
 sketch = Framer.Importer.load("imported/MODHOME_201805v5_Framer@4x", scale: 1)
 
