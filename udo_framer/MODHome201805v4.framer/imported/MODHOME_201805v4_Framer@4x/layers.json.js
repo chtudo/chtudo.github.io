@@ -491,8 +491,8 @@ window.__imported__["MODHOME_201805v4_Framer@4x/layers.json.js"] = [
 						"originalName": "Btn8*",
 						"maskFrame": null,
 						"layerFrame": {
-							"x": 886,
-							"y": 447,
+							"x": 1062,
+							"y": 271,
 							"width": 156,
 							"height": 156
 						},
@@ -503,8 +503,8 @@ window.__imported__["MODHOME_201805v4_Framer@4x/layers.json.js"] = [
 						"image": {
 							"path": "images/Layer-Btn8-mee0qjbc.png",
 							"frame": {
-								"x": 886,
-								"y": 447,
+								"x": 1062,
+								"y": 271,
 								"width": 156,
 								"height": 156
 							}
@@ -545,8 +545,8 @@ window.__imported__["MODHOME_201805v4_Framer@4x/layers.json.js"] = [
 						"originalName": "Btn6",
 						"maskFrame": null,
 						"layerFrame": {
-							"x": 1062,
-							"y": 271,
+							"x": 886,
+							"y": 447,
 							"width": 156,
 							"height": 156
 						},
@@ -557,8 +557,8 @@ window.__imported__["MODHOME_201805v4_Framer@4x/layers.json.js"] = [
 						"image": {
 							"path": "images/Layer-Btn6-rdfbmzc4.png",
 							"frame": {
-								"x": 1062,
-								"y": 271,
+								"x": 886,
+								"y": 447,
 								"width": 156,
 								"height": 156
 							}
@@ -599,8 +599,8 @@ window.__imported__["MODHOME_201805v4_Framer@4x/layers.json.js"] = [
 						"originalName": "Btn4",
 						"maskFrame": null,
 						"layerFrame": {
-							"x": 710,
-							"y": 271,
+							"x": 886,
+							"y": 95,
 							"width": 156,
 							"height": 156
 						},
@@ -611,8 +611,8 @@ window.__imported__["MODHOME_201805v4_Framer@4x/layers.json.js"] = [
 						"image": {
 							"path": "images/Layer-Btn4-njm5qthf.png",
 							"frame": {
-								"x": 710,
-								"y": 271,
+								"x": 886,
+								"y": 95,
 								"width": 156,
 								"height": 156
 							}
@@ -653,8 +653,8 @@ window.__imported__["MODHOME_201805v4_Framer@4x/layers.json.js"] = [
 						"originalName": "Btn2",
 						"maskFrame": null,
 						"layerFrame": {
-							"x": 886,
-							"y": 95,
+							"x": 710,
+							"y": 271,
 							"width": 156,
 							"height": 156
 						},
@@ -665,8 +665,8 @@ window.__imported__["MODHOME_201805v4_Framer@4x/layers.json.js"] = [
 						"image": {
 							"path": "images/Layer-Btn2-njm2rtu4.png",
 							"frame": {
-								"x": 886,
-								"y": 95,
+								"x": 710,
+								"y": 271,
 								"width": 156,
 								"height": 156
 							}
