@@ -13,7 +13,7 @@ FIFA_ScoreArray=[]
 sheet.get((data, sheet) ->
   FIFA_ScoreArray = data
   #print "ddd",FIFA_ScoreArray.length
-  Utils.delay 1,->
+  Utils.delay 0.5,->
     i=0
     for item in FIFA_ScoreArray
       
@@ -51,11 +51,12 @@ layerCover.centerX()
 layerCover.y=660
 helloText=new TextLayer
 	fontSize:24
-	text:"夏洛克出品，必屬佳作"
+	text:"更新FIFA官方數據＠夏洛克"
 	parent:layerCover
 	color:"White"
 helloText.centerX()		
-
+layerCover.on "click",->
+	window.location = "https://docs.google.com/spreadsheets/d/1wYhbZ3A8YsDe44pq5TmnDI205MTAeozgAWjNZqCw9ZY/edit?usp=sharing"
 generateScores=(win,fail,duce,total)->
 	layer=new Layer
 		backgroundColor:"Transparent"
