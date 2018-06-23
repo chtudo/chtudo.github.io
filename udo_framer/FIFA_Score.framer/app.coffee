@@ -1,4 +1,5 @@
 { Sheet } = require 'sheet'
+Framer.Extras.Preloader.enable()
 hd_score_kent = new Layer
 	width: 1280
 	height: 720
@@ -10,44 +11,61 @@ Array::toDict = (key) ->
 
 
 FIFA_ScoreArray=[]
-sheet.get((data, sheet) ->
-  FIFA_ScoreArray = data
-  #print "ddd",FIFA_ScoreArray.length
-  Utils.delay 1,->
-    i=0
-    for item in FIFA_ScoreArray
+isGetRightData=false
+isAlreadyGenUI=false
+
+getSheetData=()->
+	sheet.get((data, sheet) ->
+		FIFA_ScoreArray = data
+		if (typeof FIFA_ScoreArray[31]["Flag"] != "undefined" && FIFA_ScoreArray[31]["Flag"] != null)		
+			isGetRightData=true
+	)
+getSheetData()
+
+Utils.interval 1,->
+	if isGetRightData
+		if isAlreadyGenUI
+			log="已經產生過ui"
+		else
+			DisplayUI(FIFA_ScoreArray)
+			isAlreadyGenUI=true
+	else
+		getSheetData()
+
+	
+DisplayUI=(FIFA_ScoreArray)->
+	i=0
+	for item in FIFA_ScoreArray
+		layerScore=generateScores(item["Country_TW"],item["Flag"],item["Win"],item["Fail"],item["Duce"],item["Score"])
+		if item["Group"]=="A" 
+			layerScore.y=40*i+50
+			layerScore.x=75
+		if item["Group"]=="B" 
+			layerScore.y=40*i+55
+			layerScore.x=75
+		if item["Group"]=="C" 
+			layerScore.y=40*i+55
+			layerScore.x=75
+		if item["Group"]=="D" 
+			layerScore.y=40*i+57
+			layerScore.x=75
+		if item["Group"]=="E" 
+			layerScore.x=1030 
+			layerScore.y=40*(i%16)+50
+		if item["Group"]=="F"
+			layerScore.x=1030
+			layerScore.y=40*(i%16)+55
+		if item["Group"]=="G" 
+			layerScore.x=1030
+			layerScore.y=40*(i%16)+55
+		if item["Group"]=="H" 
+			layerScore.x=1030
+			layerScore.y=40*(i%16)+56      
+		i=i+1
+		layerScore.name="Group"+item["Group"]
       
-      #print item["Country_TW"],item["Group"],item["Win"],item["Score"]
-      layerScore=generateScores(item["Country_TW"],item["Flag"],item["Win"],item["Fail"],item["Duce"],item["Score"])
-      if item["Group"]=="A" 
-        layerScore.y=40*i+50
-        layerScore.x=75
-      if item["Group"]=="B" 
-        layerScore.y=40*i+55
-        layerScore.x=75
-      if item["Group"]=="C" 
-        layerScore.y=40*i+55
-        layerScore.x=75
-      if item["Group"]=="D" 
-        layerScore.y=40*i+57
-        layerScore.x=75
-      if item["Group"]=="E" 
-        layerScore.x=1030 
-        layerScore.y=40*(i%16)+50
-      if item["Group"]=="F"
-        layerScore.x=1030
-        layerScore.y=40*(i%16)+55
-      if item["Group"]=="G" 
-        layerScore.x=1030
-        layerScore.y=40*(i%16)+55
-      if item["Group"]=="H" 
-        layerScore.x=1030
-        
-        layerScore.y=40*(i%16)+56      
-      i=i+1
-      layerScore.name="Group"+item["Group"]
-      
-)
+
+
 layerCover=new Layer
 	backgroundColor:"#0A2242"
 	width:150
