@@ -13,31 +13,36 @@ FIFA_ScoreArray=[]
 sheet.get((data, sheet) ->
   FIFA_ScoreArray = data
   #print "ddd",FIFA_ScoreArray.length
-  Utils.delay 0.5,->
+  Utils.delay 1,->
     i=0
     for item in FIFA_ScoreArray
       
       #print item["Country_TW"],item["Group"],item["Win"],item["Score"]
-      layerScore=generateScores(item["Win"],item["Fail"],item["Duce"],item["Score"])
+      layerScore=generateScores(item["Country_TW"],item["Flag"],item["Win"],item["Fail"],item["Duce"],item["Score"])
       if item["Group"]=="A" 
         layerScore.y=40*i+50
+        layerScore.x=75
       if item["Group"]=="B" 
         layerScore.y=40*i+55
+        layerScore.x=75
       if item["Group"]=="C" 
         layerScore.y=40*i+55
+        layerScore.x=75
       if item["Group"]=="D" 
         layerScore.y=40*i+57
+        layerScore.x=75
       if item["Group"]=="E" 
-        layerScore.x=1135 
+        layerScore.x=1030 
         layerScore.y=40*(i%16)+50
       if item["Group"]=="F"
-        layerScore.x=1135
+        layerScore.x=1030
         layerScore.y=40*(i%16)+55
       if item["Group"]=="G" 
-        layerScore.x=1135
+        layerScore.x=1030
         layerScore.y=40*(i%16)+55
       if item["Group"]=="H" 
-        layerScore.x=1135
+        layerScore.x=1030
+        
         layerScore.y=40*(i%16)+56      
       i=i+1
       layerScore.name="Group"+item["Group"]
@@ -57,17 +62,42 @@ helloText=new TextLayer
 helloText.centerX()		
 layerCover.on "click",->
 	window.location = "https://docs.google.com/spreadsheets/d/1wYhbZ3A8YsDe44pq5TmnDI205MTAeozgAWjNZqCw9ZY/edit?usp=sharing"
-generateScores=(win,fail,duce,total)->
+generateScores=(chineseName,flag,win,fail,duce,total)->
+	fontSizeN=24
+	gap=9
+	fontColorT="Black"
+	layerCountryInfo=new Layer
+		backgroundColor:"Transparent"
+		height:38
+	
+	layerFlag=new Layer
+		image:flag
+		parent:layerCountryInfo
+		height:25
+		width:50
+		x:0
+	layerChineseName=new TextLayer
+		text:chineseName
+		parent:layerCountryInfo
+		color:fontColorT
+		fontSize:fontSizeN-4
+		x:50
+		width:70
+		height:38
+		lineHeight: 1		
+	layerChineseName.style =
+	"vertical-align": "middle"
+	layerChineseName.centerY()
+	layerFlag.centerY()
 	layer=new Layer
 		backgroundColor:"Transparent"
 		#borderWidth:1
 		width:100
 		height:40
-		x:190
-		y:50
-	fontSizeN=24
-	gap=9
-	fontColorT="Black"
+		x:120
+		y:0
+		parent:layerCountryInfo
+
 	
 	layerWin=new TextLayer
 		text:win
@@ -95,4 +125,4 @@ generateScores=(win,fail,duce,total)->
 		x:layerDuce.maxX+gap
 	
 		
-	return layer
+	return layerCountryInfo
