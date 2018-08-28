@@ -174,7 +174,14 @@ SettingFloatingAD=()->
 	Utils.delay 5,->
 		animationC.start()
 
-			
+videoLay=new VideoLayer
+		video: "images/Genius.mp4"
+		width:BarkerContent.width*1
+		height: BarkerContent.height*1
+		x:0
+		y:0
+		parent:BarkerContent
+		scale: 1			
 InitialUI=()->	
 	
 	TheHeader.name="TheHeader"
@@ -184,18 +191,12 @@ InitialUI=()->
 	Barker.clip=true
 	
 	
-	videoLay=new VideoLayer
-		video: "images/Genius.mp4"
-		width:BarkerContent.width*1
-		height: BarkerContent.height*1
-		x:0
-		y:0
-		parent:BarkerContent
-		scale: 1
+
 	BarkerContent.clip=true	
 	videoLay.player.loop=true
-	videoLay.player.play()
 	videoLay.player.muted=true
+	videoLay.player.play()
+	
 	Barker.isSelectable=true
 	FloatingAD.bringToFront()
 	SettingPopupAD()
