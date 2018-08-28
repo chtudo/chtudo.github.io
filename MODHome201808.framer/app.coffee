@@ -136,6 +136,7 @@ class ScaleCommandFirstRowVisibleBTN extends Layer
 # Import file "MODHome_201805v2_Framer"
 # sketch = Framer.Importer.load("imported/MODHome_201805v2_Framer@4x", scale: 1)
 sketch = Framer.Importer.load("imported/MODHome_201805v2_Framer_08update@4x", scale: 1)
+Framer.Extras.Preloader.enable()
 {focusManager} = require 'focusManager'
 enterTV=""
 
