@@ -1,0 +1,133 @@
+---
+layout: page
+title: Home
+pageDescription: "Apple Watch represents a new chapter in the way users relate to technology. It’s the most personal device Apple has ever designed, and it enables new ways to receive information and to interact with apps."
+---
+
+<!-- INTRO PARAGRAPH -->
+                <p class="intro">
+                As you design your Watch app, understand the foundations on which Apple&nbsp;Watch itself was designed:
+                </p>
+                <div class="row">
+                <div class="col-33">
+
+
+                <p><img src="{{ site.baseurl }}/public/images/overview-lightweight.png" alt="" title="" class="center" width="230" height="253" /></p>
+
+                <p><strong>Lightweight interactions.</strong> Apple&nbsp;Watch was designed for quick interactions that make the most of the display and its position on the user’s wrist. Information is quick and easy to access and dismiss. The best apps support fast interactions and focus on the content that users care about the most.</p>
+
+                </div><div class="col-33">
+
+<p><img src="{{ site.baseurl }}/public/images/overview-holistic.png" alt="" title="" class="center" width="230" height="253" /></p>
+
+<p><strong>Holistic design.</strong>  Apple&nbsp;Watch was designed to blur the boundaries between device and software. For example, Force Touch and the Digital Crown let users interact seamlessly with onscreen content. Your own apps should enhance the user’s perception that hardware and software are indistinguishable.</p>
+
+</div><div class="col-33">
+
+<p><img src="{{ site.baseurl }}/public/images/overview-personal.png" alt="" title="" class="center" width="230" height="253" /></p>
+
+<p><strong>Personal communication.</strong> <br>Because Apple&nbsp;Watch was designed to be worn, its UI is attuned to the user’s presence. No other Apple device has ever been so closely connected to the user. Be mindful of this connection during the design process.</p>
+
+</div></div>
+
+<hr />
+
+<!-- GESTURES -->
+
+<div id="gestures" class="row gestures"><div class="col-66">
+
+<h2>Gestures</h2>
+
+<p>User interactions on Apple&nbsp;Watch generate touch events and gestures, but unlike iOS apps, your Watch apps don’t handle these events directly. The system provides automatic responses for all touch events and gestures, responding in the following ways:</p>
+
+<ul>
+<li>Taps trigger action-based events in your app</li>
+<li>Vertical swipes scroll the current screen</li>
+<li>Horizontal swipes display the previous or next page in a <span class="nowrap">page-based interface</span></li>
+<li>Left edge swipes navigate back to a parent screen in a <span class="nowrap">hierarchical interface</span></li>
+</ul>
+
+<p>When the user taps a button or another control, Apple&nbsp;Watch calls that control’s associated action method. You define action methods for the controls in your interface and use them to respond to <span class="nowrap">user interactions</span>.</p>
+
+</div><div class="col-33">
+
+<p><img src="{{ site.baseurl }}/public/images/overview-gestures.png" alt="" title="" class="center overview-gestures" width="519" height="593" /></p>
+
+</div></div>
+
+<hr />
+
+<!-- FORCE TOUCH -->
+
+<div id="force-touch" class="row"><div class="col-66 middle-copy">
+
+<h2>Force Touch</h2>
+
+<p>The Apple&nbsp;Watch display not only senses a touch, it senses the force applied by the user’s finger and responds accordingly. When pressed firmly, the Apple&nbsp;Watch display causes the current screen’s menu (if any) to appear. You can use a menu to present relevant actions to the user without taking space away from the current screen.</p>
+
+<p>For more information, see <a href="/watch/human-interface-guidelines/ui-elements/#menus">Menus</a>.</p>
+
+</div><div class="col-33">
+
+<!-- FORCE TOUCH VIDEO -->
+
+    <div class="watch-frame">
+        <video class="watch-screen video-menus" width="136" height="170" poster="{{ site.baseurl }}/public/images/transparent.png">
+            <source src="{{ site.baseurl }}/public/images/force-touch.mp4" type="video/mp4" />
+            <source src="{{ site.baseurl }}/public/images/force-touch.ogv" type="video/ogg" />
+            <source src="{{ site.baseurl }}/public/images/force-touch.webm" type="video/webm" />
+            </video>
+            <a class="video-play"><span class="play-icon">Play</span></a>
+            <a class="video-replay hidden"><span class="replay-icon">Replay</span></a>
+    </div>
+</div></div>
+
+<hr />
+
+<!-- DIGITAL CROWN -->
+
+<div id="digital-crown" class="row"><div class="col-66 middle-copy">
+
+<h2>The Digital Crown</h2>
+
+<p>The Digital Crown lets users scroll content without obstructing their view of that content. In addition to scrolling, apps access the Digital Crown through pickers, which you use to create custom selection interfaces. Apps do not have direct access to data from the Digital&nbsp;Crown otherwise.</p>
+
+</div><div class="col-33">
+
+<!-- DIGITAL CROWN VIDEO -->
+
+    <div class="watch-band center no-margin">
+        <video class="video-digital-crown" width="230" height="400" poster="{{ site.baseurl }}/public/images/transparent.png">
+            <source src="{{ site.baseurl }}/public/images/digital-crown.mp4" type="video/mp4" />
+            <source src="{{ site.baseurl }}/public/images/digital-crown.ogv" type="video/ogg" />
+            <source src="{{ site.baseurl }}/public/images/digital-crown.webm" type="video/webm" />
+        </video>
+        <a class="video-play"><span class="play-icon">Play</span></a>
+        <a class="video-replay hidden"><span class="replay-icon">Replay</span></a>
+    </div>
+</div></div>
+
+<hr />
+
+<!-- SIDE BUTTON -->
+<div id="side-button" class="row"><div class="col-66 middle-copy">
+
+<h2>Side Button</h2>
+
+
+<p>Users press the side button to access the Friends screen. From this screen, they can call friends, send messages, or interact by sending sketches, taps, and even their heartbeat. Apps do not have access to the side button.</p>
+
+</div><div class="col-33 padding-bottom">
+
+<!-- SIDE BUTTON VIDEO -->
+
+    <div class="watch-band center no-margin">
+        <video class="video-side-button" width="230" height="400" poster="{{ site.baseurl }}/public/images/transparent.png">
+            <source src="{{ site.baseurl }}/public/images/side-button.mp4" type="video/mp4" />
+            <source src="{{ site.baseurl }}/public/images/side-button.ogv" type="video/ogg" />
+            <source src="{{ site.baseurl }}/public/images/side-button.webm" type="video/webm" />
+        </video>
+        <a class="video-play"><span class="play-icon">Play</span></a>
+        <a class="video-replay hidden"><span class="replay-icon">Replay</span></a>
+    </div>
+</div></div>

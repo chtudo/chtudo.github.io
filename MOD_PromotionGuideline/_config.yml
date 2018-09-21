@@ -1,0 +1,198 @@
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+relative_permalinks: true
+
+# Setup
+title:               MOD 看片金 User Experience Guideline
+tagline:             'A Jekyll theme'
+description:         'A reserved <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
+#url:                 'http://localhost/newguide'
+# you must create a folder localhost/baseurl in the web server to store these html files
+#baseurl:             '/mod_coupon_uxguide'
+# or you can use below config to change baseurl
+baseurl:             'http://10.2.21.220/mod_coupon_uxguide'
+mainurl:             'http://10.2.21.220/mod_main_uxguide'
+
+paginate:            5
+
+# About/contact
+author:
+  name:              Sherlock Tsai
+  url:               https://twitter.com/mdo
+  email:             sherlock@cht.com.tw
+
+# Custom vars
+version:             1.0.0
+
+prose:
+  siteurl: 'http://dearsherlock.github.io/'
+  relativeLinks: 'http://dearsherlock.github.io/links.jsonp'
+  media: 'images/post'
+  metadata:
+    _posts:
+      - name: "published"
+        field:
+          label: "Published"
+          element: "checkbox"
+          value: "true"
+      - name: "isLast"
+        field:
+          label: "isLast"
+          element: "checkbox"
+          value: "false"      
+      - name: "layout"
+        field:
+          element: "hidden"
+          label: "Layout"
+          value: "post"
+      - name: "sideNavId"
+        field:
+            label: "sideNavId"
+            element: "text"
+            placeholder: "Enter Page sideNavId"
+      - name: "pageDescription"
+        field:
+            label: "pageDescription"
+            element: "text"
+            placeholder: "Enter Page Main Description"
+      - name: "titleImage"
+        field:
+            label: "titleImage"
+            element: "text"
+            placeholder: "Enter Page titleImage"
+      - name: "nextSessionLink"
+        field:
+            label: "nextSessionLink"
+            element: "text"
+            placeholder: "Enter next Session Link"
+      - name: "nextSessionTitle"
+        field:
+            label: "nextSessionTitle"
+            element: "text"
+            placeholder: "Enter next Session Title"
+      - name: "nextSessionDescription"
+        field:
+            label: "nextSessionDescription"
+            element: "text"
+            placeholder: "Enter next Session Description"
+      - name: "nextSessionImage"
+        field:
+            label: "nextSessionImage"
+            element: "text"
+            placeholder: "Enter next Session Image"
+
+      - name: "title"
+        field:
+          label: "Title"
+          element: "text"
+          value: "An Awesome Headline!"
+      - name: "description"
+        field:
+          element: "text"
+          label: "Description"
+          placeholder: "Enter Post Description"
+      - name: "modified"
+        field:
+          element: "text"
+          label: "Has this page been modified?"
+          placeholder: "YYYY-MM-DD"
+      - name: "categories"
+        field:
+          element: "multiselect"
+          label: "Add categories"
+          placeholder: "Choose categories"
+          value: personal
+          options:
+            - name: "Personal"
+              value: personal
+            - name: "Engineering"
+              value: engineering
+            - name: "Mathematics"
+              value: mathematics
+            - name: "Physics"
+              value: physics
+            - name: "Psychology"
+              value: psychology
+            - name: "Photography"
+              value: photography
+            - name: "Interesting"
+              value: interesting
+            - name: "Web-Development"
+              value: webdevelopment
+          alterable: true
+      - name: "tags"
+        field:
+          element: "text"
+          label: "Tags"
+          placeholder: "Enter tags, separated by spaces"
+      - name: "imagefeature"
+        field:
+          element: "text"
+          label: "Featured Image"
+          placeholder: "somefile.jpg"
+      - name: "covereffect"
+        field:
+          element: "select"
+          label: "Select Cover Effect"
+          placeholder: "Choose Type"
+          value:
+          options:
+            - name: "None"
+              value: 
+            - name: "slice"
+              value: slice
+            - name: "push"
+              value: push
+      - name: "location"
+        field:
+          element: "text"
+          label: "Location"
+          placeholder: "Some Place"
+      - name: "locationgps"
+        field:
+          element: "text"
+          label: "Location GPS point"
+          placeholder: "long, lat"
+      - name: "mathjax"
+        field:
+          element: "checkbox"
+          label: "MathJax"
+          value: false
+      - name: "featured"
+        field:
+          element: "checkbox"
+          label: "Featured?"
+          value: false
+      - name: "comments"
+        field:
+          element: "checkbox"
+          label: "Comments"
+          value: false
+      - name: "chart"
+        field:
+          element: "checkbox"
+          label: "Chart?"
+          value: false
+      - name: "charttype"
+        field:
+          element: "select"
+          label: "Select Chart Type"
+          placeholder: "Choose Type"
+          value:
+          options:
+            - name: "None"
+              value: 
+            - name: "pie"
+              value: pie
+            - name: "serial"
+              value: serial
+      - name: "jquery"
+        field:
+          element: "checkbox"
+          label: "Require JQuery?"
+          value: false
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Gemfile", "Capfile", "Gemfile.lock", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]

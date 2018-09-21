@@ -1,0 +1,49 @@
+/* COPY */
+
+.hig-content > p,
+.hig-content > .row .col-66 p {
+	width: 90%
+}
+
+/* GESTURES */
+
+.gestures .overview-gestures {
+	margin-left:-21px;
+	margin-bottom:-1em;
+}
+
+.gestures + hr {
+	margin-top: 0;
+}
+
+/* VIDEOS */
+
+.video-menus {
+	width:136px;
+	height:170px;
+	background:transparent url('../images/force-touch-poster.png') no-repeat 0 0;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+}
+
+.video-side-button {
+	width:230px;
+	height:400px;
+	background:transparent url('../images/side-button-poster.png') no-repeat 0 0;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+}
+
+.video-digital-crown {
+	width:230px;
+	height:400px;
+	background:transparent url('../images/digital-crown-poster.png') no-repeat 0 0;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+}

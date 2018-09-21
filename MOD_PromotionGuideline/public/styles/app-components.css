@@ -1,0 +1,106 @@
+/* COPY */
+
+.hig-content > .row .col-66 p {
+	width: 90%
+}
+
+
+/* NOTIFICATION SASH */
+
+.sash-copy {
+  margin-top: 20px;
+}
+
+.sash-copy p {
+  width:90%;
+}
+
+/* GLANCES SLIDER */
+
+.watch-frame .bx-pager {
+  padding-top:120px;
+}
+
+.small-dots {
+  position:absolute;
+  padding-top:0;
+  bottom:136px;
+  width:136px;
+}
+
+.small-dots .bx-pager-item {
+  display:inline-block;
+  padding:2px;
+  vertical-align: top;
+}
+
+.small-dots .bx-pager-link {
+  width:3px;
+  height:3px;
+}
+
+.small-dots .bx-pager-link.active {
+  background:#fff;
+  border:none;
+}
+
+/* WATCHKIT APPS HERO */
+
+.watchkit-apps-hero {
+	margin: 2em 0;
+	width:730px;
+	height:410px;
+	background-image: url('../images/watchkit-apps.jpg');
+	background-size: 730px 1810px;
+	background-repeat: no-repeat;
+}
+
+/* VIDEOS */
+
+.video-notifications {
+	width:136px;
+	height:170px;
+	background:transparent url('../images/notifications-poster.png') no-repeat 0 0;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+}
+
+/* COMPLICATIONS */
+
+.complication-list {
+	list-style: none;
+	margin:0 0 24px;
+	background:#000;
+	display:block;
+}
+
+.complication-list:before,
+.complication-list:after {
+	content: '';
+	display:table;
+}
+
+.complication-list:after {
+	clear: both;
+}
+
+.complication-list li {
+		display: block;
+		float:left;
+		text-align:center;
+		margin: 24px 0;
+}
+
+.circular-small li { width:16.66%; margin-top:29px;}
+.modular-small li { width:14.285%; margin-top:20px;}
+.modular-large li { width:25%; margin-top:29px;}
+.utility-small li { width:25%;}
+.utility-large li { width:100%;}
+
+.circular-small li img { margin-bottom:16px;}
+.modular-small li img { margin-bottom:0;}
+.modular-large li img { margin-bottom:14px;}
+.utility-small li img { margin-bottom:10px;}
+.utility-large li img { margin-bottom:10px;}

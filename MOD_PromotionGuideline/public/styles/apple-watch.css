@@ -1,0 +1,294 @@
+/*** APPLE WATCH HUMAN INTERFACE GUIDELINES ***/
+
+/* HIGHLIGHT CURRENT PAGE IN SIDE NAVIGATION */
+#overview .nav-overview > a,
+#designflow .nav-designflow > a,
+#app-components .nav-app-components > a,
+#designopening .nav-designopening > a,
+#designopeningasscociate .nav-designopeningasscociate > a,
+#messageinchannel .nav-messageinchannel > a,
+#designopeninginfo .nav-designopeninginfo > a,
+#designmovieentry .nav-designmovieentry > a,
+#designorderrecord .nav-designorderrecord > a,
+#designmyfavorite .nav-designmyfavorite > a,
+#designwatchrecord .nav-designwatchrecord > a,
+#designcouponarea .nav-designcouponarea > a,
+#designcouponhintalert .nav-designcouponhintalert > a,
+#designcouponhintpopup .nav-designcouponhintpopup > a,
+#navigation .nav-navigation > a,
+#visual-design .nav-visual-design > a,
+#typography .nav-typography > a,
+#animation .nav-animation > a,
+#icons-and-images .nav-icons-and-images > a,
+#ui-elements .nav-ui-elements > a,
+#watch-technologies .nav-watch-technologies > a,
+#resources .nav-resources > a {
+  font-weight: 600;
+  color: #000;
+}
+
+/* DISPLAY MENU AND CHEVRON FOR SELECTED PAGE */
+
+#overview .nav-overview a:after,
+#designflow .nav-designflow a:after,
+#app-components .nav-app-components a:after,
+#navigation .nav-navigation a:after,
+#designopening .nav-designopening a:after,
+#designopeningasscociate .nav-designopeningasscociate a:after,
+#messageinchannel .nav-messageinchannel a:after,
+#designopeninginfo .nav-designopeninginfo a:after,
+#designmovieentry .nav-designmovieentry a:after,
+#designorderrecord .nav-designorderrecord a:after,
+#designmyfavorite .nav-designmyfavorite a:after,
+#designwatchrecord .nav-designwatchrecord a:after,
+#designcouponarea .nav-designcouponarea a:after,
+#designcouponhintalert .nav-designcouponhintalert a:after,
+#designcouponhintpopup .nav-designcouponhintpopup a:after,
+#visual-design .nav-visual-design a:after,
+#typography .nav-typography a:after,
+#animation .nav-animation a:after,
+#icons-and-images .nav-icons-and-images a:after,
+#ui-elements .nav-ui-elements a:after,
+#watch-technologies .nav-watch-technologies a:after,
+#resources .nav-resources a:after,
+
+#overview .nav-overview .sub-side,
+#designflow .nav-designflow .sub-side,
+#designopening .nav-designopening .sub-side,
+#app-components .nav-app-components .sub-side,
+#designopeningasscociate .nav-designopeningasscociate .sub-side,
+#messageinchannel .nav-messageinchannel .sub-side,
+#designopeninginfo .nav-designopeninginfo .sub-side,
+#designmovieentry .nav-designmovieentry .sub-side,
+#designorderrecord .nav-designorderrecord .sub-side,
+#designmyfavorite .nav-designmyfavorite .sub-side,
+#designwatchrecord .nav-designwatchrecord .sub-side,
+#designcouponarea .nav-designcouponarea .sub-side,
+#designcouponhintalert .nav-designcouponhintalert .sub-side,
+#designcouponhintpopup .nav-designcouponhintpopup .sub-side,
+#navigation .nav-navigation .sub-side,
+#visual-design .nav-visual-design .sub-side,
+#typography .nav-typography .sub-side,
+#animation .nav-animation .sub-side,
+#icons-and-images .nav-icons-and-images .sub-side,
+#ui-elements .nav-ui-elements .sub-side,
+#watch-technologies .nav-watch-technologies .sub-side,
+#resources .nav-resources .sub-side {
+  display: block;
+}
+
+/* Product and Headline Logos for Overview and Sub pages */
+.human-interface-guideline-product-logo {
+  width: 141px;
+  height: 47px;
+  margin: 0 auto 0.5em;
+  padding: 0;
+  background: url('https://farm8.staticflickr.com/7146/27391557185_70e8edd3e4_o.png') no-repeat;
+  background-size: 141px 47px;
+}
+
+.human-interface-guideline-product-headline {
+  display: block;
+  width: 390px;
+  height: 26px;
+  margin:26px auto 70px;
+  background: url('../images/watch-hig-title.png') no-repeat;
+  background-size: 390px 26px;
+}
+
+/* DROP COPY */
+
+.hig-content .middle-copy {
+  padding-top: 72px;
+}
+
+/* PLAY BUTTONS */
+
+.video-play,
+.video-replay {
+  display: block !important;
+  text-align: center;
+  position: relative;
+  top: -24px;
+  opacity:1;
+  -webkit-transition: opacity 0.2s ease;
+  -moz-transition: opacity 0.2s ease;
+  -o-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;*/
+}
+
+/* WATCH & BAND VIDEO FRAME */
+
+.watch-frame {
+  position:relative;
+  width: 230px;
+  height: 400px;
+  padding: 114px 53px 115px 41px;
+  background-image: url('../images/watch-frame.png');
+  background-size: 230px 400px;
+  margin-bottom: 24px;
+}
+
+.watch-frame .video-play {
+  top: 110px;
+}
+
+.watch-frame .video-replay  {
+  top: 77px;
+}
+
+/* WATCH & BAND VIDEO */
+
+.watch-band {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.watch-band .video-play,
+.watch-band .video-replay {
+  display: block !important;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  left: -6px;
+  top: 400px;
+}
+
+/* WATCH BEZEL VIDEO */
+
+.watch-bezel-device {
+  position:relative;
+  width: 240px;
+  height: 300px;
+  margin: 0 auto 20px;
+  margin-bottom: 20px;
+}
+
+.watch-bezel-device .video-play {
+  top:-32px
+}
+
+.watch-bezel-device .video-replay {
+  top:-65px
+}
+
+/* WATCH BEZEL VIDEO FRAME */
+
+.watch-bezel {
+  margin-bottom: 3em;
+}
+
+.watch-bezel-frame {
+  position: relative;
+  margin-bottom: 4em;
+  width: 230px;
+  height: 253px;
+  padding: 40px 54px 39px 42px;
+  background-image: url('../images/watch-bezel-38.png');
+  background-size: 230px 253px;
+  margin-bottom: 48px;
+}
+
+.watch-bezel-frame .video-play{
+  top: 36px;
+}
+
+.watch-bezel-frame .video-replay {
+  top: 2px;
+}
+
+/* BX SLIDER */
+
+.bx-wrapper,
+.bx-viewport {
+    position: relative;
+}
+
+.bx-viewport ul {
+  margin:0;
+  position:relative;
+}
+
+.bx-pager {
+  text-align:center;
+  padding-top:20px;
+}
+
+.bx-pager-item {
+  display:inline-block;
+  padding:9px;
+}
+
+.bx-pager-link {
+  display:block;
+  width:10px;
+  height:10px;
+  border-radius:6px;
+  background: #999999;
+  text-indent:-9999px;
+}
+
+.bx-pager-link.active {
+  background: transparent;
+  border: 1px solid #0088cc;
+  width:11px;
+  height:11px;
+}
+
+
+/* BX SLIDER NEXT / PREV BUTTONS */
+
+.bx-wrapper:hover .bx-next,
+.bx-wrapper:hover .bx-prev {
+  opacity:1;
+}
+
+.bx-prev,
+.bx-next {
+  display:block;
+  width: 42px;
+  height: 81px;
+  background:url('../images/paddles.png') no-repeat;
+  background-size: 84px 81px;
+  text-indent:-9999px;
+  position:absolute;
+  top: 1%;
+  z-index:100;
+  opacity:0;
+  -webkit-transition: opacity 0.4s ease;
+  -moz-transition: opacity 0.4s ease;
+  -o-transition: opacity 0.4s ease;
+  transition: opacity 0.4s ease;
+}
+
+.bx-prev {
+  background-position: 0 0;
+  left:17em;
+}
+
+.bx-next {
+  background-position: -43px 0;
+  right:18em;
+}
+
+
+/* BX SLIDER LABELS */
+
+.bx-labels a {
+  font-size:20px;
+  font-weight: 400;
+  color:#0088cc;
+  text-decoration:none;
+}
+
+.bx-labels a .smaller {
+  font-size:16px;
+}
+
+.bx-labels a.active {
+  color:#000;
+}
+
+.bg-dark .bx-labels a.active {
+  color:#fff;
+}
