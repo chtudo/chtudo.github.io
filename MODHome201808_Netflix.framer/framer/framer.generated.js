@@ -3012,9 +3012,9 @@ window.__imported__["MODHome_201805v2_Framer_09update@4x/layers.json.js"] = [
 	}
 ]
 if (DeviceComponent) {DeviceComponent.Devices["iphone-6-silver"].deviceImageJP2 = false};
-if (window.Framer) {window.Framer.Defaults.DeviceView = {"deviceScale":0.5,"selectedHand":"","deviceType":"sony-w85Oc","contentScale":1,"hideBezel":false,"orientation":0};
+if (window.Framer) {window.Framer.Defaults.DeviceView = {"deviceScale":"fit","selectedHand":"","deviceType":"sony-w85Oc","contentScale":1,"hideBezel":false,"orientation":0};
 }
-if (window.Framer) {window.Framer.Defaults.DeviceComponent = {"deviceScale":0.5,"selectedHand":"","deviceType":"sony-w85Oc","contentScale":1,"hideBezel":false,"orientation":0};
+if (window.Framer) {window.Framer.Defaults.DeviceComponent = {"deviceScale":"fit","selectedHand":"","deviceType":"sony-w85Oc","contentScale":1,"hideBezel":false,"orientation":0};
 }
 window.FramerStudioInfo = {"deviceImagesUrl":"\/_server\/resources\/DeviceImages","documentTitle":"MODHome201808_Netflix.framer"};
 
