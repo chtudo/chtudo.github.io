@@ -8,11 +8,11 @@ flow.y=0
 
 	
 isLogin=false
-isCloseAnnounce=false
+
 sideMenu=new Layer
 	width: 310
 	height: Screen.height
-	backgroundColor: "Transparent"
+	backgroundColor: "transparent"
 	visible: true
 	x:-310
 	
@@ -74,7 +74,7 @@ Compose_FloatingDot=()->
 			properties: 
 				opacity:1
 				time: 0.2
-
+isCloseAnnounce=false
 BuildContent_HeadTitle=()->
 	NaviTitleContent.states.LIVE=
 		opacity: 1
@@ -108,7 +108,7 @@ BuildContent_BannerBar=(contents,parent)->
 		layer=new Layer
 			width: 345
 			height: 220
-			backgroundColor: "Transparent"
+			backgroundColor: "transparent"
 		adbanner.x=0
 		adbanner.y=0
 		adbanner.parent=layer
@@ -126,21 +126,30 @@ Compose_PaddingBannerBar=()->
 		scrollVertical: false
 		clip: false
 		parent:MainContentHome
-		y:10
+		y:ImportantAnnounce.y+ImportantAnnounce.height+10
 	BuildContent_BannerBar(BannerBarHome,pager)
 	Compose_FloatingDot()
-Compose_AnnounceEvent=()->
-	Announce_Close.on Events.Click,->
-		ImportantAnnounce.animate
-			y:0
-			options:
-				time:0.2
-		scrollHomeContent.animate
-			y:74
-			options:
-				time:0.2
-		scrollHomeContent.height=scrollHomeContent.height+84
-		isCloseAnnounce=true
+# Compose_AnnounceEvent=()->
+# 	AnnounceContent.on Events.Click,->
+# 		AnnounceMessagePopup.visible=true
+# 
+# 				
+# 		BlackMask.visible=true
+# 		AnnounceMessagePopup.bringToFront()
+# 	AnnounceMessagePopupOK.on Events.Click,->
+# 		AnnounceMessagePopup.visible=false
+# 		BlackMask.visible=false
+# 	Announce_Close.on Events.Click,->
+# 		ImportantAnnounce.animate
+# 			y:0
+# 			options:
+# 				time:0.2
+# 		scrollHomeContent.animate
+# 			y:74
+# 			options:
+# 				time:0.2
+# 		scrollHomeContent.height=scrollHomeContent.height+84
+# 		isCloseAnnounce=true
 scrollHomeContent=new ScrollComponent
 		width: Screen.width
 		height: Screen.height-MainContentHome.y
@@ -152,15 +161,30 @@ scrollHomeContent=new ScrollComponent
 
 BuildControl_FloatSelectVODBar=(isSnap)->
 	if isSnap		
+		
 		MainContentSelection.y=MainContentDescription.y+MainContentDescription.height
 		MainContentSelection.parent=MainContentSelBar
+		 
 	else
+		MainContentSelection.y=NaviBTN.y+NaviBTN.height
 		MainContentSelection.parent=null
-		MainContentSelection.y=ImportantAnnounce.y+ImportantAnnounce.height	
+		
+			
 scrollHomeContent.on "scroll",->
-	
+	 
+# 	if this.y< -400 #-(320+ImportantAnnounce.height+10)
+# 		NaviTitleContent.stateSwitch("VOD")
+# 		BuildControl_FloatSelectVODBar(false)
+# 	else
+# 		NaviTitleContent.stateSwitch("HamiVideo")
+# 		BuildControl_FloatSelectVODBar(true)				
+	gap=0
+	if isCloseAnnounce
+		gap=ImportantAnnounce.height
+		#65
+	hiddenPoint=MainContentHomeVODInfo.y+MainContentDescription.height
 	if (!isCloseAnnounce)
-		if this.y<= -(320)
+		if this.y<= -(hiddenPoint)
 			NaviTitleContent.stateSwitch("VOD")
 			BuildControl_FloatSelectVODBar(false)
 		else
@@ -168,7 +192,7 @@ scrollHomeContent.on "scroll",->
 			BuildControl_FloatSelectVODBar(true)
 	else
 		
-		if this.y< -(276)
+		if this.y< -(hiddenPoint-gap)
 			NaviTitleContent.stateSwitch("VOD")
 			BuildControl_FloatSelectVODBar(false)
 		else
@@ -184,11 +208,46 @@ Compose_VODFeature=()->
 Compose_HomePage=()->
 	Compose_VODFeature()
 	Compose_PaddingBannerBar()
-	Compose_AnnounceEvent()
-	
+	#Compose_AnnounceEvent()
+	ComposeAnnounceMessagePopup()
 	MainContentHome.parent=	scrollHomeContent.content
 	MainContentHome.y=0
-	
+	scrollHomeContent.sendToBack()
+ComposeAnnounceMessagePopup=()->
+	AnnouncePopWindow=new Layer
+		size: Screen.size
+		visible: false
+		backgroundColor: "transparent"
+	AnnounceMessagePopup.visible=true
+	layerBlackMask=new Layer
+		size: Screen.size
+		backgroundColor: "Black"
+		
+		opacity: 0.6
+		parent: AnnouncePopWindow	
+	AnnounceMessagePopup.parent=AnnouncePopWindow
+	AnnouncePopWindow.bringToFront()
+	AnnounceContent.on Events.Click,->
+		AnnouncePopWindow.visible=true
+
+		AnnouncePopWindow.bringToFront()
+	AnnounceMessagePopupOK.on Events.Click,->
+		AnnouncePopWindow.visible=false
+		BlackMask.visible=false
+	Announce_Close.on Events.Click,->
+		#print ImportantAnnounce.height,ImportantAnnounce.y
+		
+		ImportantAnnounce.animate
+			y:-ImportantAnnounce.height
+			options:
+				time:0.2
+		scrollHomeContent.animate
+			y:10
+			options:
+				time:0.2
+
+		scrollHomeContent.height=scrollHomeContent.height+84
+		isCloseAnnounce=true
 Compose_LoginFlow=()->
 #組裝登入流程Compose_LoginFlow()
 	otherLogin.on Events.Click,->
@@ -238,8 +297,9 @@ Home=()->
 	BuildControl_SideMenu()
 	BuildContent_HeadTitle()
 	Compose_LoginFlow()
+	
 
 	Compose_HomePage()
-	
+	ComposeAnnounceMessagePopup()
 
 Home()
