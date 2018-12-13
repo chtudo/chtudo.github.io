@@ -1,4 +1,5 @@
-sketch = Framer.Importer.load("imported/HamiVideo2019@4x", scale: 1)
+# Import file "HamiVideo2019"
+sketch = Framer.Importer.load("imported/HamiVideo2019@2x", scale: 1)
 Utils.globalLayers sketch
 Framer.Extras.Preloader.enable()
 Framer.Extras.Hints.disable()
@@ -92,16 +93,64 @@ BuildContent_HeadTitle=()->
 			return
 		
 		for sub in this.children
-			sub.opacity=0
+			if sub.opacity==1
+				sub.animate
+					opacity:0
+					scale:0
+					options:
+						time:0.1
+						curve:"easy-out"
 		this.subLayersByName("State_"+to)[0].animate
 			opacity:1
+			scale:1
 			options:
 				time:0.2
 				curve:"easy-in"
 
 
 	NaviTitleContent.stateSwitch("HamiVideo")
-	
+ComposeHorscrollContent=(parentObject,layerContainsContent)->
+	contentScroll=new ScrollComponent
+		parent:parentObject
+		x:0
+		y:layerContainsContent.y
+		width: Screen.width
+		height: layerContainsContent.height
+		scrollVertical: false
+		scrollHorizontal: true
+	contentScroll.contentInset=
+		right: 15	
+	contentScroll.content.draggable.directionLock = true
+	contentScroll.content.draggable.directionLockThreshold = {x:5, y:5}		
+	for sub in layerContainsContent.children
+		sub.parent=contentScroll.content
+BuildHomeContentVODInfo=()->
+	ComposeHorscrollContent(ContinueWatch,ContinueWatchContents)
+	ComposeHorscrollContent(Favorite_VOD_Feature,Favorite_VOD_FeatureContents)
+	ComposeHorscrollContent(MostWatch_Drama,MostWatch_DramaContents)
+	ComposeHorscrollContent(MostWatch_Movie,MostWatch_MovieContents)
+	ComposeHorscrollContent(MostWatch_Comic,MostWatch_ComicContents)
+	ComposeHorscrollContent(MostWatch_Child,MostWatch_ChildContents)	
+	ComposeHorscrollContent(TVODFeature,TVODFeatureContents)
+	#電影
+	ComposeHorscrollContent(Content_VOD_Other,Content_VOD_OtherContents)
+	ComposeHorscrollContent(Content_VOD_Movie_Curration1,Content_VOD_Movie_Curration1Content)
+	ComposeHorscrollContent(Content_VOD_Movie_Curration2,Content_VOD_Movie_Curration2Contents)
+	ComposeHorscrollContent(Content_VOD_Movie_Hot,Content_VOD_Movie_HotContents)
+	ComposeHorscrollContent(Content_VOD_Movie_Newest,Content_VOD_Movie_NewestContents)
+	ComposeHorscrollContent(Content_VOD_Movie_Promote,Content_VOD_Movie_PromoteContents)
+#戲劇
+	ComposeHorscrollContent(VOD_Drama_OtherPromote,VOD_Drama_OtherPromoteContents)
+	ComposeHorscrollContent(VOD_Drama_Curration1,VOD_Drama_Curration1Contents)
+	ComposeHorscrollContent(VOD_Drama_Curration2,VOD_Drama_Curration2Contents)
+	ComposeHorscrollContent(VOD_Drama_Curration3,VOD_Drama_Curration3Contents)
+	ComposeHorscrollContent(VOD_Drama_Curration4,VOD_Drama_Curration4Contents)
+	ComposeHorscrollContent(VOD_Drama_Hot,VOD_Drama_HotContent)
+	ComposeHorscrollContent(VOD_Drama_Newest,VOD_Drama_NewestContent)
+	ComposeHorscrollContent(VOD_DramaPromote,VOD_DramaPromoteContents)
+	ComposeHorscrollContent(VOD_Drama_Filter,VOD_Drama_FilterContents)	
+																
+			
 BuildContent_BannerBar=(contents,parent)->
 #組裝Banner內容
 	for adbanner in contents.children		
@@ -129,27 +178,7 @@ Compose_PaddingBannerBar=()->
 		y:ImportantAnnounce.y+ImportantAnnounce.height+10
 	BuildContent_BannerBar(BannerBarHome,pager)
 	Compose_FloatingDot()
-# Compose_AnnounceEvent=()->
-# 	AnnounceContent.on Events.Click,->
-# 		AnnounceMessagePopup.visible=true
-# 
-# 				
-# 		BlackMask.visible=true
-# 		AnnounceMessagePopup.bringToFront()
-# 	AnnounceMessagePopupOK.on Events.Click,->
-# 		AnnounceMessagePopup.visible=false
-# 		BlackMask.visible=false
-# 	Announce_Close.on Events.Click,->
-# 		ImportantAnnounce.animate
-# 			y:0
-# 			options:
-# 				time:0.2
-# 		scrollHomeContent.animate
-# 			y:74
-# 			options:
-# 				time:0.2
-# 		scrollHomeContent.height=scrollHomeContent.height+84
-# 		isCloseAnnounce=true
+
 scrollHomeContent=new ScrollComponent
 		width: Screen.width
 		height: Screen.height-MainContentHome.y
@@ -158,7 +187,10 @@ scrollHomeContent=new ScrollComponent
 		backgroundColor: "transparent"
 		scrollVertical: true
 		scrollHorizontal: false
-
+scrollHomeContent.content.draggable.directionLock = true
+scrollHomeContent.content.draggable.directionLockThreshold = {x:10, y:10}
+scrollHomeContent.mouseWheelEnabled = false
+scrollHomeContent.content.draggable.momentumOptions = {friction: 10}
 BuildControl_FloatSelectVODBar=(isSnap)->
 	if isSnap		
 		
@@ -171,13 +203,6 @@ BuildControl_FloatSelectVODBar=(isSnap)->
 		
 			
 scrollHomeContent.on "scroll",->
-	 
-# 	if this.y< -400 #-(320+ImportantAnnounce.height+10)
-# 		NaviTitleContent.stateSwitch("VOD")
-# 		BuildControl_FloatSelectVODBar(false)
-# 	else
-# 		NaviTitleContent.stateSwitch("HamiVideo")
-# 		BuildControl_FloatSelectVODBar(true)				
 	gap=0
 	if isCloseAnnounce
 		gap=ImportantAnnounce.height
@@ -192,7 +217,7 @@ scrollHomeContent.on "scroll",->
 			BuildControl_FloatSelectVODBar(true)
 	else
 		
-		if this.y< -(hiddenPoint-gap)
+		if this.y<= -(hiddenPoint-gap)
 			NaviTitleContent.stateSwitch("VOD")
 			BuildControl_FloatSelectVODBar(false)
 		else
@@ -200,9 +225,68 @@ scrollHomeContent.on "scroll",->
 			BuildControl_FloatSelectVODBar(true)			
 
 	
-scrollHomeContent.content.draggable.directionLock = true
-scrollHomeContent.content.draggable.directionLockThreshold = {x:15, y:15}
+BuildControl_VODSelectionBar=()->
+	
+	
+	
+	MainContentSelBar.backgroundColor="#282828"
+	ComposeHorscrollContent(MainContentSelectionContents,MainContentSelectionContentsInner)
+	MainContentSelection_VOD_FocusBar.bringToFront()
 
+BuildControl_VODPage=()->
+	oriY=ContentVODs.y
+	oriX=ContentVODs.x
+	VODPage=new PageComponent
+		width: Screen.width
+		height: ContentVODs.height
+		x:oriX
+		y:oriY
+		scrollVertical: false
+		scrollHorizontal: false
+		clip: false
+		name:"VODPage"
+	VODPage.parent=MainContentHomeVODInfo
+	index=0
+	layerHome=null
+	arrayVOD=[3]
+	
+	for sub in ContentVODs.children
+		sub.parent=null
+		sub.x=0
+		sub.y=0
+		
+		layerParent=new Layer
+			width: Screen.width
+			height: sub.height
+			name:"page"+index
+		
+		sub.parent=	layerParent
+		arrayVOD[index]=layerParent
+		VODPage.addPage(layerParent,"right")
+		if index==0
+			layerHome=layerParent
+		index=index+1
+	VODPage.snapToPage(arrayVOD[0])
+
+	MainContentSelection_VOD_Feature.on Events.Click,->
+		MainContentHomeVODInfo.subLayersByName("VODPage")[0].snapToPage(arrayVOD[0])
+		MainContentSelection_VOD_FocusBar.animate
+			x:28
+			options:
+				time:0.2
+	MainContentSelection_VOD_Drama.on Events.Click,->
+		MainContentHomeVODInfo.subLayersByName("VODPage")[0].snapToPage(arrayVOD[1])			
+		MainContentSelection_VOD_FocusBar.animate
+			x:97
+			options:
+				time:0.2
+	MainContentSelection_VOD_Movie.on Events.Click,->
+		MainContentHomeVODInfo.subLayersByName("VODPage")[0].snapToPage(arrayVOD[2])
+		MainContentSelection_VOD_FocusBar.animate
+			x:166
+			options:
+				time:0.2	
+	
 Compose_VODFeature=()->
 	Content_VOD_Feature.visible=true
 Compose_HomePage=()->
@@ -212,6 +296,9 @@ Compose_HomePage=()->
 	ComposeAnnounceMessagePopup()
 	MainContentHome.parent=	scrollHomeContent.content
 	MainContentHome.y=0
+	BuildHomeContentVODInfo()
+	BuildControl_VODSelectionBar()
+	BuildControl_VODPage()
 	scrollHomeContent.sendToBack()
 ComposeAnnounceMessagePopup=()->
 	AnnouncePopWindow=new Layer
