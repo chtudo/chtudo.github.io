@@ -54,9 +54,9 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 				"originalName": "Group 2",
 				"maskFrame": null,
 				"layerFrame": {
-					"x": 6,
+					"x": 0,
 					"y": 3,
-					"width": 363,
+					"width": 375,
 					"height": 554
 				},
 				"visible": true,
@@ -66,9 +66,9 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 				"image": {
 					"path": "images/Layer-Group_2-nte2mzc3.png",
 					"frame": {
-						"x": 6,
+						"x": 0,
 						"y": 3,
-						"width": 363,
+						"width": 375,
 						"height": 554
 					}
 				},
@@ -208,9 +208,9 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 				"originalName": "Group",
 				"maskFrame": null,
 				"layerFrame": {
-					"x": 6,
+					"x": 0,
 					"y": 3,
-					"width": 363,
+					"width": 375,
 					"height": 634
 				},
 				"visible": true,
@@ -225,9 +225,9 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 						"originalName": "Group 2",
 						"maskFrame": null,
 						"layerFrame": {
-							"x": 6,
+							"x": 0,
 							"y": 3,
-							"width": 363,
+							"width": 375,
 							"height": 340
 						},
 						"visible": true,
@@ -237,9 +237,9 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 						"image": {
 							"path": "images/Layer-Group_2-njden0e3.png",
 							"frame": {
-								"x": 6,
+								"x": 0,
 								"y": 3,
-								"width": 363,
+								"width": 375,
 								"height": 340
 							}
 						},
@@ -331,7 +331,7 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 					"width": 335,
 					"height": 360
 				},
-				"visible": true,
+				"visible": false,
 				"metadata": {
 					"opacity": 1
 				},
@@ -393,37 +393,37 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 				]
 			},
 			{
-				"objectId": "CA9C46F6-4589-4B83-9C7E-C1160B1F424C",
+				"objectId": "65721FED-5715-4560-905C-C21AAD65362C",
 				"kind": "group",
-				"name": "StatusBar",
-				"originalName": "StatusBar",
+				"name": "MoreCurration",
+				"originalName": "MoreCurration",
 				"maskFrame": null,
 				"layerFrame": {
-					"x": 6,
-					"y": 3,
-					"width": 363,
-					"height": 14
+					"x": 0,
+					"y": 607,
+					"width": 375,
+					"height": 60
 				},
 				"visible": true,
 				"metadata": {
 					"opacity": 1
 				},
 				"image": {
-					"path": "images/Layer-StatusBar-q0e5qzq2.png",
+					"path": "images/Layer-MoreCurration-nju3mjfg.png",
 					"frame": {
-						"x": 6,
-						"y": 3,
-						"width": 363,
-						"height": 14
+						"x": 0,
+						"y": 607,
+						"width": 375,
+						"height": 60
 					}
 				},
 				"children": []
 			},
 			{
-				"objectId": "EB59864A-0544-4D7F-889C-0DFC7FFA017D",
+				"objectId": "D6D474B1-C93B-443E-AC09-D1ECD795A8FE",
 				"kind": "group",
-				"name": "NaviBTN",
-				"originalName": "NaviBTN",
+				"name": "FixTitle",
+				"originalName": "FixTitle",
 				"maskFrame": null,
 				"layerFrame": {
 					"x": 0,
@@ -437,307 +437,37 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 				},
 				"children": [
 					{
-						"objectId": "A29EF51E-1C1C-48F2-9717-255FD0910A9C",
+						"objectId": "CA9C46F6-4589-4B83-9C7E-C1160B1F424C",
 						"kind": "group",
-						"name": "NavSearch",
-						"originalName": "NavSearch",
-						"maskFrame": null,
-						"layerFrame": {
-							"x": 343,
-							"y": 40,
-							"width": 20,
-							"height": 20
-						},
-						"visible": true,
-						"metadata": {
-							"opacity": 1
-						},
-						"image": {
-							"path": "images/Layer-NavSearch-qti5ruy1.png",
-							"frame": {
-								"x": 343,
-								"y": 40,
-								"width": 20,
-								"height": 20
-							}
-						},
-						"children": []
-					},
-					{
-						"objectId": "74C00F9F-8093-4D68-B5B9-BA8BE6A8BF9E",
-						"kind": "group",
-						"name": "NavSideMenuBtn",
-						"originalName": "NavSideMenuBtn",
-						"maskFrame": null,
-						"layerFrame": {
-							"x": 22,
-							"y": 42,
-							"width": 20,
-							"height": 17
-						},
-						"visible": true,
-						"metadata": {
-							"opacity": 1
-						},
-						"children": [
-							{
-								"objectId": "B8B47630-570C-4B85-9F37-172870875F0A",
-								"kind": "group",
-								"name": "ic_menu_2",
-								"originalName": "ic_menu 2",
-								"maskFrame": null,
-								"layerFrame": {
-									"x": 22,
-									"y": 42,
-									"width": 20,
-									"height": 17
-								},
-								"visible": true,
-								"metadata": {
-									"opacity": 1
-								},
-								"image": {
-									"path": "images/Layer-ic_menu_2-qjhcndc2.png",
-									"frame": {
-										"x": 22,
-										"y": 42,
-										"width": 20,
-										"height": 17
-									}
-								},
-								"children": []
-							}
-						]
-					},
-					{
-						"objectId": "8E528B13-7B0B-4284-AAE9-664067366171",
-						"kind": "group",
-						"name": "NavNotification",
-						"originalName": "NavNotification",
-						"maskFrame": null,
-						"layerFrame": {
-							"x": 300,
-							"y": 38,
-							"width": 21,
-							"height": 22
-						},
-						"visible": true,
-						"metadata": {
-							"opacity": 1
-						},
-						"image": {
-							"path": "images/Layer-NavNotification-oeu1mjhc.png",
-							"frame": {
-								"x": 300,
-								"y": 38,
-								"width": 21,
-								"height": 22
-							}
-						},
-						"children": []
-					},
-					{
-						"objectId": "BC1D0A25-35AC-412D-A654-C962F64F0FA3",
-						"kind": "group",
-						"name": "NavTitle",
-						"originalName": "NavTitle",
+						"name": "StatusBar",
+						"originalName": "StatusBar",
 						"maskFrame": null,
 						"layerFrame": {
 							"x": 0,
-							"y": 30,
+							"y": 3,
 							"width": 375,
-							"height": 40
+							"height": 14
 						},
 						"visible": true,
 						"metadata": {
 							"opacity": 1
 						},
-						"children": [
-							{
-								"objectId": "AB206288-6A53-4071-A940-CB4EA584B8D3",
-								"kind": "group",
-								"name": "NaviTitleContent",
-								"originalName": "NaviTitleContent",
-								"maskFrame": null,
-								"layerFrame": {
-									"x": 60,
-									"y": 34,
-									"width": 138,
-									"height": 33
-								},
-								"visible": true,
-								"metadata": {
-									"opacity": 1
-								},
-								"children": [
-									{
-										"objectId": "ED9632CD-5F8D-4998-91D5-19292B404763",
-										"kind": "text",
-										"name": "State_LIVE",
-										"originalName": "State_LIVE",
-										"maskFrame": null,
-										"layerFrame": {
-											"x": 61,
-											"y": 38,
-											"width": 70,
-											"height": 25
-										},
-										"visible": true,
-										"metadata": {
-											"opacity": 1,
-											"string": "LIVE",
-											"css": [
-												"font-family: PingFangTC-Light;",
-												"font-size: 35px;",
-												"color: #EEEEEE;",
-												"letter-spacing: 0;",
-												"line-height: 40px;"
-											]
-										},
-										"image": {
-											"path": "images/Layer-State_LIVE-ruq5njmy.png",
-											"frame": {
-												"x": 61,
-												"y": 38,
-												"width": 70,
-												"height": 25
-											}
-										},
-										"children": []
-									},
-									{
-										"objectId": "7D0395FB-870C-48ED-997D-585496A1C562",
-										"kind": "text",
-										"name": "State_TVOD",
-										"originalName": "State_TVOD",
-										"maskFrame": null,
-										"layerFrame": {
-											"x": 61,
-											"y": 34,
-											"width": 137,
-											"height": 33
-										},
-										"visible": true,
-										"metadata": {
-											"opacity": 1,
-											"string": "單點電影",
-											"css": [
-												"font-family: PingFangTC-Light;",
-												"font-size: 35px;",
-												"color: #DDDDDD;",
-												"letter-spacing: 0;",
-												"line-height: 40px;"
-											]
-										},
-										"image": {
-											"path": "images/Layer-State_TVOD-n0qwmzk1.png",
-											"frame": {
-												"x": 61,
-												"y": 34,
-												"width": 137,
-												"height": 33
-											}
-										},
-										"children": []
-									},
-									{
-										"objectId": "E1521F4F-C9C8-4B54-B29F-288ABF4B8923",
-										"kind": "group",
-										"name": "State_VOD",
-										"originalName": "State_VOD",
-										"maskFrame": null,
-										"layerFrame": {
-											"x": 60,
-											"y": 34,
-											"width": 88,
-											"height": 33
-										},
-										"visible": true,
-										"metadata": {
-											"opacity": 1
-										},
-										"image": {
-											"path": "images/Layer-State_VOD-rte1mjfg.png",
-											"frame": {
-												"x": 60,
-												"y": 34,
-												"width": 88,
-												"height": 33
-											}
-										},
-										"children": []
-									},
-									{
-										"objectId": "D8BB9BCB-1AFA-438D-A932-5F199800658F",
-										"kind": "text",
-										"name": "State_HamiVideo",
-										"originalName": "State_HamiVideo",
-										"maskFrame": null,
-										"layerFrame": {
-											"x": 61,
-											"y": 39,
-											"width": 127,
-											"height": 21
-										},
-										"visible": true,
-										"metadata": {
-											"opacity": 1,
-											"string": "Hami Video",
-											"css": [
-												"font-family: SFCompactText-Semibold;",
-												"font-size: 26px;",
-												"color: #EEEEEE;",
-												"letter-spacing: -1.08px;",
-												"line-height: 40px;"
-											]
-										},
-										"image": {
-											"path": "images/Layer-State_HamiVideo-rdhcqjlc.png",
-											"frame": {
-												"x": 61,
-												"y": 39,
-												"width": 127,
-												"height": 21
-											}
-										},
-										"children": []
-									}
-								]
-							},
-							{
-								"objectId": "F168705B-10FC-41F1-8714-58137B11D06A",
-								"kind": "group",
-								"name": "NavTitleBG",
-								"originalName": "NavTitleBG",
-								"maskFrame": null,
-								"layerFrame": {
-									"x": 0,
-									"y": 30,
-									"width": 375,
-									"height": 40
-								},
-								"visible": true,
-								"metadata": {
-									"opacity": 1
-								},
-								"image": {
-									"path": "images/Layer-NavTitleBG-rje2odcw.png",
-									"frame": {
-										"x": 0,
-										"y": 30,
-										"width": 375,
-										"height": 40
-									}
-								},
-								"children": []
+						"image": {
+							"path": "images/Layer-StatusBar-q0e5qzq2.png",
+							"frame": {
+								"x": 0,
+								"y": 3,
+								"width": 375,
+								"height": 14
 							}
-						]
+						},
+						"children": []
 					},
 					{
-						"objectId": "E50903A3-4504-4A07-8908-052CB56292C5",
+						"objectId": "EB59864A-0544-4D7F-889C-0DFC7FFA017D",
 						"kind": "group",
-						"name": "NavBG",
-						"originalName": "NavBG",
+						"name": "NaviBTN",
+						"originalName": "NaviBTN",
 						"maskFrame": null,
 						"layerFrame": {
 							"x": 0,
@@ -749,16 +479,670 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 						"metadata": {
 							"opacity": 1
 						},
-						"image": {
-							"path": "images/Layer-NavBG-rtuwotaz.png",
-							"frame": {
-								"x": 0,
-								"y": 0,
-								"width": 375,
-								"height": 74
+						"children": [
+							{
+								"objectId": "74C00F9F-8093-4D68-B5B9-BA8BE6A8BF9E",
+								"kind": "group",
+								"name": "NavSideMenuBtn",
+								"originalName": "NavSideMenuBtn",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 17,
+									"y": 33,
+									"width": 31,
+									"height": 33
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"children": [
+									{
+										"objectId": "B8B47630-570C-4B85-9F37-172870875F0A",
+										"kind": "group",
+										"name": "ic_menu_2",
+										"originalName": "ic_menu 2",
+										"maskFrame": null,
+										"layerFrame": {
+											"x": 17,
+											"y": 33,
+											"width": 31,
+											"height": 33
+										},
+										"visible": true,
+										"metadata": {
+											"opacity": 1
+										},
+										"image": {
+											"path": "images/Layer-ic_menu_2-qjhcndc2.png",
+											"frame": {
+												"x": 17,
+												"y": 33,
+												"width": 31,
+												"height": 33
+											}
+										},
+										"children": []
+									}
+								]
+							},
+							{
+								"objectId": "1573FF6F-100B-4512-AC06-83AD2FBC92E1",
+								"kind": "group",
+								"name": "FunctionInBar",
+								"originalName": "FunctionInBar",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 274,
+									"y": 29,
+									"width": 89,
+									"height": 36
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"children": [
+									{
+										"objectId": "C227838A-65B3-423E-AD58-4E71B3E979D6",
+										"kind": "group",
+										"name": "FunctionInBar_State_Curration",
+										"originalName": "FunctionInBar_State_Curration",
+										"maskFrame": null,
+										"layerFrame": {
+											"x": 274,
+											"y": 29,
+											"width": 87,
+											"height": 36
+										},
+										"visible": true,
+										"metadata": {
+											"opacity": 1
+										},
+										"image": {
+											"path": "images/Layer-FunctionInBar_State_Curration-qziynzgz.png",
+											"frame": {
+												"x": 274,
+												"y": 29,
+												"width": 87,
+												"height": 36
+											}
+										},
+										"children": []
+									},
+									{
+										"objectId": "450F0906-B91A-4B4B-AD95-240A069509D8",
+										"kind": "group",
+										"name": "FunctionInBar_State_Main",
+										"originalName": "FunctionInBar_State_Main",
+										"maskFrame": null,
+										"layerFrame": {
+											"x": 300,
+											"y": 38,
+											"width": 63,
+											"height": 22
+										},
+										"visible": true,
+										"metadata": {
+											"opacity": 1
+										},
+										"children": [
+											{
+												"objectId": "A29EF51E-1C1C-48F2-9717-255FD0910A9C",
+												"kind": "group",
+												"name": "NavSearch",
+												"originalName": "NavSearch",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 343,
+													"y": 40,
+													"width": 20,
+													"height": 20
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"image": {
+													"path": "images/Layer-NavSearch-qti5ruy1.png",
+													"frame": {
+														"x": 343,
+														"y": 40,
+														"width": 20,
+														"height": 20
+													}
+												},
+												"children": []
+											},
+											{
+												"objectId": "8E528B13-7B0B-4284-AAE9-664067366171",
+												"kind": "group",
+												"name": "NavNotification",
+												"originalName": "NavNotification",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 300,
+													"y": 38,
+													"width": 21,
+													"height": 22
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"image": {
+													"path": "images/Layer-NavNotification-oeu1mjhc.png",
+													"frame": {
+														"x": 300,
+														"y": 38,
+														"width": 21,
+														"height": 22
+													}
+												},
+												"children": []
+											}
+										]
+									}
+								]
+							},
+							{
+								"objectId": "BC1D0A25-35AC-412D-A654-C962F64F0FA3",
+								"kind": "group",
+								"name": "NavTitle",
+								"originalName": "NavTitle",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 0,
+									"y": 30,
+									"width": 375,
+									"height": 40
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"children": [
+									{
+										"objectId": "AB206288-6A53-4071-A940-CB4EA584B8D3",
+										"kind": "group",
+										"name": "NaviTitleContent",
+										"originalName": "NaviTitleContent",
+										"maskFrame": null,
+										"layerFrame": {
+											"x": 60,
+											"y": 34,
+											"width": 138,
+											"height": 33
+										},
+										"visible": true,
+										"metadata": {
+											"opacity": 1
+										},
+										"children": [
+											{
+												"objectId": "ED9632CD-5F8D-4998-91D5-19292B404763",
+												"kind": "text",
+												"name": "State_LIVE",
+												"originalName": "State_LIVE",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 61,
+													"y": 38,
+													"width": 70,
+													"height": 25
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1,
+													"string": "LIVE",
+													"css": [
+														"font-family: PingFangTC-Light;",
+														"font-size: 35px;",
+														"color: #EEEEEE;",
+														"letter-spacing: 0;",
+														"line-height: 40px;"
+													]
+												},
+												"image": {
+													"path": "images/Layer-State_LIVE-ruq5njmy.png",
+													"frame": {
+														"x": 61,
+														"y": 38,
+														"width": 70,
+														"height": 25
+													}
+												},
+												"children": []
+											},
+											{
+												"objectId": "7D0395FB-870C-48ED-997D-585496A1C562",
+												"kind": "text",
+												"name": "State_TVOD",
+												"originalName": "State_TVOD",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 61,
+													"y": 34,
+													"width": 137,
+													"height": 33
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1,
+													"string": "單點電影",
+													"css": [
+														"font-family: PingFangTC-Light;",
+														"font-size: 35px;",
+														"color: #DDDDDD;",
+														"letter-spacing: 0;",
+														"line-height: 40px;"
+													]
+												},
+												"image": {
+													"path": "images/Layer-State_TVOD-n0qwmzk1.png",
+													"frame": {
+														"x": 61,
+														"y": 34,
+														"width": 137,
+														"height": 33
+													}
+												},
+												"children": []
+											},
+											{
+												"objectId": "9D73BDC1-C61B-4042-916E-0E13CA814457",
+												"kind": "text",
+												"name": "State_SPORT",
+												"originalName": "State_SPORT",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 60,
+													"y": 34,
+													"width": 66,
+													"height": 33
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1,
+													"string": "運動",
+													"css": [
+														"font-family: PingFangTC-Light;",
+														"font-size: 35px;",
+														"color: #DDDDDD;",
+														"letter-spacing: 0;",
+														"line-height: 40px;"
+													]
+												},
+												"image": {
+													"path": "images/Layer-State_SPORT-ouq3m0je.png",
+													"frame": {
+														"x": 60,
+														"y": 34,
+														"width": 66,
+														"height": 33
+													}
+												},
+												"children": []
+											},
+											{
+												"objectId": "E1521F4F-C9C8-4B54-B29F-288ABF4B8923",
+												"kind": "group",
+												"name": "State_VOD",
+												"originalName": "State_VOD",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 60,
+													"y": 34,
+													"width": 88,
+													"height": 33
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"image": {
+													"path": "images/Layer-State_VOD-rte1mjfg.png",
+													"frame": {
+														"x": 60,
+														"y": 34,
+														"width": 88,
+														"height": 33
+													}
+												},
+												"children": []
+											},
+											{
+												"objectId": "D8BB9BCB-1AFA-438D-A932-5F199800658F",
+												"kind": "text",
+												"name": "State_HamiVideo",
+												"originalName": "State_HamiVideo",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 61,
+													"y": 39,
+													"width": 127,
+													"height": 21
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1,
+													"string": "Hami Video",
+													"css": [
+														"font-family: SFCompactText-Semibold;",
+														"font-size: 26px;",
+														"color: #EEEEEE;",
+														"letter-spacing: -1.08px;",
+														"line-height: 40px;"
+													]
+												},
+												"image": {
+													"path": "images/Layer-State_HamiVideo-rdhcqjlc.png",
+													"frame": {
+														"x": 61,
+														"y": 39,
+														"width": 127,
+														"height": 21
+													}
+												},
+												"children": []
+											}
+										]
+									},
+									{
+										"objectId": "F168705B-10FC-41F1-8714-58137B11D06A",
+										"kind": "group",
+										"name": "NavTitleBG",
+										"originalName": "NavTitleBG",
+										"maskFrame": null,
+										"layerFrame": {
+											"x": 0,
+											"y": 30,
+											"width": 375,
+											"height": 40
+										},
+										"visible": true,
+										"metadata": {
+											"opacity": 1
+										},
+										"image": {
+											"path": "images/Layer-NavTitleBG-rje2odcw.png",
+											"frame": {
+												"x": 0,
+												"y": 30,
+												"width": 375,
+												"height": 40
+											}
+										},
+										"children": []
+									}
+								]
+							},
+							{
+								"objectId": "E50903A3-4504-4A07-8908-052CB56292C5",
+								"kind": "group",
+								"name": "NavBG",
+								"originalName": "NavBG",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 0,
+									"y": 0,
+									"width": 375,
+									"height": 74
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"image": {
+									"path": "images/Layer-NavBG-rtuwotaz.png",
+									"frame": {
+										"x": 0,
+										"y": 0,
+										"width": 375,
+										"height": 74
+									}
+								},
+								"children": []
 							}
+						]
+					}
+				]
+			},
+			{
+				"objectId": "94646D8A-D9A7-43F3-B34E-1672E454D5C9",
+				"kind": "group",
+				"name": "MainContent_Curration",
+				"originalName": "MainContent_Curration",
+				"maskFrame": null,
+				"layerFrame": {
+					"x": 0,
+					"y": 74,
+					"width": 375,
+					"height": 3265
+				},
+				"visible": true,
+				"metadata": {
+					"opacity": 1
+				},
+				"children": [
+					{
+						"objectId": "549624B3-08A5-437C-B1E3-1EE5F5D87984",
+						"kind": "group",
+						"name": "MainContent_CurrationList",
+						"originalName": "MainContent_CurrationList",
+						"maskFrame": null,
+						"layerFrame": {
+							"x": 0,
+							"y": 74,
+							"width": 375,
+							"height": 3265
 						},
-						"children": []
+						"visible": true,
+						"metadata": {
+							"opacity": 1
+						},
+						"children": [
+							{
+								"objectId": "1E25C6A0-5537-471C-B413-01C5B39FFFCC",
+								"kind": "group",
+								"name": "ImportantAnnounceCurration",
+								"originalName": "ImportantAnnounceCurration",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 0,
+									"y": 74,
+									"width": 375,
+									"height": 65
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"children": [
+									{
+										"objectId": "D30FB742-2D1D-42CD-A008-B16077980A97",
+										"kind": "group",
+										"name": "Announce_CloseCurration",
+										"originalName": "Announce_CloseCurration",
+										"maskFrame": null,
+										"layerFrame": {
+											"x": 336,
+											"y": 82,
+											"width": 30,
+											"height": 30
+										},
+										"visible": true,
+										"metadata": {
+											"opacity": 1
+										},
+										"image": {
+											"path": "images/Layer-Announce_CloseCurration-rdmwrki3.png",
+											"frame": {
+												"x": 336,
+												"y": 82,
+												"width": 30,
+												"height": 30
+											}
+										},
+										"children": []
+									},
+									{
+										"objectId": "8925BDD6-E485-49EB-B18E-2E509E2BAFB9",
+										"kind": "group",
+										"name": "AnnounceContentCurration",
+										"originalName": "AnnounceContentCurration",
+										"maskFrame": null,
+										"layerFrame": {
+											"x": 0,
+											"y": 74,
+											"width": 375,
+											"height": 65
+										},
+										"visible": true,
+										"metadata": {
+											"opacity": 1
+										},
+										"image": {
+											"path": "images/Layer-AnnounceContentCurration-odkynuje.png",
+											"frame": {
+												"x": 0,
+												"y": 74,
+												"width": 375,
+												"height": 65
+											}
+										},
+										"children": []
+									}
+								]
+							},
+							{
+								"objectId": "D4F41AD1-A3DC-4761-A787-7C5F1AE57D33",
+								"kind": "group",
+								"name": "MainContent_CurrationItems",
+								"originalName": "MainContent_CurrationItems",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 10,
+									"y": 149,
+									"width": 355,
+									"height": 680
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"children": [
+									{
+										"objectId": "4979683B-91D0-4662-80FA-B24B1EBC9BD4",
+										"kind": "group",
+										"name": "ERAEVENTBTN",
+										"originalName": "ERAEVENTBTN",
+										"maskFrame": null,
+										"layerFrame": {
+											"x": 10,
+											"y": 609,
+											"width": 355,
+											"height": 220
+										},
+										"visible": true,
+										"metadata": {
+											"opacity": 1
+										},
+										"image": {
+											"path": "images/Layer-ERAEVENTBTN-ndk3oty4.png",
+											"frame": {
+												"x": 10,
+												"y": 609,
+												"width": 355,
+												"height": 220
+											}
+										},
+										"children": []
+									},
+									{
+										"objectId": "084A6328-5E0F-4D33-982E-2E6F381066F3",
+										"kind": "group",
+										"name": "BERLINEVENTBTN",
+										"originalName": "BERLINEVENTBTN",
+										"maskFrame": null,
+										"layerFrame": {
+											"x": 10,
+											"y": 379,
+											"width": 355,
+											"height": 220
+										},
+										"visible": true,
+										"metadata": {
+											"opacity": 1
+										},
+										"image": {
+											"path": "images/Layer-BERLINEVENTBTN-mdg0qtyz.png",
+											"frame": {
+												"x": 10,
+												"y": 379,
+												"width": 355,
+												"height": 220
+											}
+										},
+										"children": []
+									},
+									{
+										"objectId": "5E97BA74-3F18-4BFF-B726-8177ED64DD7A",
+										"kind": "group",
+										"name": "GMABTN",
+										"originalName": "GMABTN",
+										"maskFrame": null,
+										"layerFrame": {
+											"x": 10,
+											"y": 149,
+											"width": 355,
+											"height": 220
+										},
+										"visible": true,
+										"metadata": {
+											"opacity": 1
+										},
+										"image": {
+											"path": "images/Layer-GMABTN-nuu5n0jb.png",
+											"frame": {
+												"x": 10,
+												"y": 149,
+												"width": 355,
+												"height": 220
+											}
+										},
+										"children": []
+									}
+								]
+							},
+							{
+								"objectId": "99AAC7B4-6818-4C7C-9737-EDBA0BDFB4F1",
+								"kind": "group",
+								"name": "ContentBG",
+								"originalName": "ContentBG",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 0,
+									"y": 139,
+									"width": 375,
+									"height": 3200
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"image": {
+									"path": "images/Layer-ContentBG-otlbqum3.png",
+									"frame": {
+										"x": 0,
+										"y": 139,
+										"width": 375,
+										"height": 3200
+									}
+								},
+								"children": []
+							}
+						]
 					}
 				]
 			},
@@ -1134,7 +1518,7 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 						"layerFrame": {
 							"x": 0,
 							"y": 414,
-							"width": 640,
+							"width": 650,
 							"height": 3303
 						},
 						"visible": true,
@@ -1175,16 +1559,116 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 										"metadata": {
 											"opacity": 1
 										},
-										"image": {
-											"path": "images/Layer-MainContentDescription-rtremzvg.png",
-											"frame": {
-												"x": 0,
-												"y": 414,
-												"width": 375,
-												"height": 54
+										"children": [
+											{
+												"objectId": "EB2C0FB9-610E-478D-B987-6AC6E74BF6BA",
+												"kind": "group",
+												"name": "DState_LIVE",
+												"originalName": "DState_LIVE",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 0,
+													"y": 414,
+													"width": 375,
+													"height": 54
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"image": {
+													"path": "images/Layer-DState_LIVE-ruiyqzbg.png",
+													"frame": {
+														"x": 0,
+														"y": 414,
+														"width": 375,
+														"height": 54
+													}
+												},
+												"children": []
+											},
+											{
+												"objectId": "23DECFDE-3F7C-45A8-B577-E21C0D120737",
+												"kind": "group",
+												"name": "DState_TVOD",
+												"originalName": "DState_TVOD",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 0,
+													"y": 414,
+													"width": 375,
+													"height": 54
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"image": {
+													"path": "images/Layer-DState_TVOD-mjnerung.png",
+													"frame": {
+														"x": 0,
+														"y": 414,
+														"width": 375,
+														"height": 54
+													}
+												},
+												"children": []
+											},
+											{
+												"objectId": "E7B41DEA-28A8-407E-8E1B-3C84589C5B60",
+												"kind": "group",
+												"name": "DState_VOD",
+												"originalName": "DState_VOD",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 0,
+													"y": 414,
+													"width": 375,
+													"height": 54
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"image": {
+													"path": "images/Layer-DState_VOD-rtdcndfe.png",
+													"frame": {
+														"x": 0,
+														"y": 414,
+														"width": 375,
+														"height": 54
+													}
+												},
+												"children": []
+											},
+											{
+												"objectId": "7ED1F43F-7F69-41AB-BEDF-C2B3FA02FF26",
+												"kind": "group",
+												"name": "DState_SPORT",
+												"originalName": "DState_SPORT",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 0,
+													"y": 414,
+													"width": 375,
+													"height": 54
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"image": {
+													"path": "images/Layer-DState_SPORT-n0vemuy0.png",
+													"frame": {
+														"x": 0,
+														"y": 414,
+														"width": 375,
+														"height": 54
+													}
+												},
+												"children": []
 											}
-										},
-										"children": []
+										]
 									},
 									{
 										"objectId": "5BB91EB7-B7D3-401E-A65B-927E1DBEDA11",
@@ -1219,28 +1703,74 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 												"metadata": {
 													"opacity": 1
 												},
-												"image": {
-													"path": "images/Layer-MainContentSelection_VOD_FocusBar-mdcxnzrc.png",
-													"frame": {
-														"x": 28,
-														"y": 511,
-														"width": 25,
-														"height": 6
+												"children": [
+													{
+														"objectId": "885BABED-A686-4A19-BEA8-EDC7F4BF00BF",
+														"kind": "group",
+														"name": "FocusBarState_VOD",
+														"originalName": "FocusBarState_VOD",
+														"maskFrame": null,
+														"layerFrame": {
+															"x": 28,
+															"y": 511,
+															"width": 25,
+															"height": 6
+														},
+														"visible": true,
+														"metadata": {
+															"opacity": 1
+														},
+														"image": {
+															"path": "images/Layer-FocusBarState_VOD-odg1qkfc.png",
+															"frame": {
+																"x": 28,
+																"y": 511,
+																"width": 25,
+																"height": 6
+															}
+														},
+														"children": []
+													},
+													{
+														"objectId": "15F9B692-3600-4152-A857-0CC9DC6E08D4",
+														"kind": "group",
+														"name": "FocusBarState_TVOD",
+														"originalName": "FocusBarState_TVOD",
+														"maskFrame": null,
+														"layerFrame": {
+															"x": 28,
+															"y": 511,
+															"width": 25,
+															"height": 6
+														},
+														"visible": true,
+														"metadata": {
+															"opacity": 1
+														},
+														"image": {
+															"path": "images/Layer-FocusBarState_TVOD-mtvgoui2.png",
+															"frame": {
+																"x": 28,
+																"y": 511,
+																"width": 25,
+																"height": 6
+															}
+														},
+														"children": []
 													}
-												},
-												"children": []
+												]
 											},
 											{
-												"objectId": "58C7AE51-4659-4DDE-8B48-F167AE77BCCB",
+												"objectId": "3EEFB901-CF78-4A9E-B25E-211264988377",
 												"kind": "group",
-												"name": "MainContentSelectionContents",
-												"originalName": "MainContentSelectionContents",
+												"name": "MainContentSelectionStates",
+												"originalName": "MainContentSelectionStates",
 												"maskFrame": null,
 												"layerFrame": {
 													"x": 20,
-													"y": 480,
+													"y": 474,
 													"width": 390,
-													"height": 20
+													"height": 31
 												},
 												"visible": true,
 												"metadata": {
@@ -1248,10 +1778,10 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 												},
 												"children": [
 													{
-														"objectId": "480C9FAE-30FD-47D3-B483-0B8155278D67",
+														"objectId": "CAD44F96-0BDC-4D53-B192-E27FFBA5CB3C",
 														"kind": "group",
-														"name": "MainContentSelectionContentsInner",
-														"originalName": "MainContentSelectionContentsInner",
+														"name": "MainContentSelection_State_VOD",
+														"originalName": "MainContentSelection_State_VOD",
 														"maskFrame": null,
 														"layerFrame": {
 															"x": 20,
@@ -1265,42 +1795,15 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 														},
 														"children": [
 															{
-																"objectId": "A5FAFF01-5006-4EBB-9871-B3C4DB7EFE56",
+																"objectId": "58C7AE51-4659-4DDE-8B48-F167AE77BCCB",
 																"kind": "group",
-																"name": "Group_31",
-																"originalName": "Group 3",
-																"maskFrame": null,
-																"layerFrame": {
-																	"x": 230,
-																	"y": 480,
-																	"width": 180,
-																	"height": 20
-																},
-																"visible": true,
-																"metadata": {
-																	"opacity": 1
-																},
-																"image": {
-																	"path": "images/Layer-Group_3-qtvgquzg.png",
-																	"frame": {
-																		"x": 230,
-																		"y": 480,
-																		"width": 180,
-																		"height": 20
-																	}
-																},
-																"children": []
-															},
-															{
-																"objectId": "75F5B8A8-7C7C-4021-B32E-34EC4A710915",
-																"kind": "group",
-																"name": "MainContentSelectionSelectable",
-																"originalName": "MainContentSelectionSelectable",
+																"name": "MainContentSelectionContents",
+																"originalName": "MainContentSelectionContents",
 																"maskFrame": null,
 																"layerFrame": {
 																	"x": 20,
 																	"y": 480,
-																	"width": 180,
+																	"width": 390,
 																	"height": 20
 																},
 																"visible": true,
@@ -1309,114 +1812,479 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 																},
 																"children": [
 																	{
-																		"objectId": "41254A82-B829-42E4-A7F3-4236AA2BC879",
-																		"kind": "text",
-																		"name": "MainContentSelection_VOD_Movie",
-																		"originalName": "MainContentSelection_VOD_Movie",
-																		"maskFrame": null,
-																		"layerFrame": {
-																			"x": 161,
-																			"y": 480.4074074074074,
-																			"width": 39,
-																			"height": 19
-																		},
-																		"visible": true,
-																		"metadata": {
-																			"opacity": 1,
-																			"string": "電影",
-																			"css": [
-																				"font-family: PingFangTC-Medium;",
-																				"font-size: 20px;",
-																				"color: #AAAAAA;",
-																				"letter-spacing: 0;",
-																				"text-align: center;",
-																				"line-height: 30px;"
-																			]
-																		},
-																		"image": {
-																			"path": "images/Layer-MainContentSelection_VOD_Movie-ndeyntrb.png",
-																			"frame": {
-																				"x": 161,
-																				"y": 480.4074074074074,
-																				"width": 39,
-																				"height": 19
-																			}
-																		},
-																		"children": []
-																	},
-																	{
-																		"objectId": "12338089-D156-49AC-85A9-1E1946612A43",
-																		"kind": "text",
-																		"name": "MainContentSelection_VOD_Drama",
-																		"originalName": "MainContentSelection_VOD_Drama",
-																		"maskFrame": null,
-																		"layerFrame": {
-																			"x": 90,
-																			"y": 480.4074074074074,
-																			"width": 39,
-																			"height": 20
-																		},
-																		"visible": true,
-																		"metadata": {
-																			"opacity": 1,
-																			"string": "戲劇",
-																			"css": [
-																				"font-family: PingFangTC-Medium;",
-																				"font-size: 20px;",
-																				"color: #AAAAAA;",
-																				"letter-spacing: 0;",
-																				"text-align: center;",
-																				"line-height: 30px;"
-																			]
-																		},
-																		"image": {
-																			"path": "images/Layer-MainContentSelection_VOD_Drama-mtizmzgw.png",
-																			"frame": {
-																				"x": 90,
-																				"y": 480.4074074074074,
-																				"width": 39,
-																				"height": 20
-																			}
-																		},
-																		"children": []
-																	},
-																	{
-																		"objectId": "1BA7C1BD-2DF2-4CB4-9019-9118A71A58E3",
-																		"kind": "text",
-																		"name": "MainContentSelection_VOD_Feature",
-																		"originalName": "MainContentSelection_VOD_Feature",
+																		"objectId": "480C9FAE-30FD-47D3-B483-0B8155278D67",
+																		"kind": "group",
+																		"name": "MainContentSelectionContentsInner",
+																		"originalName": "MainContentSelectionContentsInner",
 																		"maskFrame": null,
 																		"layerFrame": {
 																			"x": 20,
-																			"y": 480.4074074074074,
-																			"width": 40,
+																			"y": 480,
+																			"width": 390,
 																			"height": 20
 																		},
 																		"visible": true,
 																		"metadata": {
-																			"opacity": 1,
-																			"string": "精選",
-																			"css": [
-																				"font-family: PingFangTC-Medium;",
-																				"font-size: 20px;",
-																				"color: #DDDDDD;",
-																				"letter-spacing: 0;",
-																				"text-align: center;",
-																				"line-height: 30px;"
-																			]
+																			"opacity": 1
 																		},
-																		"image": {
-																			"path": "images/Layer-MainContentSelection_VOD_Feature-mujbn0mx.png",
-																			"frame": {
-																				"x": 20,
-																				"y": 480.4074074074074,
-																				"width": 40,
-																				"height": 20
+																		"children": [
+																			{
+																				"objectId": "A5FAFF01-5006-4EBB-9871-B3C4DB7EFE56",
+																				"kind": "group",
+																				"name": "Group_31",
+																				"originalName": "Group 3",
+																				"maskFrame": null,
+																				"layerFrame": {
+																					"x": 230,
+																					"y": 480,
+																					"width": 180,
+																					"height": 20
+																				},
+																				"visible": true,
+																				"metadata": {
+																					"opacity": 1
+																				},
+																				"image": {
+																					"path": "images/Layer-Group_3-qtvgquzg.png",
+																					"frame": {
+																						"x": 230,
+																						"y": 480,
+																						"width": 180,
+																						"height": 20
+																					}
+																				},
+																				"children": []
+																			},
+																			{
+																				"objectId": "75F5B8A8-7C7C-4021-B32E-34EC4A710915",
+																				"kind": "group",
+																				"name": "MainContentSelectionSelectable",
+																				"originalName": "MainContentSelectionSelectable",
+																				"maskFrame": null,
+																				"layerFrame": {
+																					"x": 20,
+																					"y": 480,
+																					"width": 180,
+																					"height": 20
+																				},
+																				"visible": true,
+																				"metadata": {
+																					"opacity": 1
+																				},
+																				"children": [
+																					{
+																						"objectId": "41254A82-B829-42E4-A7F3-4236AA2BC879",
+																						"kind": "text",
+																						"name": "MainContentSelection_VOD_Movie",
+																						"originalName": "MainContentSelection_VOD_Movie",
+																						"maskFrame": null,
+																						"layerFrame": {
+																							"x": 161,
+																							"y": 480.4074074074074,
+																							"width": 39,
+																							"height": 19
+																						},
+																						"visible": true,
+																						"metadata": {
+																							"opacity": 1,
+																							"string": "電影",
+																							"css": [
+																								"font-family: PingFangTC-Medium;",
+																								"font-size: 20px;",
+																								"color: #AAAAAA;",
+																								"letter-spacing: 0;",
+																								"text-align: center;",
+																								"line-height: 30px;"
+																							]
+																						},
+																						"image": {
+																							"path": "images/Layer-MainContentSelection_VOD_Movie-ndeyntrb.png",
+																							"frame": {
+																								"x": 161,
+																								"y": 480.4074074074074,
+																								"width": 39,
+																								"height": 19
+																							}
+																						},
+																						"children": []
+																					},
+																					{
+																						"objectId": "12338089-D156-49AC-85A9-1E1946612A43",
+																						"kind": "text",
+																						"name": "MainContentSelection_VOD_Drama",
+																						"originalName": "MainContentSelection_VOD_Drama",
+																						"maskFrame": null,
+																						"layerFrame": {
+																							"x": 90,
+																							"y": 480.4074074074074,
+																							"width": 39,
+																							"height": 20
+																						},
+																						"visible": true,
+																						"metadata": {
+																							"opacity": 1,
+																							"string": "戲劇",
+																							"css": [
+																								"font-family: PingFangTC-Medium;",
+																								"font-size: 20px;",
+																								"color: #AAAAAA;",
+																								"letter-spacing: 0;",
+																								"text-align: center;",
+																								"line-height: 30px;"
+																							]
+																						},
+																						"image": {
+																							"path": "images/Layer-MainContentSelection_VOD_Drama-mtizmzgw.png",
+																							"frame": {
+																								"x": 90,
+																								"y": 480.4074074074074,
+																								"width": 39,
+																								"height": 20
+																							}
+																						},
+																						"children": []
+																					},
+																					{
+																						"objectId": "1BA7C1BD-2DF2-4CB4-9019-9118A71A58E3",
+																						"kind": "text",
+																						"name": "MainContentSelection_VOD_Feature",
+																						"originalName": "MainContentSelection_VOD_Feature",
+																						"maskFrame": null,
+																						"layerFrame": {
+																							"x": 20,
+																							"y": 480.4074074074074,
+																							"width": 40,
+																							"height": 20
+																						},
+																						"visible": true,
+																						"metadata": {
+																							"opacity": 1,
+																							"string": "精選",
+																							"css": [
+																								"font-family: PingFangTC-Medium;",
+																								"font-size: 20px;",
+																								"color: #DDDDDD;",
+																								"letter-spacing: 0;",
+																								"text-align: center;",
+																								"line-height: 30px;"
+																							]
+																						},
+																						"image": {
+																							"path": "images/Layer-MainContentSelection_VOD_Feature-mujbn0mx.png",
+																							"frame": {
+																								"x": 20,
+																								"y": 480.4074074074074,
+																								"width": 40,
+																								"height": 20
+																							}
+																						},
+																						"children": []
+																					}
+																				]
 																			}
-																		},
-																		"children": []
+																		]
 																	}
 																]
+															}
+														]
+													},
+													{
+														"objectId": "D16CCA92-C2E0-43EC-A477-1F3CCC3C59AB",
+														"kind": "group",
+														"name": "MainContentSelection_State_SPORT",
+														"originalName": "MainContentSelection_State_SPORT",
+														"maskFrame": null,
+														"layerFrame": {
+															"x": 20,
+															"y": 474,
+															"width": 390,
+															"height": 31
+														},
+														"visible": true,
+														"metadata": {
+															"opacity": 1
+														},
+														"children": [
+															{
+																"objectId": "B2BA1AEB-64BE-4BD2-939C-42438F6CB45A",
+																"kind": "group",
+																"name": "Group_10",
+																"originalName": "Group 10",
+																"maskFrame": null,
+																"layerFrame": {
+																	"x": 158,
+																	"y": 480,
+																	"width": 252,
+																	"height": 20
+																},
+																"visible": true,
+																"metadata": {
+																	"opacity": 1
+																},
+																"image": {
+																	"path": "images/Layer-Group_10-qjjcqtfb.png",
+																	"frame": {
+																		"x": 158,
+																		"y": 480,
+																		"width": 252,
+																		"height": 20
+																	}
+																},
+																"children": []
+															},
+															{
+																"objectId": "3E7D563E-1092-46AA-8558-A6FE90279D3C",
+																"kind": "group",
+																"name": "MainContentSelection_State_SPORT_EuroBTN",
+																"originalName": "MainContentSelection_State_SPORT_EuroBTN",
+																"maskFrame": null,
+																"layerFrame": {
+																	"x": 83,
+																	"y": 474,
+																	"width": 55,
+																	"height": 30
+																},
+																"visible": true,
+																"metadata": {
+																	"opacity": 1
+																},
+																"image": {
+																	"path": "images/Layer-MainContentSelection_State_SPORT_EuroBTN-m0u3rdu2.png",
+																	"frame": {
+																		"x": 83,
+																		"y": 474,
+																		"width": 55,
+																		"height": 30
+																	}
+																},
+																"children": []
+															},
+															{
+																"objectId": "4D168987-BB94-4939-8658-11759C56C44C",
+																"kind": "group",
+																"name": "MainContentSelection_State_SPORT_FeatureBTN",
+																"originalName": "MainContentSelection_State_SPORT_FeatureBTN",
+																"maskFrame": null,
+																"layerFrame": {
+																	"x": 20,
+																	"y": 475,
+																	"width": 56,
+																	"height": 30
+																},
+																"visible": true,
+																"metadata": {
+																	"opacity": 1
+																},
+																"image": {
+																	"path": "images/Layer-MainContentSelection_State_SPORT_FeatureBTN-neqxnjg5.png",
+																	"frame": {
+																		"x": 20,
+																		"y": 475,
+																		"width": 56,
+																		"height": 30
+																	}
+																},
+																"children": []
+															}
+														]
+													},
+													{
+														"objectId": "E3166A2D-3917-4CE5-AE4E-27FE1636628B",
+														"kind": "group",
+														"name": "MainContentSelection_State_TVOD",
+														"originalName": "MainContentSelection_State_TVOD",
+														"maskFrame": null,
+														"layerFrame": {
+															"x": 20,
+															"y": 474,
+															"width": 390,
+															"height": 31
+														},
+														"visible": true,
+														"metadata": {
+															"opacity": 1
+														},
+														"children": [
+															{
+																"objectId": "6DD9BF55-2697-4867-9897-5DB3E3167406",
+																"kind": "group",
+																"name": "Group_8",
+																"originalName": "Group 8",
+																"maskFrame": null,
+																"layerFrame": {
+																	"x": 160,
+																	"y": 480,
+																	"width": 250,
+																	"height": 20
+																},
+																"visible": true,
+																"metadata": {
+																	"opacity": 1
+																},
+																"image": {
+																	"path": "images/Layer-Group_8-nkreoujg.png",
+																	"frame": {
+																		"x": 160,
+																		"y": 480,
+																		"width": 250,
+																		"height": 20
+																	}
+																},
+																"children": []
+															},
+															{
+																"objectId": "F128019E-8C2C-489D-9629-56E36126A447",
+																"kind": "group",
+																"name": "MainContentSelection_State_TVOD_StoryBTN",
+																"originalName": "MainContentSelection_State_TVOD_StoryBTN",
+																"maskFrame": null,
+																"layerFrame": {
+																	"x": 83,
+																	"y": 474,
+																	"width": 55,
+																	"height": 30
+																},
+																"visible": true,
+																"metadata": {
+																	"opacity": 1
+																},
+																"image": {
+																	"path": "images/Layer-MainContentSelection_State_TVOD_StoryBTN-rjeyodax.png",
+																	"frame": {
+																		"x": 83,
+																		"y": 474,
+																		"width": 55,
+																		"height": 30
+																	}
+																},
+																"children": []
+															},
+															{
+																"objectId": "03876E91-0EBB-4239-A322-85D6DF751C10",
+																"kind": "group",
+																"name": "MainContentSelection_State_TVOD_FeatureBTN",
+																"originalName": "MainContentSelection_State_TVOD_FeatureBTN",
+																"maskFrame": null,
+																"layerFrame": {
+																	"x": 20,
+																	"y": 475,
+																	"width": 56,
+																	"height": 30
+																},
+																"visible": true,
+																"metadata": {
+																	"opacity": 1
+																},
+																"image": {
+																	"path": "images/Layer-MainContentSelection_State_TVOD_FeatureBTN-mdm4nzzf.png",
+																	"frame": {
+																		"x": 20,
+																		"y": 475,
+																		"width": 56,
+																		"height": 30
+																	}
+																},
+																"children": []
+															}
+														]
+													},
+													{
+														"objectId": "2293A950-89AB-4178-9074-099ECFC6E24A",
+														"kind": "group",
+														"name": "MainContentSelection_State_LIVE",
+														"originalName": "MainContentSelection_State_LIVE",
+														"maskFrame": null,
+														"layerFrame": {
+															"x": 20,
+															"y": 474,
+															"width": 389,
+															"height": 31
+														},
+														"visible": true,
+														"metadata": {
+															"opacity": 1
+														},
+														"children": [
+															{
+																"objectId": "27C35336-5144-42F4-81F3-60114DFC2C64",
+																"kind": "group",
+																"name": "Group_9",
+																"originalName": "Group 9",
+																"maskFrame": null,
+																"layerFrame": {
+																	"x": 160,
+																	"y": 480,
+																	"width": 249,
+																	"height": 20
+																},
+																"visible": true,
+																"metadata": {
+																	"opacity": 1
+																},
+																"image": {
+																	"path": "images/Layer-Group_9-mjddmzuz.png",
+																	"frame": {
+																		"x": 160,
+																		"y": 480,
+																		"width": 249,
+																		"height": 20
+																	}
+																},
+																"children": []
+															},
+															{
+																"objectId": "1E6EAFD0-C34F-4D77-A4B2-E86FC2467EA0",
+																"kind": "group",
+																"name": "MainContentSelection_State_LIVE_News",
+																"originalName": "MainContentSelection_State_LIVE_News",
+																"maskFrame": null,
+																"layerFrame": {
+																	"x": 83,
+																	"y": 474,
+																	"width": 55,
+																	"height": 30
+																},
+																"visible": true,
+																"metadata": {
+																	"opacity": 1
+																},
+																"image": {
+																	"path": "images/Layer-MainContentSelection_State_LIVE_News-muu2rufg.png",
+																	"frame": {
+																		"x": 83,
+																		"y": 474,
+																		"width": 55,
+																		"height": 30
+																	}
+																},
+																"children": []
+															},
+															{
+																"objectId": "7841D4A6-9377-4F6D-B1A3-B30416C8B410",
+																"kind": "group",
+																"name": "MainContentSelection_State_LIVE_Feature",
+																"originalName": "MainContentSelection_State_LIVE_Feature",
+																"maskFrame": null,
+																"layerFrame": {
+																	"x": 20,
+																	"y": 475,
+																	"width": 56,
+																	"height": 30
+																},
+																"visible": true,
+																"metadata": {
+																	"opacity": 1
+																},
+																"image": {
+																	"path": "images/Layer-MainContentSelection_State_LIVE_Feature-nzg0muq0.png",
+																	"frame": {
+																		"x": 20,
+																		"y": 475,
+																		"width": 56,
+																		"height": 30
+																	}
+																},
+																"children": []
 															}
 														]
 													}
@@ -1445,6 +2313,3440 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 														"y": 467,
 														"width": 375,
 														"height": 50
+													}
+												},
+												"children": []
+											}
+										]
+									}
+								]
+							},
+							{
+								"objectId": "3D8EA928-44FD-4775-980D-4436D40247DD",
+								"kind": "group",
+								"name": "ContentSPORT",
+								"originalName": "ContentSPORT",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 0,
+									"y": 517,
+									"width": 650,
+									"height": 3200
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"children": [
+									{
+										"objectId": "B8EB58E1-F522-440B-8F3B-E7134C1AB362",
+										"kind": "group",
+										"name": "ContentSPORT_Euro",
+										"originalName": "ContentSPORT_Euro",
+										"maskFrame": null,
+										"layerFrame": {
+											"x": 0,
+											"y": 517,
+											"width": 650,
+											"height": 3200
+										},
+										"visible": true,
+										"metadata": {
+											"opacity": 1
+										},
+										"children": [
+											{
+												"objectId": "53F2D64E-4FC2-45E2-90CE-96635F448FB0",
+												"kind": "group",
+												"name": "ContentSPORT_Euro_Banner",
+												"originalName": "ContentSPORT_Euro_Banner",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 0,
+													"y": 517,
+													"width": 375,
+													"height": 270
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"image": {
+													"path": "images/Layer-ContentSPORT_Euro_Banner-ntngmkq2.png",
+													"frame": {
+														"x": 0,
+														"y": 517,
+														"width": 375,
+														"height": 270
+													}
+												},
+												"children": []
+											},
+											{
+												"objectId": "1EB4E87B-423E-41B7-9B54-21088BDF3044",
+												"kind": "group",
+												"name": "Group2",
+												"originalName": "Group",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 10,
+													"y": 817,
+													"width": 355,
+													"height": 90
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"image": {
+													"path": "images/Layer-Group-muvcneu4.png",
+													"frame": {
+														"x": 10,
+														"y": 817,
+														"width": 355,
+														"height": 90
+													}
+												},
+												"children": []
+											},
+											{
+												"objectId": "4BE0655A-31B2-4DF4-A1B0-8E14CA863D0C",
+												"kind": "group",
+												"name": "EUROSchedule",
+												"originalName": "EUROSchedule",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 10,
+													"y": 1012,
+													"width": 355,
+													"height": 435
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"image": {
+													"path": "images/Layer-EUROSchedule-nejfmdy1.png",
+													"frame": {
+														"x": 10,
+														"y": 1012,
+														"width": 355,
+														"height": 435
+													}
+												},
+												"children": []
+											},
+											{
+												"objectId": "35F11CEB-5A5E-4A7D-88D5-8AB1F855C09B",
+												"kind": "group",
+												"name": "Group_4",
+												"originalName": "Group 4",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 10,
+													"y": 1501,
+													"width": 355,
+													"height": 349
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"children": [
+													{
+														"objectId": "2AABCDF1-9CD2-498C-A577-18A43DE10328",
+														"kind": "group",
+														"name": "Set_ChannelListSport_Copy_5",
+														"originalName": "Set/ChannelListSport Copy 5",
+														"maskFrame": null,
+														"layerFrame": {
+															"x": 10,
+															"y": 1550,
+															"width": 355,
+															"height": 300
+														},
+														"visible": true,
+														"metadata": {
+															"opacity": 1
+														},
+														"image": {
+															"path": "images/Layer-Set_ChannelListSport_Copy_5-mkfbqkne.png",
+															"frame": {
+																"x": 10,
+																"y": 1550,
+																"width": 355,
+																"height": 300
+															}
+														},
+														"children": []
+													},
+													{
+														"objectId": "43F2AF36-529E-4070-B8D1-6BA42F82BE99",
+														"kind": "group",
+														"name": "Title_Copy_36",
+														"originalName": "Title Copy 36",
+														"maskFrame": null,
+														"layerFrame": {
+															"x": 11,
+															"y": 1501,
+															"width": 110,
+															"height": 27
+														},
+														"visible": true,
+														"metadata": {
+															"opacity": 1
+														},
+														"image": {
+															"path": "images/Layer-Title_Copy_36-ndngmkfg.png",
+															"frame": {
+																"x": 11,
+																"y": 1501,
+																"width": 110,
+																"height": 27
+															}
+														},
+														"children": []
+													}
+												]
+											},
+											{
+												"objectId": "53C99A67-6CF5-4269-AEDD-51E37006618B",
+												"kind": "group",
+												"name": "Title_Copy_39",
+												"originalName": "Title Copy 39",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 11,
+													"y": 961,
+													"width": 82,
+													"height": 28
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"image": {
+													"path": "images/Layer-Title_Copy_39-ntndotlb.png",
+													"frame": {
+														"x": 11,
+														"y": 961,
+														"width": 82,
+														"height": 28
+													}
+												},
+												"children": []
+											},
+											{
+												"objectId": "449922C4-4DBD-4FD6-9489-E5501FFEFE7C",
+												"kind": "group",
+												"name": "Title_Copy_38",
+												"originalName": "Title Copy 38",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 10,
+													"y": 2234,
+													"width": 111,
+													"height": 28
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"image": {
+													"path": "images/Layer-Title_Copy_38-ndq5otiy.png",
+													"frame": {
+														"x": 10,
+														"y": 2234,
+														"width": 111,
+														"height": 28
+													}
+												},
+												"children": []
+											},
+											{
+												"objectId": "228B363A-8EAA-4ED3-9119-689988F33126",
+												"kind": "group",
+												"name": "Group_23",
+												"originalName": "Group 2",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 10,
+													"y": 2755,
+													"width": 355,
+													"height": 100
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"image": {
+													"path": "images/Layer-Group_2-mji4qjm2.png",
+													"frame": {
+														"x": 10,
+														"y": 2755,
+														"width": 355,
+														"height": 100
+													}
+												},
+												"children": []
+											},
+											{
+												"objectId": "4CEE0029-B5E1-499A-8C07-628C6E692CAD",
+												"kind": "group",
+												"name": "SportEuro_Fentasic",
+												"originalName": "SportEuro_Fentasic",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 10,
+													"y": 2285,
+													"width": 640,
+													"height": 420
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"children": [
+													{
+														"objectId": "3A7ED575-FBB1-4DC2-8157-93184D528020",
+														"kind": "group",
+														"name": "SportEuro_FentasicContents",
+														"originalName": "SportEuro_FentasicContents",
+														"maskFrame": null,
+														"layerFrame": {
+															"x": 10,
+															"y": 2285,
+															"width": 640,
+															"height": 420
+														},
+														"visible": true,
+														"metadata": {
+															"opacity": 1
+														},
+														"children": [
+															{
+																"objectId": "71015E4E-4649-481E-A9A4-5FE45F81016F",
+																"kind": "group",
+																"name": "Group_6",
+																"originalName": "Group 6",
+																"maskFrame": null,
+																"layerFrame": {
+																	"x": 10,
+																	"y": 2285,
+																	"width": 640,
+																	"height": 420
+																},
+																"visible": true,
+																"metadata": {
+																	"opacity": 1
+																},
+																"image": {
+																	"path": "images/Layer-Group_6-nzewmtvf.png",
+																	"frame": {
+																		"x": 10,
+																		"y": 2285,
+																		"width": 640,
+																		"height": 420
+																	}
+																},
+																"children": []
+															}
+														]
+													}
+												]
+											},
+											{
+												"objectId": "6C181A1F-0D04-447F-B051-4734E26D9A66",
+												"kind": "group",
+												"name": "SportEuro_RealTime",
+												"originalName": "SportEuro_RealTime",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 10,
+													"y": 1905,
+													"width": 470,
+													"height": 271
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"children": [
+													{
+														"objectId": "EBF5DEAF-99FE-44BA-A65C-763C467789F0",
+														"kind": "group",
+														"name": "Title_Copy_37",
+														"originalName": "Title Copy 37",
+														"maskFrame": null,
+														"layerFrame": {
+															"x": 11,
+															"y": 1905,
+															"width": 111,
+															"height": 26
+														},
+														"visible": true,
+														"metadata": {
+															"opacity": 1
+														},
+														"image": {
+															"path": "images/Layer-Title_Copy_37-rujgnurf.png",
+															"frame": {
+																"x": 11,
+																"y": 1905,
+																"width": 111,
+																"height": 26
+															}
+														},
+														"children": []
+													},
+													{
+														"objectId": "DB73FBE9-402A-499E-B802-03FA959D76D0",
+														"kind": "group",
+														"name": "ContentSPORT_Euro_RealTime",
+														"originalName": "ContentSPORT_Euro_RealTime",
+														"maskFrame": null,
+														"layerFrame": {
+															"x": 10,
+															"y": 1955,
+															"width": 470,
+															"height": 221
+														},
+														"visible": true,
+														"metadata": {
+															"opacity": 1
+														},
+														"children": [
+															{
+																"objectId": "A0DC58BD-18E8-4B62-A6AD-E89F7D58A1C5",
+																"kind": "group",
+																"name": "ContentSPORT_Euro_RealTimeContents",
+																"originalName": "ContentSPORT_Euro_RealTimeContents",
+																"maskFrame": null,
+																"layerFrame": {
+																	"x": 10,
+																	"y": 1955,
+																	"width": 470,
+																	"height": 221
+																},
+																"visible": true,
+																"metadata": {
+																	"opacity": 1
+																},
+																"children": [
+																	{
+																		"objectId": "A85D301D-BA85-435D-8B2F-4D2918E0D3E5",
+																		"kind": "group",
+																		"name": "News_Copy_5",
+																		"originalName": "News Copy 5",
+																		"maskFrame": null,
+																		"layerFrame": {
+																			"x": 330,
+																			"y": 1955,
+																			"width": 150,
+																			"height": 221
+																		},
+																		"visible": true,
+																		"metadata": {
+																			"opacity": 1
+																		},
+																		"image": {
+																			"path": "images/Layer-News_Copy_5-qtg1rdmw.png",
+																			"frame": {
+																				"x": 330,
+																				"y": 1955,
+																				"width": 150,
+																				"height": 221
+																			}
+																		},
+																		"children": []
+																	},
+																	{
+																		"objectId": "756C8B72-7751-4676-96C3-8972D6D83D98",
+																		"kind": "group",
+																		"name": "News_Copy_6",
+																		"originalName": "News Copy 6",
+																		"maskFrame": null,
+																		"layerFrame": {
+																			"x": 170,
+																			"y": 1955,
+																			"width": 150,
+																			"height": 221
+																		},
+																		"visible": true,
+																		"metadata": {
+																			"opacity": 1
+																		},
+																		"image": {
+																			"path": "images/Layer-News_Copy_6-nzu2qzhc.png",
+																			"frame": {
+																				"x": 170,
+																				"y": 1955,
+																				"width": 150,
+																				"height": 221
+																			}
+																		},
+																		"children": []
+																	},
+																	{
+																		"objectId": "73848DE1-BCF5-4903-B232-FD8862BC71D9",
+																		"kind": "group",
+																		"name": "News_3",
+																		"originalName": "News 3",
+																		"maskFrame": null,
+																		"layerFrame": {
+																			"x": 10,
+																			"y": 1955,
+																			"width": 150,
+																			"height": 221
+																		},
+																		"visible": true,
+																		"metadata": {
+																			"opacity": 1
+																		},
+																		"image": {
+																			"path": "images/Layer-News_3-nzm4ndhe.png",
+																			"frame": {
+																				"x": 10,
+																				"y": 1955,
+																				"width": 150,
+																				"height": 221
+																			}
+																		},
+																		"children": []
+																	}
+																]
+															}
+														]
+													}
+												]
+											},
+											{
+												"objectId": "BCE5EEED-E447-46ED-9750-2728A56F166B",
+												"kind": "group",
+												"name": "ContentBG1",
+												"originalName": "ContentBG",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 0,
+													"y": 517,
+													"width": 375,
+													"height": 3200
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"image": {
+													"path": "images/Layer-ContentBG-qknfnuvf.png",
+													"frame": {
+														"x": 0,
+														"y": 517,
+														"width": 375,
+														"height": 3200
+													}
+												},
+												"children": []
+											}
+										]
+									},
+									{
+										"objectId": "CA3DABEB-6EC4-409C-9509-0DA14295229A",
+										"kind": "group",
+										"name": "ContentSPORT_Feature",
+										"originalName": "ContentSPORT_Feature",
+										"maskFrame": null,
+										"layerFrame": {
+											"x": 0,
+											"y": 517,
+											"width": 650,
+											"height": 3200
+										},
+										"visible": true,
+										"metadata": {
+											"opacity": 1
+										},
+										"children": [
+											{
+												"objectId": "AEC08839-34E7-4A02-91C4-29555C6223C9",
+												"kind": "group",
+												"name": "ContentSPORTBanner",
+												"originalName": "ContentSPORTBanner",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 0,
+													"y": 517,
+													"width": 375,
+													"height": 268
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"image": {
+													"path": "images/Layer-ContentSPORTBanner-quvdmdg4.png",
+													"frame": {
+														"x": 0,
+														"y": 517,
+														"width": 375,
+														"height": 268
+													}
+												},
+												"children": []
+											},
+											{
+												"objectId": "571D8456-9FA4-4908-8B90-32701670C754",
+												"kind": "group",
+												"name": "ContentSPORT1",
+												"originalName": "ContentSPORT",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 10,
+													"y": 817,
+													"width": 355,
+													"height": 290
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"children": [
+													{
+														"objectId": "DE773C5E-A777-4F8D-AC5E-77F403F4C2BE",
+														"kind": "group",
+														"name": "Group3",
+														"originalName": "Group",
+														"maskFrame": null,
+														"layerFrame": {
+															"x": 10,
+															"y": 817,
+															"width": 355,
+															"height": 90
+														},
+														"visible": true,
+														"metadata": {
+															"opacity": 1
+														},
+														"image": {
+															"path": "images/Layer-Group-reu3nznd.png",
+															"frame": {
+																"x": 10,
+																"y": 817,
+																"width": 355,
+																"height": 90
+															}
+														},
+														"children": []
+													},
+													{
+														"objectId": "D05297FD-3954-452B-AF01-F345AA33F55C",
+														"kind": "group",
+														"name": "Group_32",
+														"originalName": "Group 3",
+														"maskFrame": null,
+														"layerFrame": {
+															"x": 10,
+															"y": 1017,
+															"width": 355,
+															"height": 90
+														},
+														"visible": true,
+														"metadata": {
+															"opacity": 1
+														},
+														"image": {
+															"path": "images/Layer-Group_3-rda1mjk3.png",
+															"frame": {
+																"x": 10,
+																"y": 1017,
+																"width": 355,
+																"height": 90
+															}
+														},
+														"children": [
+															{
+																"objectId": "D2B462B8-9132-4B81-AF01-17A461E8F916",
+																"kind": "group",
+																"name": "Group_Copy1",
+																"originalName": "Group Copy",
+																"maskFrame": null,
+																"layerFrame": {
+																	"x": 10,
+																	"y": 1017,
+																	"width": 355,
+																	"height": 90
+																},
+																"visible": true,
+																"metadata": {
+																	"opacity": 1
+																},
+																"image": {
+																	"path": "images/Layer-Group_Copy-rdjcndyy.png",
+																	"frame": {
+																		"x": 10,
+																		"y": 1017,
+																		"width": 355,
+																		"height": 90
+																	}
+																},
+																"children": []
+															}
+														]
+													},
+													{
+														"objectId": "96447C6C-E41A-4112-838A-0ECE716CB735",
+														"kind": "group",
+														"name": "Group_Copy",
+														"originalName": "Group Copy",
+														"maskFrame": null,
+														"layerFrame": {
+															"x": 10,
+															"y": 917,
+															"width": 355,
+															"height": 90
+														},
+														"visible": true,
+														"metadata": {
+															"opacity": 1
+														},
+														"image": {
+															"path": "images/Layer-Group_Copy-oty0nddd.png",
+															"frame": {
+																"x": 10,
+																"y": 917,
+																"width": 355,
+																"height": 90
+															}
+														},
+														"children": []
+													}
+												]
+											},
+											{
+												"objectId": "7A6F500C-016F-4069-B92B-FF51A92BBF35",
+												"kind": "group",
+												"name": "Title_Copy_33",
+												"originalName": "Title Copy 33",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 11,
+													"y": 1162,
+													"width": 111,
+													"height": 26
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"image": {
+													"path": "images/Layer-Title_Copy_33-n0e2rjuw.png",
+													"frame": {
+														"x": 11,
+														"y": 1162,
+														"width": 111,
+														"height": 26
+													}
+												},
+												"children": []
+											},
+											{
+												"objectId": "70A45B22-E8B2-49DC-B1F8-F26DC7F29458",
+												"kind": "group",
+												"name": "Title_Copy_34",
+												"originalName": "Title Copy 34",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 11,
+													"y": 1501,
+													"width": 110,
+													"height": 27
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"image": {
+													"path": "images/Layer-Title_Copy_34-nzbbndvc.png",
+													"frame": {
+														"x": 11,
+														"y": 1501,
+														"width": 110,
+														"height": 27
+													}
+												},
+												"children": []
+											},
+											{
+												"objectId": "ECB92780-93F9-492D-967A-4958E9D9F9DF",
+												"kind": "group",
+												"name": "Group_24",
+												"originalName": "Group 2",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 10,
+													"y": 3057,
+													"width": 355,
+													"height": 100
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"image": {
+													"path": "images/Layer-Group_2-runcoti3.png",
+													"frame": {
+														"x": 10,
+														"y": 3057,
+														"width": 355,
+														"height": 100
+													}
+												},
+												"children": []
+											},
+											{
+												"objectId": "F2435DF7-C1E1-439A-8F11-0D895732EB7B",
+												"kind": "group",
+												"name": "ContentSPORT_Other",
+												"originalName": "ContentSPORT_Other",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 10,
+													"y": 2877,
+													"width": 390,
+													"height": 128
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"children": [
+													{
+														"objectId": "050FB133-F8EC-4912-BF66-803D9C4C1D1A",
+														"kind": "group",
+														"name": "ContentSPORT_OtherContents",
+														"originalName": "ContentSPORT_OtherContents",
+														"maskFrame": null,
+														"layerFrame": {
+															"x": 10,
+															"y": 2877,
+															"width": 390,
+															"height": 128
+														},
+														"visible": true,
+														"metadata": {
+															"opacity": 1
+														},
+														"children": [
+															{
+																"objectId": "ACBA8470-9B5E-4155-B949-405AD146E44D",
+																"kind": "group",
+																"name": "tag_copy_14",
+																"originalName": "tag copy 14",
+																"maskFrame": null,
+																"layerFrame": {
+																	"x": 110,
+																	"y": 2877,
+																	"width": 90,
+																	"height": 128
+																},
+																"visible": true,
+																"metadata": {
+																	"opacity": 1
+																},
+																"image": {
+																	"path": "images/Layer-tag_copy_14-quncqtg0.png",
+																	"frame": {
+																		"x": 110,
+																		"y": 2877,
+																		"width": 90,
+																		"height": 128
+																	}
+																},
+																"children": []
+															},
+															{
+																"objectId": "61C74F30-0950-46F7-B952-A1FA18532455",
+																"kind": "group",
+																"name": "tag_copy_15",
+																"originalName": "tag copy 15",
+																"maskFrame": null,
+																"layerFrame": {
+																	"x": 10,
+																	"y": 2877,
+																	"width": 90,
+																	"height": 128
+																},
+																"visible": true,
+																"metadata": {
+																	"opacity": 1
+																},
+																"image": {
+																	"path": "images/Layer-tag_copy_15-njfdnzrg.png",
+																	"frame": {
+																		"x": 10,
+																		"y": 2877,
+																		"width": 90,
+																		"height": 128
+																	}
+																},
+																"children": []
+															},
+															{
+																"objectId": "D89E16E9-FFC0-4A03-A4CD-494A95E986A3",
+																"kind": "group",
+																"name": "tag_copy_16",
+																"originalName": "tag copy 16",
+																"maskFrame": null,
+																"layerFrame": {
+																	"x": 310,
+																	"y": 2877,
+																	"width": 90,
+																	"height": 128
+																},
+																"visible": true,
+																"metadata": {
+																	"opacity": 1
+																},
+																"image": {
+																	"path": "images/Layer-tag_copy_16-rdg5rte2.png",
+																	"frame": {
+																		"x": 310,
+																		"y": 2877,
+																		"width": 90,
+																		"height": 128
+																	}
+																},
+																"children": []
+															},
+															{
+																"objectId": "2DDA440A-A1B2-4D53-8495-156665E2B5CB",
+																"kind": "group",
+																"name": "tag_5",
+																"originalName": "tag 5",
+																"maskFrame": null,
+																"layerFrame": {
+																	"x": 210,
+																	"y": 2877,
+																	"width": 90,
+																	"height": 128
+																},
+																"visible": true,
+																"metadata": {
+																	"opacity": 1
+																},
+																"image": {
+																	"path": "images/Layer-tag_5-mkreqtq0.png",
+																	"frame": {
+																		"x": 210,
+																		"y": 2877,
+																		"width": 90,
+																		"height": 128
+																	}
+																},
+																"children": []
+															}
+														]
+													}
+												]
+											},
+											{
+												"objectId": "C6E65CB9-907F-4E8C-B00A-086E1B72DCB4",
+												"kind": "group",
+												"name": "Title_Copy_35",
+												"originalName": "Title Copy 35",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 10,
+													"y": 2376,
+													"width": 111,
+													"height": 28
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"image": {
+													"path": "images/Layer-Title_Copy_35-qzzfnjvd.png",
+													"frame": {
+														"x": 10,
+														"y": 2376,
+														"width": 111,
+														"height": 28
+													}
+												},
+												"children": []
+											},
+											{
+												"objectId": "C724C74C-4299-46A8-9966-5CCC80325E29",
+												"kind": "group",
+												"name": "ContentSPORT_Feature_Fantasic",
+												"originalName": "ContentSPORT_Feature_Fantasic",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 10,
+													"y": 2427,
+													"width": 640,
+													"height": 420
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"children": [
+													{
+														"objectId": "79428E85-9DE8-4024-910B-3B8C9796E010",
+														"kind": "group",
+														"name": "ContentSPORT_Feature_FantasicContents",
+														"originalName": "ContentSPORT_Feature_FantasicContents",
+														"maskFrame": null,
+														"layerFrame": {
+															"x": 10,
+															"y": 2427,
+															"width": 640,
+															"height": 420
+														},
+														"visible": true,
+														"metadata": {
+															"opacity": 1
+														},
+														"children": [
+															{
+																"objectId": "002E7287-6B0E-437F-B3FE-777A92379351",
+																"kind": "group",
+																"name": "_2",
+																"originalName": "精彩時刻 2",
+																"maskFrame": null,
+																"layerFrame": {
+																	"x": 10,
+																	"y": 2427,
+																	"width": 640,
+																	"height": 420
+																},
+																"visible": true,
+																"metadata": {
+																	"opacity": 1
+																},
+																"image": {
+																	"path": "images/Layer-_2-mdayrtcy.png",
+																	"frame": {
+																		"x": 10,
+																		"y": 2427,
+																		"width": 640,
+																		"height": 420
+																	}
+																},
+																"children": []
+															}
+														]
+													}
+												]
+											},
+											{
+												"objectId": "50CD3BD7-C93C-4378-9714-30BE37C98C46",
+												"kind": "group",
+												"name": "Set_ChannelListSport_2",
+												"originalName": "Set/ChannelListSport 2",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 10,
+													"y": 1552,
+													"width": 355,
+													"height": 300
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"image": {
+													"path": "images/Layer-Set_ChannelListSport_2-ntbdrdnc.png",
+													"frame": {
+														"x": 10,
+														"y": 1552,
+														"width": 355,
+														"height": 300
+													}
+												},
+												"children": []
+											},
+											{
+												"objectId": "2E99DF82-4080-4233-9F12-37C31C1D9A93",
+												"kind": "group",
+												"name": "Title_6",
+												"originalName": "Title 6",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 11,
+													"y": 1916,
+													"width": 142,
+													"height": 28
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"image": {
+													"path": "images/Layer-Title_6-mku5ourg.png",
+													"frame": {
+														"x": 11,
+														"y": 1916,
+														"width": 142,
+														"height": 28
+													}
+												},
+												"children": []
+											},
+											{
+												"objectId": "6BBAEF00-BE21-466F-942E-A3EF7C60D2F8",
+												"kind": "group",
+												"name": "Set_livetime_2",
+												"originalName": "Set/livetime 2",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 10,
+													"y": 1967,
+													"width": 355,
+													"height": 345
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"image": {
+													"path": "images/Layer-Set_livetime_2-nkjcquvg.png",
+													"frame": {
+														"x": 10,
+														"y": 1967,
+														"width": 355,
+														"height": 345
+													}
+												},
+												"children": []
+											},
+											{
+												"objectId": "5E8739CC-DC52-4737-989E-0EA5BFB1280E",
+												"kind": "group",
+												"name": "ContentSPORT_RealTime",
+												"originalName": "ContentSPORT_RealTime",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 10,
+													"y": 1212,
+													"width": 470,
+													"height": 221
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"children": [
+													{
+														"objectId": "442F6C5E-EC4A-42D3-9877-659340A69E6F",
+														"kind": "group",
+														"name": "ContentSPORT_RealTimeContents",
+														"originalName": "ContentSPORT_RealTimeContents",
+														"maskFrame": null,
+														"layerFrame": {
+															"x": 10,
+															"y": 1212,
+															"width": 470,
+															"height": 221
+														},
+														"visible": true,
+														"metadata": {
+															"opacity": 1
+														},
+														"children": [
+															{
+																"objectId": "4262E521-65F2-4AC3-AB69-9544100E7E7C",
+																"kind": "group",
+																"name": "News_Copy_3",
+																"originalName": "News Copy 3",
+																"maskFrame": null,
+																"layerFrame": {
+																	"x": 330,
+																	"y": 1212,
+																	"width": 150,
+																	"height": 221
+																},
+																"visible": true,
+																"metadata": {
+																	"opacity": 1
+																},
+																"image": {
+																	"path": "images/Layer-News_Copy_3-ndi2mku1.png",
+																	"frame": {
+																		"x": 330,
+																		"y": 1212,
+																		"width": 150,
+																		"height": 221
+																	}
+																},
+																"children": []
+															},
+															{
+																"objectId": "4F4B115B-AB23-4606-97A2-51BA0F446906",
+																"kind": "group",
+																"name": "News_Copy_4",
+																"originalName": "News Copy 4",
+																"maskFrame": null,
+																"layerFrame": {
+																	"x": 170,
+																	"y": 1212,
+																	"width": 150,
+																	"height": 221
+																},
+																"visible": true,
+																"metadata": {
+																	"opacity": 1
+																},
+																"image": {
+																	"path": "images/Layer-News_Copy_4-ney0qjex.png",
+																	"frame": {
+																		"x": 170,
+																		"y": 1212,
+																		"width": 150,
+																		"height": 221
+																	}
+																},
+																"children": []
+															},
+															{
+																"objectId": "5FF686AC-42C2-4121-8EDC-D0E156A4BF50",
+																"kind": "group",
+																"name": "News_2",
+																"originalName": "News 2",
+																"maskFrame": null,
+																"layerFrame": {
+																	"x": 10,
+																	"y": 1212,
+																	"width": 150,
+																	"height": 221
+																},
+																"visible": true,
+																"metadata": {
+																	"opacity": 1
+																},
+																"image": {
+																	"path": "images/Layer-News_2-nuzgnjg2.png",
+																	"frame": {
+																		"x": 10,
+																		"y": 1212,
+																		"width": 150,
+																		"height": 221
+																	}
+																},
+																"children": []
+															}
+														]
+													}
+												]
+											},
+											{
+												"objectId": "D9FB5812-E285-4C3E-B4A8-A1091895C4E2",
+												"kind": "group",
+												"name": "ContentBG2",
+												"originalName": "ContentBG",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 0,
+													"y": 517,
+													"width": 375,
+													"height": 3200
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"image": {
+													"path": "images/Layer-ContentBG-rdlgqju4.png",
+													"frame": {
+														"x": 0,
+														"y": 517,
+														"width": 375,
+														"height": 3200
+													}
+												},
+												"children": []
+											}
+										]
+									}
+								]
+							},
+							{
+								"objectId": "3DA95B91-FBFF-45EB-80A2-35D0247CF3BC",
+								"kind": "group",
+								"name": "ContentLIVE",
+								"originalName": "ContentLIVE",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 0,
+									"y": 517,
+									"width": 640,
+									"height": 3200
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"children": [
+									{
+										"objectId": "B2B1CCCE-78D0-4190-9BFD-68C6186888DE",
+										"kind": "group",
+										"name": "ContentLIVEs_News",
+										"originalName": "ContentLIVEs_News",
+										"maskFrame": null,
+										"layerFrame": {
+											"x": 0,
+											"y": 517,
+											"width": 375,
+											"height": 3200
+										},
+										"visible": true,
+										"metadata": {
+											"opacity": 1
+										},
+										"children": [
+											{
+												"objectId": "13F12BD9-78D0-4BFD-A688-D65A34AD0E77",
+												"kind": "group",
+												"name": "Group_7",
+												"originalName": "Group 7",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 10,
+													"y": 527,
+													"width": 355,
+													"height": 952
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"image": {
+													"path": "images/Layer-Group_7-mtngmtjc.png",
+													"frame": {
+														"x": 10,
+														"y": 527,
+														"width": 355,
+														"height": 952
+													}
+												},
+												"children": [
+													{
+														"objectId": "9C0471BF-6236-403B-B219-61C59E78A50C",
+														"kind": "group",
+														"name": "Set_ChannelListSport_Copy_3",
+														"originalName": "Set/ChannelListSport Copy 3",
+														"maskFrame": null,
+														"layerFrame": {
+															"x": 0,
+															"y": 527,
+															"width": 375,
+															"height": 490
+														},
+														"visible": true,
+														"metadata": {
+															"opacity": 1
+														},
+														"children": []
+													},
+													{
+														"objectId": "2BED1BFF-A642-48F2-9A84-2FEB9B503BFB",
+														"kind": "group",
+														"name": "Set_ChannelListSport_Copy_4",
+														"originalName": "Set/ChannelListSport Copy 4",
+														"maskFrame": null,
+														"layerFrame": {
+															"x": 10,
+															"y": 999,
+															"width": 355,
+															"height": 480
+														},
+														"visible": true,
+														"metadata": {
+															"opacity": 1
+														},
+														"image": {
+															"path": "images/Layer-Set_ChannelListSport_Copy_4-mkjfrdfc.png",
+															"frame": {
+																"x": 10,
+																"y": 999,
+																"width": 355,
+																"height": 480
+															}
+														},
+														"children": []
+													}
+												]
+											},
+											{
+												"objectId": "5A1F2F46-F2E3-4BBC-A546-790A99D0B664",
+												"kind": "group",
+												"name": "ContentBG3",
+												"originalName": "ContentBG",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 0,
+													"y": 517,
+													"width": 375,
+													"height": 3200
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"image": {
+													"path": "images/Layer-ContentBG-nuexrjjg.png",
+													"frame": {
+														"x": 0,
+														"y": 517,
+														"width": 375,
+														"height": 3200
+													}
+												},
+												"children": []
+											}
+										]
+									},
+									{
+										"objectId": "E818CCAC-506D-4EED-A948-83976F84FD8B",
+										"kind": "group",
+										"name": "ContentLIVEs_Feature",
+										"originalName": "ContentLIVEs_Feature",
+										"maskFrame": null,
+										"layerFrame": {
+											"x": 0,
+											"y": 517,
+											"width": 640,
+											"height": 3200
+										},
+										"visible": true,
+										"metadata": {
+											"opacity": 1
+										},
+										"children": [
+											{
+												"objectId": "76D8CB91-8BA6-4C32-B1EB-45480A29AED7",
+												"kind": "group",
+												"name": "ContentLIVEsHistory",
+												"originalName": "ContentLIVEsHistory",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 10,
+													"y": 1179,
+													"width": 355,
+													"height": 531
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"image": {
+													"path": "images/Layer-ContentLIVEsHistory-nzzeoenc.png",
+													"frame": {
+														"x": 10,
+														"y": 1179,
+														"width": 355,
+														"height": 531
+													}
+												},
+												"children": []
+											},
+											{
+												"objectId": "7D4F20E1-3E57-40B3-A616-CB8E1D611122",
+												"kind": "group",
+												"name": "ContentLIVEsBanner",
+												"originalName": "ContentLIVEsBanner",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 10,
+													"y": 2005,
+													"width": 355,
+													"height": 100
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"image": {
+													"path": "images/Layer-ContentLIVEsBanner-n0q0rjiw.png",
+													"frame": {
+														"x": 10,
+														"y": 2005,
+														"width": 355,
+														"height": 100
+													}
+												},
+												"children": []
+											},
+											{
+												"objectId": "7143546A-7D33-4280-92BB-4202BDCC3DC4",
+												"kind": "group",
+												"name": "ContentLIVEs_Catogory",
+												"originalName": "ContentLIVEs_Catogory",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 10,
+													"y": 2210,
+													"width": 355,
+													"height": 1320
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"children": [
+													{
+														"objectId": "C7EC1BC4-B431-44A7-BC25-91C0473AB746",
+														"kind": "group",
+														"name": "ContentLIVEs_Catogory_5",
+														"originalName": "ContentLIVEs_Catogory_5",
+														"maskFrame": null,
+														"layerFrame": {
+															"x": 10,
+															"y": 3475,
+															"width": 355,
+															"height": 55
+														},
+														"visible": true,
+														"metadata": {
+															"opacity": 1
+														},
+														"image": {
+															"path": "images/Layer-ContentLIVEs_Catogory_5-qzdfqzfc.png",
+															"frame": {
+																"x": 10,
+																"y": 3475,
+																"width": 355,
+																"height": 55
+															}
+														},
+														"children": []
+													},
+													{
+														"objectId": "9F61C462-E969-47E4-9136-ED0989A9EF70",
+														"kind": "group",
+														"name": "ContentLIVEs_Catogory_4",
+														"originalName": "ContentLIVEs_Catogory_4",
+														"maskFrame": null,
+														"layerFrame": {
+															"x": 10,
+															"y": 3410,
+															"width": 355,
+															"height": 55
+														},
+														"visible": true,
+														"metadata": {
+															"opacity": 1
+														},
+														"image": {
+															"path": "images/Layer-ContentLIVEs_Catogory_4-ouy2mum0.png",
+															"frame": {
+																"x": 10,
+																"y": 3410,
+																"width": 355,
+																"height": 55
+															}
+														},
+														"children": []
+													},
+													{
+														"objectId": "13823215-F283-4A20-AAA0-3486C775A4E5",
+														"kind": "group",
+														"name": "ContentLIVEs_Catogory_3",
+														"originalName": "ContentLIVEs_Catogory_3",
+														"maskFrame": null,
+														"layerFrame": {
+															"x": 10,
+															"y": 3345,
+															"width": 355,
+															"height": 55
+														},
+														"visible": true,
+														"metadata": {
+															"opacity": 1
+														},
+														"image": {
+															"path": "images/Layer-ContentLIVEs_Catogory_3-mtm4mjmy.png",
+															"frame": {
+																"x": 10,
+																"y": 3345,
+																"width": 355,
+																"height": 55
+															}
+														},
+														"children": []
+													},
+													{
+														"objectId": "FDA9D0FD-A1C3-4FBA-AE69-16D9BC9644CD",
+														"kind": "group",
+														"name": "ContentLIVEs_Catogory_2",
+														"originalName": "ContentLIVEs_Catogory_2",
+														"maskFrame": null,
+														"layerFrame": {
+															"x": 10,
+															"y": 3280,
+															"width": 355,
+															"height": 55
+														},
+														"visible": true,
+														"metadata": {
+															"opacity": 1
+														},
+														"image": {
+															"path": "images/Layer-ContentLIVEs_Catogory_2-rkrbouqw.png",
+															"frame": {
+																"x": 10,
+																"y": 3280,
+																"width": 355,
+																"height": 55
+															}
+														},
+														"children": []
+													},
+													{
+														"objectId": "B53D7BA0-93A0-4AD9-8F29-1929723D301B",
+														"kind": "group",
+														"name": "ContentLIVEs_Catogory_Summary",
+														"originalName": "ContentLIVEs_Catogory_Summary",
+														"maskFrame": null,
+														"layerFrame": {
+															"x": 10,
+															"y": 2745,
+															"width": 355,
+															"height": 525
+														},
+														"visible": true,
+														"metadata": {
+															"opacity": 1
+														},
+														"children": [
+															{
+																"objectId": "7A0A11BB-B7BE-48FD-9EF1-71A4EA962DF3",
+																"kind": "group",
+																"name": "ContentLIVEs_Catogory_SummaryTitle",
+																"originalName": "ContentLIVEs_Catogory_SummaryTitle",
+																"maskFrame": null,
+																"layerFrame": {
+																	"x": 10,
+																	"y": 2745,
+																	"width": 355,
+																	"height": 55
+																},
+																"visible": true,
+																"metadata": {
+																	"opacity": 1
+																},
+																"children": [
+																	{
+																		"objectId": "08243C06-B851-4C73-B509-1A7D00C98898",
+																		"kind": "text",
+																		"name": "ContentLIVEs_Catogory_SummaryTitleArrow",
+																		"originalName": "ContentLIVEs_Catogory_SummaryTitleArrow",
+																		"maskFrame": null,
+																		"layerFrame": {
+																			"x": 328,
+																			"y": 2770,
+																			"width": 10,
+																			"height": 6
+																		},
+																		"visible": true,
+																		"metadata": {
+																			"opacity": 1,
+																			"string": "",
+																			"css": [
+																				"font-family: material;",
+																				"font-size: 24px;",
+																				"color: #EEEEEE;"
+																			]
+																		},
+																		"image": {
+																			"path": "images/Layer-ContentLIVEs_Catogory_SummaryTitleArrow-mdgyndnd.png",
+																			"frame": {
+																				"x": 328,
+																				"y": 2770,
+																				"width": 10,
+																				"height": 6
+																			}
+																		},
+																		"children": []
+																	},
+																	{
+																		"objectId": "48531618-1E98-458E-A4C7-25E3AA3BE94A",
+																		"kind": "group",
+																		"name": "TimeTitle",
+																		"originalName": "TimeTitle",
+																		"maskFrame": null,
+																		"layerFrame": {
+																			"x": 10,
+																			"y": 2745,
+																			"width": 355,
+																			"height": 55
+																		},
+																		"visible": true,
+																		"metadata": {
+																			"opacity": 1
+																		},
+																		"image": {
+																			"path": "images/Layer-TimeTitle-ndg1mze2.png",
+																			"frame": {
+																				"x": 10,
+																				"y": 2745,
+																				"width": 355,
+																				"height": 55
+																			}
+																		},
+																		"children": []
+																	}
+																]
+															},
+															{
+																"objectId": "6E73EFC2-5E58-46E6-AD2B-2ADF0FB99E16",
+																"kind": "group",
+																"name": "ContentLIVEs_Catogory_SummaryContent",
+																"originalName": "ContentLIVEs_Catogory_SummaryContent",
+																"maskFrame": null,
+																"layerFrame": {
+																	"x": 10,
+																	"y": 2800,
+																	"width": 355,
+																	"height": 470
+																},
+																"visible": true,
+																"metadata": {
+																	"opacity": 1
+																},
+																"image": {
+																	"path": "images/Layer-ContentLIVEs_Catogory_SummaryContent-nku3m0vg.png",
+																	"frame": {
+																		"x": 10,
+																		"y": 2800,
+																		"width": 355,
+																		"height": 470
+																	}
+																},
+																"children": []
+															}
+														]
+													},
+													{
+														"objectId": "FA07BCDB-3F15-4B67-A091-24336B6D37CB",
+														"kind": "group",
+														"name": "ContentLIVEs_Catogory_News",
+														"originalName": "ContentLIVEs_Catogory_News",
+														"maskFrame": null,
+														"layerFrame": {
+															"x": 10,
+															"y": 2210,
+															"width": 355,
+															"height": 525
+														},
+														"visible": true,
+														"metadata": {
+															"opacity": 1
+														},
+														"children": [
+															{
+																"objectId": "E4D74D6B-51BB-471F-94E6-1835A0A5B48D",
+																"kind": "group",
+																"name": "ContentLIVEs_Catogory_NewsTitle",
+																"originalName": "ContentLIVEs_Catogory_NewsTitle",
+																"maskFrame": null,
+																"layerFrame": {
+																	"x": 10,
+																	"y": 2210,
+																	"width": 355,
+																	"height": 55
+																},
+																"visible": true,
+																"metadata": {
+																	"opacity": 1
+																},
+																"children": [
+																	{
+																		"objectId": "C5194CE3-CCE4-47DA-82E8-6A9A8CA489F5",
+																		"kind": "text",
+																		"name": "ContentLIVEs_Catogory_NewsTitleArrow",
+																		"originalName": "ContentLIVEs_Catogory_NewsTitleArrow",
+																		"maskFrame": null,
+																		"layerFrame": {
+																			"x": 328,
+																			"y": 2235,
+																			"width": 10,
+																			"height": 6
+																		},
+																		"visible": true,
+																		"metadata": {
+																			"opacity": 1,
+																			"string": "",
+																			"css": [
+																				"font-family: material;",
+																				"font-size: 24px;",
+																				"color: #EEEEEE;"
+																			]
+																		},
+																		"image": {
+																			"path": "images/Layer-ContentLIVEs_Catogory_NewsTitleArrow-qzuxotrd.png",
+																			"frame": {
+																				"x": 328,
+																				"y": 2235,
+																				"width": 10,
+																				"height": 6
+																			}
+																		},
+																		"children": []
+																	},
+																	{
+																		"objectId": "462D4411-A0BE-49C1-9737-D69997E80C5F",
+																		"kind": "group",
+																		"name": "TimeTitle1",
+																		"originalName": "TimeTitle",
+																		"maskFrame": null,
+																		"layerFrame": {
+																			"x": 10,
+																			"y": 2210,
+																			"width": 355,
+																			"height": 55
+																		},
+																		"visible": true,
+																		"metadata": {
+																			"opacity": 1
+																		},
+																		"image": {
+																			"path": "images/Layer-TimeTitle-ndyyrdq0.png",
+																			"frame": {
+																				"x": 10,
+																				"y": 2210,
+																				"width": 355,
+																				"height": 55
+																			}
+																		},
+																		"children": []
+																	}
+																]
+															},
+															{
+																"objectId": "6DCB3219-F526-43D4-9745-6D650E833A88",
+																"kind": "group",
+																"name": "ContentLIVEs_Catogory_NewsContent",
+																"originalName": "ContentLIVEs_Catogory_NewsContent",
+																"maskFrame": null,
+																"layerFrame": {
+																	"x": 10,
+																	"y": 2265,
+																	"width": 355,
+																	"height": 470
+																},
+																"visible": true,
+																"metadata": {
+																	"opacity": 1
+																},
+																"image": {
+																	"path": "images/Layer-ContentLIVEs_Catogory_NewsContent-nkrdqjmy.png",
+																	"frame": {
+																		"x": 10,
+																		"y": 2265,
+																		"width": 355,
+																		"height": 470
+																	}
+																},
+																"children": []
+															}
+														]
+													}
+												]
+											},
+											{
+												"objectId": "65253F8E-39C7-4538-877D-E7254AEC1E2E",
+												"kind": "group",
+												"name": "Title_5",
+												"originalName": "Title 5",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 11,
+													"y": 2159,
+													"width": 110,
+													"height": 28
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"image": {
+													"path": "images/Layer-Title_5-njuyntng.png",
+													"frame": {
+														"x": 11,
+														"y": 2159,
+														"width": 110,
+														"height": 28
+													}
+												},
+												"children": []
+											},
+											{
+												"objectId": "804C4D2B-01DA-4F4C-96EA-D714C06B905C",
+												"kind": "group",
+												"name": "ContentLIVEs_Favorites",
+												"originalName": "ContentLIVEs_Favorites",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 10,
+													"y": 1773,
+													"width": 390,
+													"height": 180
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"children": [
+													{
+														"objectId": "AFD46911-E82D-41BF-A9D1-5EFA477FBBE9",
+														"kind": "group",
+														"name": "ContentLIVEs_Adjust",
+														"originalName": "ContentLIVEs_Adjust",
+														"maskFrame": null,
+														"layerFrame": {
+															"x": 291,
+															"y": 1773,
+															"width": 74,
+															"height": 30
+														},
+														"visible": true,
+														"metadata": {
+															"opacity": 1
+														},
+														"image": {
+															"path": "images/Layer-ContentLIVEs_Adjust-quzendy5.png",
+															"frame": {
+																"x": 291,
+																"y": 1773,
+																"width": 74,
+																"height": 30
+															}
+														},
+														"children": []
+													},
+													{
+														"objectId": "21476B95-4876-485E-A536-C8D1D48E4B14",
+														"kind": "group",
+														"name": "Title_Copy_32",
+														"originalName": "Title Copy 32",
+														"maskFrame": null,
+														"layerFrame": {
+															"x": 11,
+															"y": 1774,
+															"width": 166,
+															"height": 28
+														},
+														"visible": true,
+														"metadata": {
+															"opacity": 1
+														},
+														"image": {
+															"path": "images/Layer-Title_Copy_32-mje0nzzc.png",
+															"frame": {
+																"x": 11,
+																"y": 1774,
+																"width": 166,
+																"height": 28
+															}
+														},
+														"children": []
+													},
+													{
+														"objectId": "4C93D867-A4CA-4EC6-B9CA-9B6B5B9B5229",
+														"kind": "group",
+														"name": "ContentLIVEs_Favorites_Contents",
+														"originalName": "ContentLIVEs_Favorites_Contents",
+														"maskFrame": null,
+														"layerFrame": {
+															"x": 10,
+															"y": 1825,
+															"width": 390,
+															"height": 128
+														},
+														"visible": true,
+														"metadata": {
+															"opacity": 1
+														},
+														"children": [
+															{
+																"objectId": "1EAE7055-2F3D-40F3-9C33-DD374566E84F",
+																"kind": "group",
+																"name": "MyChannel_Copy_4",
+																"originalName": "MyChannel Copy 4",
+																"maskFrame": null,
+																"layerFrame": {
+																	"x": 10,
+																	"y": 1825,
+																	"width": 90,
+																	"height": 111
+																},
+																"visible": true,
+																"metadata": {
+																	"opacity": 1
+																},
+																"image": {
+																	"path": "images/Layer-MyChannel_Copy_4-muvbrtcw.png",
+																	"frame": {
+																		"x": 10,
+																		"y": 1825,
+																		"width": 90,
+																		"height": 111
+																	}
+																},
+																"children": []
+															},
+															{
+																"objectId": "28FF3EE8-AFFE-482C-BEB6-5AEF8AC4AB48",
+																"kind": "group",
+																"name": "MyChannel_Copy_5",
+																"originalName": "MyChannel Copy 5",
+																"maskFrame": null,
+																"layerFrame": {
+																	"x": 110,
+																	"y": 1825,
+																	"width": 90,
+																	"height": 128
+																},
+																"visible": true,
+																"metadata": {
+																	"opacity": 1
+																},
+																"image": {
+																	"path": "images/Layer-MyChannel_Copy_5-mjhgrjnf.png",
+																	"frame": {
+																		"x": 110,
+																		"y": 1825,
+																		"width": 90,
+																		"height": 128
+																	}
+																},
+																"children": []
+															},
+															{
+																"objectId": "716D6799-FF2A-4156-A0F5-B8F70AA41AF8",
+																"kind": "group",
+																"name": "MyChannel_Copy_6",
+																"originalName": "MyChannel Copy 6",
+																"maskFrame": null,
+																"layerFrame": {
+																	"x": 210,
+																	"y": 1825,
+																	"width": 90,
+																	"height": 128
+																},
+																"visible": true,
+																"metadata": {
+																	"opacity": 1
+																},
+																"image": {
+																	"path": "images/Layer-MyChannel_Copy_6-nze2rdy3.png",
+																	"frame": {
+																		"x": 210,
+																		"y": 1825,
+																		"width": 90,
+																		"height": 128
+																	}
+																},
+																"children": []
+															},
+															{
+																"objectId": "89D41817-6633-4BD4-A9D8-91BC8F28DD65",
+																"kind": "group",
+																"name": "MyChannel_2",
+																"originalName": "MyChannel 2",
+																"maskFrame": null,
+																"layerFrame": {
+																	"x": 310,
+																	"y": 1825,
+																	"width": 90,
+																	"height": 111
+																},
+																"visible": true,
+																"metadata": {
+																	"opacity": 1
+																},
+																"image": {
+																	"path": "images/Layer-MyChannel_2-odlende4.png",
+																	"frame": {
+																		"x": 310,
+																		"y": 1825,
+																		"width": 90,
+																		"height": 111
+																	}
+																},
+																"children": []
+															}
+														]
+													}
+												]
+											},
+											{
+												"objectId": "C298AF1E-5BB1-4963-92B4-036CB33A482E",
+												"kind": "group",
+												"name": "ContentLIVEs_Free",
+												"originalName": "ContentLIVEs_Free",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 10,
+													"y": 831,
+													"width": 630,
+													"height": 282
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"children": [
+													{
+														"objectId": "91A44C99-80AE-443B-9268-EBD729601683",
+														"kind": "group",
+														"name": "Title_Copy_31",
+														"originalName": "Title Copy 31",
+														"maskFrame": null,
+														"layerFrame": {
+															"x": 11,
+															"y": 831,
+															"width": 166,
+															"height": 28
+														},
+														"visible": true,
+														"metadata": {
+															"opacity": 1
+														},
+														"image": {
+															"path": "images/Layer-Title_Copy_31-otfbndrd.png",
+															"frame": {
+																"x": 11,
+																"y": 831,
+																"width": 166,
+																"height": 28
+															}
+														},
+														"children": []
+													},
+													{
+														"objectId": "71649815-F556-474B-90CE-1A6FA530FE2C",
+														"kind": "group",
+														"name": "ContentLIVEs_FreeContents",
+														"originalName": "ContentLIVEs_FreeContents",
+														"maskFrame": null,
+														"layerFrame": {
+															"x": 10,
+															"y": 882,
+															"width": 630,
+															"height": 231
+														},
+														"visible": true,
+														"metadata": {
+															"opacity": 1
+														},
+														"children": [
+															{
+																"objectId": "7C9FC415-BE68-42A1-81D0-4BCF30DCE690",
+																"kind": "group",
+																"name": "chanel_copy_2",
+																"originalName": "chanel copy 2",
+																"maskFrame": null,
+																"layerFrame": {
+																	"x": 330,
+																	"y": 882,
+																	"width": 310,
+																	"height": 212
+																},
+																"visible": true,
+																"metadata": {
+																	"opacity": 1
+																},
+																"image": {
+																	"path": "images/Layer-chanel_copy_2-n0m5rkm0.png",
+																	"frame": {
+																		"x": 330,
+																		"y": 882,
+																		"width": 310,
+																		"height": 212
+																	}
+																},
+																"children": []
+															},
+															{
+																"objectId": "358C93B9-E3B4-49DE-BC8A-7465056ED9BB",
+																"kind": "group",
+																"name": "chanel_2",
+																"originalName": "chanel 2",
+																"maskFrame": null,
+																"layerFrame": {
+																	"x": 10,
+																	"y": 882,
+																	"width": 310,
+																	"height": 231
+																},
+																"visible": true,
+																"metadata": {
+																	"opacity": 1
+																},
+																"image": {
+																	"path": "images/Layer-chanel_2-mzu4qzkz.png",
+																	"frame": {
+																		"x": 10,
+																		"y": 882,
+																		"width": 310,
+																		"height": 231
+																	}
+																},
+																"children": []
+															}
+														]
+													}
+												]
+											},
+											{
+												"objectId": "788D332A-99A7-44AA-B1A1-004C6BFD967D",
+												"kind": "group",
+												"name": "Banner_3",
+												"originalName": "Banner 3",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 0,
+													"y": 517,
+													"width": 375,
+													"height": 268
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"image": {
+													"path": "images/Layer-Banner_3-nzg4rdmz.png",
+													"frame": {
+														"x": 0,
+														"y": 517,
+														"width": 375,
+														"height": 268
+													}
+												},
+												"children": []
+											},
+											{
+												"objectId": "2FCFB46A-5661-4334-B509-5CB64CBF3709",
+												"kind": "group",
+												"name": "ContentBG4",
+												"originalName": "ContentBG",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 0,
+													"y": 517,
+													"width": 375,
+													"height": 3200
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"image": {
+													"path": "images/Layer-ContentBG-mkzdrki0.png",
+													"frame": {
+														"x": 0,
+														"y": 517,
+														"width": 375,
+														"height": 3200
+													}
+												},
+												"children": []
+											}
+										]
+									}
+								]
+							},
+							{
+								"objectId": "D827B4FA-0811-4848-A6A9-DE7881D297EE",
+								"kind": "group",
+								"name": "ContentTVODsContents",
+								"originalName": "ContentTVODsContents",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 0,
+									"y": 517,
+									"width": 480,
+									"height": 3146
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"children": [
+									{
+										"objectId": "0F2984C3-73A8-4720-9C63-7E6433150F7D",
+										"kind": "group",
+										"name": "ContentTVODs_Story",
+										"originalName": "ContentTVODs_Story",
+										"maskFrame": null,
+										"layerFrame": {
+											"x": 0,
+											"y": 517,
+											"width": 375,
+											"height": 3146
+										},
+										"visible": true,
+										"metadata": {
+											"opacity": 1
+										},
+										"children": [
+											{
+												"objectId": "E26073F8-9C6D-454C-8A94-E1B9863356DC",
+												"kind": "group",
+												"name": "Group_25",
+												"originalName": "Group 2",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 0,
+													"y": 527,
+													"width": 375,
+													"height": 587
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"image": {
+													"path": "images/Layer-Group_2-rti2mdcz.png",
+													"frame": {
+														"x": 0,
+														"y": 527,
+														"width": 375,
+														"height": 587
+													}
+												},
+												"children": [
+													{
+														"objectId": "BE605058-6F02-4975-AD6B-91EBB6966650",
+														"kind": "group",
+														"name": "Group4",
+														"originalName": "Group",
+														"maskFrame": null,
+														"layerFrame": {
+															"x": 0,
+															"y": 527,
+															"width": 375,
+															"height": 44
+														},
+														"visible": true,
+														"metadata": {
+															"opacity": 1
+														},
+														"image": {
+															"path": "images/Layer-Group-qku2mduw.png",
+															"frame": {
+																"x": 0,
+																"y": 527,
+																"width": 375,
+																"height": 44
+															}
+														},
+														"children": []
+													}
+												]
+											},
+											{
+												"objectId": "9A0C51FD-FD46-4F38-BD7E-CBD5A317BC35",
+												"kind": "group",
+												"name": "ContentBG5",
+												"originalName": "ContentBG",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 0,
+													"y": 517,
+													"width": 375,
+													"height": 3146
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"image": {
+													"path": "images/Layer-ContentBG-ouewqzux.png",
+													"frame": {
+														"x": 0,
+														"y": 517,
+														"width": 375,
+														"height": 3146
+													}
+												},
+												"children": []
+											}
+										]
+									},
+									{
+										"objectId": "3C29E18E-689E-4C9E-978E-6936609C24C5",
+										"kind": "group",
+										"name": "ContentTVODs_Feature",
+										"originalName": "ContentTVODs_Feature",
+										"maskFrame": null,
+										"layerFrame": {
+											"x": 0,
+											"y": 517,
+											"width": 480,
+											"height": 3146
+										},
+										"visible": true,
+										"metadata": {
+											"opacity": 1
+										},
+										"children": [
+											{
+												"objectId": "419B2998-4B60-417D-8D0D-4FE31EDD171C",
+												"kind": "group",
+												"name": "Group_26",
+												"originalName": "Group 2",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 10,
+													"y": 3087,
+													"width": 355,
+													"height": 100
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"image": {
+													"path": "images/Layer-Group_2-nde5qji5.png",
+													"frame": {
+														"x": 10,
+														"y": 3087,
+														"width": 355,
+														"height": 100
+													}
+												},
+												"children": []
+											},
+											{
+												"objectId": "11CA5059-7C6F-4AA4-B23E-225DADFB7516",
+												"kind": "group",
+												"name": "ContentTVODs_Other",
+												"originalName": "ContentTVODs_Other",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 10,
+													"y": 2907,
+													"width": 390,
+													"height": 128
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"children": [
+													{
+														"objectId": "EB37D1ED-9E3B-4289-9A8A-AD8965DF1ED5",
+														"kind": "group",
+														"name": "ContentTVODs_OtherContents",
+														"originalName": "ContentTVODs_OtherContents",
+														"maskFrame": null,
+														"layerFrame": {
+															"x": 10,
+															"y": 2907,
+															"width": 390,
+															"height": 128
+														},
+														"visible": true,
+														"metadata": {
+															"opacity": 1
+														},
+														"children": [
+															{
+																"objectId": "A39834F8-3324-4ECA-8773-4FBDB9AF90D8",
+																"kind": "group",
+																"name": "tag_copy_11",
+																"originalName": "tag copy 11",
+																"maskFrame": null,
+																"layerFrame": {
+																	"x": 110,
+																	"y": 2907,
+																	"width": 90,
+																	"height": 128
+																},
+																"visible": true,
+																"metadata": {
+																	"opacity": 1
+																},
+																"image": {
+																	"path": "images/Layer-tag_copy_11-qtm5odm0.png",
+																	"frame": {
+																		"x": 110,
+																		"y": 2907,
+																		"width": 90,
+																		"height": 128
+																	}
+																},
+																"children": []
+															},
+															{
+																"objectId": "87C3B0C2-90E1-4302-B4C8-B65E58481AFB",
+																"kind": "group",
+																"name": "tag_copy_12",
+																"originalName": "tag copy 12",
+																"maskFrame": null,
+																"layerFrame": {
+																	"x": 10,
+																	"y": 2907,
+																	"width": 90,
+																	"height": 128
+																},
+																"visible": true,
+																"metadata": {
+																	"opacity": 1
+																},
+																"image": {
+																	"path": "images/Layer-tag_copy_12-odddm0iw.png",
+																	"frame": {
+																		"x": 10,
+																		"y": 2907,
+																		"width": 90,
+																		"height": 128
+																	}
+																},
+																"children": []
+															},
+															{
+																"objectId": "43A17CC3-43CA-4510-9DED-4C4164BCB327",
+																"kind": "group",
+																"name": "tag_copy_13",
+																"originalName": "tag copy 13",
+																"maskFrame": null,
+																"layerFrame": {
+																	"x": 310,
+																	"y": 2907,
+																	"width": 90,
+																	"height": 128
+																},
+																"visible": true,
+																"metadata": {
+																	"opacity": 1
+																},
+																"image": {
+																	"path": "images/Layer-tag_copy_13-ndnbmtdd.png",
+																	"frame": {
+																		"x": 310,
+																		"y": 2907,
+																		"width": 90,
+																		"height": 128
+																	}
+																},
+																"children": []
+															},
+															{
+																"objectId": "B5B80050-613A-4D87-89B5-39277DD0630C",
+																"kind": "group",
+																"name": "tag_4",
+																"originalName": "tag 4",
+																"maskFrame": null,
+																"layerFrame": {
+																	"x": 210,
+																	"y": 2907,
+																	"width": 90,
+																	"height": 128
+																},
+																"visible": true,
+																"metadata": {
+																	"opacity": 1
+																},
+																"image": {
+																	"path": "images/Layer-tag_4-qjvcodaw.png",
+																	"frame": {
+																		"x": 210,
+																		"y": 2907,
+																		"width": 90,
+																		"height": 128
+																	}
+																},
+																"children": []
+															}
+														]
+													}
+												]
+											},
+											{
+												"objectId": "D57DBEBC-F38D-4475-AE3B-442EF577D11B",
+												"kind": "group",
+												"name": "ContentTVODs_Curration2",
+												"originalName": "ContentTVODs_Curration2",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 10,
+													"y": 2552,
+													"width": 470,
+													"height": 322
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"children": [
+													{
+														"objectId": "F0FD6027-73DE-4CCF-8F44-0F4866BFC6C5",
+														"kind": "group",
+														"name": "Title_Copy_30",
+														"originalName": "Title Copy 30",
+														"maskFrame": null,
+														"layerFrame": {
+															"x": 10,
+															"y": 2552,
+															"width": 155,
+															"height": 25
+														},
+														"visible": true,
+														"metadata": {
+															"opacity": 1
+														},
+														"image": {
+															"path": "images/Layer-Title_Copy_30-rjbgrdyw.png",
+															"frame": {
+																"x": 10,
+																"y": 2552,
+																"width": 155,
+																"height": 25
+															}
+														},
+														"children": []
+													},
+													{
+														"objectId": "5A292293-0FF6-44CF-A536-F3178A292D03",
+														"kind": "group",
+														"name": "ContentTVODs_Curration2Contents",
+														"originalName": "ContentTVODs_Curration2Contents",
+														"maskFrame": null,
+														"layerFrame": {
+															"x": 10,
+															"y": 2592,
+															"width": 470,
+															"height": 282
+														},
+														"visible": true,
+														"metadata": {
+															"opacity": 1
+														},
+														"children": [
+															{
+																"objectId": "5A00F141-4EB7-437D-98A1-FBD2CD1D62A5",
+																"kind": "group",
+																"name": "Poster_Copy_20",
+																"originalName": "Poster Copy 20",
+																"maskFrame": null,
+																"layerFrame": {
+																	"x": 330,
+																	"y": 2592,
+																	"width": 150,
+																	"height": 257
+																},
+																"visible": true,
+																"metadata": {
+																	"opacity": 1
+																},
+																"image": {
+																	"path": "images/Layer-Poster_Copy_20-nuewmeyx.png",
+																	"frame": {
+																		"x": 330,
+																		"y": 2592,
+																		"width": 150,
+																		"height": 257
+																	}
+																},
+																"children": []
+															},
+															{
+																"objectId": "406D1923-0C72-4ABD-968E-F4310EF3F0EE",
+																"kind": "group",
+																"name": "Poster_41",
+																"originalName": "Poster 41",
+																"maskFrame": null,
+																"layerFrame": {
+																	"x": 10,
+																	"y": 2592,
+																	"width": 150,
+																	"height": 257
+																},
+																"visible": true,
+																"metadata": {
+																	"opacity": 1
+																},
+																"image": {
+																	"path": "images/Layer-Poster_41-nda2rde5.png",
+																	"frame": {
+																		"x": 10,
+																		"y": 2592,
+																		"width": 150,
+																		"height": 257
+																	}
+																},
+																"children": []
+															},
+															{
+																"objectId": "25C7CCD6-AAB5-45A8-A493-E6D8EA67DCF8",
+																"kind": "group",
+																"name": "Poster_42",
+																"originalName": "Poster 42",
+																"maskFrame": null,
+																"layerFrame": {
+																	"x": 170,
+																	"y": 2592,
+																	"width": 150,
+																	"height": 282
+																},
+																"visible": true,
+																"metadata": {
+																	"opacity": 1
+																},
+																"image": {
+																	"path": "images/Layer-Poster_42-mjvdn0nd.png",
+																	"frame": {
+																		"x": 170,
+																		"y": 2592,
+																		"width": 150,
+																		"height": 282
+																	}
+																},
+																"children": []
+															}
+														]
+													}
+												]
+											},
+											{
+												"objectId": "B9458D36-502E-4EC9-A0EA-319DB7CEB47B",
+												"kind": "group",
+												"name": "ContentTVODs_Curration1",
+												"originalName": "ContentTVODs_Curration1",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 10,
+													"y": 2192,
+													"width": 470,
+													"height": 322
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"children": [
+													{
+														"objectId": "77CD9177-C78F-4D74-A904-FE2554CCFF21",
+														"kind": "group",
+														"name": "Title_Copy_29",
+														"originalName": "Title Copy 29",
+														"maskFrame": null,
+														"layerFrame": {
+															"x": 10,
+															"y": 2192,
+															"width": 155,
+															"height": 25
+														},
+														"visible": true,
+														"metadata": {
+															"opacity": 1
+														},
+														"image": {
+															"path": "images/Layer-Title_Copy_29-nzddrdkx.png",
+															"frame": {
+																"x": 10,
+																"y": 2192,
+																"width": 155,
+																"height": 25
+															}
+														},
+														"children": []
+													},
+													{
+														"objectId": "883451DB-D80E-406E-9683-64A8BC55DBD3",
+														"kind": "group",
+														"name": "ContentTVODs_Curration1Contents",
+														"originalName": "ContentTVODs_Curration1Contents",
+														"maskFrame": null,
+														"layerFrame": {
+															"x": 10,
+															"y": 2232,
+															"width": 470,
+															"height": 282
+														},
+														"visible": true,
+														"metadata": {
+															"opacity": 1
+														},
+														"image": {
+															"path": "images/Layer-ContentTVODs_Curration1Contents-odgzndux.png",
+															"frame": {
+																"x": 10,
+																"y": 2232,
+																"width": 470,
+																"height": 282
+															}
+														},
+														"children": []
+													}
+												]
+											},
+											{
+												"objectId": "1C52BC11-ECAF-418A-BB28-DC0AE9BE1283",
+												"kind": "group",
+												"name": "ContentTVODs_Hot",
+												"originalName": "ContentTVODs_Hot",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 10,
+													"y": 1832,
+													"width": 470,
+													"height": 322
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"children": [
+													{
+														"objectId": "67C7D1BA-97B1-4C97-B4FF-9EB4292F563D",
+														"kind": "group",
+														"name": "Title_Copy_28",
+														"originalName": "Title Copy 28",
+														"maskFrame": null,
+														"layerFrame": {
+															"x": 11,
+															"y": 1832,
+															"width": 102,
+															"height": 25
+														},
+														"visible": true,
+														"metadata": {
+															"opacity": 1
+														},
+														"image": {
+															"path": "images/Layer-Title_Copy_28-njddn0qx.png",
+															"frame": {
+																"x": 11,
+																"y": 1832,
+																"width": 102,
+																"height": 25
+															}
+														},
+														"children": []
+													},
+													{
+														"objectId": "6435C60A-7F96-405B-96BE-3D4D5989A790",
+														"kind": "group",
+														"name": "ContentTVODs_HotContents",
+														"originalName": "ContentTVODs_HotContents",
+														"maskFrame": null,
+														"layerFrame": {
+															"x": 10,
+															"y": 1872,
+															"width": 470,
+															"height": 282
+														},
+														"visible": true,
+														"metadata": {
+															"opacity": 1
+														},
+														"children": [
+															{
+																"objectId": "3C05A92B-DC36-44AF-9625-BBB9C7010243",
+																"kind": "group",
+																"name": "Poster_Copy_19",
+																"originalName": "Poster Copy 19",
+																"maskFrame": null,
+																"layerFrame": {
+																	"x": 330,
+																	"y": 1872,
+																	"width": 150,
+																	"height": 257
+																},
+																"visible": true,
+																"metadata": {
+																	"opacity": 1
+																},
+																"image": {
+																	"path": "images/Layer-Poster_Copy_19-m0mwnue5.png",
+																	"frame": {
+																		"x": 330,
+																		"y": 1872,
+																		"width": 150,
+																		"height": 257
+																	}
+																},
+																"children": []
+															},
+															{
+																"objectId": "BB33A16A-EF86-402D-AF5D-9E765DDF7D78",
+																"kind": "group",
+																"name": "Poster_39",
+																"originalName": "Poster 39",
+																"maskFrame": null,
+																"layerFrame": {
+																	"x": 10,
+																	"y": 1872,
+																	"width": 150,
+																	"height": 257
+																},
+																"visible": true,
+																"metadata": {
+																	"opacity": 1
+																},
+																"image": {
+																	"path": "images/Layer-Poster_39-qkizm0ex.png",
+																	"frame": {
+																		"x": 10,
+																		"y": 1872,
+																		"width": 150,
+																		"height": 257
+																	}
+																},
+																"children": []
+															},
+															{
+																"objectId": "18F0A9DD-6ECA-46AF-B748-274E41F3D985",
+																"kind": "group",
+																"name": "Poster_40",
+																"originalName": "Poster 40",
+																"maskFrame": null,
+																"layerFrame": {
+																	"x": 170,
+																	"y": 1872,
+																	"width": 150,
+																	"height": 282
+																},
+																"visible": true,
+																"metadata": {
+																	"opacity": 1
+																},
+																"image": {
+																	"path": "images/Layer-Poster_40-mthgmee5.png",
+																	"frame": {
+																		"x": 170,
+																		"y": 1872,
+																		"width": 150,
+																		"height": 282
+																	}
+																},
+																"children": []
+															}
+														]
+													}
+												]
+											},
+											{
+												"objectId": "F02BE595-D4B2-4A9D-BBE9-CB5810E166F7",
+												"kind": "group",
+												"name": "ContentTVODs_Rent",
+												"originalName": "ContentTVODs_Rent",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 10,
+													"y": 823,
+													"width": 430,
+													"height": 252
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"children": [
+													{
+														"objectId": "780B1C00-D87A-4ECA-8CF0-6D15ADE64ABA",
+														"kind": "group",
+														"name": "Title_Copy_26",
+														"originalName": "Title Copy 26",
+														"maskFrame": null,
+														"layerFrame": {
+															"x": 10,
+															"y": 823,
+															"width": 125,
+															"height": 25
+														},
+														"visible": true,
+														"metadata": {
+															"opacity": 1
+														},
+														"image": {
+															"path": "images/Layer-Title_Copy_26-nzgwqjfd.png",
+															"frame": {
+																"x": 10,
+																"y": 823,
+																"width": 125,
+																"height": 25
+															}
+														},
+														"children": []
+													},
+													{
+														"objectId": "76DF83D8-7D61-418B-9462-1D3BF8403F0B",
+														"kind": "group",
+														"name": "ContentTVODs_RentContents",
+														"originalName": "ContentTVODs_RentContents",
+														"maskFrame": null,
+														"layerFrame": {
+															"x": 10,
+															"y": 863,
+															"width": 430,
+															"height": 212
+														},
+														"visible": true,
+														"metadata": {
+															"opacity": 1
+														},
+														"children": [
+															{
+																"objectId": "D4B946A9-0C3F-4C26-BE82-E5F2A90122A2",
+																"kind": "group",
+																"name": "Poster_Copy_16",
+																"originalName": "Poster Copy 16",
+																"maskFrame": null,
+																"layerFrame": {
+																	"x": 340,
+																	"y": 863,
+																	"width": 100,
+																	"height": 187
+																},
+																"visible": true,
+																"metadata": {
+																	"opacity": 1
+																},
+																"image": {
+																	"path": "images/Layer-Poster_Copy_16-rdrcotq2.png",
+																	"frame": {
+																		"x": 340,
+																		"y": 863,
+																		"width": 100,
+																		"height": 187
+																	}
+																},
+																"children": []
+															},
+															{
+																"objectId": "AEFEFD5C-698F-47E6-A85A-33C7BFAACF1B",
+																"kind": "group",
+																"name": "Poster_32",
+																"originalName": "Poster 32",
+																"maskFrame": null,
+																"layerFrame": {
+																	"x": 230,
+																	"y": 863,
+																	"width": 100,
+																	"height": 212
+																},
+																"visible": true,
+																"metadata": {
+																	"opacity": 1
+																},
+																"image": {
+																	"path": "images/Layer-Poster_32-quvgruze.png",
+																	"frame": {
+																		"x": 230,
+																		"y": 863,
+																		"width": 100,
+																		"height": 212
+																	}
+																},
+																"children": []
+															},
+															{
+																"objectId": "738DE780-BA72-496D-AA65-E9B122F1DE22",
+																"kind": "group",
+																"name": "Poster_33",
+																"originalName": "Poster 33",
+																"maskFrame": null,
+																"layerFrame": {
+																	"x": 10,
+																	"y": 863,
+																	"width": 100,
+																	"height": 212
+																},
+																"visible": true,
+																"metadata": {
+																	"opacity": 1
+																},
+																"image": {
+																	"path": "images/Layer-Poster_33-nzm4reu3.png",
+																	"frame": {
+																		"x": 10,
+																		"y": 863,
+																		"width": 100,
+																		"height": 212
+																	}
+																},
+																"children": []
+															},
+															{
+																"objectId": "A299287E-2E85-4BF4-8203-6F51D428D971",
+																"kind": "group",
+																"name": "Poster_34",
+																"originalName": "Poster 34",
+																"maskFrame": null,
+																"layerFrame": {
+																	"x": 120,
+																	"y": 863,
+																	"width": 100,
+																	"height": 187
+																},
+																"visible": true,
+																"metadata": {
+																	"opacity": 1
+																},
+																"image": {
+																	"path": "images/Layer-Poster_34-qti5oti4.png",
+																	"frame": {
+																		"x": 120,
+																		"y": 863,
+																		"width": 100,
+																		"height": 187
+																	}
+																},
+																"children": []
+															}
+														]
+													}
+												]
+											},
+											{
+												"objectId": "BAA98E37-E551-4FEA-B96A-6A8A30D5F693",
+												"kind": "group",
+												"name": "Banner_2",
+												"originalName": "Banner 2",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 0,
+													"y": 517,
+													"width": 375,
+													"height": 267
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"image": {
+													"path": "images/Layer-Banner_2-qkfbothf.png",
+													"frame": {
+														"x": 0,
+														"y": 517,
+														"width": 375,
+														"height": 267
+													}
+												},
+												"children": []
+											},
+											{
+												"objectId": "817B0B13-84E5-40A1-ABD4-E75D732CB42C",
+												"kind": "group",
+												"name": "ContentTVODs_Rent_Favorite",
+												"originalName": "ContentTVODs_Rent_Favorite",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 10,
+													"y": 1113,
+													"width": 470,
+													"height": 321
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"children": [
+													{
+														"objectId": "75817CAE-2ED6-4FCA-93E6-EF84D217A6FF",
+														"kind": "group",
+														"name": "Title_Copy_27",
+														"originalName": "Title Copy 27",
+														"maskFrame": null,
+														"layerFrame": {
+															"x": 11,
+															"y": 1113,
+															"width": 102,
+															"height": 25
+														},
+														"visible": true,
+														"metadata": {
+															"opacity": 1
+														},
+														"image": {
+															"path": "images/Layer-Title_Copy_27-nzu4mtdd.png",
+															"frame": {
+																"x": 11,
+																"y": 1113,
+																"width": 102,
+																"height": 25
+															}
+														},
+														"children": []
+													},
+													{
+														"objectId": "1C26230B-B0FF-45A8-92BE-2610E303A0F5",
+														"kind": "group",
+														"name": "ContentTVODs_Rent_FavoriteContents",
+														"originalName": "ContentTVODs_Rent_FavoriteContents",
+														"maskFrame": null,
+														"layerFrame": {
+															"x": 10,
+															"y": 1152,
+															"width": 470,
+															"height": 282
+														},
+														"visible": true,
+														"metadata": {
+															"opacity": 1
+														},
+														"children": [
+															{
+																"objectId": "534A7C2E-84C9-4896-97B0-8E651BA07400",
+																"kind": "group",
+																"name": "Poster_Copy_17",
+																"originalName": "Poster Copy 17",
+																"maskFrame": null,
+																"layerFrame": {
+																	"x": 330,
+																	"y": 1152,
+																	"width": 150,
+																	"height": 257
+																},
+																"visible": true,
+																"metadata": {
+																	"opacity": 1
+																},
+																"image": {
+																	"path": "images/Layer-Poster_Copy_17-ntm0qtdd.png",
+																	"frame": {
+																		"x": 330,
+																		"y": 1152,
+																		"width": 150,
+																		"height": 257
+																	}
+																},
+																"children": []
+															},
+															{
+																"objectId": "013E1DFF-23F2-4F14-ACB6-7DB8C71B625C",
+																"kind": "group",
+																"name": "Poster_35",
+																"originalName": "Poster 35",
+																"maskFrame": null,
+																"layerFrame": {
+																	"x": 10,
+																	"y": 1152,
+																	"width": 150,
+																	"height": 257
+																},
+																"visible": true,
+																"metadata": {
+																	"opacity": 1
+																},
+																"image": {
+																	"path": "images/Layer-Poster_35-mdezrtfe.png",
+																	"frame": {
+																		"x": 10,
+																		"y": 1152,
+																		"width": 150,
+																		"height": 257
+																	}
+																},
+																"children": []
+															},
+															{
+																"objectId": "231152F7-268B-42C0-8754-7C74E35503F9",
+																"kind": "group",
+																"name": "Poster_36",
+																"originalName": "Poster 36",
+																"maskFrame": null,
+																"layerFrame": {
+																	"x": 170,
+																	"y": 1152,
+																	"width": 150,
+																	"height": 282
+																},
+																"visible": true,
+																"metadata": {
+																	"opacity": 1
+																},
+																"image": {
+																	"path": "images/Layer-Poster_36-mjmxmtuy.png",
+																	"frame": {
+																		"x": 170,
+																		"y": 1152,
+																		"width": 150,
+																		"height": 282
+																	}
+																},
+																"children": []
+															}
+														]
+													}
+												]
+											},
+											{
+												"objectId": "44C435D5-4432-421F-A856-173D7615F2BE",
+												"kind": "group",
+												"name": "ContentTVODs_Rent_Newest",
+												"originalName": "ContentTVODs_Rent_Newest",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 10,
+													"y": 1472,
+													"width": 470,
+													"height": 322
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"children": [
+													{
+														"objectId": "25648D29-5A06-4190-82A1-9096003BB012",
+														"kind": "group",
+														"name": "Title_4",
+														"originalName": "Title 4",
+														"maskFrame": null,
+														"layerFrame": {
+															"x": 11,
+															"y": 1472,
+															"width": 102,
+															"height": 25
+														},
+														"visible": true,
+														"metadata": {
+															"opacity": 1
+														},
+														"image": {
+															"path": "images/Layer-Title_4-mju2ndhe.png",
+															"frame": {
+																"x": 11,
+																"y": 1472,
+																"width": 102,
+																"height": 25
+															}
+														},
+														"children": []
+													},
+													{
+														"objectId": "21379A30-7508-4EFC-85A3-F118D19AE734",
+														"kind": "group",
+														"name": "ContentTVODs_Rent_NewestContents",
+														"originalName": "ContentTVODs_Rent_NewestContents",
+														"maskFrame": null,
+														"layerFrame": {
+															"x": 10,
+															"y": 1512,
+															"width": 470,
+															"height": 282
+														},
+														"visible": true,
+														"metadata": {
+															"opacity": 1
+														},
+														"children": [
+															{
+																"objectId": "2345ADE2-420B-4AFA-A941-FF3372680A02",
+																"kind": "group",
+																"name": "Poster_Copy_18",
+																"originalName": "Poster Copy 18",
+																"maskFrame": null,
+																"layerFrame": {
+																	"x": 330,
+																	"y": 1512,
+																	"width": 150,
+																	"height": 257
+																},
+																"visible": true,
+																"metadata": {
+																	"opacity": 1
+																},
+																"image": {
+																	"path": "images/Layer-Poster_Copy_18-mjm0nufe.png",
+																	"frame": {
+																		"x": 330,
+																		"y": 1512,
+																		"width": 150,
+																		"height": 257
+																	}
+																},
+																"children": []
+															},
+															{
+																"objectId": "9F544ECA-4140-4703-877E-FB1BEFD6112B",
+																"kind": "group",
+																"name": "Poster_37",
+																"originalName": "Poster 37",
+																"maskFrame": null,
+																"layerFrame": {
+																	"x": 10,
+																	"y": 1512,
+																	"width": 150,
+																	"height": 257
+																},
+																"visible": true,
+																"metadata": {
+																	"opacity": 1
+																},
+																"image": {
+																	"path": "images/Layer-Poster_37-ouy1ndrf.png",
+																	"frame": {
+																		"x": 10,
+																		"y": 1512,
+																		"width": 150,
+																		"height": 257
+																	}
+																},
+																"children": []
+															},
+															{
+																"objectId": "C53D1FA5-BAD3-4AE2-B55D-07191B2DCA3E",
+																"kind": "group",
+																"name": "Poster_38",
+																"originalName": "Poster 38",
+																"maskFrame": null,
+																"layerFrame": {
+																	"x": 170,
+																	"y": 1512,
+																	"width": 150,
+																	"height": 282
+																},
+																"visible": true,
+																"metadata": {
+																	"opacity": 1
+																},
+																"image": {
+																	"path": "images/Layer-Poster_38-qzuzrdfg.png",
+																	"frame": {
+																		"x": 170,
+																		"y": 1512,
+																		"width": 150,
+																		"height": 282
+																	}
+																},
+																"children": []
+															}
+														]
+													}
+												]
+											},
+											{
+												"objectId": "2EC509C9-42AD-4672-A14B-35B843449273",
+												"kind": "group",
+												"name": "ContentBG6",
+												"originalName": "ContentBG",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 0,
+													"y": 517,
+													"width": 375,
+													"height": 3146
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"image": {
+													"path": "images/Layer-ContentBG-mkvdnta5.png",
+													"frame": {
+														"x": 0,
+														"y": 517,
+														"width": 375,
+														"height": 3146
 													}
 												},
 												"children": []
@@ -2404,7 +6706,7 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 											{
 												"objectId": "DDB3C2B0-6D6A-4360-9162-60E56F8A65E4",
 												"kind": "group",
-												"name": "ContentBG",
+												"name": "ContentBG7",
 												"originalName": "ContentBG",
 												"maskFrame": null,
 												"layerFrame": {
@@ -3694,7 +7996,7 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 											{
 												"objectId": "A50426D7-3070-40AC-9BF5-DD640149694A",
 												"kind": "group",
-												"name": "ContentBG1",
+												"name": "ContentBG8",
 												"originalName": "ContentBG",
 												"maskFrame": null,
 												"layerFrame": {
@@ -4209,7 +8511,7 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 															{
 																"objectId": "8DBD02D9-B763-4800-9A17-D6B121A1C649",
 																"kind": "group",
-																"name": "Group2",
+																"name": "Group5",
 																"originalName": "Group",
 																"maskFrame": null,
 																"layerFrame": {
@@ -4924,7 +9226,7 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 											{
 												"objectId": "7B445A29-B086-41D8-B353-AEC7891BF3E9",
 												"kind": "group",
-												"name": "ContentBG2",
+												"name": "ContentBG9",
 												"originalName": "ContentBG",
 												"maskFrame": null,
 												"layerFrame": {
@@ -4990,16 +9292,297 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 				"metadata": {
 					"opacity": 1
 				},
-				"image": {
-					"path": "images/Layer-SideMenu_VIP-nzy1rtbb.png",
-					"frame": {
-						"x": 0,
-						"y": 0,
-						"width": 310,
-						"height": 667
+				"children": [
+					{
+						"objectId": "8FAE66BB-0AFB-4A40-9F40-D6E8CD561F24",
+						"kind": "group",
+						"name": "SideMenu_VIP1",
+						"originalName": "SideMenu_VIP",
+						"maskFrame": null,
+						"layerFrame": {
+							"x": 0,
+							"y": 0,
+							"width": 310,
+							"height": 667
+						},
+						"visible": true,
+						"metadata": {
+							"opacity": 1
+						},
+						"children": [
+							{
+								"objectId": "2DF5BFF8-F6FC-4182-AE16-52A1ADCFE1EF",
+								"kind": "group",
+								"name": "Group6",
+								"originalName": "Group",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 230,
+									"y": 143,
+									"width": 50,
+									"height": 20
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"image": {
+									"path": "images/Layer-Group-mkrgnujg.png",
+									"frame": {
+										"x": 230,
+										"y": 143,
+										"width": 50,
+										"height": 20
+									}
+								},
+								"children": []
+							},
+							{
+								"objectId": "AFBBBA96-7B4F-4816-B97C-AD052E61B576",
+								"kind": "group",
+								"name": "Group_27",
+								"originalName": "Group 2",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 230,
+									"y": 103,
+									"width": 50,
+									"height": 20
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"image": {
+									"path": "images/Layer-Group_2-quzcqkjb.png",
+									"frame": {
+										"x": 230,
+										"y": 103,
+										"width": 50,
+										"height": 20
+									}
+								},
+								"children": []
+							},
+							{
+								"objectId": "1395DE4A-AF6A-4E88-AD2F-1E257E6055C7",
+								"kind": "group",
+								"name": "Group_5_Copy",
+								"originalName": "Group 5 Copy",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 85,
+									"y": 65,
+									"width": 40,
+									"height": 20
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"image": {
+									"path": "images/Layer-Group_5_Copy-mtm5nurf.png",
+									"frame": {
+										"x": 85,
+										"y": 65,
+										"width": 40,
+										"height": 20
+									}
+								},
+								"children": []
+							},
+							{
+								"objectId": "30200076-F5F6-4C32-B952-8FE9416F2FBA",
+								"kind": "group",
+								"name": "Group_51",
+								"originalName": "Group 5",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 20,
+									"y": 250,
+									"width": 199,
+									"height": 125
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"image": {
+									"path": "images/Layer-Group_5-mzaymdaw.png",
+									"frame": {
+										"x": 20,
+										"y": 250,
+										"width": 199,
+										"height": 125
+									}
+								},
+								"children": []
+							},
+							{
+								"objectId": "38684CF6-0730-4840-B964-39B475406D2E",
+								"kind": "group",
+								"name": "SideMenu_TV",
+								"originalName": "SideMenu_TV",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 10,
+									"y": 99,
+									"width": 195,
+									"height": 31
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"image": {
+									"path": "images/Layer-SideMenu_TV-mzg2odrd.png",
+									"frame": {
+										"x": 10,
+										"y": 99,
+										"width": 195,
+										"height": 31
+									}
+								},
+								"children": []
+							},
+							{
+								"objectId": "4427AD78-14B0-425B-86B3-360302714947",
+								"kind": "group",
+								"name": "SideMenu_Curration",
+								"originalName": "SideMenu_Curration",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 10,
+									"y": 390,
+									"width": 195,
+									"height": 31
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"image": {
+									"path": "images/Layer-SideMenu_Curration-ndqyn0fe.png",
+									"frame": {
+										"x": 10,
+										"y": 390,
+										"width": 195,
+										"height": 31
+									}
+								},
+								"children": []
+							},
+							{
+								"objectId": "4E8304A8-60EF-4FCE-8579-7C6C29352A8B",
+								"kind": "group",
+								"name": "SideMenu_VOD",
+								"originalName": "SideMenu_VOD",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 10,
+									"y": 180,
+									"width": 195,
+									"height": 31
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"image": {
+									"path": "images/Layer-SideMenu_VOD-neu4mza0.png",
+									"frame": {
+										"x": 10,
+										"y": 180,
+										"width": 195,
+										"height": 31
+									}
+								},
+								"children": []
+							},
+							{
+								"objectId": "18999B2D-48F7-4ACE-A712-A4CEDD0B9DA5",
+								"kind": "group",
+								"name": "SideMenu_TVOD",
+								"originalName": "SideMenu_TVOD",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 10,
+									"y": 285,
+									"width": 195,
+									"height": 31
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"image": {
+									"path": "images/Layer-SideMenu_TVOD-mtg5otlc.png",
+									"frame": {
+										"x": 10,
+										"y": 285,
+										"width": 195,
+										"height": 31
+									}
+								},
+								"children": []
+							},
+							{
+								"objectId": "DE37935D-038A-4669-A5AE-CA967024B4CF",
+								"kind": "group",
+								"name": "SideMenu_Sport",
+								"originalName": "SideMenu_Sport",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 10,
+									"y": 140,
+									"width": 195,
+									"height": 31
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"image": {
+									"path": "images/Layer-SideMenu_Sport-reuznzkz.png",
+									"frame": {
+										"x": 10,
+										"y": 140,
+										"width": 195,
+										"height": 31
+									}
+								},
+								"children": []
+							},
+							{
+								"objectId": "954C51D2-3885-4B89-932B-837C80A954AF",
+								"kind": "group",
+								"name": "Group_41",
+								"originalName": "Group 4",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 0,
+									"y": 0,
+									"width": 310,
+									"height": 667
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"image": {
+									"path": "images/Layer-Group_4-otu0qzux.png",
+									"frame": {
+										"x": 0,
+										"y": 0,
+										"width": 310,
+										"height": 667
+									}
+								},
+								"children": []
+							}
+						]
 					}
-				},
-				"children": []
+				]
 			},
 			{
 				"objectId": "CF177946-8C0C-415E-929E-41758BDEADD5",
@@ -5048,7 +9631,7 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 					{
 						"objectId": "8E52C41A-140B-4211-943B-1D934475E22B",
 						"kind": "group",
-						"name": "Group_23",
+						"name": "Group_28",
 						"originalName": "Group 2",
 						"maskFrame": null,
 						"layerFrame": {
@@ -5145,7 +9728,7 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 					{
 						"objectId": "AD3B3AC5-E42F-4C3E-8AEE-B331311216D6",
 						"kind": "group",
-						"name": "Group3",
+						"name": "Group7",
 						"originalName": "Group",
 						"maskFrame": null,
 						"layerFrame": {
@@ -5272,7 +9855,7 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 					{
 						"objectId": "198E6FBD-6E7A-41B3-B0C7-8760E3643FF5",
 						"kind": "group",
-						"name": "Group_32",
+						"name": "Group_33",
 						"originalName": "Group 3",
 						"maskFrame": null,
 						"layerFrame": {
@@ -5298,7 +9881,7 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 							{
 								"objectId": "41DE5875-A0C5-4F0E-801F-7D8A789F2B9F",
 								"kind": "group",
-								"name": "Group_5_Copy",
+								"name": "Group_5_Copy1",
 								"originalName": "Group 5 Copy",
 								"maskFrame": null,
 								"layerFrame": {
@@ -5452,6 +10035,2419 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 								"y": 0,
 								"width": 310,
 								"height": 667
+							}
+						},
+						"children": []
+					}
+				]
+			}
+		]
+	},
+	{
+		"objectId": "7C447704-7579-4526-AD37-2D95F834DA52",
+		"kind": "artboard",
+		"name": "Curration1",
+		"originalName": "Curration1",
+		"maskFrame": null,
+		"layerFrame": {
+			"x": 2372,
+			"y": 133,
+			"width": 375,
+			"height": 667
+		},
+		"visible": true,
+		"metadata": {},
+		"backgroundColor": "rgba(255, 255, 255, 1)",
+		"children": [
+			{
+				"objectId": "12B97529-31EF-4D33-82C9-44ED5E0372EE",
+				"kind": "group",
+				"name": "GMACurrationContent",
+				"originalName": "GMACurrationContent",
+				"maskFrame": null,
+				"layerFrame": {
+					"x": 0,
+					"y": 0,
+					"width": 480,
+					"height": 3200
+				},
+				"visible": true,
+				"metadata": {
+					"opacity": 1
+				},
+				"children": [
+					{
+						"objectId": "EE51ED4C-6E1E-4F46-91E5-D00C95C25591",
+						"kind": "group",
+						"name": "Group8",
+						"originalName": "Group",
+						"maskFrame": null,
+						"layerFrame": {
+							"x": 0,
+							"y": 0,
+							"width": 480,
+							"height": 815
+						},
+						"visible": true,
+						"metadata": {
+							"opacity": 1
+						},
+						"children": [
+							{
+								"objectId": "CC00D08E-4468-48DB-85B4-28F904270C47",
+								"kind": "group",
+								"name": "Group_42",
+								"originalName": "Group 4",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 10,
+									"y": 310,
+									"width": 289,
+									"height": 161
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"image": {
+									"path": "images/Layer-Group_4-q0mwmeqw.png",
+									"frame": {
+										"x": 10,
+										"y": 310,
+										"width": 289,
+										"height": 161
+									}
+								},
+								"children": []
+							},
+							{
+								"objectId": "5670BCEF-59DC-4B42-B4A1-E3D366D3E870",
+								"kind": "group",
+								"name": "Group_29",
+								"originalName": "Group 2",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 0,
+									"y": 715,
+									"width": 355,
+									"height": 100
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"image": {
+									"path": "images/Layer-Group_2-nty3mejd.png",
+									"frame": {
+										"x": 0,
+										"y": 715,
+										"width": 355,
+										"height": 100
+									}
+								},
+								"children": []
+							},
+							{
+								"objectId": "C7C731B9-8AA2-4C1C-B5FD-AF64B0EA58FD",
+								"kind": "group",
+								"name": "GMACurrationContentRelated",
+								"originalName": "GMACurrationContentRelated",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 10,
+									"y": 495,
+									"width": 470,
+									"height": 197
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"children": [
+									{
+										"objectId": "0B6D2FFC-0C7E-4133-92E2-B464E953DC56",
+										"kind": "group",
+										"name": "GMACurrationContentRelatedContents",
+										"originalName": "GMACurrationContentRelatedContents",
+										"maskFrame": null,
+										"layerFrame": {
+											"x": 10,
+											"y": 495,
+											"width": 470,
+											"height": 197
+										},
+										"visible": true,
+										"metadata": {
+											"opacity": 1
+										},
+										"children": [
+											{
+												"objectId": "EA845BE1-765A-49FE-AD8F-71FC35AF053F",
+												"kind": "group",
+												"name": "News_Copy_31",
+												"originalName": "News Copy 3",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 330,
+													"y": 495,
+													"width": 150,
+													"height": 197
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"image": {
+													"path": "images/Layer-News_Copy_3-rue4ndvc.png",
+													"frame": {
+														"x": 330,
+														"y": 495,
+														"width": 150,
+														"height": 197
+													}
+												},
+												"children": []
+											},
+											{
+												"objectId": "C92E4294-A000-4EFC-B974-D497F50C4985",
+												"kind": "group",
+												"name": "News_Copy_41",
+												"originalName": "News Copy 4",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 170,
+													"y": 495,
+													"width": 150,
+													"height": 197
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"image": {
+													"path": "images/Layer-News_Copy_4-qzkyrtqy.png",
+													"frame": {
+														"x": 170,
+														"y": 495,
+														"width": 150,
+														"height": 197
+													}
+												},
+												"children": []
+											},
+											{
+												"objectId": "EB8E9B8C-352E-4890-9E6A-90F908D9A1C6",
+												"kind": "group",
+												"name": "News_21",
+												"originalName": "News 2",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 10,
+													"y": 495,
+													"width": 150,
+													"height": 197
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"image": {
+													"path": "images/Layer-News_2-rui4rtlc.png",
+													"frame": {
+														"x": 10,
+														"y": 495,
+														"width": 150,
+														"height": 197
+													}
+												},
+												"children": []
+											}
+										]
+									}
+								]
+							},
+							{
+								"objectId": "BD1A3081-2949-4F16-85F6-F8AE95713E86",
+								"kind": "group",
+								"name": "Group_34",
+								"originalName": "Group 3",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 0,
+									"y": 0,
+									"width": 375,
+									"height": 390
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"image": {
+									"path": "images/Layer-Group_3-qkqxqtmw.png",
+									"frame": {
+										"x": 0,
+										"y": 0,
+										"width": 375,
+										"height": 390
+									}
+								},
+								"children": []
+							}
+						]
+					},
+					{
+						"objectId": "EB9B1A77-0196-47C1-905D-8C4F124FF7C7",
+						"kind": "group",
+						"name": "ContentBG10",
+						"originalName": "ContentBG",
+						"maskFrame": null,
+						"layerFrame": {
+							"x": 0,
+							"y": 0,
+							"width": 375,
+							"height": 3200
+						},
+						"visible": true,
+						"metadata": {
+							"opacity": 1
+						},
+						"image": {
+							"path": "images/Layer-ContentBG-rui5qjfb.png",
+							"frame": {
+								"x": 0,
+								"y": 0,
+								"width": 375,
+								"height": 3200
+							}
+						},
+						"children": []
+					}
+				]
+			}
+		]
+	},
+	{
+		"objectId": "24A1BCEB-921F-4ABC-A8B5-2F2775460E6F",
+		"kind": "artboard",
+		"name": "Curration2",
+		"originalName": "Curration2",
+		"maskFrame": null,
+		"layerFrame": {
+			"x": 2847,
+			"y": 133,
+			"width": 375,
+			"height": 667
+		},
+		"visible": true,
+		"metadata": {},
+		"backgroundColor": "rgba(255, 255, 255, 1)",
+		"children": [
+			{
+				"objectId": "49CC43F1-8956-48DA-B0AE-08F02529510D",
+				"kind": "group",
+				"name": "BerlinContent",
+				"originalName": "BerlinContent",
+				"maskFrame": null,
+				"layerFrame": {
+					"x": 0,
+					"y": 0,
+					"width": 375,
+					"height": 3200
+				},
+				"visible": true,
+				"metadata": {
+					"opacity": 1
+				},
+				"children": [
+					{
+						"objectId": "999B4418-7A9A-44EE-9202-9F96F2368C59",
+						"kind": "group",
+						"name": "Group9",
+						"originalName": "Group",
+						"maskFrame": null,
+						"layerFrame": {
+							"x": 0,
+							"y": 0,
+							"width": 375,
+							"height": 843
+						},
+						"visible": true,
+						"metadata": {
+							"opacity": 1
+						},
+						"image": {
+							"path": "images/Layer-Group-otk5qjq0.png",
+							"frame": {
+								"x": 0,
+								"y": 0,
+								"width": 375,
+								"height": 843
+							}
+						},
+						"children": [
+							{
+								"objectId": "4A48A96E-E2EA-4FAA-AF0C-0329D4FDFEEB",
+								"kind": "group",
+								"name": "Group_210",
+								"originalName": "Group 2",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 10,
+									"y": 743,
+									"width": 355,
+									"height": 100
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"image": {
+									"path": "images/Layer-Group_2-nee0oee5.png",
+									"frame": {
+										"x": 10,
+										"y": 743,
+										"width": 355,
+										"height": 100
+									}
+								},
+								"children": []
+							}
+						]
+					},
+					{
+						"objectId": "9D04FD40-ECB0-4196-8063-7BA266B73663",
+						"kind": "group",
+						"name": "ContentBG11",
+						"originalName": "ContentBG",
+						"maskFrame": null,
+						"layerFrame": {
+							"x": 0,
+							"y": 0,
+							"width": 375,
+							"height": 3200
+						},
+						"visible": true,
+						"metadata": {
+							"opacity": 1
+						},
+						"image": {
+							"path": "images/Layer-ContentBG-ouqwneze.png",
+							"frame": {
+								"x": 0,
+								"y": 0,
+								"width": 375,
+								"height": 3200
+							}
+						},
+						"children": []
+					}
+				]
+			}
+		]
+	},
+	{
+		"objectId": "68355D21-FB7F-434C-A54D-819ABAF038E3",
+		"kind": "artboard",
+		"name": "Curration3",
+		"originalName": "Curration3",
+		"maskFrame": null,
+		"layerFrame": {
+			"x": 3322,
+			"y": 133,
+			"width": 375,
+			"height": 1667
+		},
+		"visible": true,
+		"metadata": {},
+		"backgroundColor": "rgba(255, 255, 255, 1)",
+		"children": [
+			{
+				"objectId": "3D781AC1-588E-441B-8810-DF9276A647E0",
+				"kind": "group",
+				"name": "ERAContent",
+				"originalName": "ERAContent",
+				"maskFrame": null,
+				"layerFrame": {
+					"x": 0,
+					"y": 0,
+					"width": 480,
+					"height": 3200
+				},
+				"visible": true,
+				"metadata": {
+					"opacity": 1
+				},
+				"children": [
+					{
+						"objectId": "58F26102-60AE-48F3-829B-1E7F1054C523",
+						"kind": "group",
+						"name": "Group_43",
+						"originalName": "Group 4",
+						"maskFrame": null,
+						"layerFrame": {
+							"x": 0,
+							"y": 0,
+							"width": 480,
+							"height": 2776
+						},
+						"visible": true,
+						"metadata": {
+							"opacity": 1
+						},
+						"image": {
+							"path": "images/Layer-Group_4-nthgmjyx.png",
+							"frame": {
+								"x": 0,
+								"y": 0,
+								"width": 480,
+								"height": 2776
+							}
+						},
+						"children": [
+							{
+								"objectId": "F4390027-E711-452E-9C50-24E276902A02",
+								"kind": "group",
+								"name": "Group_211",
+								"originalName": "Group 2",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 10,
+									"y": 2676,
+									"width": 355,
+									"height": 100
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"image": {
+									"path": "images/Layer-Group_2-rjqzotaw.png",
+									"frame": {
+										"x": 10,
+										"y": 2676,
+										"width": 355,
+										"height": 100
+									}
+								},
+								"children": []
+							},
+							{
+								"objectId": "35517D90-6DF8-42A7-81F1-E1196C127F34",
+								"kind": "group",
+								"name": "ERAContentRelated",
+								"originalName": "ERAContentRelated",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 10,
+									"y": 2426,
+									"width": 470,
+									"height": 197
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"children": [
+									{
+										"objectId": "28264F57-2AF8-4A93-9804-44DAF9C2309C",
+										"kind": "group",
+										"name": "ERAContentRelatedContents",
+										"originalName": "ERAContentRelatedContents",
+										"maskFrame": null,
+										"layerFrame": {
+											"x": 10,
+											"y": 2426,
+											"width": 470,
+											"height": 197
+										},
+										"visible": true,
+										"metadata": {
+											"opacity": 1
+										},
+										"children": [
+											{
+												"objectId": "4D075D49-0D24-4C04-8F23-3A67AD501AF3",
+												"kind": "group",
+												"name": "News_Copy_32",
+												"originalName": "News Copy 3",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 330,
+													"y": 2426,
+													"width": 150,
+													"height": 197
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"image": {
+													"path": "images/Layer-News_Copy_3-neqwnzve.png",
+													"frame": {
+														"x": 330,
+														"y": 2426,
+														"width": 150,
+														"height": 197
+													}
+												},
+												"children": []
+											},
+											{
+												"objectId": "AB229223-3358-41F6-BA33-39047AF79228",
+												"kind": "group",
+												"name": "News_Copy_42",
+												"originalName": "News Copy 4",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 170,
+													"y": 2426,
+													"width": 150,
+													"height": 197
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"image": {
+													"path": "images/Layer-News_Copy_4-quiymjky.png",
+													"frame": {
+														"x": 170,
+														"y": 2426,
+														"width": 150,
+														"height": 197
+													}
+												},
+												"children": []
+											},
+											{
+												"objectId": "88A7B665-1041-40B6-82CE-9BC705538A89",
+												"kind": "group",
+												"name": "News_22",
+												"originalName": "News 2",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 10,
+													"y": 2426,
+													"width": 150,
+													"height": 197
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"image": {
+													"path": "images/Layer-News_2-odhbn0i2.png",
+													"frame": {
+														"x": 10,
+														"y": 2426,
+														"width": 150,
+														"height": 197
+													}
+												},
+												"children": []
+											}
+										]
+									}
+								]
+							},
+							{
+								"objectId": "8FD1956E-3C4C-4F8F-BFD9-E5E96B4ED108",
+								"kind": "group",
+								"name": "Group_35",
+								"originalName": "Group 3",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 10,
+									"y": 443,
+									"width": 470,
+									"height": 355
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"image": {
+									"path": "images/Layer-Group_3-oezemtk1.png",
+									"frame": {
+										"x": 10,
+										"y": 443,
+										"width": 470,
+										"height": 355
+									}
+								},
+								"children": [
+									{
+										"objectId": "24A7BBD6-242B-4A83-A010-4E1E77234626",
+										"kind": "group",
+										"name": "Group_Copy_3",
+										"originalName": "Group Copy 3",
+										"maskFrame": null,
+										"layerFrame": {
+											"x": 291,
+											"y": 443,
+											"width": 74,
+											"height": 30
+										},
+										"visible": true,
+										"metadata": {
+											"opacity": 1
+										},
+										"image": {
+											"path": "images/Layer-Group_Copy_3-mjrbn0jc.png",
+											"frame": {
+												"x": 291,
+												"y": 443,
+												"width": 74,
+												"height": 30
+											}
+										},
+										"children": []
+									},
+									{
+										"objectId": "1E877AD9-E3F9-4494-9EAB-311A422561CA",
+										"kind": "group",
+										"name": "ERAVoteEntry",
+										"originalName": "ERAVoteEntry",
+										"maskFrame": null,
+										"layerFrame": {
+											"x": 88,
+											"y": 740,
+											"width": 200,
+											"height": 58
+										},
+										"visible": true,
+										"metadata": {
+											"opacity": 1
+										},
+										"image": {
+											"path": "images/Layer-ERAVoteEntry-muu4nzdb.png",
+											"frame": {
+												"x": 88,
+												"y": 740,
+												"width": 200,
+												"height": 58
+											}
+										},
+										"children": []
+									},
+									{
+										"objectId": "F3006209-2070-4456-B0C6-50F35D436897",
+										"kind": "group",
+										"name": "ERAContent_Vote",
+										"originalName": "ERAContent_Vote",
+										"maskFrame": null,
+										"layerFrame": {
+											"x": 10,
+											"y": 495,
+											"width": 470,
+											"height": 222
+										},
+										"visible": true,
+										"metadata": {
+											"opacity": 1
+										},
+										"children": [
+											{
+												"objectId": "BF6FFF5E-F651-4E76-9034-6DCF9CA886B7",
+												"kind": "group",
+												"name": "ERAContent_VoteContents",
+												"originalName": "ERAContent_VoteContents",
+												"maskFrame": null,
+												"layerFrame": {
+													"x": 10,
+													"y": 495,
+													"width": 470,
+													"height": 222
+												},
+												"visible": true,
+												"metadata": {
+													"opacity": 1
+												},
+												"children": [
+													{
+														"objectId": "7753DA4F-8175-4C79-A91B-E464FEBFF4EF",
+														"kind": "group",
+														"name": "Group_71",
+														"originalName": "Group 7",
+														"maskFrame": null,
+														"layerFrame": {
+															"x": 330,
+															"y": 495,
+															"width": 150,
+															"height": 202
+														},
+														"visible": true,
+														"metadata": {
+															"opacity": 1
+														},
+														"image": {
+															"path": "images/Layer-Group_7-nzc1m0rb.png",
+															"frame": {
+																"x": 330,
+																"y": 495,
+																"width": 150,
+																"height": 202
+															}
+														},
+														"children": []
+													},
+													{
+														"objectId": "CF015C46-2690-44E5-B605-785EE1358BF2",
+														"kind": "group",
+														"name": "Group_61",
+														"originalName": "Group 6",
+														"maskFrame": null,
+														"layerFrame": {
+															"x": 170,
+															"y": 495,
+															"width": 150,
+															"height": 202
+														},
+														"visible": true,
+														"metadata": {
+															"opacity": 1
+														},
+														"image": {
+															"path": "images/Layer-Group_6-q0ywmtvd.png",
+															"frame": {
+																"x": 170,
+																"y": 495,
+																"width": 150,
+																"height": 202
+															}
+														},
+														"children": []
+													},
+													{
+														"objectId": "A6732518-293D-40FB-BCFA-CD075B19EFF7",
+														"kind": "group",
+														"name": "Group_52",
+														"originalName": "Group 5",
+														"maskFrame": null,
+														"layerFrame": {
+															"x": 10,
+															"y": 495,
+															"width": 150,
+															"height": 222
+														},
+														"visible": true,
+														"metadata": {
+															"opacity": 1
+														},
+														"image": {
+															"path": "images/Layer-Group_5-qty3mzi1.png",
+															"frame": {
+																"x": 10,
+																"y": 495,
+																"width": 150,
+																"height": 222
+															}
+														},
+														"children": []
+													}
+												]
+											}
+										]
+									}
+								]
+							},
+							{
+								"objectId": "57ACDB06-24A2-493A-A2F8-CCD6B3C8034E",
+								"kind": "group",
+								"name": "Group10",
+								"originalName": "Group",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 10,
+									"y": 300,
+									"width": 355,
+									"height": 90
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"image": {
+									"path": "images/Layer-Group-ntdbq0rc.png",
+									"frame": {
+										"x": 10,
+										"y": 300,
+										"width": 355,
+										"height": 90
+									}
+								},
+								"children": []
+							}
+						]
+					},
+					{
+						"objectId": "4BBD8AEF-91F3-49FE-B67A-C6E7EA135508",
+						"kind": "group",
+						"name": "ContentBG12",
+						"originalName": "ContentBG",
+						"maskFrame": null,
+						"layerFrame": {
+							"x": 0,
+							"y": 0,
+							"width": 375,
+							"height": 3200
+						},
+						"visible": true,
+						"metadata": {
+							"opacity": 1
+						},
+						"image": {
+							"path": "images/Layer-ContentBG-nejcrdhb.png",
+							"frame": {
+								"x": 0,
+								"y": 0,
+								"width": 375,
+								"height": 3200
+							}
+						},
+						"children": []
+					}
+				]
+			}
+		]
+	},
+	{
+		"objectId": "FB72E349-41AE-4A35-B99C-99A6B734511A",
+		"kind": "artboard",
+		"name": "R_08_03_live_temp1_vote",
+		"originalName": "R_08_03_live_temp1_vote",
+		"maskFrame": null,
+		"layerFrame": {
+			"x": 3797,
+			"y": 133,
+			"width": 375,
+			"height": 1449
+		},
+		"visible": true,
+		"metadata": {},
+		"backgroundColor": "rgba(24, 24, 24, 1)",
+		"children": [
+			{
+				"objectId": "30531FC3-7E36-43CE-B7EE-86C57F5D1DBA",
+				"kind": "group",
+				"name": "ERAVotePage",
+				"originalName": "ERAVotePage",
+				"maskFrame": null,
+				"layerFrame": {
+					"x": 0,
+					"y": 0,
+					"width": 481,
+					"height": 1742
+				},
+				"visible": true,
+				"metadata": {
+					"opacity": 1
+				},
+				"children": [
+					{
+						"objectId": "528EF2EE-F085-4050-B66F-230119102962",
+						"kind": "group",
+						"name": "Group11",
+						"originalName": "Group",
+						"maskFrame": null,
+						"layerFrame": {
+							"x": 0,
+							"y": 3,
+							"width": 481,
+							"height": 1739
+						},
+						"visible": true,
+						"metadata": {
+							"opacity": 1
+						},
+						"image": {
+							"path": "images/Layer-Group-nti4ruyy.png",
+							"frame": {
+								"x": 0,
+								"y": 3,
+								"width": 481,
+								"height": 1739
+							}
+						},
+						"children": [
+							{
+								"objectId": "729EE9D9-33B4-4114-AAF6-B2D91C27EF9F",
+								"kind": "group",
+								"name": "Group_Copy2",
+								"originalName": "Group Copy",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 88,
+									"y": 1344,
+									"width": 200,
+									"height": 60
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"image": {
+									"path": "images/Layer-Group_Copy-nzi5ruu5.png",
+									"frame": {
+										"x": 88,
+										"y": 1344,
+										"width": 200,
+										"height": 60
+									}
+								},
+								"children": []
+							}
+						]
+					},
+					{
+						"objectId": "10AE1D14-F0B0-4075-8EDA-F4CC90EF4996",
+						"kind": "group",
+						"name": "VOTETITLE",
+						"originalName": "VOTETITLE",
+						"maskFrame": null,
+						"layerFrame": {
+							"x": 0,
+							"y": 0,
+							"width": 375,
+							"height": 74
+						},
+						"visible": true,
+						"metadata": {
+							"opacity": 1
+						},
+						"image": {
+							"path": "images/Layer-VOTETITLE-mtbbrtfe.png",
+							"frame": {
+								"x": 0,
+								"y": 0,
+								"width": 375,
+								"height": 74
+							}
+						},
+						"children": []
+					},
+					{
+						"objectId": "B939EB58-65C8-448A-8D99-CEB82FC98143",
+						"kind": "group",
+						"name": "G_2",
+						"originalName": "G 2",
+						"maskFrame": null,
+						"layerFrame": {
+							"x": 21,
+							"y": -2,
+							"width": 333,
+							"height": 2349
+						},
+						"visible": true,
+						"metadata": {
+							"opacity": 1
+						},
+						"children": [
+							{
+								"objectId": "C6B7A2D0-A7B5-4203-8FFE-4CCFF16C0433",
+								"kind": "group",
+								"name": "G",
+								"originalName": "G",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 21,
+									"y": -2,
+									"width": 333,
+									"height": 2349
+								},
+								"visible": false,
+								"metadata": {
+									"opacity": 1
+								},
+								"image": {
+									"path": "images/Layer-G-qzzcn0ey.png",
+									"frame": {
+										"x": 21,
+										"y": -2,
+										"width": 333,
+										"height": 2349
+									}
+								},
+								"children": []
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	{
+		"objectId": "91A8647E-7DF6-45E9-A47F-EB05C922C275",
+		"kind": "artboard",
+		"name": "VODMovieInfo",
+		"originalName": "VODMovieInfo",
+		"maskFrame": null,
+		"layerFrame": {
+			"x": 4272,
+			"y": 136,
+			"width": 375,
+			"height": 1667
+		},
+		"visible": true,
+		"metadata": {},
+		"backgroundColor": "rgba(24, 24, 24, 1)",
+		"children": [
+			{
+				"objectId": "DF83F997-A421-42E6-B6E1-E93C14EB87F1",
+				"kind": "group",
+				"name": "VODInfoPage",
+				"originalName": "VODInfoPage",
+				"maskFrame": null,
+				"layerFrame": {
+					"x": 0,
+					"y": 0,
+					"width": 480,
+					"height": 977
+				},
+				"visible": true,
+				"metadata": {
+					"opacity": 1
+				},
+				"children": [
+					{
+						"objectId": "EE7E29C9-0EAF-449C-B1A4-8B52469015C8",
+						"kind": "group",
+						"name": "RelatedMovieInMovieInfo",
+						"originalName": "RelatedMovieInMovieInfo",
+						"maskFrame": null,
+						"layerFrame": {
+							"x": 10,
+							"y": 695,
+							"width": 470,
+							"height": 282
+						},
+						"visible": true,
+						"metadata": {
+							"opacity": 1
+						},
+						"children": [
+							{
+								"objectId": "78194DD3-F2C7-4922-B6A2-D3D7F453D54F",
+								"kind": "group",
+								"name": "RelatedMovieInMovieInfoContents",
+								"originalName": "RelatedMovieInMovieInfoContents",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 10,
+									"y": 695,
+									"width": 470,
+									"height": 282
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"children": [
+									{
+										"objectId": "51F0CBA9-FE3A-445B-AF46-BF84F4940869",
+										"kind": "group",
+										"name": "Poster_Copy_21",
+										"originalName": "Poster Copy 2",
+										"maskFrame": null,
+										"layerFrame": {
+											"x": 330,
+											"y": 695,
+											"width": 150,
+											"height": 257
+										},
+										"visible": true,
+										"metadata": {
+											"opacity": 1
+										},
+										"image": {
+											"path": "images/Layer-Poster_Copy_2-ntfgmenc.png",
+											"frame": {
+												"x": 330,
+												"y": 695,
+												"width": 150,
+												"height": 257
+											}
+										},
+										"children": []
+									},
+									{
+										"objectId": "DA9DBB88-E708-4825-B0E2-B61196038AB3",
+										"kind": "group",
+										"name": "Poster_210",
+										"originalName": "Poster 2",
+										"maskFrame": null,
+										"layerFrame": {
+											"x": 10,
+											"y": 695,
+											"width": 150,
+											"height": 257
+										},
+										"visible": true,
+										"metadata": {
+											"opacity": 1
+										},
+										"image": {
+											"path": "images/Layer-Poster_2-ree5rejc.png",
+											"frame": {
+												"x": 10,
+												"y": 695,
+												"width": 150,
+												"height": 257
+											}
+										},
+										"children": []
+									},
+									{
+										"objectId": "50821B13-F727-4116-932C-C9EF40D2281C",
+										"kind": "group",
+										"name": "Poster_310",
+										"originalName": "Poster 3",
+										"maskFrame": null,
+										"layerFrame": {
+											"x": 170,
+											"y": 695,
+											"width": 150,
+											"height": 282
+										},
+										"visible": true,
+										"metadata": {
+											"opacity": 1
+										},
+										"image": {
+											"path": "images/Layer-Poster_3-nta4mjfc.png",
+											"frame": {
+												"x": 170,
+												"y": 695,
+												"width": 150,
+												"height": 282
+											}
+										},
+										"children": []
+									}
+								]
+							}
+						]
+					},
+					{
+						"objectId": "AC64E842-1B26-46FD-8175-3BD8376A7233",
+						"kind": "group",
+						"name": "SupportDeviceWindow",
+						"originalName": "SupportDeviceWindow",
+						"maskFrame": null,
+						"layerFrame": {
+							"x": 0,
+							"y": 0,
+							"width": 375,
+							"height": 667
+						},
+						"visible": true,
+						"metadata": {
+							"opacity": 1
+						},
+						"children": [
+							{
+								"objectId": "52B2D47F-DC18-40B2-9FA2-0AF10FC923DC",
+								"kind": "group",
+								"name": "Group_36",
+								"originalName": "Group 3",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 53,
+									"y": 286,
+									"width": 260,
+									"height": 99
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"image": {
+									"path": "images/Layer-Group_3-ntjcmkq0.png",
+									"frame": {
+										"x": 53,
+										"y": 286,
+										"width": 260,
+										"height": 99
+									}
+								},
+								"children": []
+							},
+							{
+								"objectId": "C8BF7D70-96F1-4356-8C55-39E95A2460FC",
+								"kind": "group",
+								"name": "Group12",
+								"originalName": "Group",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 60,
+									"y": 324,
+									"width": 164,
+									"height": 61
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"image": {
+									"path": "images/Layer-Group-qzhcrjde.png",
+									"frame": {
+										"x": 60,
+										"y": 324,
+										"width": 164,
+										"height": 61
+									}
+								},
+								"children": []
+							},
+							{
+								"objectId": "F3066B25-D297-4107-BB37-EBA13393C4DA",
+								"kind": "group",
+								"name": "Rectangle_3",
+								"originalName": "Rectangle 3",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 33,
+									"y": 264,
+									"width": 310,
+									"height": 140
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"image": {
+									"path": "images/Layer-Rectangle_3-rjmwnjzc.png",
+									"frame": {
+										"x": 33,
+										"y": 264,
+										"width": 310,
+										"height": 140
+									}
+								},
+								"children": []
+							},
+							{
+								"objectId": "A650102A-EB2C-4DF1-9F75-ECD3AE3331E9",
+								"kind": "group",
+								"name": "Rectangle_4",
+								"originalName": "Rectangle 4",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 0,
+									"y": 0,
+									"width": 375,
+									"height": 667
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"image": {
+									"path": "images/Layer-Rectangle_4-qty1mdew.png",
+									"frame": {
+										"x": 0,
+										"y": 0,
+										"width": 375,
+										"height": 667
+									}
+								},
+								"children": []
+							}
+						]
+					},
+					{
+						"objectId": "58D4E6E2-BAA7-40A7-B8B9-1671CB8470EA",
+						"kind": "group",
+						"name": "MovieTopTitleInfo",
+						"originalName": "MovieTopTitleInfo",
+						"maskFrame": null,
+						"layerFrame": {
+							"x": 0,
+							"y": 0,
+							"width": 375,
+							"height": 218
+						},
+						"visible": true,
+						"metadata": {
+							"opacity": 1
+						},
+						"children": [
+							{
+								"objectId": "5DAB6F96-314E-44A1-922A-633291751FCB",
+								"kind": "group",
+								"name": "StatusBarMovieTopTitleInfo",
+								"originalName": "StatusBarMovieTopTitleInfo",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 0,
+									"y": 3,
+									"width": 375,
+									"height": 14
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"image": {
+									"path": "images/Layer-StatusBarMovieTopTitleInfo-nurbqjzg.png",
+									"frame": {
+										"x": 0,
+										"y": 3,
+										"width": 375,
+										"height": 14
+									}
+								},
+								"children": []
+							},
+							{
+								"objectId": "4A5E7DA4-D42E-4451-B3B3-1E0B8DD91498",
+								"kind": "text",
+								"name": "MovieTopTile",
+								"originalName": "MovieTopTile",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 161,
+									"y": 35,
+									"width": 52,
+									"height": 20
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1,
+									"string": "死侍2",
+									"css": [
+										"font-family: PingFangTC-Semibold;",
+										"font-size: 20px;",
+										"color: #FFFFFF;",
+										"letter-spacing: 0.4px;",
+										"line-height: 20px;"
+									]
+								},
+								"image": {
+									"path": "images/Layer-MovieTopTile-nee1rtde.png",
+									"frame": {
+										"x": 161,
+										"y": 35,
+										"width": 52,
+										"height": 20
+									}
+								},
+								"children": []
+							},
+							{
+								"objectId": "CDD27444-940C-40C1-AFB8-A501BE1C391E",
+								"kind": "group",
+								"name": "MovieTopMask",
+								"originalName": "MovieTopMask",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 0,
+									"y": 0,
+									"width": 375,
+									"height": 218
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"image": {
+									"path": "images/Layer-MovieTopMask-q0remjc0.png",
+									"frame": {
+										"x": 0,
+										"y": 0,
+										"width": 375,
+										"height": 218
+									}
+								},
+								"children": []
+							}
+						]
+					},
+					{
+						"objectId": "B5369BB2-700F-4A61-B14E-3B6309D92020",
+						"kind": "group",
+						"name": "BTNSupportDevices",
+						"originalName": "BTNSupportDevices",
+						"maskFrame": null,
+						"layerFrame": {
+							"x": 20,
+							"y": 457,
+							"width": 125,
+							"height": 22
+						},
+						"visible": true,
+						"metadata": {
+							"opacity": 1
+						},
+						"image": {
+							"path": "images/Layer-BTNSupportDevices-qjuznjlc.png",
+							"frame": {
+								"x": 20,
+								"y": 457,
+								"width": 125,
+								"height": 22
+							}
+						},
+						"children": [
+							{
+								"objectId": "5ED637A1-A68D-467B-AFD3-ACF0A7EFA050",
+								"kind": "group",
+								"name": "Group13",
+								"originalName": "Group",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 123,
+									"y": 457,
+									"width": 22,
+									"height": 22
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"image": {
+									"path": "images/Layer-Group-nuvenjm3.png",
+									"frame": {
+										"x": 123,
+										"y": 457,
+										"width": 22,
+										"height": 22
+									}
+								},
+								"children": []
+							}
+						]
+					},
+					{
+						"objectId": "CB026B82-4EDD-4D3F-9986-082657DA80EF",
+						"kind": "group",
+						"name": "BackBTNMovieInfo",
+						"originalName": "BackBTNMovieInfo",
+						"maskFrame": null,
+						"layerFrame": {
+							"x": 24,
+							"y": 37,
+							"width": 12,
+							"height": 21
+						},
+						"visible": true,
+						"metadata": {
+							"opacity": 1
+						},
+						"image": {
+							"path": "images/Layer-BackBTNMovieInfo-q0iwmjzc.png",
+							"frame": {
+								"x": 24,
+								"y": 37,
+								"width": 12,
+								"height": 21
+							}
+						},
+						"children": []
+					},
+					{
+						"objectId": "E8AD1616-7FFA-4E50-BB4C-F0F239AAC564",
+						"kind": "group",
+						"name": "ShareBTNMovieInfo",
+						"originalName": "ShareBTNMovieInfo",
+						"maskFrame": null,
+						"layerFrame": {
+							"x": 329,
+							"y": 23,
+							"width": 28,
+							"height": 25
+						},
+						"visible": true,
+						"metadata": {
+							"opacity": 1
+						},
+						"image": {
+							"path": "images/Layer-ShareBTNMovieInfo-rthbrde2.png",
+							"frame": {
+								"x": 329,
+								"y": 23,
+								"width": 28,
+								"height": 25
+							}
+						},
+						"children": []
+					},
+					{
+						"objectId": "2AE9036F-3E08-44F6-8039-4E0BBEA353F4",
+						"kind": "group",
+						"name": "AddFavoriteBTNMovieInfo",
+						"originalName": "AddFavoriteBTNMovieInfo",
+						"maskFrame": null,
+						"layerFrame": {
+							"x": 290,
+							"y": 25,
+							"width": 28,
+							"height": 26
+						},
+						"visible": true,
+						"metadata": {
+							"opacity": 1
+						},
+						"image": {
+							"path": "images/Layer-AddFavoriteBTNMovieInfo-mkffotaz.png",
+							"frame": {
+								"x": 290,
+								"y": 25,
+								"width": 28,
+								"height": 26
+							}
+						},
+						"children": []
+					},
+					{
+						"objectId": "D016F148-2E37-4335-AE79-585B6DBFE26F",
+						"kind": "group",
+						"name": "StatusBarMovieInfo",
+						"originalName": "StatusBarMovieInfo",
+						"maskFrame": null,
+						"layerFrame": {
+							"x": 0,
+							"y": 3,
+							"width": 375,
+							"height": 14
+						},
+						"visible": true,
+						"metadata": {
+							"opacity": 1
+						},
+						"image": {
+							"path": "images/Layer-StatusBarMovieInfo-rdaxnkyx.png",
+							"frame": {
+								"x": 0,
+								"y": 3,
+								"width": 375,
+								"height": 14
+							}
+						},
+						"children": []
+					},
+					{
+						"objectId": "ACCC2BA0-2CF8-4396-8013-9A1B06A04910",
+						"kind": "group",
+						"name": "BigPlay",
+						"originalName": "BigPlay",
+						"maskFrame": null,
+						"layerFrame": {
+							"x": 88,
+							"y": 240,
+							"width": 200,
+							"height": 61
+						},
+						"visible": true,
+						"metadata": {
+							"opacity": 1
+						},
+						"children": [
+							{
+								"objectId": "E5935905-25C0-4E94-ADCD-9D91F7DAF605",
+								"kind": "group",
+								"name": "BigPlayState_VOD_ContinuePlay",
+								"originalName": "BigPlayState_VOD_ContinuePlay",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 88,
+									"y": 241,
+									"width": 200,
+									"height": 60
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"image": {
+									"path": "images/Layer-BigPlayState_VOD_ContinuePlay-rtu5mzu5.png",
+									"frame": {
+										"x": 88,
+										"y": 241,
+										"width": 200,
+										"height": 60
+									}
+								},
+								"children": []
+							},
+							{
+								"objectId": "8AC5EDE7-0EBD-485D-9A87-5CAC3048466F",
+								"kind": "group",
+								"name": "BigPlayState_VODBuy_FirstPlay",
+								"originalName": "BigPlayState_VODBuy_FirstPlay",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 88,
+									"y": 241,
+									"width": 200,
+									"height": 60
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"image": {
+									"path": "images/Layer-BigPlayState_VODBuy_FirstPlay-oefdnuve.png",
+									"frame": {
+										"x": 88,
+										"y": 241,
+										"width": 200,
+										"height": 60
+									}
+								},
+								"children": []
+							},
+							{
+								"objectId": "5F0231E4-D51A-4764-89C4-5A6C4207D35E",
+								"kind": "group",
+								"name": "BigPlayState_TVOD_ContinuePlay",
+								"originalName": "BigPlayState_TVOD_ContinuePlay",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 88,
+									"y": 240,
+									"width": 200,
+									"height": 60
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"image": {
+									"path": "images/Layer-BigPlayState_TVOD_ContinuePlay-nuywmjmx.png",
+									"frame": {
+										"x": 88,
+										"y": 240,
+										"width": 200,
+										"height": 60
+									}
+								},
+								"children": []
+							},
+							{
+								"objectId": "A2D1F44F-25C5-43BF-B114-75225C0CB632",
+								"kind": "group",
+								"name": "BigPlayState_TVODBuy",
+								"originalName": "BigPlayState_TVODBuy",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 88,
+									"y": 240,
+									"width": 200,
+									"height": 60
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"image": {
+									"path": "images/Layer-BigPlayState_TVODBuy-qtjemuy0.png",
+									"frame": {
+										"x": 88,
+										"y": 240,
+										"width": 200,
+										"height": 60
+									}
+								},
+								"children": []
+							}
+						]
+					},
+					{
+						"objectId": "441C2287-78E6-4DAD-8545-072BE7E11B3F",
+						"kind": "group",
+						"name": "MyRation",
+						"originalName": "MyRation",
+						"maskFrame": null,
+						"layerFrame": {
+							"x": 20,
+							"y": 616,
+							"width": 323,
+							"height": 17
+						},
+						"visible": true,
+						"metadata": {
+							"opacity": 1
+						},
+						"children": [
+							{
+								"objectId": "2F4520DB-3275-4C4C-A39D-16E0D6053B21",
+								"kind": "group",
+								"name": "RatingStars",
+								"originalName": "RatingStars",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 125,
+									"y": 616,
+									"width": 218,
+									"height": 17
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"children": [
+									{
+										"objectId": "2ABA7F87-B4B5-4E38-AF65-263A6C2745BD",
+										"kind": "text",
+										"name": "RatingStar5",
+										"originalName": "RatingStar5",
+										"maskFrame": null,
+										"layerFrame": {
+											"x": 325,
+											"y": 616,
+											"width": 18,
+											"height": 17
+										},
+										"visible": true,
+										"metadata": {
+											"opacity": 1,
+											"string": "",
+											"css": [
+												"font-family: material;",
+												"font-size: 20px;",
+												"color: #888888;"
+											]
+										},
+										"image": {
+											"path": "images/Layer-RatingStar5-mkfcqtdg.png",
+											"frame": {
+												"x": 325,
+												"y": 616,
+												"width": 18,
+												"height": 17
+											}
+										},
+										"children": []
+									},
+									{
+										"objectId": "7337CA58-D5FD-47E0-9764-B72F3635142F",
+										"kind": "text",
+										"name": "RatingStar4",
+										"originalName": "RatingStar4",
+										"maskFrame": null,
+										"layerFrame": {
+											"x": 275,
+											"y": 616,
+											"width": 18,
+											"height": 17
+										},
+										"visible": true,
+										"metadata": {
+											"opacity": 1,
+											"string": "",
+											"css": [
+												"font-family: material;",
+												"font-size: 20px;",
+												"color: #888888;"
+											]
+										},
+										"image": {
+											"path": "images/Layer-RatingStar4-nzmzn0nb.png",
+											"frame": {
+												"x": 275,
+												"y": 616,
+												"width": 18,
+												"height": 17
+											}
+										},
+										"children": []
+									},
+									{
+										"objectId": "50AF608E-3468-4A88-A5D1-B97FB3D1DBB5",
+										"kind": "text",
+										"name": "RatingStar3",
+										"originalName": "RatingStar3",
+										"maskFrame": null,
+										"layerFrame": {
+											"x": 225,
+											"y": 616,
+											"width": 18,
+											"height": 17
+										},
+										"visible": true,
+										"metadata": {
+											"opacity": 1,
+											"string": "",
+											"css": [
+												"font-family: material;",
+												"font-size: 20px;",
+												"color: #888888;"
+											]
+										},
+										"image": {
+											"path": "images/Layer-RatingStar3-ntbbrjyw.png",
+											"frame": {
+												"x": 225,
+												"y": 616,
+												"width": 18,
+												"height": 17
+											}
+										},
+										"children": []
+									},
+									{
+										"objectId": "C890F494-6B98-4D86-8382-9ED113D4A501",
+										"kind": "text",
+										"name": "RatingStar2",
+										"originalName": "RatingStar2",
+										"maskFrame": null,
+										"layerFrame": {
+											"x": 175,
+											"y": 616,
+											"width": 18,
+											"height": 17
+										},
+										"visible": true,
+										"metadata": {
+											"opacity": 1,
+											"string": "",
+											"css": [
+												"font-family: material;",
+												"font-size: 20px;",
+												"color: #888888;"
+											]
+										},
+										"image": {
+											"path": "images/Layer-RatingStar2-qzg5mey0.png",
+											"frame": {
+												"x": 175,
+												"y": 616,
+												"width": 18,
+												"height": 17
+											}
+										},
+										"children": []
+									},
+									{
+										"objectId": "62355D70-2BA3-44C3-A09F-7A1D78645A59",
+										"kind": "text",
+										"name": "RatingStar1",
+										"originalName": "RatingStar1",
+										"maskFrame": null,
+										"layerFrame": {
+											"x": 125,
+											"y": 616,
+											"width": 18,
+											"height": 17
+										},
+										"visible": true,
+										"metadata": {
+											"opacity": 1,
+											"string": "",
+											"css": [
+												"font-family: material;",
+												"font-size: 20px;",
+												"color: #888888;"
+											]
+										},
+										"image": {
+											"path": "images/Layer-RatingStar1-njizntve.png",
+											"frame": {
+												"x": 125,
+												"y": 616,
+												"width": 18,
+												"height": 17
+											}
+										},
+										"children": []
+									}
+								]
+							},
+							{
+								"objectId": "222549B5-FFC1-4CD3-9AA6-E4AB10B49A28",
+								"kind": "text",
+								"name": "RatingLabel",
+								"originalName": "RatingLabel",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 20,
+									"y": 616,
+									"width": 73,
+									"height": 17
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1,
+									"string": "我的評分",
+									"css": [
+										"font-family: PingFangTC-Medium;",
+										"font-size: 18px;",
+										"color: #DDDDDD;",
+										"letter-spacing: 0.36px;",
+										"line-height: 20px;"
+									]
+								},
+								"image": {
+									"path": "images/Layer-RatingLabel-mjiyntq5.png",
+									"frame": {
+										"x": 20,
+										"y": 616,
+										"width": 73,
+										"height": 17
+									}
+								},
+								"children": []
+							}
+						]
+					},
+					{
+						"objectId": "72868D09-5E3B-439F-B9A9-41C28C106E9A",
+						"kind": "group",
+						"name": "Group_62",
+						"originalName": "Group 6",
+						"maskFrame": null,
+						"layerFrame": {
+							"x": 20,
+							"y": 332,
+							"width": 171,
+							"height": 111
+						},
+						"visible": true,
+						"metadata": {
+							"opacity": 1
+						},
+						"image": {
+							"path": "images/Layer-Group_6-nzi4njhe.png",
+							"frame": {
+								"x": 20,
+								"y": 332,
+								"width": 171,
+								"height": 111
+							}
+						},
+						"children": [
+							{
+								"objectId": "B5F50B04-E0EC-421C-8148-6AD03E2E82A2",
+								"kind": "group",
+								"name": "Group_44",
+								"originalName": "Group 4",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 58,
+									"y": 407,
+									"width": 58,
+									"height": 11
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"image": {
+									"path": "images/Layer-Group_4-qjvgntbc.png",
+									"frame": {
+										"x": 58,
+										"y": 407,
+										"width": 58,
+										"height": 11
+									}
+								},
+								"children": []
+							}
+						]
+					},
+					{
+						"objectId": "DE81B0F5-A392-48A2-85D0-923F89A87F26",
+						"kind": "group",
+						"name": "DescriptionVBlock",
+						"originalName": "DescriptionVBlock",
+						"maskFrame": null,
+						"layerFrame": {
+							"x": 20,
+							"y": 526,
+							"width": 334,
+							"height": 170
+						},
+						"visible": true,
+						"metadata": {
+							"opacity": 1
+						},
+						"children": [
+							{
+								"objectId": "5A2989DE-AE8B-4D8B-917D-B8FBED602CAF",
+								"kind": "text",
+								"name": "LongDescription",
+								"originalName": "LongDescription",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 20,
+									"y": 529,
+									"width": 334,
+									"height": 167
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1,
+									"string": "講述有些固執的大媽高愛琳和神秘的鄰家男人金本之間的浪漫喜劇。蘇志燮在劇中飾演傳聞中的國情院情報員金本，在他的幫助下揭露了高愛琳丈夫突然死亡背後的巨大陰謀，「陶斯」便是金本之前的代號。",
+									"css": [
+										"font-family: PingFangTC-Regular;",
+										"font-size: 18px;",
+										"color: #AAAAAA;",
+										"letter-spacing: 0.45px;",
+										"text-align: justify;",
+										"line-height: 30px;"
+									]
+								},
+								"image": {
+									"path": "images/Layer-LongDescription-nueyotg5.png",
+									"frame": {
+										"x": 20,
+										"y": 529,
+										"width": 334,
+										"height": 167
+									}
+								},
+								"children": []
+							},
+							{
+								"objectId": "FD2F440A-E36B-4009-BA07-30C219C15732",
+								"kind": "group",
+								"name": "ShortDescriptionShow",
+								"originalName": "ShortDescriptionShow",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 20,
+									"y": 526,
+									"width": 328,
+									"height": 45
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"children": [
+									{
+										"objectId": "B342EA51-5141-4611-9AB0-EA219D5643B6",
+										"kind": "text",
+										"name": "ShortDescription",
+										"originalName": "ShortDescription",
+										"maskFrame": null,
+										"layerFrame": {
+											"x": 20,
+											"y": 529,
+											"width": 292,
+											"height": 42
+										},
+										"visible": true,
+										"metadata": {
+											"opacity": 1,
+											"string": "講述有些固執的大媽高愛琳和神秘的鄰家男人金本之間的浪漫喜劇。蘇...",
+											"css": [
+												"font-family: PingFangTC-Regular;",
+												"font-size: 18px;",
+												"color: #AAAAAA;",
+												"letter-spacing: 0.36px;",
+												"line-height: 25px;"
+											]
+										},
+										"image": {
+											"path": "images/Layer-ShortDescription-qjm0mkvb.png",
+											"frame": {
+												"x": 20,
+												"y": 529,
+												"width": 292,
+												"height": 42
+											}
+										},
+										"children": []
+									},
+									{
+										"objectId": "8C0D9CB7-5E18-4C96-8C74-EE757CD82FA4",
+										"kind": "group",
+										"name": "DescriptionCollapse",
+										"originalName": "DescriptionCollapse",
+										"maskFrame": null,
+										"layerFrame": {
+											"x": 320,
+											"y": 526,
+											"width": 28,
+											"height": 28
+										},
+										"visible": true,
+										"metadata": {
+											"opacity": 1
+										},
+										"image": {
+											"path": "images/Layer-DescriptionCollapse-oemwrdld.png",
+											"frame": {
+												"x": 320,
+												"y": 526,
+												"width": 28,
+												"height": 28
+											}
+										},
+										"children": []
+									}
+								]
+							}
+						]
+					},
+					{
+						"objectId": "D3B01602-C60D-4371-AC1B-A2EAB3E39390",
+						"kind": "group",
+						"name": "MoviePoster",
+						"originalName": "MoviePoster",
+						"maskFrame": null,
+						"layerFrame": {
+							"x": 215,
+							"y": 329,
+							"width": 140,
+							"height": 196
+						},
+						"visible": true,
+						"metadata": {
+							"opacity": 1
+						},
+						"image": {
+							"path": "images/Layer-MoviePoster-rdncmde2.jpg",
+							"frame": {
+								"x": 215,
+								"y": 329,
+								"width": 140,
+								"height": 196
+							}
+						},
+						"children": []
+					},
+					{
+						"objectId": "9B2397E9-4A00-45F8-BAD9-75422E4B5516",
+						"kind": "group",
+						"name": "MovieMainInfo",
+						"originalName": "MovieMainInfo",
+						"maskFrame": null,
+						"layerFrame": {
+							"x": 99,
+							"y": 174,
+							"width": 177,
+							"height": 49
+						},
+						"visible": true,
+						"metadata": {
+							"opacity": 1
+						},
+						"children": [
+							{
+								"objectId": "7FB21409-8D7C-4179-A71A-AE7500D9123B",
+								"kind": "text",
+								"name": "MovieExtraInfo",
+								"originalName": "MovieExtraInfo",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 99,
+									"y": 210,
+									"width": 177,
+									"height": 13
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1,
+									"string": "2018．美國．116分鐘．保護級",
+									"css": [
+										"font-family: PingFangTC-Regular;",
+										"font-size: 13px;",
+										"color: #EEEEEE;",
+										"letter-spacing: 0;",
+										"line-height: 20px;"
+									]
+								},
+								"image": {
+									"path": "images/Layer-MovieExtraInfo-n0zcmje0.png",
+									"frame": {
+										"x": 99,
+										"y": 210,
+										"width": 177,
+										"height": 13
+									}
+								},
+								"children": []
+							},
+							{
+								"objectId": "68FFE7C6-9B74-44F6-8C7E-386EB6204CFC",
+								"kind": "text",
+								"name": "MovieTitleContentInfo",
+								"originalName": "MovieTitleContentInfo",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 154,
+									"y": 174,
+									"width": 65,
+									"height": 24
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1,
+									"string": "死侍2",
+									"css": [
+										"font-family: PingFangTC-Semibold;",
+										"font-size: 25px;",
+										"color: #FFFFFF;",
+										"letter-spacing: 0.5px;",
+										"line-height: 30px;"
+									]
+								},
+								"image": {
+									"path": "images/Layer-MovieTitleContentInfo-njhgrku3.png",
+									"frame": {
+										"x": 154,
+										"y": 174,
+										"width": 65,
+										"height": 24
+									}
+								},
+								"children": []
+							}
+						]
+					},
+					{
+						"objectId": "DEBD9947-13FC-450E-AB06-0A6BB261CE1D",
+						"kind": "group",
+						"name": "MovieBigPosterContentInfo",
+						"originalName": "MovieBigPosterContentInfo",
+						"maskFrame": null,
+						"layerFrame": {
+							"x": 0,
+							"y": 0,
+							"width": 375,
+							"height": 211
+						},
+						"visible": true,
+						"metadata": {
+							"opacity": 1
+						},
+						"children": [
+							{
+								"objectId": "DECF8817-4D48-4E59-AE09-E8177A8D8164",
+								"kind": "group",
+								"name": "MaskMovieBigPosterContentInfo",
+								"originalName": "MaskMovieBigPosterContentInfo",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 0,
+									"y": 0,
+									"width": 375,
+									"height": 211
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"image": {
+									"path": "images/Layer-MaskMovieBigPosterContentInfo-revdrjg4.png",
+									"frame": {
+										"x": 0,
+										"y": 0,
+										"width": 375,
+										"height": 211
+									}
+								},
+								"children": []
+							},
+							{
+								"objectId": "E4667BE2-FB32-4293-8B1A-AD951DE28253",
+								"kind": "group",
+								"name": "PSMovieBigPosterContentInfo",
+								"originalName": "PSMovieBigPosterContentInfo",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 0,
+									"y": 0,
+									"width": 375,
+									"height": 211
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"image": {
+									"path": "images/Layer-PSMovieBigPosterContentInfo-rtq2njdc.jpg",
+									"frame": {
+										"x": 0,
+										"y": 0,
+										"width": 375,
+										"height": 211
+									}
+								},
+								"children": []
+							}
+						]
+					},
+					{
+						"objectId": "357B57AF-6E5C-47E8-A01D-6024453BCB40",
+						"kind": "group",
+						"name": "picture_copy_9",
+						"originalName": "picture copy 9",
+						"maskFrame": null,
+						"layerFrame": {
+							"x": 0,
+							"y": 0,
+							"width": 375,
+							"height": 210
+						},
+						"visible": true,
+						"metadata": {
+							"opacity": 1
+						},
+						"image": {
+							"path": "images/Layer-picture_copy_9-mzu3qju3.png",
+							"frame": {
+								"x": 0,
+								"y": 0,
+								"width": 375,
+								"height": 210
+							}
+						},
+						"children": []
+					},
+					{
+						"objectId": "2A67BA75-D9D5-400D-A375-5040EC8EF8AF",
+						"kind": "group",
+						"name": "G1",
+						"originalName": "G",
+						"maskFrame": null,
+						"layerFrame": {
+							"x": 21,
+							"y": -2,
+							"width": 333,
+							"height": 2349
+						},
+						"visible": false,
+						"metadata": {
+							"opacity": 1
+						},
+						"image": {
+							"path": "images/Layer-G-mke2n0jb.png",
+							"frame": {
+								"x": 21,
+								"y": -2,
+								"width": 333,
+								"height": 2349
+							}
+						},
+						"children": []
+					},
+					{
+						"objectId": "B70CEB7F-B81F-4F52-A0D2-F9683FA33EEB",
+						"kind": "group",
+						"name": "picture_copy_10",
+						"originalName": "picture copy 10",
+						"maskFrame": null,
+						"layerFrame": {
+							"x": 0,
+							"y": 0,
+							"width": 375,
+							"height": 210
+						},
+						"visible": true,
+						"metadata": {
+							"opacity": 1
+						},
+						"image": {
+							"path": "images/Layer-picture_copy_10-qjcwq0vc.png",
+							"frame": {
+								"x": 0,
+								"y": 0,
+								"width": 375,
+								"height": 210
 							}
 						},
 						"children": []

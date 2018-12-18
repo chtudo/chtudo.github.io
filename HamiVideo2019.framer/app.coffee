@@ -1,4 +1,9 @@
-# Import file "HamiVideo2019"
+Utils.insertCSS """
+	@font-face {
+		font-family: "material";
+		src: url("fonts/material.ttf");
+	}
+"""
 sketch = Framer.Importer.load("imported/HamiVideo2019@2x", scale: 1)
 Utils.globalLayers sketch
 Framer.Extras.Preloader.enable()
@@ -6,10 +11,13 @@ Framer.Extras.Hints.disable()
 flow=new FlowComponent()
 flow.x=0
 flow.y=0
-
-	
+defaltPackageStates="VOD"
+currentPackage="VOD"	
 isLogin=false
-
+##
+VODBig_Buy_State=["VOD_ContinuePlay","VODBuy_FirstPlay"]
+TVODBig_Buy_State=["TVOD_ContinuePlay","TVODBuy"]
+##
 sideMenu=new Layer
 	width: 310
 	height: Screen.height
@@ -22,7 +30,12 @@ BlackMask=new Layer
 	backgroundColor: "Black"
 	opacity: 0.6
 	visible: false
-
+animationSideMenu = new Animation sideMenu,
+	x: 0
+	options:
+		curve:"ease-in"
+		time:0.15
+animationSideMenuR = animationSideMenu.reverse()
 BuildControl_SideMenu=()->
 #組裝SideMenu兩種狀態元件，要在Login flow開始前執行
 
@@ -47,8 +60,43 @@ BuildControl_SideMenu=()->
 		else
 			this.subLayersByName("SideMenu_VIP")[0].visible=false
 			this.subLayersByName("SideMenu_NotLogin")[0].visible=true
+flowMain=new FlowComponent
+	size: Screen.size
+	scrollHorizontal:false
+	visible: false
+BuildContent_Description=()->
+	
+	MainContentDescription.states.LIVE=
+		opacity: 1
+	MainContentDescription.states.TVOD=
+		opacity: 1
+	MainContentDescription.states.VOD=
+		opacity: 1
+	MainContentDescription.states.SPORT=
+		opacity: 1
+	for sub in MainContentDescription.children
+		sub.opacity=0
+	MainContentDescription.on Events.StateWillSwitch,(from, to, states)->
+		if from == to
+			return
+		for sub in this.children
+			if sub.opacity==1
+				sub.animate
+					opacity:0
+					scale:0
+					options:
+						time:0.1
+						curve:"easy-out"
+		#print "State_"+to
+		this.subLayersByName("DState_"+to)[0].animate
+			opacity:1
+			scale:1
+			options:
+				time:0.2
+				curve:"easy-in"
 
 
+	MainContentDescription.stateSwitch(defaltPackageStates)
 Compose_FloatingDot=()->
 #組裝成會隨著page移動的指標點元件邏輯 Compose_FloatingDot()
 	for layer in DotBG.children
@@ -80,6 +128,8 @@ BuildContent_HeadTitle=()->
 	NaviTitleContent.states.LIVE=
 		opacity: 1
 	NaviTitleContent.states.TVOD=
+		opacity: 1
+	NaviTitleContent.states.SPORT=
 		opacity: 1
 	NaviTitleContent.states.VOD=
 		opacity: 1
@@ -133,12 +183,56 @@ BuildHomeContentVODInfo=()->
 	ComposeHorscrollContent(MostWatch_Child,MostWatch_ChildContents)	
 	ComposeHorscrollContent(TVODFeature,TVODFeatureContents)
 	#電影
+	
+	for sub in Content_VOD_OtherContents.children
+		sub.on Events.Click,->
+			ComposeMovieInfoPage(Utils.randomChoice(VODBig_Buy_State))
+			
+	for sub in Content_VOD_Movie_Curration1Content.children
+		sub.on Events.Click,->
+			ComposeMovieInfoPage(Utils.randomChoice(VODBig_Buy_State))
+	for sub in Content_VOD_Movie_Curration2Contents.children
+		sub.on Events.Click,->
+			ComposeMovieInfoPage(Utils.randomChoice(VODBig_Buy_State))
+	for sub in Content_VOD_Movie_HotContents.children
+		sub.on Events.Click,->
+			ComposeMovieInfoPage(Utils.randomChoice(VODBig_Buy_State))
+	for sub in Content_VOD_Movie_NewestContents.children
+		sub.on Events.Click,->
+			ComposeMovieInfoPage(Utils.randomChoice(VODBig_Buy_State))
+	for sub in Content_VOD_Movie_PromoteContents.children
+		sub.on Events.Click,->
+			ComposeMovieInfoPage(Utils.randomChoice(VODBig_Buy_State))
+											
 	ComposeHorscrollContent(Content_VOD_Other,Content_VOD_OtherContents)
 	ComposeHorscrollContent(Content_VOD_Movie_Curration1,Content_VOD_Movie_Curration1Content)
 	ComposeHorscrollContent(Content_VOD_Movie_Curration2,Content_VOD_Movie_Curration2Contents)
 	ComposeHorscrollContent(Content_VOD_Movie_Hot,Content_VOD_Movie_HotContents)
 	ComposeHorscrollContent(Content_VOD_Movie_Newest,Content_VOD_Movie_NewestContents)
 	ComposeHorscrollContent(Content_VOD_Movie_Promote,Content_VOD_Movie_PromoteContents)
+#TVOD
+	for sub in ContentTVODs_Rent_NewestContents.children
+		sub.on Events.Click,->
+			ComposeMovieInfoPage(Utils.randomChoice(TVODBig_Buy_State))
+			
+	for sub in ContentTVODs_Rent_FavoriteContents.children
+		sub.on Events.Click,->
+			ComposeMovieInfoPage(Utils.randomChoice(TVODBig_Buy_State))
+	for sub in ContentTVODs_RentContents.children
+		sub.on Events.Click,->
+			ComposeMovieInfoPage(Utils.randomChoice(TVODBig_Buy_State))
+	for sub in ContentTVODs_HotContents.children
+		sub.on Events.Click,->
+			ComposeMovieInfoPage(Utils.randomChoice(TVODBig_Buy_State))
+	ComposeHorscrollContent(ContentTVODs_Rent_Newest,ContentTVODs_Rent_NewestContents)
+	ComposeHorscrollContent(ContentTVODs_Rent_Favorite,ContentTVODs_Rent_FavoriteContents)
+	ComposeHorscrollContent(ContentTVODs_Rent,ContentTVODs_RentContents)
+	ComposeHorscrollContent(ContentTVODs_Hot,ContentTVODs_HotContents)
+	ComposeHorscrollContent(ContentTVODs_Curration1,ContentTVODs_Curration1Contents)
+	ComposeHorscrollContent(ContentTVODs_Curration2,ContentTVODs_Curration2Contents)
+	ComposeHorscrollContent(ContentTVODs_Other,ContentTVODs_OtherContents)
+	
+
 #戲劇
 	ComposeHorscrollContent(VOD_Drama_OtherPromote,VOD_Drama_OtherPromoteContents)
 	ComposeHorscrollContent(VOD_Drama_Curration1,VOD_Drama_Curration1Contents)
@@ -149,8 +243,325 @@ BuildHomeContentVODInfo=()->
 	ComposeHorscrollContent(VOD_Drama_Newest,VOD_Drama_NewestContent)
 	ComposeHorscrollContent(VOD_DramaPromote,VOD_DramaPromoteContents)
 	ComposeHorscrollContent(VOD_Drama_Filter,VOD_Drama_FilterContents)	
-																
+#LIVE
+	ComposeHorscrollContent(ContentLIVEs_Favorites,ContentLIVEs_Favorites_Contents)
+	ComposeHorscrollContent(ContentLIVEs_Free,ContentLIVEs_FreeContents)
+	ComposeHorscrollContent(ContentSPORT_Euro_RealTime,ContentSPORT_Euro_RealTimeContents)
+	ComposeHorscrollContent(SportEuro_Fentasic,SportEuro_FentasicContents)
+	ComposeHorscrollContent(ContentSPORT_RealTime,ContentSPORT_RealTimeContents)
+	ComposeHorscrollContent(ContentSPORT_Feature_Fantasic,ContentSPORT_Feature_FantasicContents)
+	ComposeHorscrollContent(ContentSPORT_Other,ContentSPORT_OtherContents)
+Compose_HeaderFunction=()->
+	
+	FunctionInBar.states.Curration=
+		opacity: 1
+	FunctionInBar.states.Main=
+		opacity: 1
+	for sub in FunctionInBar.children
+		sub.opacity=0
+	FunctionInBar.on Events.StateWillSwitch,(from, to, states)->
+		for sub in this.children
+			if sub.opacity==1
+				sub.animate
+					opacity:0
+					scale:0
+					options:
+						time:0.1
+						curve:"easy-out"
+		this.subLayersByName("FunctionInBar_State_"+to)[0].animate
+			opacity:1
+			scale:1
+			options:
+				time:0.2
+				curve:"easy-in"
+	FunctionInBar.stateSwitch("Main")
+Compose_LIVEClipContent=()->
+	ContentLIVEs_Catogory_News.clip=true
+	ContentLIVEs_Catogory_News.height=55
+	ContentLIVEs_Catogory_Summary.clip=true
+	ContentLIVEs_Catogory_Summary.height=55
+	ContentLIVEs_Catogory_Summary.y=ContentLIVEs_Catogory_News.y+10
+	index=0
+	ContentLIVEs_Catogory_NewsTitleArrow.expanded=false
+
+	for sib in ContentLIVEs_Catogory_News.siblings
+		index=index+1
+		sib.y=ContentLIVEs_Catogory_News.y*index+10*index+ContentLIVEs_Catogory_News.height*index
+	ContentLIVEs_Catogory_SummaryTitleArrow.on Events.Click,->
+		this.expanded=!this.expanded
+		if this.expanded==false
+			ContentLIVEs_Catogory_Summary.height=ContentLIVEs_Catogory_SummaryTitle.height+ContentLIVEs_Catogory_SummaryContent.height
+			ContentLIVEs_Catogory_SummaryTitleArrow.animate
+				rotation: -180
+		else
+			ContentLIVEs_Catogory_Summary.height=ContentLIVEs_Catogory_SummaryTitle.height
+			ContentLIVEs_Catogory_SummaryTitleArrow.animate
+				rotation: 0					
+		index=0
+		previousLayer=ContentLIVEs_Catogory_News
+		for sib in ContentLIVEs_Catogory_News.siblings
+			index=index+1
+			sib.y=previousLayer.y+10+previousLayer.height
+			previousLayer=sib
+					
+		scrollHomeContent.updateContent()
+	ContentLIVEs_Catogory_NewsTitleArrow.on Events.Click,->
+		this.expanded=!this.expanded
+		if this.expanded==false
+			ContentLIVEs_Catogory_News.height=ContentLIVEs_Catogory_NewsTitle.height+ContentLIVEs_Catogory_NewsContent.height
+			ContentLIVEs_Catogory_NewsTitleArrow.animate
+				rotation: -180
+				options:
+					time:0.2	
+		else
+			ContentLIVEs_Catogory_News.height=ContentLIVEs_Catogory_NewsTitle.height
+			ContentLIVEs_Catogory_NewsTitleArrow.animate
+				rotation: 0
+				options:
+					time:0.2						
+		index=0
+		previousLayer=ContentLIVEs_Catogory_News
+		for sib in ContentLIVEs_Catogory_News.siblings
+			index=index+1
+			sib.y=previousLayer.y+10+previousLayer.height
+			previousLayer=sib
+					
+		scrollHomeContent.updateContent()
+	
+Compose_MainSelectionFocusBarEvent=()->
+	MainContentSelection_VOD_FocusBar.states.TVOD=
+		opacity: 1
+	MainContentSelection_VOD_FocusBar.states.VOD=
+		opacity: 1
+
+	for sub in MainContentSelection_VOD_FocusBar.children
+		sub.opacity=0
+	MainContentSelection_VOD_FocusBar.on Events.StateWillSwitch,(from, to, states)->
+
+		if from == to
+			return
+		
+		for sub in this.children
+			if sub.opacity==1
+				sub.animate
+					opacity:0
+					scale:0
+					options:
+						time:0.1
+						curve:"easy-out"
+		this.subLayersByName("FocusBarState_"+to)[0].animate
+			opacity:1
+			scale:1
+			options:
+				time:0.2
+				curve:"easy-in"
+
+
+	MainContentSelection_VOD_FocusBar.stateSwitch("VOD")
+
+SettingCurrationPage=(contentPage,addFloat)->
+	jump=FixTitle.height
+	scroll=new ScrollComponent
+		width: Screen.width
+		height: Screen.height-jump
+		scrollHorizontal: false
+		name:"scrollContent"
+	contentPage.parent=scroll.content
+	scroll.content.draggable.directionLock = true
+	scroll.content.draggable.directionLockThreshold = {x:10, y:10}
+	scroll.mouseWheelEnabled = false
+	scroll.content.draggable.momentumOptions = {friction: 10}
+	if addFloat
+		layerMain=new Layer
+			width: Screen.width
+			height: (Screen.height-jump)
+		scroll.parent=layerMain
+		layerMore=MoreCurration.copy()
+		layerMore.name="LayerMore"
+		MoreCurration.destroy()
+		layerMore.visible=true
+		layerMore.y=607-jump
+		layerMore.parent=layerMain
+		return layerMain
+	else		
+		return scroll
+ComposeCurrationPage=()->
+	jump=FixTitle.height
+	#設定pagecomponent的scrollHorizontal/scrollVertical 避免移動的時候晃來晃去
+	pageCurration=new PageComponent
+		width: Screen.width
+		height: Screen.height-jump
+		parent:MainContent_Curration
+		scrollHorizontal: false
+		scrollVertical: false
+		name:"pageCurration"
+	pageCurration.content.draggable.directionLock = true
+	pageCurration.content.draggable.directionLockThreshold = {x:10, y:10}
+	pageCurration.mouseWheelEnabled = false
+	pageCurration.content.draggable.momentumOptions = {friction: 10}
+	pageERA=SettingCurrationPage(ERAContent,true)
+	berlin=SettingCurrationPage(BerlinContent,true)
+	gma=SettingCurrationPage(GMACurrationContent,true)
+	original=SettingCurrationPage(MainContent_CurrationList,false)
+	pageERA.subLayersByName("LayerMore")[0].on Events.Click,->
+		pageCurration.snapToPage(original)
+	berlin.subLayersByName("LayerMore")[0].on Events.Click,->
+		pageCurration.snapToPage(original)
+	gma.subLayersByName("LayerMore")[0].on Events.Click,->
+		pageCurration.snapToPage(original)			
+	ERAEVENTBTN.on Events.Click,->
+		pageCurration.snapToPage(pageERA)
+
+	BERLINEVENTBTN.on Events.Click,->
+		pageCurration.snapToPage(berlin)
+	GMABTN.on Events.Click,->
+		pageCurration.snapToPage(gma)			
+	pageCurration.addPage(original)	
+	pageCurration.addPage(gma)	
+	pageCurration.addPage(berlin)	
+	pageCurration.addPage(pageERA)				
+		
+	ImportantAnnounceCurration.bringToFront()
+	
+	ComposeHorscrollContent(GMACurrationContentRelated,GMACurrationContentRelatedContents)
+	ComposeHorscrollContent(ERAContent_Vote,ERAContent_VoteContents)
+	ComposeHorscrollContent(ERAContentRelated,ERAContentRelatedContents)
+	ERAVoteEntry.on Events.Click,->
+		flowMain.visible=true
+		flowMain.showNext(ERAVotePage)
+	VOTETITLE.on Events.Click,->
+		flowMain.showPrevious()
+		flowMain.visible=false
+		
+
+
 			
+ComposeSideMenuEvent=()->
+
+	
+	SideMenu_TV.on Events.Click,->
+		MainContentHome.visible=true
+		MainContentHome.bringToFront()
+		MainContent_Curration.visible=false
+		#ShareEvent是策展在用
+		FunctionInBar.stateSwitch("Main")
+		currentPackage="LIVE"
+		oldPage=MainContentHomeVODInfo.subLayersByName("LIVEPage")[0]
+		oldPage.visible=true
+		oldPage.bringToFront()
+		NaviTitleContent.stateSwitch("HamiVideo")
+		MainContentSelectionStates.stateSwitch("LIVE")
+		MainContentDescription.stateSwitch("LIVE")
+		MainContentSelection_VOD_FocusBar.stateSwitch("VOD")
+		Utils.delay 0.2,->
+			animationSideMenuR.start()
+			BlackMask.visible=false
+	SideMenu_Sport.on Events.Click,->
+		MainContentHome.visible=true
+		MainContentHome.bringToFront()
+		MainContent_Curration.visible=false
+		#ShareEvent是策展在用
+		FunctionInBar.stateSwitch("Main")		
+		currentPackage="SPORT"
+		oldPage=MainContentHomeVODInfo.subLayersByName("SPORTPage")[0]
+		oldPage.visible=true
+		oldPage.bringToFront()
+		NaviTitleContent.stateSwitch("HamiVideo")
+		MainContentSelectionStates.stateSwitch("SPORT")
+		MainContentDescription.stateSwitch("SPORT")
+		MainContentSelection_VOD_FocusBar.stateSwitch("VOD")
+		Utils.delay 0.2,->
+			animationSideMenuR.start()
+			BlackMask.visible=false
+	SideMenu_VOD.on Events.Click,->
+		MainContentHome.visible=true
+		MainContentHome.bringToFront()
+		MainContent_Curration.visible=false
+		#ShareEvent是策展在用
+		FunctionInBar.stateSwitch("Main")			
+		#這裡可以用regular finder 去調整
+		currentPackage="VOD"
+		oldPage=MainContentHomeVODInfo.subLayersByName("VODPage")[0]
+		oldPage.visible=true
+		oldPage.bringToFront()
+		NaviTitleContent.stateSwitch("HamiVideo")
+		MainContentSelectionStates.stateSwitch("VOD")
+		MainContentSelection_VOD_FocusBar.stateSwitch("VOD")
+		MainContentDescription.stateSwitch("VOD")
+		Utils.delay 0.2,->
+			animationSideMenuR.start()
+			BlackMask.visible=false
+		#scrollHomeContent.sendToBack()
+	SideMenu_TVOD.on Events.Click,->
+		MainContentHome.visible=true
+		MainContentHome.bringToFront()
+		MainContent_Curration.visible=false
+		#ShareEvent是策展在用
+		FunctionInBar.stateSwitch("Main")			
+		currentPackage="TVOD"
+		oldPage=MainContentHomeVODInfo.subLayersByName("TVODPage")[0]
+		oldPage.visible=true
+		oldPage.bringToFront()
+		NaviTitleContent.stateSwitch("HamiVideo")
+		MainContentSelectionStates.stateSwitch("TVOD")
+		MainContentDescription.stateSwitch("TVOD")
+		MainContentSelection_VOD_FocusBar.stateSwitch("TVOD")
+		Utils.delay 0.2,->
+			animationSideMenuR.start()
+			BlackMask.visible=false
+	SideMenu_Curration.on Events.Click,->
+		if isCloseAnnounce
+			jump=FixTitle.height
+			MainContent_CurrationItems.y=10
+			ImportantAnnounceCurration.visible=false
+		MainContent_Curration.visible=true
+		MainContentHome.visible=false
+		FunctionInBar.stateSwitch("Curration")
+		MainContent_Curration.bringToFront()
+		FixTitle.bringToFront()
+		page=MainContent_Curration.subLayersByName("pageCurration")[0]
+		page.snapToPage()		
+		Utils.delay 0.2,->
+			animationSideMenuR.start()
+			BlackMask.visible=false
+		
+
+			
+BuildContent_MainSelection=()->
+	
+	MainContentSelectionStates.states.LIVE=
+		opacity: 1
+	MainContentSelectionStates.states.TVOD=
+		opacity: 1
+	MainContentSelectionStates.states.VOD=
+		opacity: 1
+	MainContentSelectionStates.states.SPORT=
+		opacity: 1
+	for sub in MainContentSelectionStates.children
+		sub.opacity=0
+	MainContentSelectionStates.on Events.StateWillSwitch,(from, to, states)->
+
+		if from == to
+			return
+		
+		for sub in this.children
+			if sub.opacity==1
+				sub.animate
+					opacity:0
+					scale:0
+					options:
+						time:0.1
+						curve:"easy-out"
+		this.subLayersByName("MainContentSelection_State_"+to)[0].animate
+			opacity:1
+			scale:1
+			options:
+				time:0.2
+				curve:"easy-in"
+		this.subLayersByName("MainContentSelection_State_"+to)[0].bringToFront()
+
+
+	MainContentSelectionStates.stateSwitch(defaltPackageStates)			
 BuildContent_BannerBar=(contents,parent)->
 #組裝Banner內容
 	for adbanner in contents.children		
@@ -199,7 +610,7 @@ BuildControl_FloatSelectVODBar=(isSnap)->
 		 
 	else
 		MainContentSelection.y=NaviBTN.y+NaviBTN.height
-		MainContentSelection.parent=null
+		MainContentSelection.parent=R_02_01_home_subs_vod#null
 		
 			
 scrollHomeContent.on "scroll",->
@@ -210,7 +621,7 @@ scrollHomeContent.on "scroll",->
 	hiddenPoint=MainContentHomeVODInfo.y+MainContentDescription.height
 	if (!isCloseAnnounce)
 		if this.y<= -(hiddenPoint)
-			NaviTitleContent.stateSwitch("VOD")
+			NaviTitleContent.stateSwitch(currentPackage)
 			BuildControl_FloatSelectVODBar(false)
 		else
 			NaviTitleContent.stateSwitch("HamiVideo")
@@ -218,7 +629,8 @@ scrollHomeContent.on "scroll",->
 	else
 		
 		if this.y<= -(hiddenPoint-gap)
-			NaviTitleContent.stateSwitch("VOD")
+			print NaviTitleContent.states.current
+			NaviTitleContent.stateSwitch(currentPackage)
 			BuildControl_FloatSelectVODBar(false)
 		else
 			NaviTitleContent.stateSwitch("HamiVideo")
@@ -249,7 +661,7 @@ BuildControl_VODPage=()->
 	index=0
 	layerHome=null
 	arrayVOD=[3]
-	
+
 	for sub in ContentVODs.children
 		sub.parent=null
 		sub.x=0
@@ -266,8 +678,9 @@ BuildControl_VODPage=()->
 		if index==0
 			layerHome=layerParent
 		index=index+1
-	VODPage.snapToPage(arrayVOD[0])
 
+	VODPage.snapToPage(arrayVOD[0])
+	
 	MainContentSelection_VOD_Feature.on Events.Click,->
 		MainContentHomeVODInfo.subLayersByName("VODPage")[0].snapToPage(arrayVOD[0])
 		MainContentSelection_VOD_FocusBar.animate
@@ -286,11 +699,158 @@ BuildControl_VODPage=()->
 			x:166
 			options:
 				time:0.2	
+
+
+BuildControl_TVODPage=()->
+	oriY=ContentVODs.y
+	oriX=ContentVODs.x
+	TVODPage=new PageComponent
+		width: Screen.width
+		height: ContentVODs.height
+		x:oriX
+		y:oriY
+		scrollVertical: false
+		scrollHorizontal: false
+		clip: false
+		name:"TVODPage"
+		visible: false
+	TVODPage.parent=MainContentHomeVODInfo
+	index=0
+	layerHome=null
+	arrayVOD=[3]
 	
+	for sub in ContentTVODsContents.children
+		sub.parent=null
+		sub.x=0
+		sub.y=0
+		
+		layerParent=new Layer
+			width: Screen.width
+			height: sub.height
+			name:"page"+index
+		
+		sub.parent=	layerParent
+		arrayVOD[index]=layerParent
+		TVODPage.addPage(layerParent,"right")
+		if index==0
+			layerHome=layerParent
+		index=index+1
+	TVODPage.snapToPage(arrayVOD[0])
+
+	MainContentSelection_State_TVOD_FeatureBTN.on Events.Click,->
+		MainContentHomeVODInfo.subLayersByName("TVODPage")[0].snapToPage(arrayVOD[0])
+		MainContentSelection_VOD_FocusBar.animate
+			x:28
+			options:
+				time:0.2
+	MainContentSelection_State_TVOD_StoryBTN.on Events.Click,->
+		MainContentHomeVODInfo.subLayersByName("TVODPage")[0].snapToPage(arrayVOD[1])			
+		MainContentSelection_VOD_FocusBar.animate
+			x:97
+			options:
+				time:0.2
+
+BuildControl_LIVEPage=()->
+	oriY=ContentVODs.y
+	oriX=ContentVODs.x
+	LIVEPage=new PageComponent
+		width: Screen.width
+		height: ContentVODs.height
+		x:oriX
+		y:oriY
+		scrollVertical: false
+		scrollHorizontal: false
+		clip: false
+		name:"LIVEPage"
+		visible: false
+	LIVEPage.parent=MainContentHomeVODInfo
+	index=0
+	layerHome=null
+	arrayVOD=[2]
+	
+	for sub in ContentLIVE.children
+		sub.parent=null
+		sub.x=0
+		sub.y=0
+		
+		layerParent=new Layer
+			width: Screen.width
+			height: sub.height
+			name:"page"+index
+		
+		sub.parent=	layerParent
+		arrayVOD[index]=layerParent
+		LIVEPage.addPage(layerParent,"right")
+		if index==0
+			layerHome=layerParent
+		index=index+1
+	LIVEPage.snapToPage(arrayVOD[0])
+	MainContentSelection_State_LIVE_Feature.on Events.Click,->
+		MainContentHomeVODInfo.subLayersByName("LIVEPage")[0].snapToPage(arrayVOD[0])
+		MainContentSelection_VOD_FocusBar.animate
+			x:28
+			options:
+				time:0.2
+	MainContentSelection_State_LIVE_News.on Events.Click,->
+		MainContentHomeVODInfo.subLayersByName("LIVEPage")[0].snapToPage(arrayVOD[1])			
+		MainContentSelection_VOD_FocusBar.animate
+			x:97
+			options:
+				time:0.2
+BuildControl_SportPage=()->
+	oriY=ContentVODs.y
+	oriX=ContentVODs.x
+	SPORTPage=new PageComponent
+		width: Screen.width
+		height: ContentVODs.height
+		x:oriX
+		y:oriY
+		scrollVertical: false
+		scrollHorizontal: false
+		clip: false
+		name:"SPORTPage"
+		visible: false
+	SPORTPage.parent=MainContentHomeVODInfo
+	index=0
+	layerHome=null
+	arrayVOD=[2]
+	
+	for sub in ContentSPORT.children
+		sub.parent=null
+		sub.x=0
+		sub.y=0
+		
+		layerParent=new Layer
+			width: Screen.width
+			height: sub.height
+			name:"page"+index
+		
+		sub.parent=	layerParent
+		arrayVOD[index]=layerParent
+		SPORTPage.addPage(layerParent,"right")
+		if index==0
+			layerHome=layerParent
+		index=index+1
+	SPORTPage.snapToPage(arrayVOD[0])
+	MainContentSelection_State_SPORT_FeatureBTN.on Events.Click,->
+		MainContentHomeVODInfo.subLayersByName("SPORTPage")[0].snapToPage(arrayVOD[0])
+		MainContentSelection_VOD_FocusBar.animate
+			x:28
+			options:
+				time:0.2
+	MainContentSelection_State_SPORT_EuroBTN.on Events.Click,->
+		MainContentHomeVODInfo.subLayersByName("SPORTPage")[0].snapToPage(arrayVOD[1])			
+		MainContentSelection_VOD_FocusBar.animate
+			x:97
+			options:
+				time:0.2
+				
 Compose_VODFeature=()->
 	Content_VOD_Feature.visible=true
 Compose_HomePage=()->
+	MainContent_Curration.visible=false
 	Compose_VODFeature()
+	ComposeCurrationPage()
 	Compose_PaddingBannerBar()
 	#Compose_AnnounceEvent()
 	ComposeAnnounceMessagePopup()
@@ -299,7 +859,59 @@ Compose_HomePage=()->
 	BuildHomeContentVODInfo()
 	BuildControl_VODSelectionBar()
 	BuildControl_VODPage()
+	BuildControl_TVODPage()
+	BuildControl_LIVEPage()
+	BuildControl_SportPage()
 	scrollHomeContent.sendToBack()
+	ComposeSideMenuEvent()
+	Compose_HeaderFunction()
+	Compose_MainSelectionFocusBarEvent()
+	MoreCurration.visible=false
+	Compose_LIVEClipContent()
+BuildControl_RatingControl=(stars,gap)->
+
+	IN=0
+	RatingBar=new Layer
+		width: stars*20+gap*(stars-1)
+		height: 20
+		backgroundColor: "transparent"
+	indexT=stars
+	for sub in [0...indexT]
+		
+		star=new TextLayer
+			text:""
+			fontFamily:"material"
+			parent:RatingBar
+			x:IN*(gap+20)
+			y:0
+			fontSize: 20
+			color: '#50E3C2'
+			name:"StarMe"+(IN+1)
+		star.centerY()
+		star.states.NULL=
+			color:	'#888888'
+		star.states.NOSELECT=
+			color:	'#50E3C2'
+			text:""
+		star.states.SELECT=
+			color:	'#50E3C2'
+			text: ''
+		star.stateSwitch("NULL")
+		star.hintStar=IN
+		IN=IN+1
+				
+	for star in RatingBar.children	
+		star.on Events.Click,->
+			for sib in RatingBar.children
+				sib.stateSwitch("NOSELECT")
+			toSrar=0
+			for sib in RatingBar.children
+				if toSrar==this.hintStar
+					break
+				sib.stateSwitch("SELECT")
+				toSrar=toSrar+1
+			this.stateSwitch("SELECT")
+	return RatingBar
 ComposeAnnounceMessagePopup=()->
 	AnnouncePopWindow=new Layer
 		size: Screen.size
@@ -351,12 +963,7 @@ Compose_LoginFlow=()->
 	Login.on Events.Click,->
 		flow.showOverlayCenter(R_02_01_home_subs_vod,false)
 		sideMenu.stateSwitch("VIP")
-	animationSideMenu = new Animation sideMenu,
-		x: 0
-		options:
-			curve:"ease-in"
-			time:0.15
-	animationSideMenuR = animationSideMenu.reverse()
+
 # Nothing will move until we start 
 	
 	BlackMask.on Events.Click,->
@@ -379,14 +986,138 @@ Compose_LoginFlow=()->
 
 	else
 		sideMenu.stateSwitch("NOLOGIN")
+ComposeMovieInfoPage=(VODState)->
+	VODInfoPageC=VODInfoPage.copy()
+	layerMovieInfo=new Layer
+		size: Screen.size
+	scrollMovieInfo=new ScrollComponent
+		size: Screen.size
+		scrollHorizontal: false
+		scrollVertical: true
+		parent: layerMovieInfo
+	BigPlayC=VODInfoPageC.subLayersByName("BigPlay")[0]# BigPlay.copy()
+	BigPlayC.name="BigPlayC"
+	BigPlayC.states.VOD_ContinuePlay=
+		opacity:1
+	BigPlayC.states.VODBuy_FirstPlay=
+		opacity:1		
+	BigPlayC.states.TVOD_ContinuePlay=
+		opacity:1
+	BigPlayC.states.TVODBuy=
+		opacity:1
+	for sub in BigPlayC.children
+		sub.opacity=0	
+	BigPlayC.on Events.StateWillSwitch,(from, to, states)->
+		for sub in this.children
+			if sub.opacity==1
+				sub.animate
+					opacity:0
+					scale:0
+					options:
+						time:0.1
+						curve:"easy-out"
+		#print "State_"+to
+		this.subLayersByName("BigPlayState_"+to)[0].animate
+			opacity:1
+			scale:1
+			options:
+				time:0.2
+				curve:"easy-in"
+	BigPlayC.stateSwitch(VODState)
+									
+	scrollMovieInfo.content.draggable.directionLock = true
+	scrollMovieInfo.content.draggable.directionLockThreshold = {x:10, y:10}
+	scrollMovieInfo.mouseWheelEnabled = false
+	scrollMovieInfo.content.draggable.momentumOptions = {friction: 10}	
+	SupportDeviceWindowC=VODInfoPageC.subLayersByName("SupportDeviceWindow")[0]
+	SupportDeviceWindowC.parent=null
+	SupportDeviceWindowC.visible=false
+	StatusBarMovieInfoC=VODInfoPageC.subLayersByName("StatusBarMovieInfo")[0]
+	StatusBarMovieInfoC.y=0
+	MovieTopTitleInfoC=VODInfoPageC.subLayersByName("MovieTopTitleInfo")[0]
+	
+	StatusBarMovieTopTitleInfoC=MovieTopTitleInfoC.subLayersByName("StatusBarMovieTopTitleInfo")[0]
+	StatusBarMovieTopTitleInfoC.y=0
+	MovieTopTitleInfoC.parent=layerMovieInfo
+	MovieTopTitleInfoC.opacity=0
+	MovieTopTitleInfoC.y=0
+	StatusBarMovieInfoC.parent=layerMovieInfo
+	
+	VODInfoPageC.parent=scrollMovieInfo.content
+	VODInfoPageC.backgroundColor="#181818"
+	DescriptionVBlockC=VODInfoPageC.subLayersByName("DescriptionVBlock")[0]
+	DescriptionVBlockC.clip=true
+	originalBlockH=DescriptionVBlockC.height
+	originalBlockW=DescriptionVBlockC.width
+	DescriptionVBlockC.height=50
+	DescriptionVBlockC.width=ShortDescriptionShow.width
+	LongDescriptionC=DescriptionVBlockC.subLayersByName("LongDescription")[0]
+	LongDescriptionC.visible=false
+	origialBigPlayY=BigPlay.y
+	BigPlayC.parent=layerMovieInfo
+	
+	DescriptionCollapseC=DescriptionVBlockC.subLayersByName("ShortDescriptionShow")[0].subLayersByName("DescriptionCollapse")[0]
+	RelatedMovieInMovieInfoC=VODInfoPageC.subLayersByName("RelatedMovieInMovieInfo")[0]
+	MyRationC=VODInfoPageC.subLayersByName("MyRation")[0]	
+	DescriptionCollapseC.on Events.Click,->
+		DescriptionVBlockC.height=originalBlockH
+		DescriptionVBlockC.width=originalBlockW
+		ShortDescriptionC=DescriptionVBlockC.subLayersByName("ShortDescriptionShow")[0].subLayersByName("ShortDescription")[0]
+		ShortDescriptionC.visible=false
+		
+		LongDescriptionC.visible=true
+		this.visible=false
+		
+		MyRationC.y=(DescriptionVBlockC.maxY+40)
+		RelatedMovieInMovieInfoC.y=(MyRationC.maxY+60)
+	scrollMovieInfo.on "scroll",->
+		if this.y<=-150
+			MovieTopTitleInfoC.opacity=Utils.modulate(Math.abs(this.y), [150, 160], [0, 1],true)
+			BigPlayC.parent=layerMovieInfo
+			BigPlayC.placeBefore(MovieTopTitleInfoC)
+			BigPlayC.y=Utils.modulate(Math.abs(this.y), [150, 160], [90, 70],true)
+		else
+			MovieTopTitleInfoC.opacity=0
+			BigPlayC.parent=VODInfoPageC
+			BigPlayC.y=origialBigPlayY			
+	RelatedMovieInMovieInfoContentsC=RelatedMovieInMovieInfoC.subLayersByName("RelatedMovieInMovieInfoContents")[0]  
+	#if RelatedMovieInMovieInfoContents.children.length==0
+	#else
+	ComposeHorscrollContent(RelatedMovieInMovieInfoC,RelatedMovieInMovieInfoContentsC)	
+	BTNSupportDevicesC=VODInfoPageC.subLayersByName("BTNSupportDevices")[0]
+	BTNSupportDevicesC.on Events.Click,->
+		SupportDeviceWindowC.visible=true
+	SupportDeviceWindowC.on Events.Click,->
+		this.visible=false
+	BackBTNMovieInfoC=VODInfoPageC.subLayersByName("BackBTNMovieInfo")[0]
+	RatingStarsC=MyRationC.subLayersByName("RatingStars")[0]
+	
+	newStarBar=BuildControl_RatingControl(5,30)
+	newStarBar.x=RatingStars.x
+	newStarBar.y=RatingStars.y
+	newStarBar.parent=RatingStarsC.parent
+	RatingStarsC.destroy()
+	BackBTNMovieInfoC.on Events.Click,->
+		layerMovieInfo.destroy()
+		scrollMovieInfo.destroy()
+		BigPlayC.destroy()
+		DescriptionCollapseC.destroy()
+		BTNSupportDevicesC.destroy()
+		SupportDeviceWindowC.destroy()
+		VODInfoPageC.destroy()
+		
 Home=()->
 	flow.showNext(R_01_01_login_phone)
 	BuildControl_SideMenu()
 	BuildContent_HeadTitle()
+	BuildContent_Description()
+	BuildContent_MainSelection()
 	Compose_LoginFlow()
 	
 
 	Compose_HomePage()
 	ComposeAnnounceMessagePopup()
+	
 
+	
 Home()
