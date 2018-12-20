@@ -1,11 +1,15 @@
+
+sketch = Framer.Importer.load("imported/HamiVideo2019@2x", scale: 1)
+Utils.globalLayers sketch
+
+ChannelPlayerControl = require 'ChannelPlayerControl'
 Utils.insertCSS """
 	@font-face {
 		font-family: "material";
 		src: url("fonts/material.ttf");
 	}
 """
-sketch = Framer.Importer.load("imported/HamiVideo2019@2x", scale: 1)
-Utils.globalLayers sketch
+
 Framer.Extras.Preloader.enable()
 Framer.Extras.Hints.disable()
 flow=new FlowComponent()
@@ -17,6 +21,7 @@ isLogin=false
 ##
 VODBig_Buy_State=["VOD_ContinuePlay","VODBuy_FirstPlay"]
 TVODBig_Buy_State=["TVOD_ContinuePlay","TVODBuy"]
+sportNewsArray=[R_05_07_subs_sport_news_video,R_05_06_subs_sport_news_image]
 ##
 sideMenu=new Layer
 	width: 310
@@ -168,6 +173,7 @@ ComposeHorscrollContent=(parentObject,layerContainsContent)->
 		height: layerContainsContent.height
 		scrollVertical: false
 		scrollHorizontal: true
+		name:"HorContentScroll"
 	contentScroll.contentInset=
 		right: 15	
 	contentScroll.content.draggable.directionLock = true
@@ -327,7 +333,25 @@ Compose_LIVEClipContent=()->
 			previousLayer=sib
 					
 		scrollHomeContent.updateContent()
+	MoreExcellentContentSPORT_FEATURE.on Events.Click,->
+		flowMain.visible=true
+		flowMain.showNext(R_05_03_subs_sport_vod)
+	MoreExcellentContentSPORT.on Events.Click,->
+		flowMain.visible=true
+		flowMain.showNext(R_05_03_subs_sport_vod)
+	MoreLiveSchedule_Feature.on Events.Click,->
+		flowMain.visible=true
+		flowMain.showNext(R_05_04_subs_sport_live_calendar)
 	
+	More_EUROSchedule.on Events.Click,->
+		flowMain.visible=true
+		flowMain.showNext(R_05_08_subs_game_calendar)
+	BACK_LIVEGAMESCHEDULE.on Events.Click,->
+		flowMain.visible=false
+		flowMain.showPrevious()	
+	BackSportVODS.on Events.Click,->
+		flowMain.visible=false
+		flowMain.showPrevious()
 Compose_MainSelectionFocusBarEvent=()->
 	MainContentSelection_VOD_FocusBar.states.TVOD=
 		opacity: 1
@@ -1106,6 +1130,159 @@ ComposeMovieInfoPage=(VODState)->
 		SupportDeviceWindowC.destroy()
 		VODInfoPageC.destroy()
 		
+ComposeTVChannelProgramList=()->
+	SupportDevice_TV_Channel_ProgramList.visible=false
+	ContentLIVEsHistoryList.on Events.Click,->
+		flowMain.visible=true
+		flowMain.showNext(TV_Channel_ProgramList)	
+	ContentLIVEs_NewsList.on Events.Click,->
+		flowMain.visible=true
+		flowMain.showNext(TV_Channel_ProgramList)
+	for sub in ContentLIVEs_Favorites.subLayersByName("HorContentScroll")[0].content.children
+		sub.on Events.Click,->
+			flowMain.showNext(TV_Channel_ProgramList)
+			flowMain.visible=true
+	BackTV_Channel_ProgramList.on Events.Click,->
+		flowMain.visible=false
+		flowMain.showPrevious()
+	HintSupportDeviceTV_Channel_ProgramList.on Events.Click,->
+		SupportDevice_TV_Channel_ProgramList.visible=true
+	SupportDevice_TV_Channel_ProgramList.on Events.Click,->
+		SupportDevice_TV_Channel_ProgramList.visible=false
+
+ComposeAnimateNews=(isStart)->
+	Video_sport_news_videoCover.bringToFront()
+	if isStart
+		Utils.delay 2,->
+			Video_sport_news_videoCover.visible=false
+			#print Video_sport_news_video.subLayersByName("layerPlayer")[0]
+			R_05_07_subs_sport_news_video.subLayersByName("layerPlayer")[0].Show()
+	else
+		Video_sport_news_videoCover.visible=true
+		
+		R_05_07_subs_sport_news_video.subLayersByName("layerPlayer")[0].STOP()
+
+		
+#賽事、聊天室 0904
+ComposeAllR0904Pagelink=()->
+# 	layerPlayer=BuildControlChannelPlayer("Small")
+# 	layerPlayer.Show()
+# 	layerPlayer.player.muted=true
+# 	layerPlayer.player.loop=true
+	SportPlayer.clip=true
+# 	layerPlayer.parent=SportPlayer			
+	layerPlayerSmall=new ChannelPlayerControl
+		ControlMask:SportPlayerControlMask.copy()
+		Video:"images/SportVoD.mp4"
+		visible:false
+		parent:R_09_04_SportPlayer
+		isrotated:"N"
+	layerPlayerSmall.ori_XX=0
+	layerPlayerSmall.ori_YY=0
+	Back_R_09_04_SportPlayer.on Events.Click,->
+		flowMain.showPrevious()
+		flowMain.visible=false
+	layerPlayerSmall.InitialEvent()
+# 	backBtn=layerPlayerSmall.subLayersByName("LayerPlayerMask")[0].subLayersByName("Back_ChannelPlayer")[0]
+# 	
+# 	backBtn.on Events.Click,->
+# 		#裡面按下Back，要判斷是否為已旋轉，若是已旋轉則轉回去，保持元畫面
+# 		if layerPlayerSmall.rotation==90
+# 			layerPlayerSmall.RotationBack()
+# 		else
+# 			flowMain.showPrevious()
+# 			flowMain.visible=false		
+
+	layerPlayerSmall.bringToFront()	
+	for sub in MainContentHome.subLayersByName("ADComponent_Home")[0].children
+		sub.on Events.Click,->
+			flowMain.visible=true
+			flowMain.showOverlayRight(R_09_04_SportPlayer)
+			Utils.delay 1,->
+				R_09_04_SportPlayerStatus.animate
+					opacity:0
+					options:
+						time:2
+						curve:"easy-out"
+			SportPlayer.visible=false
+			layerPlayerSmall.Show()			
+# 				SportPlayerControlMask.animate
+# 					opacity:0
+# 					options:
+# 						time:2
+# 						curve:"easy-out"
+# 			SportPlayerContent.subLayersByName("SportPlayerContentPlayer")[0].player.currentTime=0
+# 			SportPlayerContent.subLayersByName("SportPlayerContentPlayer")[0].player.play()
+	
+# 	Back_R_09_04_SportPlayer.on Events.Click,->
+# 		flowMain.visible=false
+# 		flowMain.showPrevious()
+# 		SportPlayerControlMask.opacity=1
+# 		R_09_04_SportPlayerStatus.opacity=1
+		
+
+Compose_SportNewsVideoImage=()->
+	layerVideoSport=new ChannelPlayerControl
+		ControlMask:SportPlayerControlMask.copy()
+		Video:"images/SportVoD.mp4"
+		visible:false
+		parent:R_05_07_subs_sport_news_video
+		name:"layerPlayer"
+# 		ori_X:0
+# 		ori_Y:74
+	layerVideoSport.ori_XX=0
+	layerVideoSport.ori_YY=74
+		
+	layerVideoSport.InitialEvent()
+# 	backBtn=layerVideoSport.subLayersByName("LayerPlayerMask")[0].subLayersByName("Back_ChannelPlayer")[0]
+# 	
+# 	backBtn.on Events.Click,->
+# 		#裡面按下Back，要判斷是否為已旋轉，若是已旋轉則轉回去，保持元畫面
+# # 		layerPlayerSmall.doisrotated="Y"
+# # 		print "dddd",layerPlayerSmall.rotation
+# 		if layerVideoSport.rotation==90
+# 			layerVideoSport.RotationBack()
+# 		else
+# 			flowMain.showPrevious()
+# 			flowMain.visible=false		
+
+	Video_sport_news_video.clip=true	
+	
+	for sub in ContentSPORT_Euro_RealTime.subLayersByName("HorContentScroll")[0].content.children
+		
+		sub.on Events.Click,->
+			flowMain.visible=true
+			flowMain.showNext(Utils.randomChoice(sportNewsArray))
+			
+	
+	for sub in ContentSPORT_RealTime.subLayersByName("HorContentScroll")[0].content.children
+		sub.on Events.Click,->
+			flowMain.visible=true
+			layer=Utils.randomChoice(sportNewsArray)
+			if layer==R_05_07_subs_sport_news_video
+				ComposeAnimateNews(true)
+				
+			flowMain.showNext(layer)
+			
+	
+	
+	BACK_R_05_07_subs_sport_news_video.on Events.Click,->
+		flowMain.visible=false
+		flowMain.showPrevious()
+		ComposeAnimateNews(false)
+	BACK_R_05_06_subs_sport_news_image.on Events.Click,->
+		flowMain.visible=false
+		flowMain.showPrevious()
+		
+ComposeChangeTVOrderPage=()->
+	ContentLIVEs_Adjust.on Events.Click,->
+		
+		flowMain.visible=true
+		flowMain.showNext(R_04_05_subs_tv_change_order)
+	
+	ChangeTVOrderBackTilte.on Events.Click,->
+		flowMain.visible=false
+		flowMain.showPrevious()
 Home=()->
 	flow.showNext(R_01_01_login_phone)
 	BuildControl_SideMenu()
@@ -1117,7 +1294,18 @@ Home=()->
 
 	Compose_HomePage()
 	ComposeAnnounceMessagePopup()
-	
-
-	
+	ComposeChangeTVOrderPage()
+	ComposeTVChannelProgramList()
+	Compose_SportNewsVideoImage()
+	ComposeAllR0904Pagelink()
+# 	layerPlayerSmall=new ChannelPlayerControl
+# 		ControlMask:SportPlayerControlMask.copy()
+# 		Video:"images/SportVoD.mp4"
+# 	layerPlayerSmall.Show()
 Home()
+# SportVoD = new VideoLayer
+# 	width: 1280
+# 	height: 720
+# 	video: "images/SportVoD.mp4"
+# 
+# SportVoD.player.play()
