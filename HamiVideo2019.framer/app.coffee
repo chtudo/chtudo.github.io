@@ -9,7 +9,9 @@ Utils.insertCSS """
 		src: url("fonts/material.ttf");
 	}
 """
-
+layerLoading=new Layer
+	size: Screen.size
+	backgroundColor: "#181818"
 Framer.Extras.Preloader.enable()
 Framer.Extras.Hints.disable()
 flow=new FlowComponent()
@@ -21,6 +23,7 @@ isLogin=false
 ##
 VODBig_Buy_State=["VOD_ContinuePlay","VODBuy_FirstPlay"]
 TVODBig_Buy_State=["TVOD_ContinuePlay","TVODBuy"]
+DramaBig_Buy_State=["Drama_ContinuePlay","DramaBuy_FirstPlay"]
 sportNewsArray=[R_05_07_subs_sport_news_video,R_05_06_subs_sport_news_image]
 ##
 sideMenu=new Layer
@@ -240,6 +243,38 @@ BuildHomeContentVODInfo=()->
 	
 
 #戲劇
+	for sub in VOD_Drama_OtherPromoteContents.children
+		sub.on Events.Click,->
+			BuildControl_LoadingMask(Utils.randomNumber(0.5,3) )
+			ComposeDramaInfoPage(Utils.randomChoice(DramaBig_Buy_State))		
+	for sub in VOD_Drama_Curration1Contents.children
+		sub.on Events.Click,->
+			BuildControl_LoadingMask(Utils.randomNumber(0.5,3))
+			ComposeDramaInfoPage(Utils.randomChoice(DramaBig_Buy_State))		
+	for sub in VOD_Drama_Curration2Contents.children
+		sub.on Events.Click,->
+			BuildControl_LoadingMask(Utils.randomNumber(0.5,3))
+			ComposeDramaInfoPage(Utils.randomChoice(DramaBig_Buy_State))		
+	for sub in VOD_Drama_Curration3Contents.children
+		sub.on Events.Click,->
+			BuildControl_LoadingMask(Utils.randomNumber(0.5,3))
+			ComposeDramaInfoPage(Utils.randomChoice(DramaBig_Buy_State))					
+	for sub in VOD_Drama_Curration4Contents.children
+		sub.on Events.Click,->
+			BuildControl_LoadingMask(Utils.randomNumber(0.5,3))
+			ComposeDramaInfoPage(Utils.randomChoice(DramaBig_Buy_State))		
+	for sub in VOD_Drama_HotContent.children
+		sub.on Events.Click,->
+			BuildControl_LoadingMask(Utils.randomNumber(0.5,3))
+			ComposeDramaInfoPage(Utils.randomChoice(DramaBig_Buy_State))		
+	for sub in VOD_Drama_NewestContent.children
+		sub.on Events.Click,->
+			BuildControl_LoadingMask(Utils.randomNumber(0.5,3))
+			ComposeDramaInfoPage(Utils.randomChoice(DramaBig_Buy_State))		
+	for sub in VOD_DramaPromoteContents.children
+		sub.on Events.Click,->
+			BuildControl_LoadingMask(Utils.randomNumber(0.5,3))
+			ComposeDramaInfoPage(Utils.randomChoice(DramaBig_Buy_State))																	
 	ComposeHorscrollContent(VOD_Drama_OtherPromote,VOD_Drama_OtherPromoteContents)
 	ComposeHorscrollContent(VOD_Drama_Curration1,VOD_Drama_Curration1Contents)
 	ComposeHorscrollContent(VOD_Drama_Curration2,VOD_Drama_Curration2Contents)
@@ -869,6 +904,38 @@ BuildControl_SportPage=()->
 			options:
 				time:0.2
 				
+ComposeLoadingPage=()->
+
+	AndroidLoading.parent=layerLoading
+	AndroidLoading.bringToFront()
+	AndroidLoading.center()
+	AndroidLoading.visible=true
+	
+	Utils.interval 0.2,->
+		return if layerLoading.opacity==0
+		layerLoading.bringToFront()
+		AndroidLoading.animate
+			rotation:180*13/0.5
+			options:
+				time:13*0.5
+		#print "Loading",Date()
+# # 	while (layerLoading.opacity==1)
+# 	Utils.interval 1,->
+# 		AndroidLoading.animate
+# 			rotation:180
+# 			options:
+# 				time:0.5
+layerLoading.opacity=0
+BuildControl_LoadingMask=(waitingTime)->
+	layerLoading.opacity=1
+	Utils.delay waitingTime,->
+		layerLoading.animate
+			opacity: 0
+			options: 
+				time:0.5	
+		
+		
+
 Compose_VODFeature=()->
 	Content_VOD_Feature.visible=true
 Compose_HomePage=()->
@@ -1149,7 +1216,165 @@ ComposeTVChannelProgramList=()->
 		SupportDevice_TV_Channel_ProgramList.visible=true
 	SupportDevice_TV_Channel_ProgramList.on Events.Click,->
 		SupportDevice_TV_Channel_ProgramList.visible=false
+ComposeDramaInfoPage=(VODState)->
+	
+	DramaInfoPageC=VODDramaInfoPage.copy()
+	
+	layerDramaInfo=new Layer
+		size: Screen.size
+	scrollDramaInfo=new ScrollComponent
+		size: Screen.size
+		scrollHorizontal: false
+		scrollVertical: true
+		parent: layerDramaInfo
+	BigPlayC=DramaInfoPageC.subLayersByName("BigPlayDrama")[0]# BigPlay.copy()
+	BigPlayC.name="BigPlayDramaC"
+	BigPlayC.states.Drama_ContinuePlay=
+		opacity:1
+	BigPlayC.states.DramaBuy_FirstPlay=
+		opacity:1		
 
+	for sub in BigPlayC.children
+		sub.opacity=0	
+	BigPlayC.on Events.StateWillSwitch,(from, to, states)->
+		for sub in this.children
+			if sub.opacity==1
+				sub.animate
+					opacity:0
+					scale:0
+					options:
+						time:0.1
+						curve:"easy-out"
+		#print "State_"+to
+		this.subLayersByName("BigPlayState_"+to)[0].animate
+			opacity:1
+			scale:1
+			options:
+				time:0.2
+				curve:"easy-in"
+	BigPlayC.stateSwitch(VODState)
+									
+	scrollDramaInfo.content.draggable.directionLock = true
+	scrollDramaInfo.content.draggable.directionLockThreshold = {x:10, y:10}
+	scrollDramaInfo.mouseWheelEnabled = false
+	scrollDramaInfo.content.draggable.momentumOptions = {friction: 10}	
+	SupportDeviceWindowC=DramaInfoPageC.subLayersByName("DramaSupportDeviceWindow")[0]
+	SupportDeviceWindowC.parent=null
+	SupportDeviceWindowC.visible=false
+	StatusBarMovieInfoC=DramaInfoPageC.subLayersByName("StatusBarDramaInfo")[0]
+	StatusBarMovieInfoC.y=0
+	DramaTopTitleInfoC=DramaInfoPageC.subLayersByName("DramaTopTitleInfo")[0]
+	
+	StatusBarDramaTopTitleInfoC=DramaTopTitleInfoC.subLayersByName("StatusBarDramaTopTitleInfo")[0]
+	StatusBarDramaTopTitleInfoC.y=0
+	DramaTopTitleInfoC.parent=layerDramaInfo
+	DramaTopTitleInfoC.opacity=0
+	DramaTopTitleInfoC.y=0
+	StatusBarMovieInfoC.parent=layerDramaInfo
+	
+	DramaInfoPageC.parent=scrollDramaInfo.content
+	DramaInfoPageC.backgroundColor="#181818"
+	DescriptionVBlockC=DramaInfoPageC.subLayersByName("DescriptionDramaBlock")[0]
+	DescriptionVBlockC.clip=true
+	originalBlockH=DescriptionVBlockC.height
+	originalBlockW=DescriptionVBlockC.width
+	DescriptionVBlockC.height=50
+	DescriptionVBlockC.width=ShortDescriptionShow.width
+	LongDescriptionC=DescriptionVBlockC.subLayersByName("LongDescriptionDrama")[0]
+	LongDescriptionC.visible=false
+	origialBigPlayY=BigPlay.y
+	BigPlayC.parent=layerDramaInfo
+	DescriptionCollapseC=DescriptionVBlockC.subLayersByName("ShortDescriptionShowDrama")[0].subLayersByName("DescriptionCollapseDrama")[0]
+	RelatedDramaInDramaInfoC=DramaInfoPageC.subLayersByName("VODDramaInfoRelated")[0] 
+	ShortDescriptionC=DescriptionVBlockC.subLayersByName("ShortDescriptionShowDrama")[0].subLayersByName("ShortDescriptionDrama")[0]
+	DramaSessionSelectorC=DramaInfoPageC.subLayersByName("DramaSessionSelector")[0]
+	MyRationC=DramaInfoPageC.subLayersByName("MyDramaRation")[0]	
+	DescriptionCollapseC.on Events.Click,->
+		DescriptionVBlockC.height=originalBlockH
+		DescriptionVBlockC.width=originalBlockW
+		ShortDescriptionC.visible=false
+		
+		LongDescriptionC.visible=true
+		
+		DramaSessionSelectorC.y=(DescriptionVBlockC.maxY+40)
+		MyRationC.y=(DramaSessionSelectorC.maxY+40)
+# 		MyRationC.y=(DescriptionVBlockC.maxY+40)
+		RelatedDramaInDramaInfoC.y=(MyRationC.maxY+60)
+		this.visible=false
+	scrollDramaInfo.on "scroll",->
+		if this.y<=-150
+			DramaTopTitleInfoC.opacity=Utils.modulate(Math.abs(this.y), [150, 160], [0, 1],true)
+			BigPlayC.parent=layerDramaInfo
+			BigPlayC.placeBefore(DramaTopTitleInfoC)
+			BigPlayC.y=Utils.modulate(Math.abs(this.y), [150, 160], [90, 70],true)
+		else
+			DramaTopTitleInfoC.opacity=0
+			BigPlayC.parent=DramaInfoPageC
+			BigPlayC.y=origialBigPlayY			
+	
+	Session01_20C=DramaSessionSelectorC.subLayersByName("Session01_20")[0]
+	Session21_40C=DramaSessionSelectorC.subLayersByName("Session21_40")[0]
+	Session41_60C=DramaSessionSelectorC.subLayersByName("Session41_60")[0]	
+	Session01_20_TitleC=Session01_20C.subLayersByName("Session01_20_Title")[0]
+	Session01_20_TitleRotateIconC=Session01_20_TitleC.subLayersByName("Session01_20_TitleRotateIcon")[0]
+	DramaSession1TO20SetC=Session01_20C.subLayersByName("DramaSession1TO20Set")[0]
+	isexpandSession=true
+	Session01_20C.clip=true
+	Session01_20_TitleC.bringToFront()
+	Session01_20_TitleC.on Events.Click,->
+		isexpandSession=!isexpandSession
+		if isexpandSession
+			Session01_20_TitleRotateIconC.animate
+				rotation:0
+				options:
+					time:0.2
+					curve:"linear"				
+			DramaSession1TO20SetC.animate
+				y:Session01_20_Title.maxY
+				options:
+					time:0.2
+					curve:"linear"
+			Session01_20C.height=DramaSession1TO20SetC.height+Session01_20_Title.height
+		else
+			Session01_20_TitleRotateIconC.animate
+				rotation:180
+				options:
+					time:0.2
+					curve:"linear"
+			DramaSession1TO20SetC.animate
+				y:-DramaSession1TO20SetC.height
+				options:
+					time:0.2
+					curve:"linear"
+			Session01_20C.height=Session01_20_Title.height
+		
+		Session21_40C.y=Session01_20C.maxY+10
+		Session41_60C.y=Session21_40C.maxY+10
+		DramaSessionSelectorC.height=Session41_60C.maxY
+		MyRationC.y=(DramaSessionSelectorC.maxY+40)
+		RelatedDramaInDramaInfoC.y=(MyRationC.maxY+60)
+	
+	RelatedMovieInMovieInfoContentsC=RelatedDramaInDramaInfoC.subLayersByName("VODDramaInfoRelatedContents")[0]  
+	#if RelatedMovieInMovieInfoContents.children.length==0
+	#else
+	ComposeHorscrollContent(RelatedDramaInDramaInfoC,RelatedMovieInMovieInfoContentsC)	
+	BTNSupportDevicesC=DramaInfoPageC.subLayersByName("BTNSupportDevicesDrama")[0]
+	BTNSupportDevicesC.on Events.Click,->
+		SupportDeviceWindowC.visible=true
+	SupportDeviceWindowC.on Events.Click,->
+		this.visible=false
+	BackBTNMovieInfoC=DramaInfoPageC.subLayersByName("BackBTNDramaInfo")[0]
+	RatingStarsC=MyRationC.subLayersByName("DramaRatingStars")[0]
+	
+	newStarBar=BuildControl_RatingControl(5,30)
+	newStarBar.x=RatingStars.x
+	newStarBar.y=RatingStars.y
+	newStarBar.parent=RatingStarsC.parent
+	RatingStarsC.destroy()
+	BackBTNMovieInfoC.on Events.Click,->
+		layerDramaInfo.destroy()
+
+		
 ComposeAnimateNews=(isStart)->
 	Video_sport_news_videoCover.bringToFront()
 	if isStart
@@ -1165,12 +1390,8 @@ ComposeAnimateNews=(isStart)->
 		
 #賽事、聊天室 0904
 ComposeAllR0904Pagelink=()->
-# 	layerPlayer=BuildControlChannelPlayer("Small")
-# 	layerPlayer.Show()
-# 	layerPlayer.player.muted=true
-# 	layerPlayer.player.loop=true
+
 	SportPlayer.clip=true
-# 	layerPlayer.parent=SportPlayer			
 	layerPlayerSmall=new ChannelPlayerControl
 		ControlMask:SportPlayerControlMask.copy()
 		Video:"images/SportVoD.mp4"
@@ -1182,6 +1403,7 @@ ComposeAllR0904Pagelink=()->
 	Back_R_09_04_SportPlayer.on Events.Click,->
 		flowMain.showPrevious()
 		flowMain.visible=false
+		layerPlayerSmall.STOP()
 	layerPlayerSmall.InitialEvent()
 # 	backBtn=layerPlayerSmall.subLayersByName("LayerPlayerMask")[0].subLayersByName("Back_ChannelPlayer")[0]
 # 	
@@ -1196,6 +1418,7 @@ ComposeAllR0904Pagelink=()->
 	layerPlayerSmall.bringToFront()	
 	for sub in MainContentHome.subLayersByName("ADComponent_Home")[0].children
 		sub.on Events.Click,->
+			return if MainContentHome.subLayersByName("ADComponent_Home")[0].isDragging
 			flowMain.visible=true
 			flowMain.showOverlayRight(R_09_04_SportPlayer)
 			Utils.delay 1,->
@@ -1298,6 +1521,9 @@ Home=()->
 	ComposeTVChannelProgramList()
 	Compose_SportNewsVideoImage()
 	ComposeAllR0904Pagelink()
+	ComposeLoadingPage()
+# 	ComposeDramaInfoPage(Utils.randomChoice(DramaBig_Buy_State))
+	#ComposeMovieInfoPage(Utils.randomChoice(TVODBig_Buy_State))		
 # 	layerPlayerSmall=new ChannelPlayerControl
 # 		ControlMask:SportPlayerControlMask.copy()
 # 		Video:"images/SportVoD.mp4"
