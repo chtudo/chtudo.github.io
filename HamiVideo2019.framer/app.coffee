@@ -12,6 +12,11 @@ Utils.insertCSS """
 layerLoading=new Layer
 	size: Screen.size
 	backgroundColor: "#181818"
+animationLoading = new Animation
+	layer: AndroidLoading
+	properties: { rotation: 360 }
+	repeat: Infinity
+	time: 1	
 Framer.Extras.Preloader.enable()
 Framer.Extras.Hints.disable()
 flow=new FlowComponent()
@@ -245,35 +250,35 @@ BuildHomeContentVODInfo=()->
 #戲劇
 	for sub in VOD_Drama_OtherPromoteContents.children
 		sub.on Events.Click,->
-			BuildControl_LoadingMask(Utils.randomNumber(0.5,3) )
+			BuildControl_LoadingMask(Utils.randomNumber(1,3) )
 			ComposeDramaInfoPage(Utils.randomChoice(DramaBig_Buy_State))		
 	for sub in VOD_Drama_Curration1Contents.children
 		sub.on Events.Click,->
-			BuildControl_LoadingMask(Utils.randomNumber(0.5,3))
+			BuildControl_LoadingMask(Utils.randomNumber(1,3))
 			ComposeDramaInfoPage(Utils.randomChoice(DramaBig_Buy_State))		
 	for sub in VOD_Drama_Curration2Contents.children
 		sub.on Events.Click,->
-			BuildControl_LoadingMask(Utils.randomNumber(0.5,3))
+			BuildControl_LoadingMask(Utils.randomNumber(1,3))
 			ComposeDramaInfoPage(Utils.randomChoice(DramaBig_Buy_State))		
 	for sub in VOD_Drama_Curration3Contents.children
 		sub.on Events.Click,->
-			BuildControl_LoadingMask(Utils.randomNumber(0.5,3))
+			BuildControl_LoadingMask(Utils.randomNumber(1,3))
 			ComposeDramaInfoPage(Utils.randomChoice(DramaBig_Buy_State))					
 	for sub in VOD_Drama_Curration4Contents.children
 		sub.on Events.Click,->
-			BuildControl_LoadingMask(Utils.randomNumber(0.5,3))
+			BuildControl_LoadingMask(Utils.randomNumber(1,3))
 			ComposeDramaInfoPage(Utils.randomChoice(DramaBig_Buy_State))		
 	for sub in VOD_Drama_HotContent.children
 		sub.on Events.Click,->
-			BuildControl_LoadingMask(Utils.randomNumber(0.5,3))
+			BuildControl_LoadingMask(Utils.randomNumber(1,3))
 			ComposeDramaInfoPage(Utils.randomChoice(DramaBig_Buy_State))		
 	for sub in VOD_Drama_NewestContent.children
 		sub.on Events.Click,->
-			BuildControl_LoadingMask(Utils.randomNumber(0.5,3))
+			BuildControl_LoadingMask(Utils.randomNumber(1,3))
 			ComposeDramaInfoPage(Utils.randomChoice(DramaBig_Buy_State))		
 	for sub in VOD_DramaPromoteContents.children
 		sub.on Events.Click,->
-			BuildControl_LoadingMask(Utils.randomNumber(0.5,3))
+			BuildControl_LoadingMask(Utils.randomNumber(1,3))
 			ComposeDramaInfoPage(Utils.randomChoice(DramaBig_Buy_State))																	
 	ComposeHorscrollContent(VOD_Drama_OtherPromote,VOD_Drama_OtherPromoteContents)
 	ComposeHorscrollContent(VOD_Drama_Curration1,VOD_Drama_Curration1Contents)
@@ -910,31 +915,23 @@ ComposeLoadingPage=()->
 	AndroidLoading.bringToFront()
 	AndroidLoading.center()
 	AndroidLoading.visible=true
-	
+	animationLoading.start()
 	Utils.interval 0.2,->
 		return if layerLoading.opacity==0
 		layerLoading.bringToFront()
-		AndroidLoading.animate
-			rotation:180*13/0.5
-			options:
-				time:13*0.5
-		#print "Loading",Date()
-# # 	while (layerLoading.opacity==1)
-# 	Utils.interval 1,->
-# 		AndroidLoading.animate
-# 			rotation:180
-# 			options:
-# 				time:0.5
+
+
 layerLoading.opacity=0
 BuildControl_LoadingMask=(waitingTime)->
 	layerLoading.opacity=1
+	
 	Utils.delay waitingTime,->
 		layerLoading.animate
 			opacity: 0
 			options: 
 				time:0.5	
 		
-		
+# 		animationLoading.stop()	
 
 Compose_VODFeature=()->
 	Content_VOD_Feature.visible=true
