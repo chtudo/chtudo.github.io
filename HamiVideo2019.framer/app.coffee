@@ -3,6 +3,7 @@ sketch = Framer.Importer.load("imported/HamiVideo2019@2x", scale: 1)
 Utils.globalLayers sketch
 
 ChannelPlayerControl = require 'ChannelPlayerControl'
+VODPlayerControl=require 'VODPlayerControl'
 Utils.insertCSS """
 	@font-face {
 		font-family: "material";
@@ -100,7 +101,6 @@ BuildContent_Description=()->
 					options:
 						time:0.1
 						curve:"easy-out"
-		#print "State_"+to
 		this.subLayersByName("DState_"+to)[0].animate
 			opacity:1
 			scale:1
@@ -693,7 +693,6 @@ scrollHomeContent.on "scroll",->
 	else
 		
 		if this.y<= -(hiddenPoint-gap)
-			print NaviTitleContent.states.current
 			NaviTitleContent.stateSwitch(currentPackage)
 			BuildControl_FloatSelectVODBar(false)
 		else
@@ -1022,7 +1021,6 @@ ComposeAnnounceMessagePopup=()->
 		AnnouncePopWindow.visible=false
 		BlackMask.visible=false
 	Announce_Close.on Events.Click,->
-		#print ImportantAnnounce.height,ImportantAnnounce.y
 		
 		ImportantAnnounce.animate
 			y:-ImportantAnnounce.height
@@ -1112,7 +1110,24 @@ ComposeMovieInfoPage=(VODState)->
 				time:0.2
 				curve:"easy-in"
 	BigPlayC.stateSwitch(VODState)
-									
+	
+	BigPlayC.on Events.Click,->
+		layerPlayerSmall=new VODPlayerControl
+			ControlMask:VODPlayerMask.copy()
+			Video:"images/dead6.mp4"
+			visible:false
+			name:"layerVODPl"
+			QualitySesstingMask:VODQualitySetting.copy()
+			VODSelectSessionMask:VODSelectSession.copy()
+			IsDrama:false
+			parent:layerMovieInfo
+		layerPlayerSmall.center()
+		layerPlayerSmall.InitialEvent()
+		layerPlayerSmall.Show()
+		
+		backBtn=layerPlayerSmall.subLayersByName("LayerPlayerMask")[0].subLayersByName("VODPlayer_Back")[0]
+		backBtn.on Events.Click,->
+			layerPlayerSmall.destroy()									
 	scrollMovieInfo.content.draggable.directionLock = true
 	scrollMovieInfo.content.draggable.directionLockThreshold = {x:10, y:10}
 	scrollMovieInfo.mouseWheelEnabled = false
@@ -1193,7 +1208,14 @@ ComposeMovieInfoPage=(VODState)->
 		BTNSupportDevicesC.destroy()
 		SupportDeviceWindowC.destroy()
 		VODInfoPageC.destroy()
-		
+# 		
+# dead6 = new VideoLayer
+# 	width: 1936
+# 	height: 804
+# 	video: "images/dead6.mp4"
+# 
+# dead6.player.play()
+
 ComposeTVChannelProgramList=()->
 	SupportDevice_TV_Channel_ProgramList.visible=false
 	ContentLIVEsHistoryList.on Events.Click,->
@@ -1250,7 +1272,24 @@ ComposeDramaInfoPage=(VODState)->
 				time:0.2
 				curve:"easy-in"
 	BigPlayC.stateSwitch(VODState)
-									
+	BigPlayC.on Events.Click,->
+		layerPlayerSmall=new VODPlayerControl
+			ControlMask:VODPlayerMask.copy()
+			Video:"images/BackVOD.mp4"
+			visible:false
+			name:"layerVODPl"
+			QualitySesstingMask:VODQualitySetting.copy()
+			VODSelectSessionMask:VODSelectSession.copy()
+			IsDrama:true
+			parent:layerDramaInfo
+		layerPlayerSmall.center()
+		layerPlayerSmall.InitialEvent()
+		layerPlayerSmall.Show()
+		
+		backBtn=layerPlayerSmall.subLayersByName("LayerPlayerMask")[0].subLayersByName("VODPlayer_Back")[0]
+		backBtn.on Events.Click,->
+			layerPlayerSmall.destroy()
+												
 	scrollDramaInfo.content.draggable.directionLock = true
 	scrollDramaInfo.content.draggable.directionLockThreshold = {x:10, y:10}
 	scrollDramaInfo.mouseWheelEnabled = false
@@ -1395,6 +1434,8 @@ ComposeAllR0904Pagelink=()->
 		visible:false
 		parent:R_09_04_SportPlayer
 		isrotated:"N"
+		ControlMask_Landscape:ChannelPlayerLandscape.copy()
+		QualitySesstingMask:QualitySetting_Portrait.copy()
 	layerPlayerSmall.ori_XX=0
 	layerPlayerSmall.ori_YY=0
 	Back_R_09_04_SportPlayer.on Events.Click,->
@@ -1444,15 +1485,17 @@ ComposeAllR0904Pagelink=()->
 Compose_SportNewsVideoImage=()->
 	layerVideoSport=new ChannelPlayerControl
 		ControlMask:SportPlayerControlMask.copy()
+		ControlMask_Landscape:ChannelPlayerLandscape.copy()
 		Video:"images/SportVoD.mp4"
 		visible:false
 		parent:R_05_07_subs_sport_news_video
 		name:"layerPlayer"
-# 		ori_X:0
-# 		ori_Y:74
+		QualitySesstingMask:QualitySetting_Portrait.copy()
+		ori_XX:0
+		ori_YY:74
 	layerVideoSport.ori_XX=0
 	layerVideoSport.ori_YY=74
-		
+	layerVideoSport.bringToFront()	
 	layerVideoSport.InitialEvent()
 # 	backBtn=layerVideoSport.subLayersByName("LayerPlayerMask")[0].subLayersByName("Back_ChannelPlayer")[0]
 # 	
@@ -1493,7 +1536,8 @@ Compose_SportNewsVideoImage=()->
 	BACK_R_05_06_subs_sport_news_image.on Events.Click,->
 		flowMain.visible=false
 		flowMain.showPrevious()
-		
+	BACK_R_05_07_subs_sport_news_video.sendToBack()
+	#BACK_R_05_07_subs_sport_news_video.visible=false
 ComposeChangeTVOrderPage=()->
 	ContentLIVEs_Adjust.on Events.Click,->
 		
@@ -1519,6 +1563,19 @@ Home=()->
 	Compose_SportNewsVideoImage()
 	ComposeAllR0904Pagelink()
 	ComposeLoadingPage()
+# 	layerPlayerSmall=new ChannelPlayerControl
+# 		ControlMask:SportPlayerControlMask.copy()
+# 		Video:"images/SportVoD.mp4"
+# 		visible:false
+# 		isrotated:"N"
+# 		ControlMask_Landscape:ChannelPlayerLandscape.copy()
+# 		name:"AAAAAAA"
+# 		QualitySesstingMask:QualitySetting_Portrait.copy()
+# 	layerPlayerSmall.ori_XX=0
+# 	layerPlayerSmall.ori_YY=0
+# 	layerPlayerSmall.InitialEvent()
+# 	layerPlayerSmall.Show()
+
 # 	ComposeDramaInfoPage(Utils.randomChoice(DramaBig_Buy_State))
 	#ComposeMovieInfoPage(Utils.randomChoice(TVODBig_Buy_State))		
 # 	layerPlayerSmall=new ChannelPlayerControl
@@ -1526,9 +1583,3 @@ Home=()->
 # 		Video:"images/SportVoD.mp4"
 # 	layerPlayerSmall.Show()
 Home()
-# SportVoD = new VideoLayer
-# 	width: 1280
-# 	height: 720
-# 	video: "images/SportVoD.mp4"
-# 
-# SportVoD.player.play()
