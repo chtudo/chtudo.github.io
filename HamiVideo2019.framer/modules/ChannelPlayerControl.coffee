@@ -16,12 +16,16 @@ class module.exports extends Layer
 		@ControlMask=@options.ControlMask
 		@ControlMask_Landscape=@options.ControlMask_Landscape
 		@QualitySesstingMask=@options.QualitySesstingMask
+		@QualitySesstingMask_Landscape=@options.QualitySesstingMask_Landscape
+		@DeviceSupportMask=@options.DeviceSupportMask
+		@DeviceSupportMask_Landscape=@options.DeviceSupportMask_Landscape
+		
 		@Video=@options.Video
 		#@options.x=@.ori_XX
 		#@options.y=@.ori_YY
 		@offsetY=@options.ori_YY
 		@ControlMask_Landscape.offsetYY=@offsetY
-
+		@ControlMask.offsetYY=@offsetY
 
 		super @options
 
@@ -42,13 +46,32 @@ class module.exports extends Layer
 		layerPlayerSmallVideo.player.loop=true
 		layerPlayerMask=@options.ControlMask
 		@ControlMask.parent=@
+
 		@ControlMask_Landscape.parent=@
 		@ControlMask_Landscape.visible=false
 		@ControlMask_Landscape.name="controlMask_Landscape"
-		
+
+
+		@DeviceSupportMask.parent=@
+		@DeviceSupportMask.x=@options.ori_XX
+		@DeviceSupportMask.y=-@options.ori_YY
+		@DeviceSupportMask.visible=false
+		@DeviceSupportMask.name="DeviceSupportMask"
+		@DeviceSupportMask_Landscape.parent=@
+		@DeviceSupportMask_Landscape.visible=false
+		@DeviceSupportMask_Landscape.name="DeviceSupportMask_Landscape"
+		@QualitySesstingMask_Landscape.parent=@
+		@QualitySesstingMask_Landscape.visible=false
+		@QualitySesstingMask_Landscape.name="QualitySesstingMask_Landscape"		
+		@QualitySesstingMask_Landscape.rotation=90
+		@QualitySesstingMask_Landscape.x=-146
+		@QualitySesstingMask_Landscape.y=146-@options.ori_YY
+
+
+
+
 		@ControlMask.bringToFront()
 		@ControlMask.name="LayerPlayerMask"
-		#@ControlMask.subLayersByName("ZoomOUT_ChannelPlayer")[0].visible=false
 		@ControlMask.subLayersByName("UnFullScreen_ChannelPlayer")[0].visible=false
 		numlayer=@ControlMask.subLayersByName("BitRate_ChannelPlayer")[0].subLayersByName("bitratenum")[0]
 		numlayer.visible=false
@@ -76,6 +99,13 @@ class module.exports extends Layer
 		#---PlayBTN Landscape
 		playBtn_land=@ControlMask_Landscape.subLayersByName("PlayBTN_ChannelPlayerLandscape")[0]
 		playBtn_port=@ControlMask.subLayersByName("PlayBTN_ChannelPlayer")[0]
+		deviceHintBTN_land=@ControlMask_Landscape.subLayersByName("DeviceSupport_LandscapeChannel")[0]
+		settingBtn_land=@ControlMask_Landscape.subLayersByName("Setting_ChannelPlayerLandscape")[0]
+		deviceHintBtn=@ControlMask.subLayersByName("ScreenSupport_PortChannel")[0]
+
+
+
+
 		
 		playBtn_land.states.Play=
 			opacity:1
@@ -215,7 +245,51 @@ class module.exports extends Layer
 			
 			this.parent.parent.width=375
 			this.parent.parent.height=667
+		@DeviceSupportMask_Landscape.on Events.Click,->
+			this.visible=false
 
+		deviceHintBTN_land.on Events.Click,->
+			
+			#以下的DeviceSupportMask為在早先initial的時候的name
+			controlMask_Landscape=this.parent.parent.subLayersByName("controlMask_Landscape")[0]
+			layerDeviceLand=this.parent.parent.subLayersByName("DeviceSupportMask_Landscape")[0]
+			layerDeviceLand.visible=true
+			layerDeviceLand.bringToFront()
+			this.parent.parent.width=375
+			this.parent.parent.height=667
+			layerDeviceLand.width=667
+			layerDeviceLand.height=375			
+			layerDeviceLand.rotation=90
+			layerDeviceLand.x=-146
+			layerDeviceLand.y=146-controlMask_Landscape.offsetYY			
+			
+			# DeviceSupportMask_Landscape
+		@QualitySesstingMask_Landscape.on Events.Click,->
+			this.visible=false
+
+		settingBtn_land.on Events.Click,->
+			qualitySesstingMask_Landscape=this.parent.parent.subLayersByName("QualitySesstingMask_Landscape")[0]
+			qualitySesstingMask_Landscape.visible=true
+			qualitySesstingMask_Landscape.bringToFront()
+
+			
+		@DeviceSupportMask.on Events.Click,->
+			this.visible=false
+			this.parent.width=375
+			this.parent.height=210
+			#this.parent.parent 是指-->ChannelPlayerControl
+			this.parent.clip=false
+			
+		deviceHintBtn.on Events.Click,->
+			#以下的DeviceSupportMask為在早先initial的時候的name
+			this.parent.parent.subLayersByName("DeviceSupportMask")[0].visible=true
+			this.parent.parent.subLayersByName("DeviceSupportMask")[0].bringToFront()
+			this.parent.parent.width=375
+			this.parent.parent.height=667
+			controlMask_Landscape=this.parent.parent.subLayersByName("controlMask_Landscape")[0]
+			if Math.abs(controlMask_Landscape.offsetYY)>0
+				#print "有位移，，且因為要全螢幕要把此元件的clip設成false"
+				this.parent.parent.clip=false
 		@ControlMask.subLayersByName("Fullscreen_ChannelPlayer")[0].on Events.Click,->
 			#要找到水平畫面下的控制項，並把狀態改變，共有三個：聲音、播放、放大
 			#也要找到垂直的，然後把垂直的狀態assign給水平的
@@ -277,6 +351,7 @@ class module.exports extends Layer
 
 		@ControlMask_Landscape.subLayersByName("FullScreen_ChannelPlayerLandscape")[0].on Events.Click,->
 			this.parent.parent.clip=true
+			#this.parent.parent 是指-->ChannelPlayerControl
 			controlMask=this.parent.parent.subLayersByName("LayerPlayerMask")[0]
 			controlMask.bringToFront()
 			controlMask.visible=true

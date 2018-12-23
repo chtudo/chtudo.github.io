@@ -14255,10 +14255,10 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 								"originalName": "Casting_ChannelPlayer",
 								"maskFrame": null,
 								"layerFrame": {
-									"x": 287,
+									"x": 243,
 									"y": 28,
 									"width": 24,
-									"height": 19
+									"height": 18
 								},
 								"visible": true,
 								"metadata": {
@@ -14267,10 +14267,10 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 								"image": {
 									"path": "images/Layer-Casting_ChannelPlayer-qte5mtne.png",
 									"frame": {
-										"x": 287,
+										"x": 243,
 										"y": 28,
 										"width": 24,
-										"height": 19
+										"height": 18
 									}
 								},
 								"children": []
@@ -14282,7 +14282,7 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 								"originalName": "Share_ChannelPlayer",
 								"maskFrame": null,
 								"layerFrame": {
-									"x": 329,
+									"x": 285,
 									"y": 23,
 									"width": 28,
 									"height": 25
@@ -14294,10 +14294,37 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 								"image": {
 									"path": "images/Layer-Share_ChannelPlayer-ndmwodu2.png",
 									"frame": {
-										"x": 329,
+										"x": 285,
 										"y": 23,
 										"width": 28,
 										"height": 25
+									}
+								},
+								"children": []
+							},
+							{
+								"objectId": "BBC593F7-20C6-42D5-A98D-9D77A56B8B58",
+								"kind": "group",
+								"name": "ScreenSupport_PortChannel",
+								"originalName": "ScreenSupport_PortChannel",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 331,
+									"y": 28,
+									"width": 24,
+									"height": 21
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"image": {
+									"path": "images/Layer-ScreenSupport_PortChannel-qkjdntkz.png",
+									"frame": {
+										"x": 331,
+										"y": 28,
+										"width": 24,
+										"height": 21
 									}
 								},
 								"children": []
@@ -18456,7 +18483,7 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 						"originalName": "VODPlayer_Share",
 						"maskFrame": null,
 						"layerFrame": {
-							"x": 621,
+							"x": 577,
 							"y": 26,
 							"width": 28,
 							"height": 25
@@ -18468,10 +18495,37 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 						"image": {
 							"path": "images/Layer-VODPlayer_Share-rjayquq3.png",
 							"frame": {
-								"x": 621,
+								"x": 577,
 								"y": 26,
 								"width": 28,
 								"height": 25
+							}
+						},
+						"children": []
+					},
+					{
+						"objectId": "1C97EF56-8A9B-443F-9ED6-7533A5C1A476",
+						"kind": "group",
+						"name": "DeviceSupport_LandscapeVOD",
+						"originalName": "DeviceSupport_LandscapeVOD",
+						"maskFrame": null,
+						"layerFrame": {
+							"x": 623,
+							"y": 28,
+							"width": 24,
+							"height": 21
+						},
+						"visible": true,
+						"metadata": {
+							"opacity": 1
+						},
+						"image": {
+							"path": "images/Layer-DeviceSupport_LandscapeVOD-mum5n0vg.png",
+							"frame": {
+								"x": 623,
+								"y": 28,
+								"width": 24,
+								"height": 21
 							}
 						},
 						"children": []
@@ -18483,7 +18537,7 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 						"originalName": "VODPlayer_Casting",
 						"maskFrame": null,
 						"layerFrame": {
-							"x": 579,
+							"x": 535,
 							"y": 31,
 							"width": 24,
 							"height": 18
@@ -18495,7 +18549,7 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 						"image": {
 							"path": "images/Layer-VODPlayer_Casting-rem2qtng.png",
 							"frame": {
-								"x": 579,
+								"x": 535,
 								"y": 31,
 								"width": 24,
 								"height": 18
@@ -19259,7 +19313,7 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 						"originalName": "Casting_ChannelPlayerLandscape",
 						"maskFrame": null,
 						"layerFrame": {
-							"x": 579,
+							"x": 535,
 							"y": 31,
 							"width": 24,
 							"height": 19
@@ -19271,7 +19325,7 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 						"image": {
 							"path": "images/Layer-Casting_ChannelPlayerLandscape-neqymju5.png",
 							"frame": {
-								"x": 579,
+								"x": 535,
 								"y": 31,
 								"width": 24,
 								"height": 19
@@ -19286,7 +19340,7 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 						"originalName": "Share_ChannelPlayerLandscape",
 						"maskFrame": null,
 						"layerFrame": {
-							"x": 621,
+							"x": 577,
 							"y": 26,
 							"width": 28,
 							"height": 25
@@ -19298,10 +19352,37 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 						"image": {
 							"path": "images/Layer-Share_ChannelPlayerLandscape-nzqynzu3.png",
 							"frame": {
-								"x": 621,
+								"x": 577,
 								"y": 26,
 								"width": 28,
 								"height": 25
+							}
+						},
+						"children": []
+					},
+					{
+						"objectId": "D2E5DFF5-09D6-47C6-9FBA-9A35B0E0E68C",
+						"kind": "group",
+						"name": "DeviceSupport_LandscapeChannel",
+						"originalName": "DeviceSupport_LandscapeChannel",
+						"maskFrame": null,
+						"layerFrame": {
+							"x": 623,
+							"y": 28,
+							"width": 24,
+							"height": 21
+						},
+						"visible": true,
+						"metadata": {
+							"opacity": 1
+						},
+						"image": {
+							"path": "images/Layer-DeviceSupport_LandscapeChannel-rdjfnurg.png",
+							"frame": {
+								"x": 623,
+								"y": 28,
+								"width": 24,
+								"height": 21
 							}
 						},
 						"children": []
@@ -19512,6 +19593,206 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 							}
 						},
 						"children": []
+					}
+				]
+			}
+		]
+	},
+	{
+		"objectId": "B53E7D87-B0FE-47B4-A095-8E756EF88356",
+		"kind": "artboard",
+		"name": "R_09_29_player_device",
+		"originalName": "R_09_29_player_device",
+		"maskFrame": null,
+		"layerFrame": {
+			"x": 11936,
+			"y": 106,
+			"width": 667,
+			"height": 375
+		},
+		"visible": true,
+		"metadata": {},
+		"backgroundColor": "rgba(32.00000000000001, 32.00000000000001, 32.00000000000001, 1)",
+		"children": [
+			{
+				"objectId": "559C4474-F502-4750-932A-C6972BB78273",
+				"kind": "group",
+				"name": "SupportDeviceWindowLanscape",
+				"originalName": "SupportDeviceWindowLanscape",
+				"maskFrame": null,
+				"layerFrame": {
+					"x": 0,
+					"y": 0,
+					"width": 669,
+					"height": 375
+				},
+				"visible": true,
+				"metadata": {
+					"opacity": 1
+				},
+				"children": [
+					{
+						"objectId": "834F1454-2BB0-41C7-9688-4EABE5447D2D",
+						"kind": "group",
+						"name": "Group_411",
+						"originalName": "Group 4",
+						"maskFrame": null,
+						"layerFrame": {
+							"x": 0,
+							"y": 0,
+							"width": 669,
+							"height": 375
+						},
+						"visible": true,
+						"metadata": {
+							"opacity": 1
+						},
+						"image": {
+							"path": "images/Layer-Group_4-odm0rje0.png",
+							"frame": {
+								"x": 0,
+								"y": 0,
+								"width": 669,
+								"height": 375
+							}
+						},
+						"children": []
+					},
+					{
+						"objectId": "78D0B126-C67A-4849-BC45-884AA6D57BD9",
+						"kind": "group",
+						"name": "Group_224",
+						"originalName": "Group 2",
+						"maskFrame": null,
+						"layerFrame": {
+							"x": 200,
+							"y": 91,
+							"width": 268,
+							"height": 193
+						},
+						"visible": true,
+						"metadata": {
+							"opacity": 1
+						},
+						"children": [
+							{
+								"objectId": "C298503A-9936-480C-9CDD-4866162617B6",
+								"kind": "text",
+								"name": "_25",
+								"originalName": "可以使用的裝置 2",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 264,
+									"y": 135,
+									"width": 140,
+									"height": 20
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1,
+									"string": "可以使用的裝置",
+									"css": [
+										"font-family: PingFangTC-Medium;",
+										"font-size: 20px;",
+										"color: #EEEEEE;",
+										"letter-spacing: 0.4px;",
+										"line-height: 20px;"
+									]
+								},
+								"image": {
+									"path": "images/Layer-_2-qzi5oduw.png",
+									"frame": {
+										"x": 264,
+										"y": 135,
+										"width": 140,
+										"height": 20
+									}
+								},
+								"children": []
+							},
+							{
+								"objectId": "EFADFE7B-B19F-4B3C-84B6-F44510F961EE",
+								"kind": "group",
+								"name": "Group_318",
+								"originalName": "Group 3",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 237,
+									"y": 186,
+									"width": 191,
+									"height": 70
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"image": {
+									"path": "images/Layer-Group_3-ruzbrezf.png",
+									"frame": {
+										"x": 237,
+										"y": 186,
+										"width": 191,
+										"height": 70
+									}
+								},
+								"children": [
+									{
+										"objectId": "98E3E765-C231-4F93-BF5D-2582C61E57F7",
+										"kind": "group",
+										"name": "Group29",
+										"originalName": "Group",
+										"maskFrame": null,
+										"layerFrame": {
+											"x": 237,
+											"y": 186,
+											"width": 191,
+											"height": 70
+										},
+										"visible": true,
+										"metadata": {
+											"opacity": 1
+										},
+										"image": {
+											"path": "images/Layer-Group-othfm0u3.png",
+											"frame": {
+												"x": 237,
+												"y": 186,
+												"width": 191,
+												"height": 70
+											}
+										},
+										"children": []
+									}
+								]
+							},
+							{
+								"objectId": "84E6C319-E09F-4C08-A1B9-53DDCB124F75",
+								"kind": "group",
+								"name": "Rectangle_21",
+								"originalName": "Rectangle 2",
+								"maskFrame": null,
+								"layerFrame": {
+									"x": 204,
+									"y": 95,
+									"width": 260,
+									"height": 185
+								},
+								"visible": true,
+								"metadata": {
+									"opacity": 1
+								},
+								"image": {
+									"path": "images/Layer-Rectangle_2-odrfnkmz.png",
+									"frame": {
+										"x": 204,
+										"y": 95,
+										"width": 260,
+										"height": 185
+									}
+								},
+								"children": []
+							}
+						]
 					}
 				]
 			}

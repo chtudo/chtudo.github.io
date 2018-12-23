@@ -14,6 +14,7 @@ class module.exports extends Layer
 		@IsDrama =@options.IsDrama
 		@ControlMask=@options.ControlMask
 		@QualitySesstingMask=@options.QualitySesstingMask
+		@DeviceSupportMask=@options.DeviceSupportMask
 		@VODSelectSessionMask=@options.VODSelectSessionMask
 		#print @options.QualitySesstingMask,@QualitySesstingMask
 		@Video=@options.Video
@@ -21,6 +22,11 @@ class module.exports extends Layer
 		@ControlMask.x=-146
 		@ControlMask.y=146
 		
+		@DeviceSupportMask.rotation=90
+		@DeviceSupportMask.x=-146
+		@DeviceSupportMask.y=146
+
+
 		@QualitySesstingMask.rotation=90
 		@QualitySesstingMask.x=-146
 		@QualitySesstingMask.y=146
@@ -40,9 +46,14 @@ class module.exports extends Layer
 			x:-146
 			y:146
 			rotation:90
+			backgroundColor: "Black"
 # 		layerPlayerSmallVideo.player.muted=true
 		layerPlayerSmallVideo.player.loop=true
 		#layerPlayerMask=@options.ControlMask
+		@DeviceSupportMask.parent=@
+		@DeviceSupportMask.visible=false
+		@DeviceSupportMask.name="DeviceSupportMask"
+		
 		@QualitySesstingMask.parent=@
 		@QualitySesstingMask.visible=false
 		@QualitySesstingMask.name="QualitySesstingMask"
@@ -84,6 +95,9 @@ class module.exports extends Layer
 #			@options.isrotated = value
 	InitialEvent: ->		
 		#print @IsDrama
+		DeviceHintBTN=@ControlMask.subLayersByName("DeviceSupport_LandscapeVOD")[0]
+
+
 		QualityBTN=@ControlMask.subLayersByName("VODPlayer_Quality")[0]
 		SessionBTN=@ControlMask.subLayersByName("VODPlayer_SessionSelector")[0]
 
@@ -111,10 +125,14 @@ class module.exports extends Layer
 		QualityBTN.on Events.Click,->
 			this.stateSwitch("ShowQ")
 			#@options.QualitySesstingMask.visible=true
-
+		DeviceHintBTN.on Events.Click,->
+			this.parent.parent.subLayersByName("DeviceSupportMask")[0].visible=true
+			this.parent.parent.subLayersByName("DeviceSupportMask")[0].bringToFront()
 		SessionBTN.on Events.Click,->
 			this.parent.parent.subLayersByName("VODSelectSessionMask")[0].visible=true
 			this.parent.parent.subLayersByName("VODSelectSessionMask")[0].bringToFront()
+		@DeviceSupportMask.on Events.Click,->
+			this.visible=false
 		@QualitySesstingMask.on Events.Click,->
 			this.visible=false
 		@VODSelectSessionMask.on Events.Click,->
@@ -145,14 +163,14 @@ class module.exports extends Layer
 		ZoomBtn.states.ZoomOut=
 			opacity:1
 		ZoomBtn.on Events.StateWillSwitch,(from, to, states)->
-			if to=="ZoomOut"
-				this.subLayersByName("VODPlayer_ZoomState_ZoomIn")[0].visible=true
-				this.subLayersByName("VODPlayer_ZoomState_ZoomOut")[0].visible=false
+			if to=="ZoomIn"
+				this.subLayersByName("VODPlayer_ZoomState_ZoomIn")[0].visible=false
+				this.subLayersByName("VODPlayer_ZoomState_ZoomOut")[0].visible=true
 				this.parent.parent.subLayersByName("ChannelPlayerSmallVideo")[0].scale=1.333
 
 			else
-				this.subLayersByName("VODPlayer_ZoomState_ZoomIn")[0].visible=false
-				this.subLayersByName("VODPlayer_ZoomState_ZoomOut")[0].visible=true
+				this.subLayersByName("VODPlayer_ZoomState_ZoomIn")[0].visible=true
+				this.subLayersByName("VODPlayer_ZoomState_ZoomOut")[0].visible=false
 				this.parent.parent.subLayersByName("ChannelPlayerSmallVideo")[0].scale=1			
 		ZoomBtn.stateSwitch("ZoomOut")
 		ZoomBtn.on Events.Click,->

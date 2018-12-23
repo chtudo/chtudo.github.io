@@ -1119,6 +1119,7 @@ ComposeMovieInfoPage=(VODState)->
 			name:"layerVODPl"
 			QualitySesstingMask:VODQualitySetting.copy()
 			VODSelectSessionMask:VODSelectSession.copy()
+			DeviceSupportMask:SupportDeviceWindowLanscape.copy()
 			IsDrama:false
 			parent:layerMovieInfo
 		layerPlayerSmall.center()
@@ -1282,6 +1283,7 @@ ComposeDramaInfoPage=(VODState)->
 			VODSelectSessionMask:VODSelectSession.copy()
 			IsDrama:true
 			parent:layerDramaInfo
+			DeviceSupportMask:SupportDeviceWindowLanscape.copy()
 		layerPlayerSmall.center()
 		layerPlayerSmall.InitialEvent()
 		layerPlayerSmall.Show()
@@ -1436,6 +1438,9 @@ ComposeAllR0904Pagelink=()->
 		isrotated:"N"
 		ControlMask_Landscape:ChannelPlayerLandscape.copy()
 		QualitySesstingMask:QualitySetting_Portrait.copy()
+		QualitySesstingMask_Landscape:VODQualitySetting.copy()
+		DeviceSupportMask:DramaSupportDeviceWindow.copy()
+		DeviceSupportMask_Landscape:SupportDeviceWindowLanscape.copy()
 	layerPlayerSmall.ori_XX=0
 	layerPlayerSmall.ori_YY=0
 	Back_R_09_04_SportPlayer.on Events.Click,->
@@ -1491,6 +1496,9 @@ Compose_SportNewsVideoImage=()->
 		parent:R_05_07_subs_sport_news_video
 		name:"layerPlayer"
 		QualitySesstingMask:QualitySetting_Portrait.copy()
+		QualitySesstingMask_Landscape:VODQualitySetting.copy()
+		DeviceSupportMask:DramaSupportDeviceWindow.copy()
+		DeviceSupportMask_Landscape:SupportDeviceWindowLanscape.copy()
 		ori_XX:0
 		ori_YY:74
 	layerVideoSport.ori_XX=0
@@ -1563,6 +1571,7 @@ Home=()->
 	Compose_SportNewsVideoImage()
 	ComposeAllR0904Pagelink()
 	ComposeLoadingPage()
+		
 # 	layerPlayerSmall=new ChannelPlayerControl
 # 		ControlMask:SportPlayerControlMask.copy()
 # 		Video:"images/SportVoD.mp4"
