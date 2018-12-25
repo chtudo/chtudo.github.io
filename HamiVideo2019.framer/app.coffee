@@ -20,9 +20,13 @@ animationLoading = new Animation
 	time: 1	
 Framer.Extras.Preloader.enable()
 Framer.Extras.Hints.disable()
-flow=new FlowComponent()
-flow.x=0
-flow.y=0
+flowMain=new FlowComponent
+	size: Screen.size
+	scrollHorizontal:false
+	visible: true
+# flow=new FlowComponent()
+# flow.x=0
+# flow.y=0
 defaltPackageStates="VOD"
 currentPackage="VOD"	
 isLogin=false
@@ -74,10 +78,7 @@ BuildControl_SideMenu=()->
 		else
 			this.subLayersByName("SideMenu_VIP")[0].visible=false
 			this.subLayersByName("SideMenu_NotLogin")[0].visible=true
-flowMain=new FlowComponent
-	size: Screen.size
-	scrollHorizontal:false
-	visible: false
+
 BuildContent_Description=()->
 	
 	MainContentDescription.states.LIVE=
@@ -137,6 +138,40 @@ Compose_FloatingDot=()->
 				opacity:1
 				time: 0.2
 isCloseAnnounce=false
+ComposeHorscrollContentAndClickEvent=(parentObject,layerContainsContent,contentType)->
+	contentScroll=new ScrollComponent
+		parent:parentObject
+		x:0
+		y:layerContainsContent.y
+		width: Screen.width
+		height: layerContainsContent.height
+		scrollVertical: false
+		scrollHorizontal: true
+		name:"HorContentScroll"
+	contentScroll.contentInset=
+		right: 15	
+	contentScroll.content.draggable.directionLock = true
+	contentScroll.content.draggable.directionLockThreshold = {x:5, y:5}		
+	for sub in layerContainsContent.children
+		if contentType=="Movie"
+			sub.on Events.Click,->
+				BuildControl_LoadingMask(Utils.randomNumber(1,3) )
+				ComposeMovieInfoPage(Utils.randomChoice(VODBig_Buy_State))
+		else if contentType=="TVOD"
+			sub.on Events.Click,->
+				BuildControl_LoadingMask(Utils.randomNumber(1,3) )
+			
+				ComposeMovieInfoPage(Utils.randomChoice(TVODBig_Buy_State))
+		else if contentType=="Drama"
+			sub.on Events.Click,->
+				BuildControl_LoadingMask(Utils.randomNumber(1,3) )
+				ComposeDramaInfoPage(Utils.randomChoice(DramaBig_Buy_State))
+		else
+			print "LIVE"
+		
+		sub.parent=contentScroll.content
+		
+
 BuildContent_HeadTitle=()->
 	NaviTitleContent.states.LIVE=
 		opacity: 1
@@ -189,106 +224,42 @@ ComposeHorscrollContent=(parentObject,layerContainsContent)->
 	for sub in layerContainsContent.children
 		sub.parent=contentScroll.content
 BuildHomeContentVODInfo=()->
-	ComposeHorscrollContent(ContinueWatch,ContinueWatchContents)
-	ComposeHorscrollContent(Favorite_VOD_Feature,Favorite_VOD_FeatureContents)
-	ComposeHorscrollContent(MostWatch_Drama,MostWatch_DramaContents)
-	ComposeHorscrollContent(MostWatch_Movie,MostWatch_MovieContents)
-	ComposeHorscrollContent(MostWatch_Comic,MostWatch_ComicContents)
-	ComposeHorscrollContent(MostWatch_Child,MostWatch_ChildContents)	
-	ComposeHorscrollContent(TVODFeature,TVODFeatureContents)
+	ComposeHorscrollContentAndClickEvent(ContinueWatch,ContinueWatchContents,"Movie")
+	ComposeHorscrollContentAndClickEvent(Favorite_VOD_Feature,Favorite_VOD_FeatureContents,"Movie")
+	ComposeHorscrollContentAndClickEvent(MostWatch_Drama,MostWatch_DramaContents,"Drama")
+	ComposeHorscrollContentAndClickEvent(MostWatch_Movie,MostWatch_MovieContents,"Movie")
+	ComposeHorscrollContentAndClickEvent(MostWatch_Comic,MostWatch_ComicContents,"Drama")
+	ComposeHorscrollContentAndClickEvent(MostWatch_Child,MostWatch_ChildContents,"Drama")	
+	ComposeHorscrollContentAndClickEvent(TVODFeature,TVODFeatureContents,"TVOD")
 	#電影
-	
-	for sub in Content_VOD_OtherContents.children
-		sub.on Events.Click,->
-			ComposeMovieInfoPage(Utils.randomChoice(VODBig_Buy_State))
-			
-	for sub in Content_VOD_Movie_Curration1Content.children
-		sub.on Events.Click,->
-			ComposeMovieInfoPage(Utils.randomChoice(VODBig_Buy_State))
-	for sub in Content_VOD_Movie_Curration2Contents.children
-		sub.on Events.Click,->
-			ComposeMovieInfoPage(Utils.randomChoice(VODBig_Buy_State))
-	for sub in Content_VOD_Movie_HotContents.children
-		sub.on Events.Click,->
-			ComposeMovieInfoPage(Utils.randomChoice(VODBig_Buy_State))
-	for sub in Content_VOD_Movie_NewestContents.children
-		sub.on Events.Click,->
-			ComposeMovieInfoPage(Utils.randomChoice(VODBig_Buy_State))
-	for sub in Content_VOD_Movie_PromoteContents.children
-		sub.on Events.Click,->
-			ComposeMovieInfoPage(Utils.randomChoice(VODBig_Buy_State))
 											
-	ComposeHorscrollContent(Content_VOD_Other,Content_VOD_OtherContents)
-	ComposeHorscrollContent(Content_VOD_Movie_Curration1,Content_VOD_Movie_Curration1Content)
-	ComposeHorscrollContent(Content_VOD_Movie_Curration2,Content_VOD_Movie_Curration2Contents)
-	ComposeHorscrollContent(Content_VOD_Movie_Hot,Content_VOD_Movie_HotContents)
-	ComposeHorscrollContent(Content_VOD_Movie_Newest,Content_VOD_Movie_NewestContents)
-	ComposeHorscrollContent(Content_VOD_Movie_Promote,Content_VOD_Movie_PromoteContents)
+	ComposeHorscrollContentAndClickEvent(Content_VOD_Other,Content_VOD_OtherContents,"Movie")
+	ComposeHorscrollContentAndClickEvent(Content_VOD_Movie_Curration1,Content_VOD_Movie_Curration1Content,"Movie")
+	ComposeHorscrollContentAndClickEvent(Content_VOD_Movie_Curration2,Content_VOD_Movie_Curration2Contents,"Movie")
+	ComposeHorscrollContentAndClickEvent(Content_VOD_Movie_Hot,Content_VOD_Movie_HotContents,"Movie")
+	ComposeHorscrollContentAndClickEvent(Content_VOD_Movie_Newest,Content_VOD_Movie_NewestContents,"Movie")
+	ComposeHorscrollContentAndClickEvent(Content_VOD_Movie_Promote,Content_VOD_Movie_PromoteContents,"Movie")
 #TVOD
-	for sub in ContentTVODs_Rent_NewestContents.children
-		sub.on Events.Click,->
-			ComposeMovieInfoPage(Utils.randomChoice(TVODBig_Buy_State))
-			
-	for sub in ContentTVODs_Rent_FavoriteContents.children
-		sub.on Events.Click,->
-			ComposeMovieInfoPage(Utils.randomChoice(TVODBig_Buy_State))
-	for sub in ContentTVODs_RentContents.children
-		sub.on Events.Click,->
-			ComposeMovieInfoPage(Utils.randomChoice(TVODBig_Buy_State))
-	for sub in ContentTVODs_HotContents.children
-		sub.on Events.Click,->
-			ComposeMovieInfoPage(Utils.randomChoice(TVODBig_Buy_State))
-	ComposeHorscrollContent(ContentTVODs_Rent_Newest,ContentTVODs_Rent_NewestContents)
-	ComposeHorscrollContent(ContentTVODs_Rent_Favorite,ContentTVODs_Rent_FavoriteContents)
-	ComposeHorscrollContent(ContentTVODs_Rent,ContentTVODs_RentContents)
-	ComposeHorscrollContent(ContentTVODs_Hot,ContentTVODs_HotContents)
-	ComposeHorscrollContent(ContentTVODs_Curration1,ContentTVODs_Curration1Contents)
-	ComposeHorscrollContent(ContentTVODs_Curration2,ContentTVODs_Curration2Contents)
-	ComposeHorscrollContent(ContentTVODs_Other,ContentTVODs_OtherContents)
+
+	ComposeHorscrollContentAndClickEvent(ContentTVODs_Rent_Newest,ContentTVODs_Rent_NewestContents,"TVOD")
+	ComposeHorscrollContentAndClickEvent(ContentTVODs_Rent_Favorite,ContentTVODs_Rent_FavoriteContents,"TVOD")
+	ComposeHorscrollContentAndClickEvent(ContentTVODs_Rent,ContentTVODs_RentContents,"TVOD")
+	ComposeHorscrollContentAndClickEvent(ContentTVODs_Hot,ContentTVODs_HotContents,"TVOD")
+	ComposeHorscrollContentAndClickEvent(ContentTVODs_Curration1,ContentTVODs_Curration1Contents,"TVOD")
+	ComposeHorscrollContentAndClickEvent(ContentTVODs_Curration2,ContentTVODs_Curration2Contents,"TVOD")
+	ComposeHorscrollContentAndClickEvent(ContentTVODs_Other,ContentTVODs_OtherContents,"TVOD")
 	
 
 #戲劇
-	for sub in VOD_Drama_OtherPromoteContents.children
-		sub.on Events.Click,->
-			BuildControl_LoadingMask(Utils.randomNumber(1,3) )
-			ComposeDramaInfoPage(Utils.randomChoice(DramaBig_Buy_State))		
-	for sub in VOD_Drama_Curration1Contents.children
-		sub.on Events.Click,->
-			BuildControl_LoadingMask(Utils.randomNumber(1,3))
-			ComposeDramaInfoPage(Utils.randomChoice(DramaBig_Buy_State))		
-	for sub in VOD_Drama_Curration2Contents.children
-		sub.on Events.Click,->
-			BuildControl_LoadingMask(Utils.randomNumber(1,3))
-			ComposeDramaInfoPage(Utils.randomChoice(DramaBig_Buy_State))		
-	for sub in VOD_Drama_Curration3Contents.children
-		sub.on Events.Click,->
-			BuildControl_LoadingMask(Utils.randomNumber(1,3))
-			ComposeDramaInfoPage(Utils.randomChoice(DramaBig_Buy_State))					
-	for sub in VOD_Drama_Curration4Contents.children
-		sub.on Events.Click,->
-			BuildControl_LoadingMask(Utils.randomNumber(1,3))
-			ComposeDramaInfoPage(Utils.randomChoice(DramaBig_Buy_State))		
-	for sub in VOD_Drama_HotContent.children
-		sub.on Events.Click,->
-			BuildControl_LoadingMask(Utils.randomNumber(1,3))
-			ComposeDramaInfoPage(Utils.randomChoice(DramaBig_Buy_State))		
-	for sub in VOD_Drama_NewestContent.children
-		sub.on Events.Click,->
-			BuildControl_LoadingMask(Utils.randomNumber(1,3))
-			ComposeDramaInfoPage(Utils.randomChoice(DramaBig_Buy_State))		
-	for sub in VOD_DramaPromoteContents.children
-		sub.on Events.Click,->
-			BuildControl_LoadingMask(Utils.randomNumber(1,3))
-			ComposeDramaInfoPage(Utils.randomChoice(DramaBig_Buy_State))																	
-	ComposeHorscrollContent(VOD_Drama_OtherPromote,VOD_Drama_OtherPromoteContents)
-	ComposeHorscrollContent(VOD_Drama_Curration1,VOD_Drama_Curration1Contents)
-	ComposeHorscrollContent(VOD_Drama_Curration2,VOD_Drama_Curration2Contents)
-	ComposeHorscrollContent(VOD_Drama_Curration3,VOD_Drama_Curration3Contents)
-	ComposeHorscrollContent(VOD_Drama_Curration4,VOD_Drama_Curration4Contents)
-	ComposeHorscrollContent(VOD_Drama_Hot,VOD_Drama_HotContent)
-	ComposeHorscrollContent(VOD_Drama_Newest,VOD_Drama_NewestContent)
-	ComposeHorscrollContent(VOD_DramaPromote,VOD_DramaPromoteContents)
-	ComposeHorscrollContent(VOD_Drama_Filter,VOD_Drama_FilterContents)	
+	ComposeHorscrollContentAndClickEvent(VOD_Drama_OtherPromote,VOD_Drama_OtherPromoteContents,"Drama")
+	ComposeHorscrollContentAndClickEvent(VOD_Drama_Curration1,VOD_Drama_Curration1Contents,"Drama")
+	ComposeHorscrollContentAndClickEvent(VOD_Drama_Curration2,VOD_Drama_Curration2Contents,"Drama")
+	ComposeHorscrollContentAndClickEvent(VOD_Drama_Curration3,VOD_Drama_Curration3Contents,"Drama")
+	ComposeHorscrollContentAndClickEvent(VOD_Drama_Curration4,VOD_Drama_Curration4Contents,"Drama")
+	ComposeHorscrollContentAndClickEvent(VOD_Drama_Hot,VOD_Drama_HotContent,"Drama")
+	ComposeHorscrollContentAndClickEvent(VOD_Drama_Newest,VOD_Drama_NewestContent,"Drama")
+	ComposeHorscrollContentAndClickEvent(VOD_DramaPromote,VOD_DramaPromoteContents,"Drama")
+	ComposeHorscrollContentAndClickEvent(VOD_Drama_Filter,VOD_Drama_FilterContents,"Drama")	
 #LIVE
 	ComposeHorscrollContent(ContentLIVEs_Favorites,ContentLIVEs_Favorites_Contents)
 	ComposeHorscrollContent(ContentLIVEs_Free,ContentLIVEs_FreeContents)
@@ -303,17 +274,10 @@ Compose_HeaderFunction=()->
 		opacity: 1
 	FunctionInBar.states.Main=
 		opacity: 1
-	for sub in FunctionInBar.children
-		sub.opacity=0
 	FunctionInBar.on Events.StateWillSwitch,(from, to, states)->
 		for sub in this.children
-			if sub.opacity==1
-				sub.animate
-					opacity:0
-					scale:0
-					options:
-						time:0.1
-						curve:"easy-out"
+			sub.opacity=0			
+
 		this.subLayersByName("FunctionInBar_State_"+to)[0].animate
 			opacity:1
 			scale:1
@@ -382,16 +346,19 @@ Compose_LIVEClipContent=()->
 	MoreLiveSchedule_Feature.on Events.Click,->
 		flowMain.visible=true
 		flowMain.showNext(R_05_04_subs_sport_live_calendar)
+
+	
 	
 	More_EUROSchedule.on Events.Click,->
 		flowMain.visible=true
 		flowMain.showNext(R_05_08_subs_game_calendar)
 	BACK_LIVEGAMESCHEDULE.on Events.Click,->
-		flowMain.visible=false
+		#flowMain.visible=false
 		flowMain.showPrevious()	
 	BackSportVODS.on Events.Click,->
-		flowMain.visible=false
+		#flowMain.visible=false
 		flowMain.showPrevious()
+		
 Compose_MainSelectionFocusBarEvent=()->
 	MainContentSelection_VOD_FocusBar.states.TVOD=
 		opacity: 1
@@ -495,7 +462,7 @@ ComposeCurrationPage=()->
 		flowMain.showNext(ERAVotePage)
 	VOTETITLE.on Events.Click,->
 		flowMain.showPrevious()
-		flowMain.visible=false
+		#flowMain.visible=false
 		
 
 
@@ -561,7 +528,7 @@ ComposeSideMenuEvent=()->
 		MainContentHome.bringToFront()
 		MainContent_Curration.visible=false
 		#ShareEvent是策展在用
-		FunctionInBar.stateSwitch("Main")			
+		FunctionInBar.stateSwitch("Main")
 		currentPackage="TVOD"
 		oldPage=MainContentHomeVODInfo.subLayersByName("TVODPage")[0]
 		oldPage.visible=true
@@ -581,6 +548,7 @@ ComposeSideMenuEvent=()->
 		MainContent_Curration.visible=true
 		MainContentHome.visible=false
 		FunctionInBar.stateSwitch("Curration")
+		NaviTitleContent.stateSwitch("HamiVideo")
 		MainContent_Curration.bringToFront()
 		FixTitle.bringToFront()
 		page=MainContent_Curration.subLayersByName("pageCurration")[0]
@@ -907,7 +875,119 @@ BuildControl_SportPage=()->
 			x:97
 			options:
 				time:0.2
-				
+	ContentSPORT_EuroLink.on Events.Click,->
+		MainContentHomeVODInfo.subLayersByName("SPORTPage")[0].snapToPage(arrayVOD[1])			
+		MainContentSelection_VOD_FocusBar.animate
+			x:97
+			options:
+				time:0.2
+	ContentSPORTBanner.on Events.Click,->
+		flowMain.showOverlayRight(R_09_04_SportPlayer)
+		layerPlayerSmall=R_09_04_SportPlayer.subLayersByName("layerPlayerSmall")[0]
+	
+		Utils.delay 1,->
+			R_09_04_SportPlayerStatus.animate
+				opacity:0
+				options:
+					time:2
+					curve:"easy-out"
+			SportPlayer.visible=false
+			layerPlayerSmall.Show()
+	ContentSPORT_Euro_Banner.on Events.Click,->
+		flowMain.showOverlayRight(R_09_04_SportPlayer)
+		layerPlayerSmall=R_09_04_SportPlayer.subLayersByName("layerPlayerSmall")[0]
+		Utils.delay 1,->
+			R_09_04_SportPlayerStatus.animate
+				opacity:0
+				options:
+					time:2
+					curve:"easy-out"
+			SportPlayer.visible=false
+			layerPlayerSmall.Show()
+	for sub in ContentSPORT_Feature_Datas.children
+		sub.on Events.Click,->
+			flowMain.visible=true
+			flowMain.showNext(TV_Channel_ProgramList)
+# 			flowMain.showOverlayRight(R_09_04_SportPlayer)
+# 			layerPlayerSmall=R_09_04_SportPlayer.subLayersByName("layerPlayerSmall")[0]
+# 			Utils.delay 1,->
+# 				R_09_04_SportPlayerStatus.animate
+# 					opacity:0
+# 					options:
+# 						time:2
+# 						curve:"easy-out"
+# 				SportPlayer.visible=false
+# 				layerPlayerSmall.Show()
+	for sub in ContentLIVEs_Free.subLayersByName("HorContentScroll")[0].content.children
+		sub.on Events.Click,->	
+			flowMain.showOverlayRight(R_09_04_SportPlayer)
+			layerPlayerSmall=R_09_04_SportPlayer.subLayersByName("layerPlayerSmall")[0]
+			Utils.delay 1,->
+				R_09_04_SportPlayerStatus.animate
+					opacity:0
+					options:
+						time:2
+						curve:"easy-out"
+				SportPlayer.visible=false
+				layerPlayerSmall.Show()
+	ContentLIVEsBigBanner.on Events.Click,->
+		flowMain.showOverlayRight(R_09_04_SportPlayer)
+		layerPlayerSmall=R_09_04_SportPlayer.subLayersByName("layerPlayerSmall")[0]
+		Utils.delay 1,->
+			R_09_04_SportPlayerStatus.animate
+				opacity:0
+				options:
+					time:2
+					curve:"easy-out"
+			SportPlayer.visible=false
+			layerPlayerSmall.Show()		
+	#電視/新聞/列表，直接連到新聞台之節目表
+	for sub in ContentLIVEs_NewsList_Data.children		
+		sub.on Events.Click,->
+			flowMain.visible=true
+			flowMain.showNext(TV_Channel_ProgramList)
+# 			flowMain.showOverlayRight(R_09_04_SportPlayer)
+# 			layerPlayerSmall=R_09_04_SportPlayer.subLayersByName("layerPlayerSmall")[0]
+# 			Utils.delay 1,->
+# 				R_09_04_SportPlayerStatus.animate
+# 					opacity:0
+# 					options:
+# 						time:2
+# 						curve:"easy-out"
+# 				SportPlayer.visible=false
+# 				layerPlayerSmall.Show()
+	for sub in LiveSchedule_Feature_ListItem.children		
+		sub.on Events.Click,->
+			flowMain.showOverlayRight(R_09_04_SportPlayer)
+			layerPlayerSmall=R_09_04_SportPlayer.subLayersByName("layerPlayerSmall")[0]
+			Utils.delay 1,->
+				R_09_04_SportPlayerStatus.animate
+					opacity:0
+					options:
+						time:2
+						curve:"easy-out"
+				SportPlayer.visible=false
+				layerPlayerSmall.Show()
+	Back_R_05_08_subs_game_calendar.on Events.Click,->
+		flowMain.showPrevious()
+	
+	#運動-歐冠-運動頻道，要連接到某新聞台有節目表的畫面
+	for sub in ContentSPORT_Euro_SportList.children
+		sub.on Events.Click,->
+			flowMain.visible=true
+			flowMain.showNext(TV_Channel_ProgramList)
+	for sub in More_EUROScheduleItems.children		
+		sub.on Events.Click,->
+			flowMain.showOverlayRight(R_09_04_SportPlayer)
+			layerPlayerSmall=R_09_04_SportPlayer.subLayersByName("layerPlayerSmall")[0]
+			Utils.delay 1,->
+				R_09_04_SportPlayerStatus.animate
+					opacity:0
+					options:
+						time:2
+						curve:"easy-out"
+				SportPlayer.visible=false
+				layerPlayerSmall.Show()
 ComposeLoadingPage=()->
 
 	AndroidLoading.parent=layerLoading
@@ -948,13 +1028,21 @@ Compose_HomePage=()->
 	BuildControl_VODPage()
 	BuildControl_TVODPage()
 	BuildControl_LIVEPage()
-	BuildControl_SportPage()
+	
 	scrollHomeContent.sendToBack()
 	ComposeSideMenuEvent()
 	Compose_HeaderFunction()
 	Compose_MainSelectionFocusBarEvent()
 	MoreCurration.visible=false
 	Compose_LIVEClipContent()
+	NavSearch.on Events.Click,->
+		flowMain.showNext(R_11_01_search_filter_input)
+	BackSearch.on Events.Click,->
+		flowMain.showPrevious()
+	BTNFilter_Search.on Events.Click,->
+		flowMain.showNext(R_11_10_filter_vod_rent)
+	BackR_11_10_filter_vod_rent.on Events.Click,->
+		flowMain.showPrevious()
 BuildControl_RatingControl=(stars,gap)->
 
 	IN=0
@@ -1036,18 +1124,18 @@ ComposeAnnounceMessagePopup=()->
 Compose_LoginFlow=()->
 #組裝登入流程Compose_LoginFlow()
 	otherLogin.on Events.Click,->
-		flow.showNext(R_01_02_login_phone_others,false)
+		flowMain.showNext(R_01_02_login_phone_others,false)
 	Back_BTN_CellPhone.on Events.Click,->
-		flow.showOverlayLeft(R_02_01_home_subs_vod,false)
+		flowMain.showOverlayLeft(R_02_01_home_subs_vod,false)
 		sideMenu.stateSwitch("NOLOGIN")
 		BlackMask.visible=true
 		sideMenu.bringToFront()
 		animationSideMenu.start()	
 	Back_BTN_OtherLogin.on Events.Click,->
-		flow.showPrevious()
+		flowMain.showPrevious()
 
 	Login.on Events.Click,->
-		flow.showOverlayCenter(R_02_01_home_subs_vod,false)
+		flowMain.showOverlayCenter(R_02_01_home_subs_vod,false)
 		sideMenu.stateSwitch("VIP")
 
 # Nothing will move until we start 
@@ -1062,9 +1150,9 @@ Compose_LoginFlow=()->
 	LoginBIgBTN_SideMenu.on Events.Click,->	
 		animationSideMenuR.start()
 		BlackMask.visible=false
-		flow.showNext(R_01_01_login_phone)
+		flowMain.showNext(R_01_01_login_phone)
 	BTN_LoginBYHN.on Events.Click,->
-		flow.showOverlayCenter(R_02_01_home_subs_vod,false)
+		flowMain.showOverlayCenter(R_02_01_home_subs_vod,false)
 		sideMenu.stateSwitch("NOLOGIN")
 		
 	if isLogin
@@ -1102,7 +1190,6 @@ ComposeMovieInfoPage=(VODState)->
 					options:
 						time:0.1
 						curve:"easy-out"
-		#print "State_"+to
 		this.subLayersByName("BigPlayState_"+to)[0].animate
 			opacity:1
 			scale:1
@@ -1222,15 +1309,15 @@ ComposeTVChannelProgramList=()->
 	ContentLIVEsHistoryList.on Events.Click,->
 		flowMain.visible=true
 		flowMain.showNext(TV_Channel_ProgramList)	
-	ContentLIVEs_NewsList.on Events.Click,->
-		flowMain.visible=true
-		flowMain.showNext(TV_Channel_ProgramList)
+# 	ContentLIVEs_NewsList.on Events.Click,->
+# 		flowMain.visible=true
+# 		flowMain.showNext(TV_Channel_ProgramList)
 	for sub in ContentLIVEs_Favorites.subLayersByName("HorContentScroll")[0].content.children
 		sub.on Events.Click,->
 			flowMain.showNext(TV_Channel_ProgramList)
 			flowMain.visible=true
 	BackTV_Channel_ProgramList.on Events.Click,->
-		flowMain.visible=false
+		#flowMain.visible=false
 		flowMain.showPrevious()
 	HintSupportDeviceTV_Channel_ProgramList.on Events.Click,->
 		SupportDevice_TV_Channel_ProgramList.visible=true
@@ -1265,7 +1352,6 @@ ComposeDramaInfoPage=(VODState)->
 					options:
 						time:0.1
 						curve:"easy-out"
-		#print "State_"+to
 		this.subLayersByName("BigPlayState_"+to)[0].animate
 			opacity:1
 			scale:1
@@ -1415,20 +1501,72 @@ ComposeDramaInfoPage=(VODState)->
 		
 ComposeAnimateNews=(isStart)->
 	Video_sport_news_videoCover.bringToFront()
+	Video_sport_news_videoCover.visible=true
 	if isStart
 		Utils.delay 2,->
 			Video_sport_news_videoCover.visible=false
-			#print Video_sport_news_video.subLayersByName("layerPlayer")[0]
 			R_05_07_subs_sport_news_video.subLayersByName("layerPlayer")[0].Show()
 	else
 		Video_sport_news_videoCover.visible=true
 		
 		R_05_07_subs_sport_news_video.subLayersByName("layerPlayer")[0].STOP()
 
+SettingComponent_Select_Unselect_States=(component,prefixNaming,defaultState)->
+	component.states.Select=
+		opacity:1
+	component.states.UnSelect=
+		opacity:1		
 		
+	component.on Events.StateWillSwitch,(from, to, states)->
+		#print component,prefixNaming
+		if to=="Select"
+			this.subLayersByName(prefixNaming+"Select")[0].visible=true
+			this.subLayersByName(prefixNaming+"UnSelect")[0].visible=false
+		else
+			this.subLayersByName(prefixNaming+"Select")[0].visible=false
+			this.subLayersByName(prefixNaming+"UnSelect")[0].visible=true
+	component.on Events.Click,->
+		this.stateCycle("Select","UnSelect")
+	component.stateSwitch(defaultState)	
 #賽事、聊天室 0904
 ComposeAllR0904Pagelink=()->
 
+#處理命令列上面的功能狀態
+	SettingComponent_Select_Unselect_States(FavoriteTV_ChannelPlayer,"FavoriteTV_ChannelPlayer_State_","Select")
+	
+	SettingComponent_Select_Unselect_States(Interaction_ChannelPlayer,"Interaction_ChannelPlayer_State_","Select")
+
+	SettingComponent_Select_Unselect_States(EPGContent,"EPGContent_State_","UnSelect")
+	SettingComponent_Select_Unselect_States(SwitchCategory_ChannelPlayer,"SwitchCategory_ChannelPlayer_State_","UnSelect")
+	ChannelPlayerDownContents_States.states.Category=
+		options:1
+	ChannelPlayerDownContents_States.states.TodayEPG=
+		options:1
+	ChannelPlayerDownContents_States.states.Interaction=
+		options:1
+	ChannelPlayerDownContents_States.on Events.StateWillSwitch,(from, to, states)->
+		for sub in this.children
+			sub.visible=false
+		ChannelPlayerDownContents_States.subLayersByName("ChannelPlayerDownContents_States_"+to)[0].visible=true
+	Interaction_ChannelPlayer.on Events.Click,->
+		ChannelPlayerDownContents_States.stateSwitch("Interaction")
+		SwitchCategory_ChannelPlayer.stateSwitch("UnSelect")
+		EPGContent.stateSwitch("UnSelect")
+	SwitchCategory_ChannelPlayer.on Events.Click,->
+		ChannelPlayerDownContents_States.stateSwitch("Category")
+		Interaction_ChannelPlayer.stateSwitch("UnSelect")
+		EPGContent.stateSwitch("UnSelect")
+	EPGContent.on Events.Click,->
+		ChannelPlayerDownContents_States.stateSwitch("TodayEPG")
+		SwitchCategory_ChannelPlayer.stateSwitch("UnSelect")
+		Interaction_ChannelPlayer.stateSwitch("UnSelect")
+
+# 	Interaction_ChannelPlayer.on Events.Click,->
+# 		ChannelPlayerDownContents_States.stateSwitch("TodayEPG")
+# 		SwitchCategory_ChannelPlayer.stateSwitch("UnSelect")
+# 		EPGContent.stateSwitch("UnSelect")
+# 		FavoriteTV_ChannelPlayer.stateSwitch("UnSelect")
+# 		SwitchCategory_ChannelPlayer.stateSwitch("UnSelect")
 	SportPlayer.clip=true
 	layerPlayerSmall=new ChannelPlayerControl
 		ControlMask:SportPlayerControlMask.copy()
@@ -1441,22 +1579,16 @@ ComposeAllR0904Pagelink=()->
 		QualitySesstingMask_Landscape:VODQualitySetting.copy()
 		DeviceSupportMask:DramaSupportDeviceWindow.copy()
 		DeviceSupportMask_Landscape:SupportDeviceWindowLanscape.copy()
+		name:"layerPlayerSmall"
 	layerPlayerSmall.ori_XX=0
 	layerPlayerSmall.ori_YY=0
 	Back_R_09_04_SportPlayer.on Events.Click,->
 		flowMain.showPrevious()
-		flowMain.visible=false
+		#flowMain.visible=false
 		layerPlayerSmall.STOP()
+
 	layerPlayerSmall.InitialEvent()
-# 	backBtn=layerPlayerSmall.subLayersByName("LayerPlayerMask")[0].subLayersByName("Back_ChannelPlayer")[0]
-# 	
-# 	backBtn.on Events.Click,->
-# 		#裡面按下Back，要判斷是否為已旋轉，若是已旋轉則轉回去，保持元畫面
-# 		if layerPlayerSmall.rotation==90
-# 			layerPlayerSmall.RotationBack()
-# 		else
-# 			flowMain.showPrevious()
-# 			flowMain.visible=false		
+	
 
 	layerPlayerSmall.bringToFront()	
 	for sub in MainContentHome.subLayersByName("ADComponent_Home")[0].children
@@ -1472,19 +1604,7 @@ ComposeAllR0904Pagelink=()->
 						curve:"easy-out"
 			SportPlayer.visible=false
 			layerPlayerSmall.Show()			
-# 				SportPlayerControlMask.animate
-# 					opacity:0
-# 					options:
-# 						time:2
-# 						curve:"easy-out"
-# 			SportPlayerContent.subLayersByName("SportPlayerContentPlayer")[0].player.currentTime=0
-# 			SportPlayerContent.subLayersByName("SportPlayerContentPlayer")[0].player.play()
-	
-# 	Back_R_09_04_SportPlayer.on Events.Click,->
-# 		flowMain.visible=false
-# 		flowMain.showPrevious()
-# 		SportPlayerControlMask.opacity=1
-# 		R_09_04_SportPlayerStatus.opacity=1
+
 		
 
 Compose_SportNewsVideoImage=()->
@@ -1505,17 +1625,7 @@ Compose_SportNewsVideoImage=()->
 	layerVideoSport.ori_YY=74
 	layerVideoSport.bringToFront()	
 	layerVideoSport.InitialEvent()
-# 	backBtn=layerVideoSport.subLayersByName("LayerPlayerMask")[0].subLayersByName("Back_ChannelPlayer")[0]
-# 	
-# 	backBtn.on Events.Click,->
-# 		#裡面按下Back，要判斷是否為已旋轉，若是已旋轉則轉回去，保持元畫面
-# # 		layerPlayerSmall.doisrotated="Y"
-# # 		print "dddd",layerPlayerSmall.rotation
-# 		if layerVideoSport.rotation==90
-# 			layerVideoSport.RotationBack()
-# 		else
-# 			flowMain.showPrevious()
-# 			flowMain.visible=false		
+
 
 	Video_sport_news_video.clip=true	
 	
@@ -1524,27 +1634,30 @@ Compose_SportNewsVideoImage=()->
 		sub.on Events.Click,->
 			flowMain.visible=true
 			flowMain.showNext(Utils.randomChoice(sportNewsArray))
+			#todo需要Show
 			
 	
 	for sub in ContentSPORT_RealTime.subLayersByName("HorContentScroll")[0].content.children
 		sub.on Events.Click,->
 			flowMain.visible=true
 			layer=Utils.randomChoice(sportNewsArray)
+			#todo 第二次會當掉
 			if layer==R_05_07_subs_sport_news_video
+				flowMain.showNext(layer)
 				ComposeAnimateNews(true)
-				
-			flowMain.showNext(layer)
+			else	
+				flowMain.showNext(layer)
 			
 	
 	
 	BACK_R_05_07_subs_sport_news_video.on Events.Click,->
-		flowMain.visible=false
+		#flowMain.visible=false
 		flowMain.showPrevious()
 		ComposeAnimateNews(false)
 	BACK_R_05_06_subs_sport_news_image.on Events.Click,->
-		flowMain.visible=false
+		#flowMain.visible=false
 		flowMain.showPrevious()
-	BACK_R_05_07_subs_sport_news_video.sendToBack()
+	#BACK_R_05_07_subs_sport_news_video.sendToBack()
 	#BACK_R_05_07_subs_sport_news_video.visible=false
 ComposeChangeTVOrderPage=()->
 	ContentLIVEs_Adjust.on Events.Click,->
@@ -1553,10 +1666,174 @@ ComposeChangeTVOrderPage=()->
 		flowMain.showNext(R_04_05_subs_tv_change_order)
 	
 	ChangeTVOrderBackTilte.on Events.Click,->
-		flowMain.visible=false
+		#flowMain.visible=false
 		flowMain.showPrevious()
+ComposeFavoritePage=()->
+	#R_10_34_my_purchase_status_rent
+	
+	Favorite_State.states.Expired=
+		opacity:1
+	Favorite_State.states.TV=
+		opacity:1
+	Favorite_State.states.VOD=
+		opacity:1
+	Favorite_State.on Events.Click,->
+		this.stateCycle("TV","VOD","Expired")
+	Favorite_State.stateSwitch("TV")
+	
+	FavoriteVOD_Contents.states.Expired=
+		opacity:1
+	FavoriteVOD_Contents.states.TV=
+		opacity:1
+	FavoriteVOD_Contents.states.VOD=
+		opacity:1
+
+	FavoriteVOD_Contents.stateSwitch("TV")
+	
+	Favorite_State.on Events.StateWillSwitch,(from, to, states)->
+		for sub in this.children
+			sub.visible=false
+		this.subLayersByName("Favorite_State_"+to)[0].visible=true
+		FavoriteVOD_Contents.stateSwitch(to)
+
+	FavoriteVOD_Contents.on Events.StateWillSwitch,(from, to, states)->
+		for sub in this.children
+			sub.visible=false
+		this.subLayersByName("FavoriteVOD_Contents_States_"+to)[0].visible=true
+		
+	
+ComposePurchaseHistoryPage=()->
+	#R_10_34_my_purchase_status_rent
+	SettingComponent_Select_Unselect_States(MySubscripbeRecord_Current,"MySubscripbeRecord_Current_State_","Select")
+	SettingComponent_Select_Unselect_States(MySubscripbeRecord_Records,"MySubscripbeRecord_Records_State_","UnSelect")
+	SettingComponent_Select_Unselect_States(MySubscripbeRecord_TVOD,"MySubscripbeRecord_TVOD_State_","UnSelect")
+	MyRecords_State.states.Current=
+		opacity:1
+	MyRecords_State.states.MyRecord=
+		opacity:1
+	MyRecords_State.states.TVOD=
+		opacity:1
+	MyRecords_State.on Events.StateWillSwitch,(from, to, states)->
+		for sub in this.children
+			sub.visible=false
+			
+		this.subLayersByName("MyRecords_State_"+to)[0].visible=true
+	MySubscripbeRecord_Current.on Events.Click,->
+		MyRecords_State.stateSwitch("Current")
+		MySubscripbeRecord_Records.stateSwitch("UnSelect")
+		MySubscripbeRecord_TVOD.stateSwitch("UnSelect")
+	MySubscripbeRecord_Records.on Events.Click,->
+		MyRecords_State.stateSwitch("MyRecord")
+		MySubscripbeRecord_Current.stateSwitch("UnSelect")
+		MySubscripbeRecord_TVOD.stateSwitch("UnSelect")
+	MySubscripbeRecord_TVOD.on Events.Click,->
+		MyRecords_State.stateSwitch("TVOD")
+		MySubscripbeRecord_Current.stateSwitch("UnSelect")
+		MySubscripbeRecord_Records.stateSwitch("UnSelect")			
+# 	SettingComponent_Select_Unselect_States(FavoriteTV_ChannelPlayer,"FavoriteTV_ChannelPlayer_State_","Select")
+ComposeMessagePage=()->
+	SettingComponent_Select_Unselect_States(PersonalMessage,"PersonalMessage_State_","Select")
+	SettingComponent_Select_Unselect_States(SystemMessage,"SystemMessage_State_","UnSelect")
+	
+	MessageContent_State.states.System=
+		opacity:1
+	MessageContent_State.states.Personal=
+		opacity:1
+
+	MessageContent_State.on Events.StateWillSwitch,(from, to, states)->
+		for sub in this.children
+			sub.visible=false
+			
+		this.subLayersByName("MessageContent_State_"+to)[0].visible=true
+	
+	
+	PersonalMessage.on Events.Click,->
+		SystemMessage.stateSwitch("UnSelect")
+		MessageContent_State.stateSwitch("Personal")
+	SystemMessage.on Events.Click,->
+		PersonalMessage.stateSwitch("UnSelect")
+		MessageContent_State.stateSwitch("System")
+Compose_MyInfoPage=()->
+	
+	SideMenuVIPINFO.on Events.Click,->
+		flowMain.visible=true
+		flowMain.showNext(R_10_02_my_vip)
+		Utils.delay 0.2,->
+			animationSideMenuR.start()
+			BlackMask.visible=false
+	My_CloseTitle.on Events.Click,->
+		flowMain.showNext(R_02_01_home_subs_vod)
+		
+	#登出：會到首頁	
+	My_Logout.on Events.Click,->
+		flowMain.showOverlayCenter(R_02_01_home_subs_vod,false)
+		sideMenu.stateSwitch("VIP")
+	#切換帳號：會跑登入flow.showNext(R_01_01_login_phone)
+	BTNSwitchAccount.on Events.Click,->
+		flowMain.showNext(R_01_01_login_phone)
+		BlackMask.visible=false
+	#觀看歷史	
+	My_History.on Events.Click,->
+		flowMain.showNext(R_10_03_my_history_all)
+	Back_R_10_03_my_history_all.on Events.Click,->
+		flowMain.showPrevious()
+	#訊息通知
+	ComposeMessagePage()
+	My_Message.on Events.Click,->
+		
+		flowMain.showNext(R_10_15_my_msg_personal)
+	Back_R_10_15_my_msg_personal.on Events.Click,->
+		flowMain.showPrevious()
+	#節目提醒
+	My_ProgramNotify.on Events.Click,->
+		flowMain.showNext(R_10_08_my_notice_all)
+	BackR_10_08_my_notice_all.on Events.Click,->
+		flowMain.showPrevious()
+	
+	#訂閱方案
+	R_10_25_my_buy_subscribed
+	My_Subscription.on Events.Click,->
+		flowMain.showNext(R_10_25_my_buy_subscribed)
+		BlackMask.visible=false
+	Back_R_10_25_my_buy_subscribed.on Events.Click,->
+		flowMain.showPrevious()
+	#購買記錄
+	ComposePurchaseHistoryPage()
+	My_PurchaseHistory.on Events.Click,->
+		flowMain.showNext(R_10_34_my_purchase_status_rent)
+		BlackMask.visible=false
+	Back_R_10_34_my_purchase_status_rent.on Events.Click,->
+		flowMain.showPrevious()
+	#我的收藏
+	ComposeFavoritePage()
+	My_Favorite.on Events.Click,->
+		flowMain.showNext(R_10_22_my_favorite_tv)
+		BlackMask.visible=false
+	BackR_10_22_my_favorite_tv.on Events.Click,->
+		flowMain.showPrevious()
+		
+	#設定
+	My_Setting.on Events.Click,->
+		flowMain.showNext(R_10_17_my_setting)
+	Back_R_10_17_my_setting.on Events.Click,->
+		flowMain.showPrevious()		
+	#優惠兌換
+	My_Coupon.on Events.Click,->
+		flowMain.showNext(R_10_12_my_discount)
+	Back_R_10_12_my_discount.on Events.Click,->
+		flowMain.showPrevious()
+	#編輯
+	BTNEditAccount.on Events.Click,->
+		flowMain.showNext(MyInfoEditAccount)
+	MyInfoEditAccount.on Events.Click,->
+		flowMain.showNext(MyInfoEditAccount_UploadPhoto)
+	MyInfoEditAccount_UploadPhoto.on Events.Click,->
+		flowMain.showNext(R_10_02_my_vip)	
+
+		
+		
 Home=()->
-	flow.showNext(R_01_01_login_phone)
+	flowMain.showNext(R_01_01_login_phone)
 	BuildControl_SideMenu()
 	BuildContent_HeadTitle()
 	BuildContent_Description()
@@ -1565,30 +1842,15 @@ Home=()->
 	
 
 	Compose_HomePage()
+	ComposeAllR0904Pagelink()
+	BuildControl_SportPage()
 	ComposeAnnounceMessagePopup()
 	ComposeChangeTVOrderPage()
 	ComposeTVChannelProgramList()
+	
 	Compose_SportNewsVideoImage()
-	ComposeAllR0904Pagelink()
+	
 	ComposeLoadingPage()
-		
-# 	layerPlayerSmall=new ChannelPlayerControl
-# 		ControlMask:SportPlayerControlMask.copy()
-# 		Video:"images/SportVoD.mp4"
-# 		visible:false
-# 		isrotated:"N"
-# 		ControlMask_Landscape:ChannelPlayerLandscape.copy()
-# 		name:"AAAAAAA"
-# 		QualitySesstingMask:QualitySetting_Portrait.copy()
-# 	layerPlayerSmall.ori_XX=0
-# 	layerPlayerSmall.ori_YY=0
-# 	layerPlayerSmall.InitialEvent()
-# 	layerPlayerSmall.Show()
+	Compose_MyInfoPage()	
 
-# 	ComposeDramaInfoPage(Utils.randomChoice(DramaBig_Buy_State))
-	#ComposeMovieInfoPage(Utils.randomChoice(TVODBig_Buy_State))		
-# 	layerPlayerSmall=new ChannelPlayerControl
-# 		ControlMask:SportPlayerControlMask.copy()
-# 		Video:"images/SportVoD.mp4"
-# 	layerPlayerSmall.Show()
 Home()
