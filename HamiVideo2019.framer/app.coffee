@@ -170,7 +170,86 @@ ComposeHorscrollContentAndClickEvent=(parentObject,layerContainsContent,contentT
 			print "LIVE"
 		
 		sub.parent=contentScroll.content
+ComposeHorscrollContentAndClickFullPlayEvent=(parentObject,layerContainsContent,contentType)->
+	contentScroll=new ScrollComponent
+		parent:parentObject
+		x:0
+		y:layerContainsContent.y
+		width: Screen.width
+		height: layerContainsContent.height
+		scrollVertical: false
+		scrollHorizontal: true
+		name:"HorContentScroll"
+	contentScroll.contentInset=
+		right: 15	
+	contentScroll.content.draggable.directionLock = true
+	contentScroll.content.draggable.directionLockThreshold = {x:5, y:5}		
+	for sub in layerContainsContent.children
+		if contentType=="Movie"
+			sub.on Events.Click,->
+				BuildControl_LoadingMask(Utils.randomNumber(1,3) )
+				layerPlayerSmall=new VODPlayerControl
+					ControlMask:VODPlayerMask.copy()
+					Video:"images/dead6.mp4"
+					visible:false
+					name:"layerVODPl"
+					QualitySesstingMask:VODQualitySetting.copy()
+					VODSelectSessionMask:VODSelectSession.copy()
+					DeviceSupportMask:SupportDeviceWindowLanscape.copy()
+					IsDrama:false
+					parent:R_02_01_home_subs_vod
+				layerPlayerSmall.center()
+				layerPlayerSmall.InitialEvent()
+				layerPlayerSmall.Show()
+				
+				backBtn=layerPlayerSmall.subLayersByName("LayerPlayerMask")[0].subLayersByName("VODPlayer_Back")[0]
+				backBtn.on Events.Click,->
+					layerPlayerSmall.destroy()
+		else if contentType=="TVOD"
+			sub.on Events.Click,->
+				BuildControl_LoadingMask(Utils.randomNumber(1,3) )
+			
+				layerPlayerSmall=new VODPlayerControl
+					ControlMask:VODPlayerMask.copy()
+					Video:"images/dead6.mp4"
+					visible:false
+					name:"layerVODPl"
+					QualitySesstingMask:VODQualitySetting.copy()
+					VODSelectSessionMask:VODSelectSession.copy()
+					DeviceSupportMask:SupportDeviceWindowLanscape.copy()
+					IsDrama:false
+					parent:R_02_01_home_subs_vod
+				layerPlayerSmall.center()
+				layerPlayerSmall.InitialEvent()
+				layerPlayerSmall.Show()
+				
+				backBtn=layerPlayerSmall.subLayersByName("LayerPlayerMask")[0].subLayersByName("VODPlayer_Back")[0]
+				backBtn.on Events.Click,->
+					layerPlayerSmall.destroy()
+		else if contentType=="Drama"
+			sub.on Events.Click,->
+				BuildControl_LoadingMask(Utils.randomNumber(1,3) )
+				layerPlayerSmall=new VODPlayerControl
+					ControlMask:VODPlayerMask.copy()
+					Video:"images/BackVOD.mp4"
+					visible:false
+					name:"layerVODPl"
+					QualitySesstingMask:VODQualitySetting.copy()
+					VODSelectSessionMask:VODSelectSession.copy()
+					DeviceSupportMask:SupportDeviceWindowLanscape.copy()
+					IsDrama:false
+					parent:R_02_01_home_subs_vod
+				layerPlayerSmall.center()
+				layerPlayerSmall.InitialEvent()
+				layerPlayerSmall.Show()
+				
+				backBtn=layerPlayerSmall.subLayersByName("LayerPlayerMask")[0].subLayersByName("VODPlayer_Back")[0]
+				backBtn.on Events.Click,->
+					layerPlayerSmall.destroy()
+		else
+			print "LIVE"
 		
+		sub.parent=contentScroll.content		
 
 BuildContent_HeadTitle=()->
 	NaviTitleContent.states.LIVE=
@@ -224,7 +303,7 @@ ComposeHorscrollContent=(parentObject,layerContainsContent)->
 	for sub in layerContainsContent.children
 		sub.parent=contentScroll.content
 BuildHomeContentVODInfo=()->
-	ComposeHorscrollContentAndClickEvent(ContinueWatch,ContinueWatchContents,"Movie")
+	ComposeHorscrollContentAndClickFullPlayEvent(ContinueWatch,ContinueWatchContents,"Movie")
 	ComposeHorscrollContentAndClickEvent(Favorite_VOD_Feature,Favorite_VOD_FeatureContents,"Movie")
 	ComposeHorscrollContentAndClickEvent(MostWatch_Drama,MostWatch_DramaContents,"Drama")
 	ComposeHorscrollContentAndClickEvent(MostWatch_Movie,MostWatch_MovieContents,"Movie")
@@ -905,19 +984,68 @@ BuildControl_SportPage=()->
 			SportPlayer.visible=false
 			layerPlayerSmall.Show()
 	for sub in ContentSPORT_Feature_Datas.children
-		sub.on Events.Click,->
+		sub.subLayersByName(sub.name+"_ItemEPG")[0].on Events.Click,->
 			flowMain.visible=true
-			flowMain.showNext(TV_Channel_ProgramList)
-# 			flowMain.showOverlayRight(R_09_04_SportPlayer)
-# 			layerPlayerSmall=R_09_04_SportPlayer.subLayersByName("layerPlayerSmall")[0]
-# 			Utils.delay 1,->
-# 				R_09_04_SportPlayerStatus.animate
-# 					opacity:0
-# 					options:
-# 						time:2
-# 						curve:"easy-out"
-# 				SportPlayer.visible=false
-# 				layerPlayerSmall.Show()
+			flowMain.showNext(TV_Channel_ProgramList)			
+		sub.subLayersByName(sub.name+"_ItemMainContent")[0].on Events.Click,->
+			flowMain.showOverlayRight(R_09_04_SportPlayer)
+			layerPlayerSmall=R_09_04_SportPlayer.subLayersByName("layerPlayerSmall")[0]
+			Utils.delay 1,->
+				R_09_04_SportPlayerStatus.animate
+					opacity:0
+					options:
+						time:2
+						curve:"easy-out"
+				SportPlayer.visible=false
+				layerPlayerSmall.Show()
+				
+	for sub in ContentSPORT_Euro_SportList.children
+		sub.subLayersByName(sub.name+"_ItemEPG")[0].on Events.Click,->
+			flowMain.visible=true
+			flowMain.showNext(TV_Channel_ProgramList)			
+		sub.subLayersByName(sub.name+"_ItemMainContent")[0].on Events.Click,->
+			flowMain.showOverlayRight(R_09_04_SportPlayer)
+			layerPlayerSmall=R_09_04_SportPlayer.subLayersByName("layerPlayerSmall")[0]
+			Utils.delay 1,->
+				R_09_04_SportPlayerStatus.animate
+					opacity:0
+					options:
+						time:2
+						curve:"easy-out"
+				SportPlayer.visible=false
+				layerPlayerSmall.Show()
+				
+				
+	for sub in ContentLIVEs_NewsList_Data.children
+		sub.subLayersByName(sub.name+"_ItemEPG")[0].on Events.Click,->
+			flowMain.visible=true
+			flowMain.showNext(TV_Channel_ProgramList)			
+		sub.subLayersByName(sub.name+"_ItemMainContent")[0].on Events.Click,->
+			flowMain.showOverlayRight(R_09_04_SportPlayer)
+			layerPlayerSmall=R_09_04_SportPlayer.subLayersByName("layerPlayerSmall")[0]
+			Utils.delay 1,->
+				R_09_04_SportPlayerStatus.animate
+					opacity:0
+					options:
+						time:2
+						curve:"easy-out"
+				SportPlayer.visible=false
+				layerPlayerSmall.Show()				
+	for sub in ContentLIVEsHistoryList.children
+		sub.subLayersByName(sub.name+"_ItemEPG")[0].on Events.Click,->
+			flowMain.visible=true
+			flowMain.showNext(TV_Channel_ProgramList)			
+		sub.subLayersByName(sub.name+"_ItemMainContent")[0].on Events.Click,->
+			flowMain.showOverlayRight(R_09_04_SportPlayer)
+			layerPlayerSmall=R_09_04_SportPlayer.subLayersByName("layerPlayerSmall")[0]
+			Utils.delay 1,->
+				R_09_04_SportPlayerStatus.animate
+					opacity:0
+					options:
+						time:2
+						curve:"easy-out"
+				SportPlayer.visible=false
+				layerPlayerSmall.Show()				
 	for sub in ContentLIVEs_Free.subLayersByName("HorContentScroll")[0].content.children
 		sub.on Events.Click,->	
 			flowMain.showOverlayRight(R_09_04_SportPlayer)
@@ -941,21 +1069,6 @@ BuildControl_SportPage=()->
 					curve:"easy-out"
 			SportPlayer.visible=false
 			layerPlayerSmall.Show()		
-	#電視/新聞/列表，直接連到新聞台之節目表
-	for sub in ContentLIVEs_NewsList_Data.children		
-		sub.on Events.Click,->
-			flowMain.visible=true
-			flowMain.showNext(TV_Channel_ProgramList)
-# 			flowMain.showOverlayRight(R_09_04_SportPlayer)
-# 			layerPlayerSmall=R_09_04_SportPlayer.subLayersByName("layerPlayerSmall")[0]
-# 			Utils.delay 1,->
-# 				R_09_04_SportPlayerStatus.animate
-# 					opacity:0
-# 					options:
-# 						time:2
-# 						curve:"easy-out"
-# 				SportPlayer.visible=false
-# 				layerPlayerSmall.Show()
 	for sub in LiveSchedule_Feature_ListItem.children		
 		sub.on Events.Click,->
 			flowMain.showOverlayRight(R_09_04_SportPlayer)
@@ -972,10 +1085,10 @@ BuildControl_SportPage=()->
 		flowMain.showPrevious()
 	
 	#運動-歐冠-運動頻道，要連接到某新聞台有節目表的畫面
-	for sub in ContentSPORT_Euro_SportList.children
-		sub.on Events.Click,->
-			flowMain.visible=true
-			flowMain.showNext(TV_Channel_ProgramList)
+# 	for sub in ContentSPORT_Euro_SportList.children
+# 		sub.on Events.Click,->
+# 			flowMain.visible=true
+# 			flowMain.showNext(TV_Channel_ProgramList)
 	for sub in More_EUROScheduleItems.children		
 		sub.on Events.Click,->
 			flowMain.showOverlayRight(R_09_04_SportPlayer)
@@ -1306,16 +1419,27 @@ ComposeMovieInfoPage=(VODState)->
 
 ComposeTVChannelProgramList=()->
 	SupportDevice_TV_Channel_ProgramList.visible=false
-	ContentLIVEsHistoryList.on Events.Click,->
-		flowMain.visible=true
-		flowMain.showNext(TV_Channel_ProgramList)	
+# 	ContentLIVEsHistoryList.on Events.Click,->
+# 		flowMain.visible=true
+# 		flowMain.showNext(TV_Channel_ProgramList)	
 # 	ContentLIVEs_NewsList.on Events.Click,->
 # 		flowMain.visible=true
 # 		flowMain.showNext(TV_Channel_ProgramList)
 	for sub in ContentLIVEs_Favorites.subLayersByName("HorContentScroll")[0].content.children
 		sub.on Events.Click,->
-			flowMain.showNext(TV_Channel_ProgramList)
-			flowMain.visible=true
+			flowMain.showOverlayRight(R_09_04_SportPlayer)
+			layerPlayerSmall=R_09_04_SportPlayer.subLayersByName("layerPlayerSmall")[0]
+			Utils.delay 1,->
+				R_09_04_SportPlayerStatus.animate
+					opacity:0
+					options:
+						time:2
+						curve:"easy-out"
+				SportPlayer.visible=false
+				layerPlayerSmall.Show()	
+# 		sub.on Events.Click,->
+# 			flowMain.showNext(TV_Channel_ProgramList)
+# 			flowMain.visible=true
 	BackTV_Channel_ProgramList.on Events.Click,->
 		#flowMain.visible=false
 		flowMain.showPrevious()
