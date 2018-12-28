@@ -36,6 +36,12 @@ TVODBig_Buy_State=["TVOD_ContinuePlay","TVODBuy"]
 DramaBig_Buy_State=["Drama_ContinuePlay","DramaBuy_FirstPlay"]
 sportNewsArray=[R_05_07_subs_sport_news_video,R_05_06_subs_sport_news_image]
 ##
+
+SPORT_NOBUY_HINT.visible=false
+TV_NOBUY_HINT.visible=false
+SPORT_NOBUY_HINT.parent=null
+TV_NOBUY_HINT.parent=null
+
 sideMenu=new Layer
 	width: 310
 	height: Screen.height
@@ -566,6 +572,8 @@ ComposeSideMenuEvent=()->
 		Utils.delay 0.2,->
 			animationSideMenuR.start()
 			BlackMask.visible=false
+			SPORT_NOBUY_HINT.visible=false
+			TV_NOBUY_HINT.visible=true
 	SideMenu_Sport.on Events.Click,->
 		MainContentHome.visible=true
 		MainContentHome.bringToFront()
@@ -583,6 +591,8 @@ ComposeSideMenuEvent=()->
 		Utils.delay 0.2,->
 			animationSideMenuR.start()
 			BlackMask.visible=false
+			SPORT_NOBUY_HINT.visible=true
+			TV_NOBUY_HINT.visible=false
 	SideMenu_VOD.on Events.Click,->
 		MainContentHome.visible=true
 		MainContentHome.bringToFront()
@@ -601,6 +611,8 @@ ComposeSideMenuEvent=()->
 		Utils.delay 0.2,->
 			animationSideMenuR.start()
 			BlackMask.visible=false
+			SPORT_NOBUY_HINT.visible=false
+			TV_NOBUY_HINT.visible=false
 		#scrollHomeContent.sendToBack()
 	SideMenu_TVOD.on Events.Click,->
 		MainContentHome.visible=true
@@ -619,6 +631,8 @@ ComposeSideMenuEvent=()->
 		Utils.delay 0.2,->
 			animationSideMenuR.start()
 			BlackMask.visible=false
+			SPORT_NOBUY_HINT.visible=false
+			TV_NOBUY_HINT.visible=false
 	SideMenu_Curration.on Events.Click,->
 		if isCloseAnnounce
 			jump=FixTitle.height
@@ -635,6 +649,8 @@ ComposeSideMenuEvent=()->
 		Utils.delay 0.2,->
 			animationSideMenuR.start()
 			BlackMask.visible=false
+			SPORT_NOBUY_HINT.visible=false
+			TV_NOBUY_HINT.visible=false
 		
 
 			
@@ -972,6 +988,8 @@ BuildControl_SportPage=()->
 					curve:"easy-out"
 			SportPlayer.visible=false
 			layerPlayerSmall.Show()
+			SPORT_NOBUY_HINT.visible=false
+			TV_NOBUY_HINT.visible=false
 	ContentSPORT_Euro_Banner.on Events.Click,->
 		flowMain.showOverlayRight(R_09_04_SportPlayer)
 		layerPlayerSmall=R_09_04_SportPlayer.subLayersByName("layerPlayerSmall")[0]
@@ -983,6 +1001,8 @@ BuildControl_SportPage=()->
 					curve:"easy-out"
 			SportPlayer.visible=false
 			layerPlayerSmall.Show()
+			SPORT_NOBUY_HINT.visible=false
+			TV_NOBUY_HINT.visible=false			
 	for sub in ContentSPORT_Feature_Datas.children
 		sub.subLayersByName(sub.name+"_ItemEPG")[0].on Events.Click,->
 			flowMain.visible=true
@@ -998,7 +1018,8 @@ BuildControl_SportPage=()->
 						curve:"easy-out"
 				SportPlayer.visible=false
 				layerPlayerSmall.Show()
-				
+				SPORT_NOBUY_HINT.visible=false
+				TV_NOBUY_HINT.visible=false
 	for sub in ContentSPORT_Euro_SportList.children
 		sub.subLayersByName(sub.name+"_ItemEPG")[0].on Events.Click,->
 			flowMain.visible=true
@@ -1014,7 +1035,8 @@ BuildControl_SportPage=()->
 						curve:"easy-out"
 				SportPlayer.visible=false
 				layerPlayerSmall.Show()
-				
+				SPORT_NOBUY_HINT.visible=false
+				TV_NOBUY_HINT.visible=false
 				
 	for sub in ContentLIVEs_NewsList_Data.children
 		sub.subLayersByName(sub.name+"_ItemEPG")[0].on Events.Click,->
@@ -1030,7 +1052,9 @@ BuildControl_SportPage=()->
 						time:2
 						curve:"easy-out"
 				SportPlayer.visible=false
-				layerPlayerSmall.Show()				
+				layerPlayerSmall.Show()
+				SPORT_NOBUY_HINT.visible=false
+				TV_NOBUY_HINT.visible=false
 	for sub in ContentLIVEsHistoryList.children
 		sub.subLayersByName(sub.name+"_ItemEPG")[0].on Events.Click,->
 			flowMain.visible=true
@@ -1045,7 +1069,9 @@ BuildControl_SportPage=()->
 						time:2
 						curve:"easy-out"
 				SportPlayer.visible=false
-				layerPlayerSmall.Show()				
+				layerPlayerSmall.Show()
+				SPORT_NOBUY_HINT.visible=false
+				TV_NOBUY_HINT.visible=false
 	for sub in ContentLIVEs_Free.subLayersByName("HorContentScroll")[0].content.children
 		sub.on Events.Click,->	
 			flowMain.showOverlayRight(R_09_04_SportPlayer)
@@ -1058,6 +1084,8 @@ BuildControl_SportPage=()->
 						curve:"easy-out"
 				SportPlayer.visible=false
 				layerPlayerSmall.Show()
+				SPORT_NOBUY_HINT.visible=false
+				TV_NOBUY_HINT.visible=false				
 	ContentLIVEsBigBanner.on Events.Click,->
 		flowMain.showOverlayRight(R_09_04_SportPlayer)
 		layerPlayerSmall=R_09_04_SportPlayer.subLayersByName("layerPlayerSmall")[0]
@@ -1068,7 +1096,9 @@ BuildControl_SportPage=()->
 					time:2
 					curve:"easy-out"
 			SportPlayer.visible=false
-			layerPlayerSmall.Show()		
+			layerPlayerSmall.Show()
+			SPORT_NOBUY_HINT.visible=false
+			TV_NOBUY_HINT.visible=false			
 	for sub in LiveSchedule_Feature_ListItem.children		
 		sub.on Events.Click,->
 			flowMain.showOverlayRight(R_09_04_SportPlayer)
@@ -1081,6 +1111,8 @@ BuildControl_SportPage=()->
 						curve:"easy-out"
 				SportPlayer.visible=false
 				layerPlayerSmall.Show()
+				SPORT_NOBUY_HINT.visible=false
+				TV_NOBUY_HINT.visible=false
 	Back_R_05_08_subs_game_calendar.on Events.Click,->
 		flowMain.showPrevious()
 	
@@ -1101,6 +1133,8 @@ BuildControl_SportPage=()->
 						curve:"easy-out"
 				SportPlayer.visible=false
 				layerPlayerSmall.Show()
+				SPORT_NOBUY_HINT.visible=false
+				TV_NOBUY_HINT.visible=false
 ComposeLoadingPage=()->
 
 	AndroidLoading.parent=layerLoading
@@ -1692,6 +1726,10 @@ ComposeAllR0904Pagelink=()->
 # 		FavoriteTV_ChannelPlayer.stateSwitch("UnSelect")
 # 		SwitchCategory_ChannelPlayer.stateSwitch("UnSelect")
 	SportPlayer.clip=true
+	ChannelPlayerDownContents_States.stateSwitch("TodayEPG")
+	SwitchCategory_ChannelPlayer.stateSwitch("UnSelect")
+	Interaction_ChannelPlayer.stateSwitch("UnSelect")
+	EPGContent.stateSwitch("Select")
 	layerPlayerSmall=new ChannelPlayerControl
 		ControlMask:SportPlayerControlMask.copy()
 		Video:"images/SportVoD.mp4"
@@ -1710,6 +1748,9 @@ ComposeAllR0904Pagelink=()->
 		flowMain.showPrevious()
 		#flowMain.visible=false
 		layerPlayerSmall.STOP()
+		if (currentPackage=="LIVE") or (currentPackage=="SPORT") or (currentPackage=="Curation")
+			SPORT_NOBUY_HINT.visible=true
+			TV_NOBUY_HINT.visible=true
 
 	layerPlayerSmall.InitialEvent()
 	
@@ -1727,7 +1768,9 @@ ComposeAllR0904Pagelink=()->
 						time:2
 						curve:"easy-out"
 			SportPlayer.visible=false
-			layerPlayerSmall.Show()			
+			layerPlayerSmall.Show()
+			SPORT_NOBUY_HINT.visible=false
+			TV_NOBUY_HINT.visible=false
 
 		
 

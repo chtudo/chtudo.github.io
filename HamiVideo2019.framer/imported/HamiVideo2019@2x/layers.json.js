@@ -372,7 +372,7 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 					"width": 335,
 					"height": 360
 				},
-				"visible": false,
+				"visible": true,
 				"metadata": {
 					"opacity": 1
 				},
@@ -432,6 +432,60 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 						"children": []
 					}
 				]
+			},
+			{
+				"objectId": "B82575B9-FD69-4E29-8DFA-026F4FA26569",
+				"kind": "group",
+				"name": "SPORT_NOBUY_HINT",
+				"originalName": "SPORT_NOBUY_HINT",
+				"maskFrame": null,
+				"layerFrame": {
+					"x": 88,
+					"y": 527,
+					"width": 200,
+					"height": 60
+				},
+				"visible": true,
+				"metadata": {
+					"opacity": 1
+				},
+				"image": {
+					"path": "images/Layer-SPORT_NOBUY_HINT-qjgyntc1.png",
+					"frame": {
+						"x": 88,
+						"y": 527,
+						"width": 200,
+						"height": 60
+					}
+				},
+				"children": []
+			},
+			{
+				"objectId": "5B90A2DE-35CA-4447-94EB-4C02ED50AB32",
+				"kind": "group",
+				"name": "TV_NOBUY_HINT",
+				"originalName": "TV_NOBUY_HINT",
+				"maskFrame": null,
+				"layerFrame": {
+					"x": 88,
+					"y": 527,
+					"width": 200,
+					"height": 60
+				},
+				"visible": true,
+				"metadata": {
+					"opacity": 1
+				},
+				"image": {
+					"path": "images/Layer-TV_NOBUY_HINT-nui5meey.png",
+					"frame": {
+						"x": 88,
+						"y": 527,
+						"width": 200,
+						"height": 60
+					}
+				},
+				"children": []
 			},
 			{
 				"objectId": "65721FED-5715-4560-905C-C21AAD65362C",
@@ -961,7 +1015,7 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 					"width": 375,
 					"height": 3265
 				},
-				"visible": false,
+				"visible": true,
 				"metadata": {
 					"opacity": 1
 				},
@@ -2391,7 +2445,7 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 											"width": 650,
 											"height": 3200
 										},
-										"visible": false,
+										"visible": true,
 										"metadata": {
 											"opacity": 1
 										},
@@ -16190,7 +16244,7 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 									"x": 0,
 									"y": 270,
 									"width": 375,
-									"height": 397
+									"height": 604
 								},
 								"visible": true,
 								"metadata": {
@@ -16410,6 +16464,33 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 												"y": 328,
 												"width": 334,
 												"height": 231
+											}
+										},
+										"children": []
+									},
+									{
+										"objectId": "54ED1B49-10AD-4CEE-AA66-0E05D7693A68",
+										"kind": "group",
+										"name": "Rectangle_24",
+										"originalName": "Rectangle 2",
+										"maskFrame": null,
+										"layerFrame": {
+											"x": 0,
+											"y": 270,
+											"width": 375,
+											"height": 604
+										},
+										"visible": true,
+										"metadata": {
+											"opacity": 1
+										},
+										"image": {
+											"path": "images/Layer-Rectangle_2-ntrfrdfc.png",
+											"frame": {
+												"x": 0,
+												"y": 270,
+												"width": 375,
+												"height": 604
 											}
 										},
 										"children": []
@@ -22402,7 +22483,7 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 							{
 								"objectId": "84E6C319-E09F-4C08-A1B9-53DDCB124F75",
 								"kind": "group",
-								"name": "Rectangle_24",
+								"name": "Rectangle_25",
 								"originalName": "Rectangle 2",
 								"maskFrame": null,
 								"layerFrame": {
@@ -22995,7 +23076,7 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 			{
 				"objectId": "7AB206E1-EAAF-48DB-9C37-C94AA727D1FF",
 				"kind": "group",
-				"name": "Rectangle_25",
+				"name": "Rectangle_26",
 				"originalName": "Rectangle 2",
 				"maskFrame": null,
 				"layerFrame": {
@@ -23540,7 +23621,7 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 			{
 				"objectId": "A32CEEEF-A37F-49E4-8DFA-E397E0CF8BEE",
 				"kind": "group",
-				"name": "Rectangle_26",
+				"name": "Rectangle_27",
 				"originalName": "Rectangle 2",
 				"maskFrame": null,
 				"layerFrame": {
@@ -23837,7 +23918,7 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 			{
 				"objectId": "F4CB3FA1-AEA0-45FF-80DE-87646EF66BAD",
 				"kind": "group",
-				"name": "Rectangle_27",
+				"name": "Rectangle_28",
 				"originalName": "Rectangle 2",
 				"maskFrame": null,
 				"layerFrame": {
@@ -24104,7 +24185,7 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 			{
 				"objectId": "536A5CDC-39D8-4CA1-AF5A-45BAF9A7CB4D",
 				"kind": "group",
-				"name": "Rectangle_28",
+				"name": "Rectangle_29",
 				"originalName": "Rectangle 2",
 				"maskFrame": null,
 				"layerFrame": {
@@ -25413,7 +25494,7 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 			{
 				"objectId": "E584B665-B0EE-4B5F-AC33-93DBC164E12B",
 				"kind": "group",
-				"name": "Rectangle_29",
+				"name": "Rectangle_210",
 				"originalName": "Rectangle 2",
 				"maskFrame": null,
 				"layerFrame": {
@@ -26974,7 +27055,7 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 							{
 								"objectId": "9D3735C1-D455-4154-A51D-566252D5C731",
 								"kind": "group",
-								"name": "Rectangle_210",
+								"name": "Rectangle_211",
 								"originalName": "Rectangle 2",
 								"maskFrame": null,
 								"layerFrame": {
@@ -27701,7 +27782,7 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 			{
 				"objectId": "A15C6CD6-CA1E-4A5E-B4D9-CD4EDC916005",
 				"kind": "group",
-				"name": "Rectangle_211",
+				"name": "Rectangle_212",
 				"originalName": "Rectangle 2",
 				"maskFrame": null,
 				"layerFrame": {
@@ -27910,7 +27991,7 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 			{
 				"objectId": "7148D600-3CEA-4F30-8773-CB472238CB32",
 				"kind": "group",
-				"name": "Rectangle_212",
+				"name": "Rectangle_213",
 				"originalName": "Rectangle 2",
 				"maskFrame": null,
 				"layerFrame": {
@@ -28037,7 +28118,7 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 			{
 				"objectId": "364F8DC6-CD3C-4E80-9A23-531D3AE98AAC",
 				"kind": "group",
-				"name": "Rectangle_213",
+				"name": "Rectangle_214",
 				"originalName": "Rectangle 2",
 				"maskFrame": null,
 				"layerFrame": {
@@ -28350,7 +28431,7 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 					{
 						"objectId": "7E2E0D21-1544-4641-A368-BBF71C50E2BF",
 						"kind": "group",
-						"name": "Rectangle_214",
+						"name": "Rectangle_215",
 						"originalName": "Rectangle 2",
 						"maskFrame": null,
 						"layerFrame": {
@@ -28630,7 +28711,7 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 					{
 						"objectId": "F51047F0-5388-4F44-BC26-C71562A71C7B",
 						"kind": "group",
-						"name": "Rectangle_215",
+						"name": "Rectangle_216",
 						"originalName": "Rectangle 2",
 						"maskFrame": null,
 						"layerFrame": {
