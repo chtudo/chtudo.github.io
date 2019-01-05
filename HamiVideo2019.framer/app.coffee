@@ -1004,6 +1004,7 @@ BuildControl_SportPage=()->
 			SPORT_NOBUY_HINT.visible=false
 			TV_NOBUY_HINT.visible=false			
 	for sub in ContentSPORT_Feature_Datas.children
+		
 		sub.subLayersByName(sub.name+"_ItemEPG")[0].on Events.Click,->
 			flowMain.visible=true
 			flowMain.showNext(TV_Channel_ProgramList)			
@@ -2019,5 +2020,4 @@ Home=()->
 	
 	ComposeLoadingPage()
 	Compose_MyInfoPage()	
-
 Home()

@@ -2802,10 +2802,10 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 																				"originalName": "ContentSPORT_Euro_SportList1_ItemEPG",
 																				"maskFrame": null,
 																				"layerFrame": {
-																					"x": 325,
-																					"y": 1695,
-																					"width": 20,
-																					"height": 18
+																					"x": 310,
+																					"y": 1680,
+																					"width": 50,
+																					"height": 50
 																				},
 																				"visible": true,
 																				"metadata": {
@@ -2814,10 +2814,10 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 																				"image": {
 																					"path": "images/Layer-ContentSPORT_Euro_SportList1_ItemEPG-rduxqkq5.png",
 																					"frame": {
-																						"x": 325,
-																						"y": 1695,
-																						"width": 20,
-																						"height": 18
+																						"x": 310,
+																						"y": 1680,
+																						"width": 50,
+																						"height": 50
 																					}
 																				},
 																				"children": []
@@ -2875,10 +2875,10 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 																				"originalName": "ContentSPORT_Euro_SportList2_ItemEPG",
 																				"maskFrame": null,
 																				"layerFrame": {
-																					"x": 325,
-																					"y": 1795,
-																					"width": 20,
-																					"height": 18
+																					"x": 310,
+																					"y": 1780,
+																					"width": 50,
+																					"height": 50
 																				},
 																				"visible": true,
 																				"metadata": {
@@ -2887,10 +2887,10 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 																				"image": {
 																					"path": "images/Layer-ContentSPORT_Euro_SportList2_ItemEPG-mzu3qzc5.png",
 																					"frame": {
-																						"x": 325,
-																						"y": 1795,
-																						"width": 20,
-																						"height": 18
+																						"x": 310,
+																						"y": 1780,
+																						"width": 50,
+																						"height": 50
 																					}
 																				},
 																				"children": []
@@ -2948,10 +2948,10 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 																				"originalName": "ContentSPORT_Euro_SportList3_ItemEPG",
 																				"maskFrame": null,
 																				"layerFrame": {
-																					"x": 325,
-																					"y": 1595,
-																					"width": 20,
-																					"height": 18
+																					"x": 310,
+																					"y": 1580,
+																					"width": 50,
+																					"height": 50
 																				},
 																				"visible": true,
 																				"metadata": {
@@ -2960,10 +2960,10 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 																				"image": {
 																					"path": "images/Layer-ContentSPORT_Euro_SportList3_ItemEPG-nte4mjhf.png",
 																					"frame": {
-																						"x": 325,
-																						"y": 1595,
-																						"width": 20,
-																						"height": 18
+																						"x": 310,
+																						"y": 1580,
+																						"width": 50,
+																						"height": 50
 																					}
 																				},
 																				"children": []
@@ -4864,10 +4864,10 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 																		"originalName": "ContentLIVEs_NewsList_Data01_ItemEPG",
 																		"maskFrame": null,
 																		"layerFrame": {
-																			"x": 325,
-																			"y": 672,
-																			"width": 20,
-																			"height": 18
+																			"x": 310,
+																			"y": 664,
+																			"width": 50,
+																			"height": 50
 																		},
 																		"visible": true,
 																		"metadata": {
@@ -4876,10 +4876,10 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 																		"image": {
 																			"path": "images/Layer-ContentLIVEs_NewsList_Data01_ItemEPG-nzuxqjkx.png",
 																			"frame": {
-																				"x": 325,
-																				"y": 672,
-																				"width": 20,
-																				"height": 18
+																				"x": 310,
+																				"y": 664,
+																				"width": 50,
+																				"height": 50
 																			}
 																		},
 																		"children": []
@@ -4937,10 +4937,10 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 																		"originalName": "ContentLIVEs_NewsList_Data02_ItemEPG",
 																		"maskFrame": null,
 																		"layerFrame": {
-																			"x": 325,
-																			"y": 952,
-																			"width": 20,
-																			"height": 18
+																			"x": 310,
+																			"y": 937,
+																			"width": 50,
+																			"height": 50
 																		},
 																		"visible": true,
 																		"metadata": {
@@ -4949,10 +4949,10 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 																		"image": {
 																			"path": "images/Layer-ContentLIVEs_NewsList_Data02_ItemEPG-qtc5ouy2.png",
 																			"frame": {
-																				"x": 325,
-																				"y": 952,
-																				"width": 20,
-																				"height": 18
+																				"x": 310,
+																				"y": 937,
+																				"width": 50,
+																				"height": 50
 																			}
 																		},
 																		"children": []
@@ -5010,10 +5010,10 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 																		"originalName": "ContentLIVEs_NewsList_Data03_ItemEPG",
 																		"maskFrame": null,
 																		"layerFrame": {
-																			"x": 325,
-																			"y": 862,
-																			"width": 20,
-																			"height": 18
+																			"x": 310,
+																			"y": 847,
+																			"width": 50,
+																			"height": 50
 																		},
 																		"visible": true,
 																		"metadata": {
@@ -5022,10 +5022,10 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 																		"image": {
 																			"path": "images/Layer-ContentLIVEs_NewsList_Data03_ItemEPG-nzkwreff.png",
 																			"frame": {
-																				"x": 325,
-																				"y": 862,
-																				"width": 20,
-																				"height": 18
+																				"x": 310,
+																				"y": 847,
+																				"width": 50,
+																				"height": 50
 																			}
 																		},
 																		"children": []
@@ -5083,10 +5083,10 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 																		"originalName": "ContentLIVEs_NewsList_Data04_ItemEPG",
 																		"maskFrame": null,
 																		"layerFrame": {
-																			"x": 325,
-																			"y": 772,
-																			"width": 20,
-																			"height": 18
+																			"x": 310,
+																			"y": 757,
+																			"width": 50,
+																			"height": 50
 																		},
 																		"visible": true,
 																		"metadata": {
@@ -5095,10 +5095,10 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 																		"image": {
 																			"path": "images/Layer-ContentLIVEs_NewsList_Data04_ItemEPG-ruy1rky5.png",
 																			"frame": {
-																				"x": 325,
-																				"y": 772,
-																				"width": 20,
-																				"height": 18
+																				"x": 310,
+																				"y": 757,
+																				"width": 50,
+																				"height": 50
 																			}
 																		},
 																		"children": []
@@ -5156,10 +5156,10 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 																		"originalName": "ContentLIVEs_NewsList_Data05_ItemEPG",
 																		"maskFrame": null,
 																		"layerFrame": {
-																			"x": 325,
-																			"y": 572,
-																			"width": 20,
-																			"height": 18
+																			"x": 310,
+																			"y": 567,
+																			"width": 50,
+																			"height": 50
 																		},
 																		"visible": true,
 																		"metadata": {
@@ -5168,10 +5168,10 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 																		"image": {
 																			"path": "images/Layer-ContentLIVEs_NewsList_Data05_ItemEPG-mjzeqjrg.png",
 																			"frame": {
-																				"x": 325,
-																				"y": 572,
-																				"width": 20,
-																				"height": 18
+																				"x": 310,
+																				"y": 567,
+																				"width": 50,
+																				"height": 50
 																			}
 																		},
 																		"children": []
@@ -5229,10 +5229,10 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 																		"originalName": "ContentLIVEs_NewsList_Data06_ItemEPG",
 																		"maskFrame": null,
 																		"layerFrame": {
-																			"x": 325,
-																			"y": 1144,
-																			"width": 20,
-																			"height": 18
+																			"x": 310,
+																			"y": 1128,
+																			"width": 50,
+																			"height": 50
 																		},
 																		"visible": true,
 																		"metadata": {
@@ -5241,10 +5241,10 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 																		"image": {
 																			"path": "images/Layer-ContentLIVEs_NewsList_Data06_ItemEPG-mufgqufb.png",
 																			"frame": {
-																				"x": 325,
-																				"y": 1144,
-																				"width": 20,
-																				"height": 18
+																				"x": 310,
+																				"y": 1128,
+																				"width": 50,
+																				"height": 50
 																			}
 																		},
 																		"children": []
@@ -5302,10 +5302,10 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 																		"originalName": "ContentLIVEs_NewsList_Data07_ItemEPG",
 																		"maskFrame": null,
 																		"layerFrame": {
-																			"x": 325,
-																			"y": 1424,
-																			"width": 20,
-																			"height": 18
+																			"x": 310,
+																			"y": 1408,
+																			"width": 50,
+																			"height": 50
 																		},
 																		"visible": true,
 																		"metadata": {
@@ -5314,10 +5314,10 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 																		"image": {
 																			"path": "images/Layer-ContentLIVEs_NewsList_Data07_ItemEPG-mtawrkfc.png",
 																			"frame": {
-																				"x": 325,
-																				"y": 1424,
-																				"width": 20,
-																				"height": 18
+																				"x": 310,
+																				"y": 1408,
+																				"width": 50,
+																				"height": 50
 																			}
 																		},
 																		"children": []
@@ -5375,10 +5375,10 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 																		"originalName": "ContentLIVEs_NewsList_Data08_ItemEPG",
 																		"maskFrame": null,
 																		"layerFrame": {
-																			"x": 325,
-																			"y": 1334,
-																			"width": 20,
-																			"height": 18
+																			"x": 310,
+																			"y": 1318,
+																			"width": 50,
+																			"height": 50
 																		},
 																		"visible": true,
 																		"metadata": {
@@ -5387,10 +5387,10 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 																		"image": {
 																			"path": "images/Layer-ContentLIVEs_NewsList_Data08_ItemEPG-qzfcrkuz.png",
 																			"frame": {
-																				"x": 325,
-																				"y": 1334,
-																				"width": 20,
-																				"height": 18
+																				"x": 310,
+																				"y": 1318,
+																				"width": 50,
+																				"height": 50
 																			}
 																		},
 																		"children": []
@@ -5448,10 +5448,10 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 																		"originalName": "ContentLIVEs_NewsList_Data09_ItemEPG",
 																		"maskFrame": null,
 																		"layerFrame": {
-																			"x": 325,
-																			"y": 1244,
-																			"width": 20,
-																			"height": 18
+																			"x": 310,
+																			"y": 1229,
+																			"width": 50,
+																			"height": 50
 																		},
 																		"visible": true,
 																		"metadata": {
@@ -5460,10 +5460,10 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 																		"image": {
 																			"path": "images/Layer-ContentLIVEs_NewsList_Data09_ItemEPG-mtlbnti2.png",
 																			"frame": {
-																				"x": 325,
-																				"y": 1244,
-																				"width": 20,
-																				"height": 18
+																				"x": 310,
+																				"y": 1229,
+																				"width": 50,
+																				"height": 50
 																			}
 																		},
 																		"children": []
@@ -5521,10 +5521,10 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 																		"originalName": "ContentLIVEs_NewsList_Data10_ItemEPG",
 																		"maskFrame": null,
 																		"layerFrame": {
-																			"x": 325,
-																			"y": 1044,
-																			"width": 20,
-																			"height": 18
+																			"x": 310,
+																			"y": 1027,
+																			"width": 50,
+																			"height": 50
 																		},
 																		"visible": true,
 																		"metadata": {
@@ -5533,10 +5533,10 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 																		"image": {
 																			"path": "images/Layer-ContentLIVEs_NewsList_Data10_ItemEPG-mjzertk1.png",
 																			"frame": {
-																				"x": 325,
-																				"y": 1044,
-																				"width": 20,
-																				"height": 18
+																				"x": 310,
+																				"y": 1027,
+																				"width": 50,
+																				"height": 50
 																			}
 																		},
 																		"children": []
@@ -5732,10 +5732,10 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 																		"originalName": "ContentLIVEsHistoryList1_ItemEPG",
 																		"maskFrame": null,
 																		"layerFrame": {
-																			"x": 325,
-																			"y": 1375,
-																			"width": 20,
-																			"height": 18
+																			"x": 310,
+																			"y": 1360,
+																			"width": 50,
+																			"height": 50
 																		},
 																		"visible": true,
 																		"metadata": {
@@ -5744,10 +5744,10 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 																		"image": {
 																			"path": "images/Layer-ContentLIVEsHistoryList1_ItemEPG-n0yynkq2.png",
 																			"frame": {
-																				"x": 325,
-																				"y": 1375,
-																				"width": 20,
-																				"height": 18
+																				"x": 310,
+																				"y": 1360,
+																				"width": 50,
+																				"height": 50
 																			}
 																		},
 																		"children": []
@@ -5805,10 +5805,10 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 																		"originalName": "ContentLIVEsHistoryList2_ItemEPG",
 																		"maskFrame": null,
 																		"layerFrame": {
-																			"x": 325,
-																			"y": 1655,
-																			"width": 20,
-																			"height": 18
+																			"x": 310,
+																			"y": 1640,
+																			"width": 50,
+																			"height": 50
 																		},
 																		"visible": true,
 																		"metadata": {
@@ -5817,10 +5817,10 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 																		"image": {
 																			"path": "images/Layer-ContentLIVEsHistoryList2_ItemEPG-oevgnzi3.png",
 																			"frame": {
-																				"x": 325,
-																				"y": 1655,
-																				"width": 20,
-																				"height": 18
+																				"x": 310,
+																				"y": 1640,
+																				"width": 50,
+																				"height": 50
 																			}
 																		},
 																		"children": []
@@ -5878,10 +5878,10 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 																		"originalName": "ContentLIVEsHistoryList3_ItemEPG",
 																		"maskFrame": null,
 																		"layerFrame": {
-																			"x": 325,
-																			"y": 1565,
-																			"width": 20,
-																			"height": 18
+																			"x": 310,
+																			"y": 1550,
+																			"width": 50,
+																			"height": 50
 																		},
 																		"visible": true,
 																		"metadata": {
@@ -5890,10 +5890,10 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 																		"image": {
 																			"path": "images/Layer-ContentLIVEsHistoryList3_ItemEPG-nkzbnuey.png",
 																			"frame": {
-																				"x": 325,
-																				"y": 1565,
-																				"width": 20,
-																				"height": 18
+																				"x": 310,
+																				"y": 1550,
+																				"width": 50,
+																				"height": 50
 																			}
 																		},
 																		"children": []
@@ -5951,10 +5951,10 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 																		"originalName": "ContentLIVEsHistoryList4_ItemEPG",
 																		"maskFrame": null,
 																		"layerFrame": {
-																			"x": 325,
-																			"y": 1475,
-																			"width": 20,
-																			"height": 18
+																			"x": 310,
+																			"y": 1460,
+																			"width": 50,
+																			"height": 50
 																		},
 																		"visible": true,
 																		"metadata": {
@@ -5963,10 +5963,10 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 																		"image": {
 																			"path": "images/Layer-ContentLIVEsHistoryList4_ItemEPG-q0m1rdqw.png",
 																			"frame": {
-																				"x": 325,
-																				"y": 1475,
-																				"width": 20,
-																				"height": 18
+																				"x": 310,
+																				"y": 1460,
+																				"width": 50,
+																				"height": 50
 																			}
 																		},
 																		"children": []
@@ -6024,10 +6024,10 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 																		"originalName": "ContentLIVEsHistoryList5_ItemEPG",
 																		"maskFrame": null,
 																		"layerFrame": {
-																			"x": 325,
-																			"y": 1275,
-																			"width": 20,
-																			"height": 18
+																			"x": 310,
+																			"y": 1260,
+																			"width": 50,
+																			"height": 50
 																		},
 																		"visible": true,
 																		"metadata": {
@@ -6036,10 +6036,10 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 																		"image": {
 																			"path": "images/Layer-ContentLIVEsHistoryList5_ItemEPG-revenznc.png",
 																			"frame": {
-																				"x": 325,
-																				"y": 1275,
-																				"width": 20,
-																				"height": 18
+																				"x": 310,
+																				"y": 1260,
+																				"width": 50,
+																				"height": 50
 																			}
 																		},
 																		"children": []
@@ -15589,10 +15589,10 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 								"originalName": "Back_R_09_04_SportPlayer",
 								"maskFrame": null,
 								"layerFrame": {
-									"x": 20,
-									"y": 223,
-									"width": 148,
-									"height": 20
+									"x": 24,
+									"y": 230,
+									"width": 126,
+									"height": 21
 								},
 								"visible": true,
 								"metadata": {
@@ -15601,10 +15601,10 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 								"image": {
 									"path": "images/Layer-Back_R_09_04_SportPlayer-otlerujc.png",
 									"frame": {
-										"x": 20,
-										"y": 223,
-										"width": 148,
-										"height": 20
+										"x": 24,
+										"y": 230,
+										"width": 126,
+										"height": 21
 									}
 								},
 								"children": []
@@ -15616,10 +15616,10 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 								"originalName": "Group",
 								"maskFrame": null,
 								"layerFrame": {
-									"x": 20,
-									"y": 221,
-									"width": 333,
-									"height": 41
+									"x": 233,
+									"y": 212,
+									"width": 131,
+									"height": 40
 								},
 								"visible": true,
 								"metadata": {
@@ -15633,10 +15633,10 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 										"originalName": "EPGContent",
 										"maskFrame": null,
 										"layerFrame": {
-											"x": 288,
-											"y": 221,
-											"width": 22,
-											"height": 20
+											"x": 279,
+											"y": 212,
+											"width": 40,
+											"height": 40
 										},
 										"visible": true,
 										"metadata": {
@@ -15650,10 +15650,10 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 												"originalName": "EPGContent_State_Select",
 												"maskFrame": null,
 												"layerFrame": {
-													"x": 288,
-													"y": 221,
-													"width": 22,
-													"height": 20
+													"x": 279,
+													"y": 212,
+													"width": 40,
+													"height": 40
 												},
 												"visible": true,
 												"metadata": {
@@ -15662,10 +15662,10 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 												"image": {
 													"path": "images/Layer-EPGContent_State_Select-rtnfmzrc.png",
 													"frame": {
-														"x": 288,
-														"y": 221,
-														"width": 22,
-														"height": 20
+														"x": 279,
+														"y": 212,
+														"width": 40,
+														"height": 40
 													}
 												},
 												"children": []
@@ -15677,10 +15677,10 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 												"originalName": "EPGContent_State_UnSelect",
 												"maskFrame": null,
 												"layerFrame": {
-													"x": 288,
-													"y": 221,
-													"width": 22,
-													"height": 20
+													"x": 279,
+													"y": 212,
+													"width": 40,
+													"height": 40
 												},
 												"visible": true,
 												"metadata": {
@@ -15689,10 +15689,10 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 												"image": {
 													"path": "images/Layer-EPGContent_State_UnSelect-mdvcm0yx.png",
 													"frame": {
-														"x": 288,
-														"y": 221,
-														"width": 22,
-														"height": 20
+														"x": 279,
+														"y": 212,
+														"width": 40,
+														"height": 40
 													}
 												},
 												"children": []
@@ -15706,10 +15706,10 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 										"originalName": "SwitchCategory_ChannelPlayer",
 										"maskFrame": null,
 										"layerFrame": {
-											"x": 334,
-											"y": 225,
-											"width": 19,
-											"height": 15
+											"x": 324,
+											"y": 212,
+											"width": 40,
+											"height": 40
 										},
 										"visible": true,
 										"metadata": {
@@ -15723,10 +15723,10 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 												"originalName": "SwitchCategory_ChannelPlayer_State_Select",
 												"maskFrame": null,
 												"layerFrame": {
-													"x": 334,
-													"y": 225,
-													"width": 19,
-													"height": 15
+													"x": 324,
+													"y": 212,
+													"width": 40,
+													"height": 40
 												},
 												"visible": true,
 												"metadata": {
@@ -15735,10 +15735,10 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 												"image": {
 													"path": "images/Layer-SwitchCategory_ChannelPlayer_State_Select-reveqkqz.png",
 													"frame": {
-														"x": 334,
-														"y": 225,
-														"width": 19,
-														"height": 15
+														"x": 324,
+														"y": 212,
+														"width": 40,
+														"height": 40
 													}
 												},
 												"children": []
@@ -15750,10 +15750,10 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 												"originalName": "SwitchCategory_ChannelPlayer_State_UnSelect",
 												"maskFrame": null,
 												"layerFrame": {
-													"x": 334,
-													"y": 225,
-													"width": 19,
-													"height": 15
+													"x": 324,
+													"y": 212,
+													"width": 40,
+													"height": 40
 												},
 												"visible": true,
 												"metadata": {
@@ -15762,10 +15762,10 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 												"image": {
 													"path": "images/Layer-SwitchCategory_ChannelPlayer_State_UnSelect-mdndnzdb.png",
 													"frame": {
-														"x": 334,
-														"y": 225,
-														"width": 19,
-														"height": 15
+														"x": 324,
+														"y": 212,
+														"width": 40,
+														"height": 40
 													}
 												},
 												"children": []
@@ -15780,11 +15780,11 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 										"maskFrame": null,
 										"layerFrame": {
 											"x": 20,
-											"y": 249,
+											"y": 245,
 											"width": 65,
-											"height": 13
+											"height": 20
 										},
-										"visible": true,
+										"visible": false,
 										"metadata": {
 											"opacity": 1,
 											"string": "體育最前線",
@@ -15800,9 +15800,9 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 											"path": "images/Layer-labelOther-nzexmure.png",
 											"frame": {
 												"x": 20,
-												"y": 249,
+												"y": 245,
 												"width": 65,
-												"height": 13
+												"height": 20
 											}
 										},
 										"children": []
@@ -15814,10 +15814,10 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 										"originalName": "Interaction_ChannelPlayer",
 										"maskFrame": null,
 										"layerFrame": {
-											"x": 245,
-											"y": 223,
-											"width": 20,
-											"height": 19
+											"x": 233,
+											"y": 212,
+											"width": 40,
+											"height": 40
 										},
 										"visible": true,
 										"metadata": {
@@ -15826,72 +15826,54 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 										"children": [
 											{
 												"objectId": "9FF5E843-57D5-4427-AE12-AB4563193980",
-												"kind": "text",
+												"kind": "group",
 												"name": "Interaction_ChannelPlayer_State_Select",
 												"originalName": "Interaction_ChannelPlayer_State_Select",
 												"maskFrame": null,
 												"layerFrame": {
-													"x": 245,
-													"y": 223,
-													"width": 20,
-													"height": 19
+													"x": 233,
+													"y": 212,
+													"width": 40,
+													"height": 40
 												},
 												"visible": true,
 												"metadata": {
-													"opacity": 1,
-													"string": "",
-													"css": [
-														"font-family: material;",
-														"font-size: 22px;",
-														"color: #50E3C2;",
-														"letter-spacing: 0;",
-														"text-align: center;",
-														"line-height: 24px;"
-													]
+													"opacity": 1
 												},
 												"image": {
 													"path": "images/Layer-Interaction_ChannelPlayer_State_Select-ouzgnuu4.png",
 													"frame": {
-														"x": 245,
-														"y": 223,
-														"width": 20,
-														"height": 19
+														"x": 233,
+														"y": 212,
+														"width": 40,
+														"height": 40
 													}
 												},
 												"children": []
 											},
 											{
 												"objectId": "66386468-04E6-4D1F-8D9B-A7C01D161550",
-												"kind": "text",
+												"kind": "group",
 												"name": "Interaction_ChannelPlayer_State_UnSelect",
 												"originalName": "Interaction_ChannelPlayer_State_UnSelect",
 												"maskFrame": null,
 												"layerFrame": {
-													"x": 245,
-													"y": 223,
-													"width": 20,
-													"height": 19
+													"x": 233,
+													"y": 212,
+													"width": 40,
+													"height": 40
 												},
 												"visible": true,
 												"metadata": {
-													"opacity": 1,
-													"string": "",
-													"css": [
-														"font-family: material;",
-														"font-size: 22px;",
-														"color: #555555;",
-														"letter-spacing: 0;",
-														"text-align: center;",
-														"line-height: 24px;"
-													]
+													"opacity": 1
 												},
 												"image": {
 													"path": "images/Layer-Interaction_ChannelPlayer_State_UnSelect-njyzody0.png",
 													"frame": {
-														"x": 245,
-														"y": 223,
-														"width": 20,
-														"height": 19
+														"x": 233,
+														"y": 212,
+														"width": 40,
+														"height": 40
 													}
 												},
 												"children": []
@@ -15910,7 +15892,7 @@ window.__imported__["HamiVideo2019@2x/layers.json.js"] = [
 											"width": 24,
 											"height": 24
 										},
-										"visible": true,
+										"visible": false,
 										"metadata": {
 											"opacity": 1
 										},
