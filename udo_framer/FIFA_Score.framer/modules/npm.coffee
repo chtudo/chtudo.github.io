@@ -1,1 +1,0 @@
-exports.Tabletop = require 'tabletop'
