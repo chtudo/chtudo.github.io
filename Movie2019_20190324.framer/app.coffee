@@ -858,7 +858,7 @@ for item in movies
 		width: 400*scaleContent
 		height: 600*scaleContent
 		y:0		
-		backgroundColor:"Blue"
+		backgroundColor:"White"
 		parent:card
 		image:item["poster"]
 	cardBody=new Layer
